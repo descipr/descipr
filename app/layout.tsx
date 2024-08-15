@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   description:
     "Unlock your AI potential with our Fellowships led by Hiring managers. Gain personalized guidance, tackle job-simulation projects, and join a supportive community. Start now to fast-track your AI career!",
-  metadataBase: new URL("http://localhost:3000/"),
+  metadataBase: new URL("https://deciphr.vercel.app/"),
   twitter: {
     card: "summary_large_image",
   },
