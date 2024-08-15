@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://deciphr.vercel.app/",
     images: [
       {
-        url: "https://deciphr.vercel.app/your-opengraph-image.png",
+        url: "https://deciphr.vercel.app/your-opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "Decipr - Become a 360-degree AI Professional",
