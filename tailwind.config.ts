@@ -9,9 +9,33 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-custom": "linear-gradient(180deg, #02122b 6.32%, #000 100%)",
+      },
+      backgroundAttachment: {
+        fixed: "fixed",
+      },
+      fontFamily: {
+        "Plus-jakarta": "var(--font--plus-jakarta)",
+      },
+      colors: {
+        blue: {
+          Textprimary: "#ACC2FA",
+          button: "#ACC2FA",
+          bl2: "#DBE5FF",
+          b2d: "#2154DA",
+        },
+        gray: {
+          line: "#B7B0B0",
+          footer: "#CBDADA",
+        },
+        black: {
+          Textsecondary: "#262629",
+          primary: "#000000",
+        },
+        green: {
+          button: "#4CAF50",
+          secondary: "#00916E",
+        },
       },
     },
   },
