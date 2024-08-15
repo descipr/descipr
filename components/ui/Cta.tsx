@@ -12,8 +12,8 @@ const Cta = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const base_url = process.env.NEXT_PUBLIC_BASE_URL as string;
-      const res = await fetch(`${base_url}/api/user`, {
+      // const base_url = process.env.NEXT_PUBLIC_BASE_URL as string;
+      const res = await fetch(`/api/user`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
