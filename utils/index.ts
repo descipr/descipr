@@ -25,7 +25,7 @@ import QuizLogo from "@/public/Images/QuizLogo.svg";
 import Phone from "@/public/Images/call.svg";
 import Whatsapp from "@/public/Images/Whatsapp.svg";
 import linkedIcon from "@/public/Images/linkedin-svg.svg";
-import instagramIcon from "@/public/Images/instagram-icon.svg";
+import instagramIcon from "@/public/Images/instagram_icon.svg";
 import twitterIcon from "@/public/Images/twitter-icon.svg";
 import youtubeIcon from "@/public/Images/youtube-icon.svg";
 import DownloadIcon from "@/public/Images/DownloadIcon.svg";
