@@ -104,7 +104,7 @@ const CoursePage = ({ params }: { params: { slug: string } }) => {
       <HorizontalLine />
       <Testimonials />
       <HorizontalLine />
-      <LearningAndTools courseDetails = {course}/>
+      <LearningAndTools courseDetails={course} />
       <HorizontalLine />
       <LiveSessionSection VideoUrl={course.videoUrl} />
     </>

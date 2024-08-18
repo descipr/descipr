@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import LearningCard from "./LearningCard";
-import { LearningCardArray, LearningCardData } from "@/constants";
+import { LearningCardData } from "@/constants";
 
 interface LearningProps {
   courseDetails: LearningCardData[];
@@ -10,7 +10,8 @@ interface LearningProps {
 const LearningCardSection = ({courseDetails} : LearningProps) => {
   const [current, setCurrent] = useState(0);
   const [learningCardArrayPerPage, setLearningCardArrayPerPage] = useState(1);
-  const length = LearningCardArray.length;
+  const length = courseDetails.length;
+
 
   useEffect(() => {
     const handleResize = () => {
