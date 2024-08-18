@@ -1,5 +1,5 @@
-
 import { fellowshipList } from "@/constants";
+import Link from "next/link";
 import React from "react";
 
 const Fellowship: React.FC = () => {
@@ -9,7 +9,7 @@ const Fellowship: React.FC = () => {
       <ul className="flex flex-col space-y-2">
         {fellowshipList.map((item, index) => (
           <li key={index} className="text-xs font-light">
-            {item.label}
+            <Link href={item.link}>{item.label}</Link>
           </li>
         ))}
       </ul>

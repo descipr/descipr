@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
             />
             <div className="relative flex flex-col items-center justify-center leading-relaxed tracking-wide space-y-5 md:space-y-8">
                 <div className="flex flex-col items-center">
-                    <h1 className="text-3xl md:text-6xl font-bold text-center text-white">
+                    <h1 className="text-3xl md:text-7xl font-bold text-center text-white">
                         Become a{' '}
                         <span className="text-blue-Textprimary font-Plus-jakarta">360-degree</span>
                     </h1>
@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
                         AI Professional
                     </h1>
                 </div>
-                <p className="text-sm md:text-md text-white text-center font-normal">
+                <p className="text-sm md:text-lg text-white text-center font-normal">
                     Fast-track your career with live Cohort-based{' '}
                     <span className="text-blue-Textprimary font-medium">
                         learning and mentorship from Hiring managers

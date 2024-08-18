@@ -1,4 +1,5 @@
 import { companyList } from "@/constants";
+import Link from "next/link";
 import React from "react";
 
 const Company: React.FC = () => {
@@ -11,6 +12,15 @@ const Company: React.FC = () => {
             {item.label}
           </li>
         ))}
+        <li className="text-xs font-light">
+          <Link
+            href={`mailto:hello@descipr.com?subject=${encodeURIComponent(
+              "contact us"
+            )}`}
+          >
+            contact us
+          </Link>
+        </li>
       </ul>
     </div>
   );

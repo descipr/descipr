@@ -66,7 +66,7 @@ const PriceCard = ({ courseDetails }: PriceCardProps) => {
           EMI from ₹{courseDetails.EmiOptions}/month available at checkout
         </div>
 
-        <form id="razorpay-button-container" className="mt-4">
+        <form id="razorpay-button-container" className="mt-4 text-center sm:text-left" >
           {/* Razorpay button script will be appended here */}
         </form>
 

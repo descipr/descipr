@@ -100,8 +100,9 @@ export interface CourseCardProps {
   date: string;
 }
 
-export interface ListItem {
+interface ListItem {
   label: string;
+  email?: string;
 }
 
 export interface SocialLink {
@@ -127,6 +128,11 @@ export interface FAQItem {
   answer: string;
 }
 
+export interface fellowship {
+  label: string;
+  link: string;
+}
+
 export interface CourseDetail {
   heading: string;
   description: string;
@@ -149,13 +155,11 @@ export interface CourseDetail {
 }
 
 export const companyList: ListItem[] = [
-  { label: "Team" },
   { label: "About Us" },
   { label: "Blogs" },
   { label: "Podcasts" },
   { label: "Privacy Policy" },
   { label: "Terms of Use" },
-  { label: "Contact Us" },
 ];
 
 export const socialLinks: SocialLink[] = [
@@ -170,11 +174,6 @@ export const socialLinks: SocialLink[] = [
     link: "https://www.instagram.com/team_descipr/",
   },
   {
-    label: "Twitter",
-    iconSrc: twitterIcon,
-    link: "https://x.com/team_descipr",
-  },
-  {
     label: "YouTube",
     iconSrc: youtubeIcon,
     link: "https://www.youtube.com/@team_descipr",
@@ -183,24 +182,20 @@ export const socialLinks: SocialLink[] = [
 
 export const courses: Course[] = [
   {
-    imageSrc: BusinessAnalystCard,
-    title: "Business Analyst Fellowship",
-    date: "19 Oct – 01 Dec",
+    imageSrc: DataScientistCard,
+    title: "Data Scientist Fellowship",
+    date: "19 Oct – 22 Feb",
   },
+
   {
     imageSrc: AiEngineeringCard,
     title: "AI Engineer Fellowship",
-    date: "02 Nov – 22 Dec",
+    date: "19 Oct – 18 Jan",
   },
   {
-    imageSrc: DataScientistCard,
-    title: "Data Scientist Fellowship",
-    date: "19 Oct – 26 Jan",
-  },
-  {
-    imageSrc: MlEngineeringCard,
-    title: "ML Engineer Fellowship",
-    date: "26 Oct – 08 Dec",
+    imageSrc: BusinessAnalystCard,
+    title: "Business Analyst Fellowship",
+    date: "19 Oct – 25 Jan",
   },
 ];
 export const items = [
@@ -284,7 +279,7 @@ export const testimonials = [
     testimonial:
       "It was an amazing session, very informative and full of insights by Tanoy Dewanjee. Thanks for the STAR method and the real world case studies.",
     linkedinUrl:
-      "https://www.linkedin.com/feed/update/urn:li:activity:7202704501504368641/?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7202704501504368641%2C7203396111527538689%29&dashCommentUrn=urn%3Ali%3Acomment%3A%28activity%3A7202704501504368641%2C7203396111527538689%29&actorCompanyId=89923542",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7202704501504368641?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7202704501504368641%2C7203396111527538689%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287203396111527538689%2Curn%3Ali%3Aactivity%3A7202704501504368641%29",
   },
   {
     profilePic: Sayan_paul,
@@ -293,7 +288,7 @@ export const testimonials = [
     testimonial:
       "A really insightful session. Enjoyed every bit of it. Looking forward for more sessions like this.",
     linkedinUrl:
-      "https://www.linkedin.com/feed/update/urn:li:activity:7205048134664642562/?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7205048134664642562%2C7205095558686932992%29&dashCommentUrn=urn%3Ali%3Acomment%3A%28activity%3A7205048134664642562%2C7205095558686932992%29&actorCompanyId=89923542",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7205048134664642562?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7205048134664642562%2C7205095558686932992%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287205095558686932992%2Curn%3Ali%3Aactivity%3A7205048134664642562%29",
   },
 ];
 
@@ -324,12 +319,19 @@ export const careerCardData: CardData[] = [
   },
 ];
 
-export const fellowshipList: ListItem[] = [
-  { label: "Business Analyst Fellowship" },
-  { label: "AI Engineer Fellowship" },
-  { label: "Data Scientist Fellowship" },
-  { label: "ML Engineer Fellowship" },
-  { label: "BI Engineer Fellowship" },
+export const fellowshipList: fellowship[] = [
+  {
+    label: "Data Scientist Fellowship",
+    link: "/courses/Data%20Scientist%20Fellowship",
+  },
+  {
+    label: "AI Engineer Fellowship",
+    link: "/courses/AI%20Engineer%20Fellowship",
+  },
+  {
+    label: "Business Analyst Fellowship",
+    link: "/courses/Business%20Analyst%20Fellowship",
+  },
 ];
 
 export const LearningCardArray: LearningCardData[] = [
@@ -600,448 +602,6 @@ export const faqData: FAQItem[] = [
 
 export const courseDetails: CourseDetail[] = [
   {
-    heading: "Business Analyst Fellowship",
-    description:
-      "Kickstart your Business analyst career at top companies like Amazon, Dell, Swiggy etc. Gain hands-on experience, personalized mentorship, and exclusive networking while working on impactful projects. Your future in business analysis starts here!",
-    dateOfStart: "Jul, 2024",
-    timeCommitment: "10 hours/week",
-    cost: "₹10,499",
-    seatsLeft: 25,
-    sessionInsights: businessAnalystInsights,
-    id: "1",
-    actualcost: "₹19,999",
-    imgUrl: BusinessAnalystFellowshipCard,
-    razorPay: {
-      src: "https://checkout.razorpay.com/v1/payment-button.js",
-      paymentButtonId: "pl_OhyVw2SEjrbyw4",
-    },
-    discount: "45% OFF",
-    EmiOptions: "EMI from ₹499/month available at checkout",
-    weekSchedule: [
-      {
-        id: 1,
-        title: "Business Fundamentals",
-        listItems: [
-          "Business Models and Customer Segmentation",
-          "Products, Value Proposition and Distribution Channels",
-          "Revenue Streams and Costs Models",
-        ],
-        time: "Week 1",
-        para: "Dissecting Business of Indian Unicorns",
-      },
-      {
-        id: 2,
-        title: "Problem Solving Approach",
-        listItems: [
-          "Structured Problem Solving Canva",
-          "Human Centered Solution Design",
-          "Stakeholders Communication",
-        ],
-        time: "Week 2",
-        para: "Designing an Data/AI Product",
-      },
-      {
-        id: 3,
-        title: "Intro to SQL",
-        listItems: [
-          "Fundamental SQL Statements",
-          "Joins and Subqueries",
-          "Conditional and Case Statements",
-        ],
-        time: "Week 3",
-        para: "Deconstructing the Business of an E-Commerce Website",
-      },
-      {
-        id: 4,
-        title: "Business Analysis with SQL",
-        listItems: [
-          "Effective KPI Design Principles",
-          "KPI Trees and Impact Mapping",
-          "Advanced SQL Techniques for Production",
-        ],
-        time: "Week 4",
-        para: "Building Business Tracker for an E-commerce CEO Office",
-      },
-      {
-        id: 5,
-        title: "Intro to PowerBI",
-        listItems: [
-          "Data Preparation and Loading Data",
-          "Understanding Chart Types, Trends",
-          "Creating Dashboards",
-        ],
-        time: "Week 5",
-        para: "Building Business Tracker for an E-commerce CEO Office",
-      },
-      {
-        id: 6,
-        title: "Business Intelligence with PowerBI",
-        listItems: [
-          "Decision Funnel Understanding",
-          "Self Serve Dashboard Design Principles",
-          "Efficient Data Models for Speed and Accuracy",
-        ],
-        time: "Week 6",
-        para: "Developing Digital Marketing Dashboard for a Fitness Brand",
-      },
-      {
-        id: 7,
-        title: "Intro to Statistics",
-        listItems: [
-          "Types of statistics: Descriptive vs. Inferential",
-          "Basic Probability Concepts & Distributions",
-          "Hypothesis Testing, p-Value, Correlation",
-        ],
-        time: "Week 7",
-        para: "Analyzing the Business Model of a Fashion Store",
-      },
-      {
-        id: 8,
-        title: "Product Design and Insights",
-        listItems: [
-          "Understanding Business Metrics to Optimize",
-          "Customer Cohort Analysis",
-          "Statistical Analysis for Launch Decisions",
-        ],
-        time: "Week 8",
-        para: "Designing Launch Strategy for a New E-Commerce Fashion Store",
-      },
-      {
-        id: 9,
-        title: "Intro to MS-Excel & Python",
-        listItems: [
-          "Data Cleaning Techniques in Excel",
-          "PivotTable, Grouping, & Lookup Functions for Data Analysis in Excel",
-          "Python Programming Fundamentals",
-          "Data Manipulation using Pandas",
-        ],
-        time: "Week 9",
-        para: "Developing Digital Marketing Dashboard for a Fitness Brand",
-      },
-      {
-        id: 10,
-        title: "Business Insights with Python & Excel",
-        listItems: [
-          "Exploratory Data Analysis",
-          "Advanced Data Wrangling Techniques",
-          "Detailed Insights Report Writing for Stakeholders",
-        ],
-        time: "Week 10",
-        para: "Building Business Tracker for an E-commerce CEO Office",
-      },
-      {
-        id: 11,
-        title: "Generative AI: The Art of Prompt Engineering",
-        listItems: [
-          "NLP and LLM Fundamentals",
-          "Efficient Prompt Engineering",
-          "Automation using GenAI Tools",
-        ],
-        time: "Week 11",
-        para: "Building a YouTube Video Summarizer App",
-      },
-      {
-        id: 12,
-        title: "Mock Interviews & Portfolio Building",
-        listItems: [
-          "Building your Resume",
-          "Building your Project Portfolio",
-          "Business Analyst Interview Questions",
-        ],
-        time: "Week 12",
-        para: "Developing Digital Marketing Dashboard for a Fitness Brand",
-      },
-    ],
-    videoUrl: "https://www.youtube.com/embed/mctYPXz85CA?si=sM2oW7pLucnQgfIU",
-  },
-  {
-    heading: "ML Engineer Fellowship",
-    description:
-      "Unlock the power of Machine Learning with our comprehensive course! Learn key concepts, gain hands-on experience with popular tools, and build real-world projects. Propel your career forward in the dynamic field of ML at top companies like Fidelity, Swiggy, Zomato, etc",
-    dateOfStart: "October 19, 2024",
-    timeCommitment: "2.5 months",
-    cost: "₹7,999",
-    seatsLeft: 25,
-    sessionInsights: businessAnalystInsights,
-    id: "2",
-    actualcost: "₹16,999",
-    imgUrl: BusinessAnalystFellowshipCard,
-    razorPay: {
-      src: "https://checkout.razorpay.com/v1/payment-button.js",
-      paymentButtonId: "pl_OhyfCxUlrva95Q",
-    },
-    discount: "55% OFF",
-    EmiOptions: "EMI from ₹449/month available at checkout",
-    videoUrl: " https://www.youtube.com/watch?v=mctYPXz85CA&t=261s",
-    weekSchedule: [
-      {
-        id: 1,
-        title: "Business Fundamentals",
-        listItems: [
-          "Business Models and Customer Segmentation",
-          "Products, Value Proposition and Distribution Channels",
-          "Revenue Streams and Costs Models",
-        ],
-        time: "Week 1",
-        para: "Dissecting Business of Indian Unicorns",
-      },
-      {
-        id: 2,
-        title: "Problem Solving Approach",
-        listItems: [
-          "Structured Problem Solving Canva",
-          "Human Centered Solution Design",
-          "Stakeholders Communication",
-        ],
-        time: "Week 2",
-        para: "Designing an Data/AI Product",
-      },
-      {
-        id: 3,
-        title: "Intro to Statistics",
-        listItems: [
-          "Types of statistics: Descriptive vs. Inferential",
-          "Basic Probability Concepts & Distributions",
-          "Hypothesis Testing, p-Value, Correlation",
-        ],
-        time: "Week 3",
-        para: "Analyzing the Business Model of a Fashion Store",
-      },
-      {
-        id: 4,
-        title: "Product Design and Insights",
-        listItems: [
-          "Understanding Business Metrics to Optimize",
-          "Customer Cohort Analysis",
-          "Statistical Analysis for Launch Decisions",
-        ],
-        time: "Week 4",
-        para: "Launch Strategy for a New E-Commerce Fashion Store",
-      },
-      {
-        id: 5,
-        title: "Intro to MS-Excel & Python",
-        listItems: [
-          "Data Cleaning, Pivot Tables, & Lookup for Analysis",
-          "Python Programming Fundamentals",
-          "Data Manipulation using Pandas",
-        ],
-        time: "Week 5",
-        para: "Analyzing the Business Model of Banks",
-      },
-      {
-        id: 6,
-        title: "Business Insights with Python",
-        listItems: [
-          "Exploratory Data Analysis",
-          "Advanced Data Wrangling Techniques",
-          "Detailed Insights Report Writing for Stakeholders",
-        ],
-        time: "Week 6",
-        para: "Loan Application Quality Assessments for an NBFC",
-      },
-      {
-        id: 7,
-        title: "Intro to Machine Learning",
-        listItems: [
-          "Types: Supervised, Unsupervised, Reinforcement",
-          "Data and features; Training and testing datasets",
-          "Model Evaluation and Selection",
-        ],
-        time: "Week 7",
-        para: "Analyzing the Credit System of a Bank",
-      },
-      {
-        id: 8,
-        title: "Problem Solving with ML",
-        listItems: [
-          "Problem Solving with ML",
-          "Feature Engineering and Scaling",
-          "Production Grade Modelling Techniques",
-        ],
-        time: "Week 8",
-        para: "Credit Decision System for a Multinational Bank",
-      },
-      {
-        id: 9,
-        title: "Deploying ML Systems",
-        listItems: [
-          "MLOps - Batch vs Real Time Implementation",
-          "Feature Pipeline, Model Registry, and Inference Pipeline",
-          "Model Observability Techniques",
-        ],
-        time: "Week 9",
-        para: "User Demand Prediction Model for a Ride Sharing App",
-      },
-      {
-        id: 10,
-        title: "Mock Interviews & Portfolio Building",
-        listItems: [
-          "Building Project Portfolio & Optimizing your Resume",
-          "Business Study Interview Questions",
-          "Technical Interview Questions ",
-        ],
-        time: "Week 10",
-        para: "Exit Exam & Feedback",
-      },
-    ],
-  },
-  {
-    heading: "AI Engineer Fellowship",
-    description:
-      "Kickstart your AI career with our all-inclusive fellowship! Get hands-on experience, personalized mentorship, and exclusive networking. Work on cutting-edge projects and gear up for top roles at Google, Amazon, Microsoft, and more. Your AI future starts now!",
-    dateOfStart: "October 19, 2024",
-    timeCommitment: "3 months",
-    cost: "₹9,999",
-    seatsLeft: 25,
-    sessionInsights: businessAnalystInsights,
-    id: "3",
-    actualcost: "₹19,999",
-    imgUrl: BusinessAnalystFellowshipCard,
-
-    razorPay: {
-      src: "https://checkout.razorpay.com/v1/payment-button.js",
-      paymentButtonId: "pl_OhyfCxUlrva95Q",
-    },
-    discount: "50% OFF",
-    EmiOptions: "EMI from ₹449/month available at checkout",
-    videoUrl: "https://www.youtube.com/embed/md7C78glaGQ?si=3o-7rtKvM_sTg8gM",
-    weekSchedule: [
-      {
-        id: 1,
-        title: "Business Fundamentals",
-        listItems: [
-          "Business Models and Customer Segmentation",
-          "Products, Value Proposition and Distribution Channels",
-          "Revenue Streams and Costs Models",
-        ],
-        time: "Week 1",
-        para: "Dissecting Business of Indian Unicorns",
-      },
-      {
-        id: 2,
-        title: "Problem Solving Approach",
-        listItems: [
-          "Structured Problem Solving Canva",
-          "Human Centered Solution Design",
-          "Stakeholders Communication",
-        ],
-        time: "Week 2",
-        para: "Designing an Data/AI Product",
-      },
-      {
-        id: 3,
-        title: "Intro to Statistics",
-        listItems: [
-          "Types of statistics: Descriptive vs. Inferential",
-          "Basic Probability Concepts & Distributions",
-          "Hypothesis Testing, p-Value, Correlation",
-        ],
-        time: "Week 3",
-        para: "Analyzing the Business Model of a Fashion Store",
-      },
-      {
-        id: 4,
-        title: "Product Design and Insights",
-        listItems: [
-          "Understanding Business Metrics to Optimize",
-          "Customer Cohort Analysis",
-          "Statistical Analysis for Launch Decisions",
-        ],
-        time: "Week 4",
-        para: "Launch Strategy for a New E-Commerce Fashion Store",
-      },
-      {
-        id: 5,
-        title: "Intro to MS-Excel & Python",
-        listItems: [
-          "Data Cleaning, Pivot Tables, & Lookup for Analysis",
-          "Python Programming Fundamentals",
-          "Data Manipulation using Pandas",
-        ],
-        time: "Week 5",
-        para: "Analyzing the Business Model of Banks",
-      },
-      {
-        id: 6,
-        title: "Business Insights with Python",
-        listItems: [
-          "Exploratory Data Analysis",
-          "Advanced Data Wrangling Techniques",
-          "Detailed Insights Report Writing for Stakeholders",
-        ],
-        time: "Week 6",
-        para: "Loan Application Quality Assessments for an NBFC",
-      },
-      {
-        id: 7,
-        title: "Intro to Machine Learning",
-        listItems: [
-          "Types: Supervised, Unsupervised, Reinforcement",
-          "Data and features; Training and testing datasets",
-          "Model Evaluation and Selection",
-        ],
-        time: "Week 7",
-        para: "Analyzing the Credit System of a Bank",
-      },
-      {
-        id: 8,
-        title: "Problem Solving with ML",
-        listItems: [
-          "Problem Solving with ML",
-          "Feature Engineering and Scaling",
-          "Production Grade Modelling Techniques",
-        ],
-        time: "Week 8",
-        para: "Credit Decision System for a Multinational Bank",
-      },
-      {
-        id: 9,
-        title: "Deploying ML Systems",
-        listItems: [
-          "MLOps - Batch vs Real Time Implementation",
-          "Feature Pipeline, Model Registry, and Inference Pipeline",
-          "Model Observability Techniques",
-        ],
-        time: "Week 9",
-        para: "User Demand Prediction Model for a Ride Sharing App",
-      },
-      {
-        id: 10,
-        title: "Generative AI: Art of Prompt Engineering",
-        listItems: [
-          "NLP and LLM Fundamentals",
-          "Efficient Prompt Engineering",
-          "Automation using GenAI Tools",
-        ],
-        time: "Week 10",
-        para: "Building a YouTube Video Summarizer App",
-      },
-      {
-        id: 11,
-        title: "Generative AI: Building RAG Systems",
-        listItems: [
-          "Design RAG Systems",
-          "Agent Frameworks and Use case",
-          "Considerations for LLM Models in Production",
-        ],
-        time: "Week 11",
-        para: "Develop and Deploy an FAQBot for a Website",
-      },
-      {
-        id: 12,
-        title: "Mock Interviews & Portfolio Building",
-        listItems: [
-          "Building Project Portfolio & Optimizing your Resume",
-          "Business Study Interview Questions",
-          "Technical Interview Questions",
-        ],
-        time: "Week 12",
-        para: "Exit Exam & Feedback",
-      },
-    ],
-  },
-  {
     heading: "Data Scientist Fellowship",
     description:
       "Transform your career with our Data Scientist Fellowship! Master data analysis, machine learning, and real-world applications with expert mentorship and hands-on projects. Step into top roles at leading tech companies like Microsoft, Google, Amazon, etc",
@@ -1218,4 +778,321 @@ export const courseDetails: CourseDetail[] = [
       },
     ],
   },
+  {
+    heading: "AI Engineer Fellowship",
+    description:
+      "Kickstart your AI career with our all-inclusive fellowship! Get hands-on experience, personalized mentorship, and exclusive networking. Work on cutting-edge projects and gear up for top roles at Google, Amazon, Microsoft, and more. Your AI future starts now!",
+    dateOfStart: "October 19, 2024",
+    timeCommitment: "12 hours/week",
+    cost: "₹9,999",
+    seatsLeft: 25,
+    sessionInsights: businessAnalystInsights,
+    id: "3",
+    actualcost: "₹19,999",
+    imgUrl: BusinessAnalystFellowshipCard,
+
+    razorPay: {
+      src: "https://checkout.razorpay.com/v1/payment-button.js",
+      paymentButtonId: "pl_OhyfCxUlrva95Q",
+    },
+    discount: "50% OFF",
+    EmiOptions: "EMI from ₹485/month available at checkout",
+    videoUrl: "https://www.youtube.com/embed/md7C78glaGQ?si=3o-7rtKvM_sTg8gM",
+    weekSchedule: [
+      {
+        id: 1,
+        title: "Business Fundamentals",
+        listItems: [
+          "Business Models and Customer Segmentation",
+          "Products, Value Proposition and Distribution Channels",
+          "Revenue Streams and Costs Models",
+        ],
+        time: "Week 1",
+        para: "Dissecting Business of Indian Unicorns",
+      },
+      {
+        id: 2,
+        title: "Problem Solving Approach",
+        listItems: [
+          "Structured Problem Solving Canva",
+          "Human Centered Solution Design",
+          "Stakeholders Communication",
+        ],
+        time: "Week 2",
+        para: "Designing an Data/AI Product",
+      },
+      {
+        id: 3,
+        title: "Intro to Statistics",
+        listItems: [
+          "Types of statistics: Descriptive vs. Inferential",
+          "Basic Probability Concepts & Distributions",
+          "Hypothesis Testing, p-Value, Correlation",
+        ],
+        time: "Week 3",
+        para: "Analyzing the Business Model of a Fashion Store",
+      },
+      {
+        id: 4,
+        title: "Product Design and Insights",
+        listItems: [
+          "Understanding Business Metrics to Optimize",
+          "Customer Cohort Analysis",
+          "Statistical Analysis for Launch Decisions",
+        ],
+        time: "Week 4",
+        para: "Launch Strategy for a New E-Commerce Fashion Store",
+      },
+      {
+        id: 5,
+        title: "Intro to MS-Excel & Python",
+        listItems: [
+          "Data Cleaning, Pivot Tables, & Lookup for Analysis",
+          "Python Programming Fundamentals",
+          "Data Manipulation using Pandas",
+        ],
+        time: "Week 5",
+        para: "Analyzing the Business Model of Banks",
+      },
+      {
+        id: 6,
+        title: "Business Insights with Python",
+        listItems: [
+          "Exploratory Data Analysis",
+          "Advanced Data Wrangling Techniques",
+          "Detailed Insights Report Writing for Stakeholders",
+        ],
+        time: "Week 6",
+        para: "Loan Application Quality Assessments for an NBFC",
+      },
+      {
+        id: 7,
+        title: "Intro to Machine Learning",
+        listItems: [
+          "Types: Supervised, Unsupervised, Reinforcement",
+          "Data and features; Training and testing datasets",
+          "Model Evaluation and Selection",
+        ],
+        time: "Week 7",
+        para: "Analyzing the Credit System of a Bank",
+      },
+      {
+        id: 8,
+        title: "Problem Solving with ML",
+        listItems: [
+          "Problem Solving with ML",
+          "Feature Engineering and Scaling",
+          "Production Grade Modelling Techniques",
+        ],
+        time: "Week 8",
+        para: "Credit Decision System for a Multinational Bank",
+      },
+      {
+        id: 9,
+        title: "Deploying ML Systems",
+        listItems: [
+          "MLOps - Batch vs Real Time Implementation",
+          "Feature Pipeline, Model Registry, and Inference Pipeline",
+          "Model Observability Techniques",
+        ],
+        time: "Week 9",
+        para: "User Demand Prediction Model for a Ride Sharing App",
+      },
+      {
+        id: 10,
+        title: "Generative AI: Art of Prompt Engineering",
+        listItems: [
+          "NLP and LLM Fundamentals",
+          "Efficient Prompt Engineering",
+          "Automation using GenAI Tools",
+        ],
+        time: "Week 10",
+        para: "Building a YouTube Video Summarizer App",
+      },
+      {
+        id: 11,
+        title: "Generative AI: Building RAG Systems",
+        listItems: [
+          "Design RAG Systems",
+          "Agent Frameworks and Use case",
+          "Considerations for LLM Models in Production",
+        ],
+        time: "Week 11",
+        para: "Develop and Deploy an FAQBot for a Website",
+      },
+      {
+        id: 12,
+        title: "Mock Interviews & Portfolio Building",
+        listItems: [
+          "Building Project Portfolio & Optimizing your Resume",
+          "Business Study Interview Questions",
+          "Technical Interview Questions",
+        ],
+        time: "Week 12",
+        para: "Exit Exam & Feedback",
+      },
+    ],
+  },
+  {
+    heading: "Business Analyst Fellowship",
+    description:
+      "Kickstart your Business analyst career at top companies like Amazon, Dell, Swiggy etc. Gain hands-on experience, personalized mentorship, and exclusive networking while working on impactful projects. Your future in business analysis starts here!",
+    dateOfStart: "Jul, 2024",
+    timeCommitment: "10 hours/week",
+    cost: "₹10,499",
+    seatsLeft: 25,
+    sessionInsights: businessAnalystInsights,
+    id: "1",
+    actualcost: "₹19,999",
+    imgUrl: BusinessAnalystFellowshipCard,
+    razorPay: {
+      src: "https://checkout.razorpay.com/v1/payment-button.js",
+      paymentButtonId: "pl_OhyVw2SEjrbyw4",
+    },
+    discount: "45% OFF",
+    EmiOptions: "EMI from ₹499/month available at checkout",
+    weekSchedule: [
+      {
+        id: 1,
+        title: "Business Fundamentals",
+        listItems: [
+          "Business Models and Customer Segmentation",
+          "Products, Value Proposition and Distribution Channels",
+          "Revenue Streams and Costs Models",
+        ],
+        time: "Week 1",
+        para: "Dissecting Business of Indian Unicorns",
+      },
+      {
+        id: 2,
+        title: "Problem Solving Approach",
+        listItems: [
+          "Structured Problem Solving Canva",
+          "Human Centered Solution Design",
+          "Stakeholders Communication",
+        ],
+        time: "Week 2",
+        para: "Designing an Data/AI Product",
+      },
+      {
+        id: 3,
+        title: "Intro to SQL",
+        listItems: [
+          "Fundamental SQL Statements",
+          "Joins and Subqueries",
+          "Conditional and Case Statements",
+        ],
+        time: "Week 3",
+        para: "Deconstructing the Business of an E-Commerce Website",
+      },
+      {
+        id: 4,
+        title: "Business Analysis with SQL",
+        listItems: [
+          "Effective KPI Design Principles",
+          "KPI Trees and Impact Mapping",
+          "Advanced SQL Techniques for Production",
+        ],
+        time: "Week 4",
+        para: "Building Business Tracker for an E-commerce CEO Office",
+      },
+      {
+        id: 5,
+        title: "Intro to PowerBI",
+        listItems: [
+          "Data Preparation and Loading Data",
+          "Understanding Chart Types, Trends",
+          "Creating Dashboards",
+        ],
+        time: "Week 5",
+        para: "Building Business Tracker for an E-commerce CEO Office",
+      },
+      {
+        id: 6,
+        title: "Business Intelligence with PowerBI",
+        listItems: [
+          "Decision Funnel Understanding",
+          "Self Serve Dashboard Design Principles",
+          "Efficient Data Models for Speed and Accuracy",
+        ],
+        time: "Week 6",
+        para: "Developing Digital Marketing Dashboard for a Fitness Brand",
+      },
+      {
+        id: 7,
+        title: "Intro to Statistics",
+        listItems: [
+          "Types of statistics: Descriptive vs. Inferential",
+          "Basic Probability Concepts & Distributions",
+          "Hypothesis Testing, p-Value, Correlation",
+        ],
+        time: "Week 7",
+        para: "Analyzing the Business Model of a Fashion Store",
+      },
+      {
+        id: 8,
+        title: "Product Design and Insights",
+        listItems: [
+          "Understanding Business Metrics to Optimize",
+          "Customer Cohort Analysis",
+          "Statistical Analysis for Launch Decisions",
+        ],
+        time: "Week 8",
+        para: "Designing Launch Strategy for a New E-Commerce Fashion Store",
+      },
+      {
+        id: 9,
+        title: "Intro to MS-Excel & Python",
+        listItems: [
+          "Data Cleaning Techniques in Excel",
+          "PivotTable, Grouping, & Lookup Functions for Data Analysis in Excel",
+          "Python Programming Fundamentals",
+          "Data Manipulation using Pandas",
+        ],
+        time: "Week 9",
+        para: "Developing Digital Marketing Dashboard for a Fitness Brand",
+      },
+      {
+        id: 10,
+        title: "Business Insights with Python & Excel",
+        listItems: [
+          "Exploratory Data Analysis",
+          "Advanced Data Wrangling Techniques",
+          "Detailed Insights Report Writing for Stakeholders",
+        ],
+        time: "Week 10",
+        para: "Building Business Tracker for an E-commerce CEO Office",
+      },
+      {
+        id: 11,
+        title: "Generative AI: The Art of Prompt Engineering",
+        listItems: [
+          "NLP and LLM Fundamentals",
+          "Efficient Prompt Engineering",
+          "Automation using GenAI Tools",
+        ],
+        time: "Week 11",
+        para: "Building a YouTube Video Summarizer App",
+      },
+      {
+        id: 12,
+        title: "Mock Interviews & Portfolio Building",
+        listItems: [
+          "Building your Resume",
+          "Building your Project Portfolio",
+          "Business Analyst Interview Questions",
+        ],
+        time: "Week 12",
+        para: "Developing Digital Marketing Dashboard for a Fitness Brand",
+      },
+    ],
+    videoUrl: "https://www.youtube.com/embed/mctYPXz85CA?si=sM2oW7pLucnQgfIU",
+  },
+];
+
+export const FellowshipImages = [
+  HiringManager,
+  CourseCard,
+  Mentorship,
+  Community,
 ];

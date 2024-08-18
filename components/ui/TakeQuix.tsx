@@ -28,10 +28,18 @@ const TakeQuiz = () => {
             <p className="text-white font-Plus-jakarta text-xl font-medium cursor-pointer">
               Take the Descrip Quiz
             </p>
-            <Image src={QuizArrow} alt="right arrow" width={30} height={30} priority />
+            <Image
+              src={QuizArrow}
+              alt="right arrow"
+              width={30}
+              height={30}
+              priority
+            />
           </Link>
         </div>
-        <Image src={QuizLogo} alt="Logo" width={330} height={75} priority />
+        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSek560yqpVAo_JLnyf8BOw88AN4fdUC4XQ0qIQo83VajddFXw/viewform">
+          <Image src={QuizLogo} alt="Logo" width={330} height={75} priority />
+        </Link>
       </div>
     </div>
   );

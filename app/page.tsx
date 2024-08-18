@@ -19,7 +19,6 @@ const Home: React.FC = () => {
         <CareerSection />
         <HorizontalLine />
         <Cta />
-        <FullHorizontalLine />
       </div>
     </main>
   );

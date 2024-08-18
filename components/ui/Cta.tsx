@@ -11,8 +11,13 @@ const Cta = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!/^\d{10}$/.test(phoneNumber)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
     try {
-      // const base_url = process.env.NEXT_PUBLIC_BASE_URL as string;
       const res = await fetch(`/api/user`, {
         method: "POST",
         headers: {
@@ -22,7 +27,7 @@ const Cta = () => {
       });
 
       if (res.ok) {
-        alert("Your callback request has been sent!");
+        alert("We’ve received your request. Our mentor will connect with you within the next 24 hours!");
         setFullName("");
         setPhoneNumber("");
         setIsOpen(false);
@@ -58,11 +63,11 @@ const Cta = () => {
           onClick={() => setIsOpen(true)}
           className="flex items-center px-4 py-2 space-x-2 text-black bg-blue-400 hover:bg-blue-500 rounded-xl box-shadow"
         >
-          <span className="font-medium">Request a call back</span>
+          <span className="font-medium">Request a Call back</span>
           <Image src={Phone} alt="Phone icon" width={24} height={24} priority />
         </button>
         <Link
-          href="https://wa.me/918179102369"
+          href="https://wa.me/917019156736"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center px-4 py-2 space-x-2 text-white bg-green-500 hover:bg-green-600 rounded-xl shadow-md box-shadow"
@@ -75,7 +80,7 @@ const Cta = () => {
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
-            <h3 className="text-2xl font-bold mb-4">Request a Call Back</h3>
+            <h3 className="text-2xl font-bold mb-4">Book Your Free 30-Minute Career Guidance Session</h3>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-bold mb-2">

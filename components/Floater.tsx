@@ -1,7 +1,7 @@
 "use client";
+import { useEffect } from "react";
 import { CourseDetail, courseDetails } from "@/constants";
 import { cleanUpSlug } from "@/utils";
-import React from "react";
 import { useParams } from "next/navigation";
 
 const FloatingBar = () => {
@@ -12,6 +12,26 @@ const FloatingBar = () => {
   const course: CourseDetail | undefined = courseDetails.find(
     (course) => cleanUpSlug(course.heading) === cleanedSlug
   );
+
+  useEffect(() => {
+    if (!course || !course.razorPay?.paymentButtonId) return;
+
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/payment-button.js";
+    script.setAttribute("data-payment_button_id", course.razorPay.paymentButtonId);
+    script.async = true;
+
+    const container = document.getElementById("razorpay-button-container-floating");
+    if (container) {
+      container.appendChild(script);
+    }
+
+    return () => {
+      if (container && container.contains(script)) {
+        container.removeChild(script);
+      }
+    };
+  }, [course]);
 
   if (!course) {
     return <div>Course not found</div>;
@@ -56,10 +76,9 @@ const FloatingBar = () => {
           <span className="absolute -top-2 md:-top-3 -left-2 md:-left-4 bg-green-500 text-white text-[8px] sm:text-[10px] md:text-xs font-semibold rounded-full px-1 sm:px-2 py-[2px] z-30">
             {course.seatsLeft} (Filling fast)
           </span>
-          <button className="ml-2 sm:ml-4 md:ml-8 px-3 sm:px-4 md:px-6 py-1 sm:py-2 bg-white text-black-primary font-semibold rounded-md flex items-center space-x-1 sm:space-x-2 relative z-10">
-            <span className="text-xs sm:text-sm md:text-base">Enroll now</span>
-            <span className="text-xs sm:text-sm md:text-base">→</span>
-          </button>
+          <form id="razorpay-button-container-floating" className="ml-2 sm:ml-4 md:ml-8 relative z-10">
+            {/* Razorpay button script will be appended here */}
+          </form>
         </div>
       </div>
     </div>

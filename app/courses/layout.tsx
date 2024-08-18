@@ -20,7 +20,6 @@ export default function CourseLayout({
         <Accomplishments />
         <HorizontalLine />
         <FaqSection />
-        <HorizontalLine />
       </div>
     </section>
   );

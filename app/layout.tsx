@@ -3,12 +3,13 @@ import "./globals.css";
 import { plus_jakarta } from "./fonts";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import HorizontalLine from "@/components/ui/HorizontalLine";
 
 export const metadata: Metadata = {
   title: {
     template: "%s | Descipr | Become a 360-degree AI Professional",
-    default: "Decipr",
-    absolute: "Decipr",
+    default: "Descipr",
+    absolute: "Descipr",
   },
   description:
     "Unlock your AI potential with our Fellowships led by Hiring managers. Gain personalized guidance, tackle job-simulation projects, and join a supportive community. Start now to fast-track your AI career!",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   openGraph: {
-    title: "Decipr | Become a 360-degree AI Professional",
+    title: "Descipr | Become a 360-degree AI Professional",
     description:
       "Unlock your AI potential with our Fellowships led by Hiring managers. Gain personalized guidance, tackle job-simulation projects, and join a supportive community. Start now to fast-track your AI career!",
     url: "https://deciphr.vercel.app/",
@@ -44,6 +45,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <HorizontalLine />
         <Footer />
       </body>
     </html>
