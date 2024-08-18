@@ -14,11 +14,13 @@ import {
   ExportData,
   FarzandKhan,
   Gaurav_Kumar,
+  generativeModel,
   HiringManager,
   instagramIcon,
   Interview,
   JobSimulation,
   KshitjiJha,
+  largeLanguageModel,
   linkedIcon,
   LiveClasses,
   LiveSession,
@@ -27,7 +29,9 @@ import {
   Mentorship,
   MentorshipIcon,
   MlEngineeringCard,
+  MlLibrary,
   MockInterview,
+  ModelBuilding,
   MsExcel,
   PeerLearning,
   Portfolio,
@@ -44,6 +48,7 @@ import {
   Statistcs,
   Suryansh_abijith,
   TanoyDewanjee,
+  transformers,
   twitterIcon,
   VasuBhasin,
   youtubeIcon,
@@ -100,9 +105,10 @@ export interface CourseCardProps {
   date: string;
 }
 
-interface ListItem {
+export interface ListItem {
   label: string;
   email?: string;
+  href?: string;
 }
 
 export interface SocialLink {
@@ -152,14 +158,14 @@ export interface CourseDetail {
   EmiOptions: string;
   weekSchedule?: LearningCardData[];
   videoUrl: string;
+  learning: DesciprDiffernceProps[];
+  tools: DesciprDiffernceProps[];
 }
 
 export const companyList: ListItem[] = [
   { label: "About Us" },
   { label: "Blogs" },
   { label: "Podcasts" },
-  { label: "Privacy Policy" },
-  { label: "Terms of Use" },
 ];
 
 export const socialLinks: SocialLink[] = [
@@ -605,7 +611,7 @@ export const courseDetails: CourseDetail[] = [
     heading: "Data Scientist Fellowship",
     description:
       "Transform your career with our Data Scientist Fellowship! Master data analysis, machine learning, and real-world applications with expert mentorship and hands-on projects. Step into top roles at leading tech companies like Microsoft, Google, Amazon, etc",
-    dateOfStart: "October 19, 2024",
+    dateOfStart: "Oct 19, 2024",
     timeCommitment: "3.5 months",
     cost: "₹11,999",
     seatsLeft: 25,
@@ -645,69 +651,69 @@ export const courseDetails: CourseDetail[] = [
       },
       {
         id: 3,
-        title: "Intro to SQL",
+        title: "Intro to Analytics with SQL",
         listItems: [
-          "Fundamental SQL Statements",
+          "Relational data base & SQL syntax",
           "Joins and Subqueries",
           "Conditional and Case Statements",
         ],
         time: "Week 3",
-        para: "Deconstructing the Business of an E-Commerce Website",
+        para: "Grocery E-commerce Performance Analysis",
       },
       {
         id: 4,
-        title: "Business Analysis with SQL",
+        title: "Advanced Business Analysis with SQL",
         listItems: [
           "Effective KPI Design Principles",
           "KPI Trees and Impact Mapping",
           "Advanced SQL Techniques for Production",
         ],
         time: "Week 4",
-        para: "Building Business Tracker for an E-commerce CEO Office",
+        para: "Business Review Tracker for CEO Office",
       },
       {
         id: 5,
-        title: "Intro to PowerBI",
+        title: "Intro to Visualization with PowerBI",
         listItems: [
-          "Data Preparation and Loading Data",
+          "Understanding Data Models & Relationships",
           "Understanding Chart Types, Trends",
           "Creating Dashboards",
         ],
         time: "Week 5",
-        para: "Building Business Tracker for an E-commerce CEO Office",
+        para: "E-Commerce Store Google Analytics",
       },
       {
         id: 6,
-        title: "Business Intelligence with PowerBI",
+        title: "Advanced Business Intelligence with PowerBI",
         listItems: [
           "Decision Funnel Understanding",
           "Self Serve Dashboard Design Principles",
           "Efficient Data Models for Speed and Accuracy",
         ],
         time: "Week 6",
-        para: "Developing Digital Marketing Dashboard for a Fitness Brand",
+        para: "Marketing Dashboard for a D2C Fitness Brand",
       },
       {
         id: 7,
-        title: "Intro to Statistics",
+        title: "Essential Statistics for Business Insights",
         listItems: [
           "Types of statistics: Descriptive vs. Inferential",
           "Basic Probability Concepts & Distributions",
           "Hypothesis Testing, p-Value, Correlation",
         ],
         time: "Week 7",
-        para: "Analyzing the Business Model of a Fashion Store",
+        para: "Assortment Analysis for a Quick Commerce Company",
       },
       {
         id: 8,
-        title: "Product Design and Insights",
+        title: "Feature Design and Insights with A/B Testing",
         listItems: [
           "Understanding Business Metrics to Optimize",
           "Customer Cohort Analysis",
           "Statistical Analysis for Launch Decisions",
         ],
         time: "Week 8",
-        para: "Designing Launch Strategy for a New E-Commerce Fashion Store",
+        para: "Launch Strategy for a Lifestyle Brand’s Landing Page",
       },
       {
         id: 9,
@@ -719,70 +725,116 @@ export const courseDetails: CourseDetail[] = [
           "Data Manipulation using Pandas",
         ],
         time: "Week 9",
-        para: "Developing Digital Marketing Dashboard for a Fitness Brand",
+        para: "Assortment Analysis for a Quick Commerce Company",
       },
       {
         id: 10,
-        title: "Business Insights with Python & Excel",
+        title: "Advanced Business Insights with Python",
         listItems: [
           "Exploratory Data Analysis",
           "Advanced Data Wrangling Techniques",
           "Detailed Insights Report Writing for Stakeholders",
         ],
         time: "Week 10",
-        para: "Building Business Tracker for an E-commerce CEO Office",
+        para: "Loan Application Quality Assessment for an NBFC",
       },
       {
         id: 11,
-        title: "Intro to LLMs and Gen AI",
+        title: "Fundamentals of Machine Learning",
         listItems: [
-          "Introduction to Neural Networks",
-          "Gen AI - Key concepts and applications",
-          "Real-world applications and innovations",
+          "Problem Scope Definition & Evaluation Framework",
+          "Exploratory Data Analysis",
+          "Feature Engineering & Scaling",
         ],
         time: "Week 11",
-        para: "Building a YouTube Video Summarizer App",
+        para: "Credit Decisioning System for an NBFC",
       },
       {
         id: 12,
+        title: "Advanced Machine Learning Techniques",
+        listItems: [
+          "Ensemble Learning – Bagging/Boosting",
+          "Hyperparameter Tuning – Grid Search",
+          "Optimizing for Accuracy & Explainability",
+        ],
+        time: "Week 12",
+        para: "Valued Shopper Retention in E-Commerce",
+      },
+      {
+        id: 13,
+        title: "Fundamentals of Deep Learning",
+        listItems: [
+          "Layers and Architectures",
+          "Backpropagation & Gradient Descent",
+          "Sequential Modeling Techniques (RNN, LSTM)",
+        ],
+        time: "Week 13",
+        para: "Brand’s Social Listening from X (Twitter) feed",
+      },
+      {
+        id: 14,
         title: "Generative AI: The Art of Prompt Engineering",
         listItems: [
           "NLP and LLM Fundamentals",
           "Efficient Prompt Engineering",
-          "Automation using GenAI Tools",
-        ],
-        time: "Week 12",
-        para: "Building a YouTube Video Summarizer App",
-      },
-      {
-        id: 13,
-        title: "Generative AI: Building RAG Systems",
-        listItems: [
-          "Design RAG Systems",
-          "Agent Frameworks and Use case",
-          "Considerations for LLM Models in Production",
-        ],
-        time: "Week 13",
-        para: "Develop and Deploy an FAQBot for a Website",
-      },
-      {
-        id: 14,
-        title: "Mock Interviews & Portfolio Building",
-        listItems: [
-          "Building Project Portfolio & Optimizing your Resume",
-          "Business Study Interview Questions",
-          "Technical Interview Questions",
+          "Working with OpenAI and Opensource LLM Models",
         ],
         time: "Week 14",
-        para: "Exit Exam & Feedback",
+        para: "Negative News Screener for Fraud Alerts",
       },
+      {
+        id: 15,
+        title: "Generative AI: Building RAG Systems",
+        listItems: [
+          "Understanding RAG Architecture",
+          "Design & Implement RAG Pipeline",
+          "Finetune and Evaluate Model Performance",
+        ],
+        time: "Week 15",
+        para: "Develop and Deploy an Privacy for a Website",
+      },
+      {
+        id: 16,
+        title: "Interview Prep & Portfolio Building",
+        listItems: [
+          "Building Project Portfolio & Optimizing your Resume",
+          "Business Case Study Interview Questions",
+          "Technical Interview Questions",
+        ],
+        time: "Week 16",
+        para: "Exit Exam, Resume Feedback, & Mock Interviews",
+      },
+    ],
+    learning: [
+      {
+        src: ProblemSolving,
+        alt: "Image 1",
+        title: "Problem Solving Frameworks",
+      },
+      {
+        src: BusinessFundamentals,
+        alt: "Image 1",
+        title: "Business Fundamentals",
+      },
+      { src: ModelBuilding, alt: "Image 1", title: "Model Building" },
+      {
+        src: largeLanguageModel,
+        alt: "Image 1",
+        title: "Large Language Models",
+      },
+    ],
+    tools: [
+      { src: python, alt: "Image 1", title: "Python" },
+      { src: MsExcel, alt: "Image 1", title: "MS Excel" },
+      { src: MlLibrary, alt: "Image 1", title: "ML Libraries" },
+      { src: generativeModel, alt: "Image 1", title: "Generative Models" },
     ],
   },
   {
     heading: "AI Engineer Fellowship",
     description:
       "Kickstart your AI career with our all-inclusive fellowship! Get hands-on experience, personalized mentorship, and exclusive networking. Work on cutting-edge projects and gear up for top roles at Google, Amazon, Microsoft, and more. Your AI future starts now!",
-    dateOfStart: "October 19, 2024",
+    dateOfStart: "Oct 19, 2024",
     timeCommitment: "12 hours/week",
     cost: "₹9,999",
     seatsLeft: 25,
@@ -823,18 +875,18 @@ export const courseDetails: CourseDetail[] = [
       },
       {
         id: 3,
-        title: "Intro to Statistics",
+        title: "Essential Statistics for Business Insights",
         listItems: [
           "Types of statistics: Descriptive vs. Inferential",
           "Basic Probability Concepts & Distributions",
           "Hypothesis Testing, p-Value, Correlation",
         ],
         time: "Week 3",
-        para: "Analyzing the Business Model of a Fashion Store",
+        para: "Assortment Analysis for a Quick Commerce Company",
       },
       {
         id: 4,
-        title: "Product Design and Insights",
+        title: "Feature Design and Insights with A/B Testing",
         listItems: [
           "Understanding Business Metrics to Optimize",
           "Customer Cohort Analysis",
@@ -852,11 +904,11 @@ export const courseDetails: CourseDetail[] = [
           "Data Manipulation using Pandas",
         ],
         time: "Week 5",
-        para: "Analyzing the Business Model of Banks",
+        para: "Assortment Analysis for a Quick Commerce Company",
       },
       {
         id: 6,
-        title: "Business Insights with Python",
+        title: "Advanced Business Insights with Python",
         listItems: [
           "Exploratory Data Analysis",
           "Advanced Data Wrangling Techniques",
@@ -867,70 +919,94 @@ export const courseDetails: CourseDetail[] = [
       },
       {
         id: 7,
-        title: "Intro to Machine Learning",
+        title: "Fundamentals of Machine Learning",
         listItems: [
-          "Types: Supervised, Unsupervised, Reinforcement",
-          "Data and features; Training and testing datasets",
-          "Model Evaluation and Selection",
+          "Problem Scope Definition & Evaluation Framework",
+          "Exploratory Data Analysis",
+          "Feature Engineering & Scaling",
         ],
         time: "Week 7",
-        para: "Analyzing the Credit System of a Bank",
+        para: "Credit Decisioning System for an NBFC",
       },
       {
         id: 8,
-        title: "Problem Solving with ML",
+        title: "Advanced Machine Learning Techniques",
         listItems: [
-          "Problem Solving with ML",
-          "Feature Engineering and Scaling",
-          "Production Grade Modelling Techniques",
+          "Ensemble Learning – Bagging/Boosting",
+          "Hyperparameter Tuning – Grid Search",
+          "Optimizing for Accuracy & Explainability",
         ],
         time: "Week 8",
-        para: "Credit Decision System for a Multinational Bank",
+        para: "Valued Shopper Retention in E-Commerce",
       },
       {
         id: 9,
-        title: "Deploying ML Systems",
+        title: "Fundamentals of Deep Learning",
         listItems: [
-          "MLOps - Batch vs Real Time Implementation",
-          "Feature Pipeline, Model Registry, and Inference Pipeline",
-          "Model Observability Techniques",
+          "Layers and Architectures",
+          "Backpropagation & Gradient Descent",
+          "Sequential Modeling Techniques (RNN, LSTM)",
         ],
         time: "Week 9",
-        para: "User Demand Prediction Model for a Ride Sharing App",
+        para: "Brand’s Social Listening from X (Twitter) feed",
       },
       {
         id: 10,
-        title: "Generative AI: Art of Prompt Engineering",
+        title: "Generative AI: The Art of Prompt Engineering",
         listItems: [
           "NLP and LLM Fundamentals",
           "Efficient Prompt Engineering",
-          "Automation using GenAI Tools",
+          "Working with OpenAI and Opensource LLM Models",
         ],
         time: "Week 10",
-        para: "Building a YouTube Video Summarizer App",
+        para: "Negative News Screener for Fraud Alerts",
       },
       {
         id: 11,
         title: "Generative AI: Building RAG Systems",
         listItems: [
-          "Design RAG Systems",
-          "Agent Frameworks and Use case",
-          "Considerations for LLM Models in Production",
+          "Understanding RAG Architecture",
+          "Design & Implement RAG Pipeline",
+          "Finetune and Evaluate Model Performance",
         ],
         time: "Week 11",
-        para: "Develop and Deploy an FAQBot for a Website",
+        para: "Develop and Deploy an Privacy for a Website",
       },
       {
         id: 12,
-        title: "Mock Interviews & Portfolio Building",
+        title: "Interview Prep & Portfolio Building",
         listItems: [
           "Building Project Portfolio & Optimizing your Resume",
           "Business Study Interview Questions",
           "Technical Interview Questions",
         ],
         time: "Week 12",
-        para: "Exit Exam & Feedback",
+        para: "Exit Exam, Resume Feedback, & Mock Interviews",
       },
+    ],
+    learning: [
+      {
+        src: ProblemSolving,
+        alt: "Image 1",
+        title: "Problem Solving Frameworks",
+      },
+      {
+        src: BusinessFundamentals,
+        alt: "Image 1",
+        title: "Business Fundamentals",
+      },
+      { src: transformers, alt: "Image 1", title: "Transformer Concepts" },
+      {
+        src: largeLanguageModel,
+        alt: "Image 1",
+        title: "Large Language Models",
+      },
+    ],
+    tools: [
+      { src: python, alt: "Image 1", title: "Python" },
+      { src: MsExcel, alt: "Image 1", title: "MS Excel" },
+      { src: MlLibrary, alt: "Image 1", title: "ML Libraries" },
+      { src: generativeModel, alt: "Image 1", title: "Generative Models" },
     ],
   },
   {
@@ -976,73 +1052,73 @@ export const courseDetails: CourseDetail[] = [
       },
       {
         id: 3,
-        title: "Intro to SQL",
+        title: "Intro to Analytics with SQL",
         listItems: [
-          "Fundamental SQL Statements",
+          "Relational data base & SQL syntax",
           "Joins and Subqueries",
           "Conditional and Case Statements",
         ],
         time: "Week 3",
-        para: "Deconstructing the Business of an E-Commerce Website",
+        para: "Grocery E-commerce Performance Analysis",
       },
       {
         id: 4,
-        title: "Business Analysis with SQL",
+        title: "Advanced Business Analysis with SQL",
         listItems: [
           "Effective KPI Design Principles",
           "KPI Trees and Impact Mapping",
           "Advanced SQL Techniques for Production",
         ],
         time: "Week 4",
-        para: "Building Business Tracker for an E-commerce CEO Office",
+        para: "Business Review Tracker for CEO Office",
       },
       {
         id: 5,
-        title: "Intro to PowerBI",
+        title: "Intro to Visualization with PowerBI",
         listItems: [
-          "Data Preparation and Loading Data",
+          "Understanding Data Models & Relationships",
           "Understanding Chart Types, Trends",
           "Creating Dashboards",
         ],
         time: "Week 5",
-        para: "Building Business Tracker for an E-commerce CEO Office",
+        para: "E-Commerce Store Google Analytics",
       },
       {
         id: 6,
-        title: "Business Intelligence with PowerBI",
+        title: "Advanced Business Intelligence with PowerBI",
         listItems: [
           "Decision Funnel Understanding",
           "Self Serve Dashboard Design Principles",
           "Efficient Data Models for Speed and Accuracy",
         ],
         time: "Week 6",
-        para: "Developing Digital Marketing Dashboard for a Fitness Brand",
+        para: "Marketing Dashboard for a D2C Fitness Brand",
       },
       {
         id: 7,
-        title: "Intro to Statistics",
+        title: "Essential Statistics for Business Insights",
         listItems: [
           "Types of statistics: Descriptive vs. Inferential",
           "Basic Probability Concepts & Distributions",
           "Hypothesis Testing, p-Value, Correlation",
         ],
         time: "Week 7",
-        para: "Analyzing the Business Model of a Fashion Store",
+        para: "Assortment Analysis for a Quick Commerce Company",
       },
       {
         id: 8,
-        title: "Product Design and Insights",
+        title: "Feature Design and Insights with A/B Testing",
         listItems: [
           "Understanding Business Metrics to Optimize",
           "Customer Cohort Analysis",
           "Statistical Analysis for Launch Decisions",
         ],
         time: "Week 8",
-        para: "Designing Launch Strategy for a New E-Commerce Fashion Store",
+        para: "Launch Strategy for a Lifestyle Brand’s Landing Page",
       },
       {
         id: 9,
-        title: "Intro to MS-Excel & Python",
+        title: "Intro to Insights with MS-Excel & Python",
         listItems: [
           "Data Cleaning Techniques in Excel",
           "PivotTable, Grouping, & Lookup Functions for Data Analysis in Excel",
@@ -1050,18 +1126,18 @@ export const courseDetails: CourseDetail[] = [
           "Data Manipulation using Pandas",
         ],
         time: "Week 9",
-        para: "Developing Digital Marketing Dashboard for a Fitness Brand",
+        para: "Assortment Analysis for a Quick Commerce Company",
       },
       {
         id: 10,
-        title: "Business Insights with Python & Excel",
+        title: "Advanced Business Insights with Python",
         listItems: [
           "Exploratory Data Analysis",
           "Advanced Data Wrangling Techniques",
           "Detailed Insights Report Writing for Stakeholders",
         ],
         time: "Week 10",
-        para: "Building Business Tracker for an E-commerce CEO Office",
+        para: "Loan Application Quality Assessment for an NBFC",
       },
       {
         id: 11,
@@ -1069,22 +1145,46 @@ export const courseDetails: CourseDetail[] = [
         listItems: [
           "NLP and LLM Fundamentals",
           "Efficient Prompt Engineering",
-          "Automation using GenAI Tools",
+          "Working with OpenAI and Opensource LLM Models",
         ],
         time: "Week 11",
-        para: "Building a YouTube Video Summarizer App",
+        para: "Negative News Screener for Fraud Alerts",
       },
       {
         id: 12,
-        title: "Mock Interviews & Portfolio Building",
+        title: "Interview Prep & Portfolio Building",
         listItems: [
           "Building your Resume",
           "Building your Project Portfolio",
-          "Business Analyst Interview Questions",
+          "Technical Interview Questions",
         ],
         time: "Week 12",
-        para: "Developing Digital Marketing Dashboard for a Fitness Brand",
+        para: "Exit Exam, Resume Feedback, & Mock Interviews",
       },
+    ],
+    learning: [
+      {
+        src: ProblemSolving,
+        alt: "Image 1",
+        title: "Problem Solving Frameworks",
+      },
+      {
+        src: BusinessFundamentals,
+        alt: "Image 1",
+        title: "Business Fundamentals",
+      },
+      { src: Statistcs, alt: "Image 1", title: "Statistics" },
+      {
+        src: ExportData,
+        alt: "Image 1",
+        title: "Exploratory Data Analysis (EDA)",
+      },
+    ],
+    tools: [
+      { src: python, alt: "Image 1", title: "Python" },
+      { src: MsExcel, alt: "Image 1", title: "MS Excel" },
+      { src: sql, alt: "Image 1", title: "SQL" },
+      { src: PowerBi, alt: "Image 1", title: "PowerBI" },
     ],
     videoUrl: "https://www.youtube.com/embed/mctYPXz85CA?si=sM2oW7pLucnQgfIU",
   },

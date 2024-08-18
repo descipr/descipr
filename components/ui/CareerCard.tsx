@@ -5,7 +5,7 @@ import Image from "next/image";
 const CareerCard = ({ imageUrl, title, description, background }: CardData) => {
     return (
         <div
-            className="flex flex-col max-w-md p-4 pb-8 space-y-4 rounded-xl shadow-md overflow-hidden h-full"
+            className="flex flex-col max-w-md p-4 pb-8 space-y-4 rounded-xl shadow-md overflow-hidden h-full "
             style={{ backgroundColor: background }}
         >
             <div className="flex ">

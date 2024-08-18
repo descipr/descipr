@@ -2,11 +2,10 @@ import React from "react";
 import Image from "next/image";
 import { socialLinks } from "@/constants";
 
-
 const FollowUs: React.FC = () => {
   return (
     <div className="flex flex-col text-left text-white space-y-4">
-      <h4 className="font-semibold text-md">Follow Us</h4>
+      <h3 className=" font-normal sm:font-semibold text-md">Follow Us</h3>
       <ul className="flex flex-col space-y-2">
         {socialLinks.map((link, index) => (
           <li

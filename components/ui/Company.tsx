@@ -5,7 +5,7 @@ import React from "react";
 const Company: React.FC = () => {
   return (
     <div className="flex flex-col text-left text-white space-y-4">
-      <h4 className="font-semibold text-md">Company</h4>
+      <h3 className="font-normal sm:font-semibold text-md">Company</h3>
       <ul className="flex flex-col space-y-2">
         {companyList.map((item, index) => (
           <li key={index} className="text-xs font-light">
@@ -13,12 +13,18 @@ const Company: React.FC = () => {
           </li>
         ))}
         <li className="text-xs font-light">
+          <Link href="/Privacy%Policy">Privacy Policy</Link>
+        </li>
+        <li className="text-xs font-light">
+          <Link href="/Terms%of%Use">Terms of Use</Link>
+        </li>
+        <li className="text-xs font-light">
           <Link
             href={`mailto:hello@descipr.com?subject=${encodeURIComponent(
-              "contact us"
+              "Contact us"
             )}`}
           >
-            contact us
+            Contact us
           </Link>
         </li>
       </ul>

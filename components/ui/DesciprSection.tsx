@@ -11,11 +11,11 @@ const DesciprSection = () => {
               src={item.src}
               alt={item.alt}
               key={index}
-              width={40}
-              height={40}
+              width={48}
+              height={48}
               priority
             />
-            <p className="text-white text-sm font-light font-Plus-jakarta">{item.title}</p>
+            <p className="text-white text-md font-light font-Plus-jakarta">{item.title}</p>
           </div>
         ))}
       </div>

@@ -63,6 +63,11 @@ import Lochan_raj from "@/public/Images/Lochan_raj.jpg";
 import Suryansh_abijith from "@/public/Images/suryansh_abijith.jpg"
 import Sampath_vinayak from "@/public/Images/sampath_vinayak.jpg"
 import Sayan_paul from "@/public/Images/Sayan_paul.jpg"
+import transformers from "@/public/Images/Transformers.png"
+import largeLanguageModel from "@/public/Images/LLMs.png"
+import ModelBuilding from "@/public/Images/ML Models.png"
+import MlLibrary from "@/public/Images/ML Libraries.png"
+import generativeModel from "@/public/Images/Generative Models.png"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -142,5 +147,10 @@ export {
   FarzandKhan,
   Lochan_raj,
   Suryansh_abijith,
-  Sampath_vinayak
+  Sampath_vinayak,
+  transformers,
+  largeLanguageModel,
+  ModelBuilding,
+  MlLibrary,
+  generativeModel
 };

@@ -22,7 +22,7 @@ const DesciprFellowSection = () => {
 
   if (isMobile) {
     return (
-      <section className="section-style">
+      <section className="container mx-auto px-4 py-4 md:py-8 flex flex-col items-center space-y-4 md:space-y-8">
         <div className="flex flex-col space-y-1 items-center justify-center">
           <h2 className="heading text-white">
             Become a <span className="text-blue-Textprimary">Descipr Fellow</span> and

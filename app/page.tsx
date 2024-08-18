@@ -3,7 +3,6 @@ import DesciprFellowSection from "@/components/DesciprFellowSection";
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
 import Cta from "@/components/ui/Cta";
-import FullHorizontalLine from "@/components/ui/FullHorizontalLine";
 import HorizontalLine from "@/components/ui/HorizontalLine";
 
 const Home: React.FC = () => {
