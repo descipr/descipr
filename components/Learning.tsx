@@ -59,7 +59,7 @@ const Learning = ({ courseDetails }: LearningProps) => {
   };
 
   return (
-    <section className="section-style">
+    <section className="section-style items-center">
       <h2 className="heading text-white">
         What Will<span className="text-blue-Textprimary"> You Learn</span>
       </h2>
@@ -68,7 +68,7 @@ const Learning = ({ courseDetails }: LearningProps) => {
         onClick={handleDownloadClick}
         className="flex items-center px-4 py-2 space-x-2 text-white bg-[#ACC2FA] hover:bg-blue-500 rounded-xl shadow-md box-shadow"
       >
-        <span className="flex items-center justify-center text-black-primary text-center font-bold text-lg">
+        <span className="flex items-center  justify-center text-black-primary text-center font-bold text-lg">
           Download Detailed Curriculum and Course Timelines
         </span>
         <Image
