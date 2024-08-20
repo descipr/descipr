@@ -56,7 +56,7 @@ const FloatingBar = () => {
             Cohort starts
           </span>
           <span className="text-sm sm:text-base md:text-lg font-semibold">
-            {course.dateOfStart}
+            {course.floatingBar}
           </span>
         </div>
 

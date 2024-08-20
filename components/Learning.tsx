@@ -1,9 +1,10 @@
 "use client";
-import { useState, ChangeEvent, FormEvent } from "react";
-import LearningCardSection from "./ui/LearningCardSection";
+import { useState, ChangeEvent, FormEvent, useEffect } from "react";
+import LearningCardSection from "./ui/LearningCardSection"; 
 import Image from "next/image";
 import { DownloadIcon } from "@/utils";
 import { LearningCardData } from "@/constants";
+import MobileLearningCarousel from "./ui/MobileLearningCarousel";
 
 interface LearningProps {
   courseDetails: LearningCardData[];
@@ -13,11 +14,23 @@ const Learning = ({ courseDetails }: LearningProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [fullName, setFullName] = useState<string>("");
   const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [isDesktop, setIsDesktop] = useState<boolean>(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleDownloadClick = () => {
     setTimeout(() => {
       setIsOpen(true);
-    }, 2000); 
+    }, 2000);
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -37,7 +50,6 @@ const Learning = ({ courseDetails }: LearningProps) => {
         setPhoneNumber("");
         setIsOpen(false);
 
-      
         const link = document.createElement("a");
         link.href = "/Business_analyst_cariculum.pdf";
         link.download = "Business_analyst_cariculum.pdf";
@@ -59,16 +71,22 @@ const Learning = ({ courseDetails }: LearningProps) => {
   };
 
   return (
-    <section className="section-style items-center">
+    <section className="section-style gap-6 sm:gap-0 ">
       <h2 className="heading text-white">
         What Will<span className="text-blue-Textprimary"> You Learn</span>
       </h2>
-      <LearningCardSection courseDetails={courseDetails} />
+
+      {isDesktop ? (
+        <LearningCardSection courseDetails={courseDetails} />
+      ) : (
+        <MobileLearningCarousel courseDetails={courseDetails} />
+      )}
+
       <button
         onClick={handleDownloadClick}
-        className="flex items-center px-4 py-2 space-x-2 text-white bg-[#ACC2FA] hover:bg-blue-500 rounded-xl shadow-md box-shadow"
+        className="flex items-center px-4 py-2 space-x-2 text-white bg-[#ACC2FA] hover:bg-blue-500 rounded-xl shadow-md box-shadow mx-auto"
       >
-        <span className="flex items-center  justify-center text-black-primary text-center font-bold text-lg">
+        <span className="flex items-center justify-center text-black-primary text-center font-bold text-lg">
           Download Detailed Curriculum and Course Timelines
         </span>
         <Image
@@ -83,7 +101,7 @@ const Learning = ({ courseDetails }: LearningProps) => {
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
-            <h3 className="text-2xl font-bold mb-4">Download Carriculum</h3>
+            <h3 className="text-2xl font-bold mb-4">Download Curriculum</h3>
             <p className="text-gray-600 mb-4">
               Please fill in your details to download the PDF. The download will
               start automatically after submission.

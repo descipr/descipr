@@ -68,6 +68,10 @@ import largeLanguageModel from "@/public/Images/LLMs.png"
 import ModelBuilding from "@/public/Images/ML Models.png"
 import MlLibrary from "@/public/Images/ML Libraries.png"
 import generativeModel from "@/public/Images/Generative Models.png"
+import HiringManagerMobile from "@/public/Images/hiring_manager_mobile.svg"
+import CourseCardMobile from "@/public/Images/Course_card_mobile.svg"
+import MentorshipMobile from "@/public/Images/Mentorship_mobile.svg"
+import CommunityMobile from "@/public/Images/Community_mobile.svg"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -152,5 +156,9 @@ export {
   largeLanguageModel,
   ModelBuilding,
   MlLibrary,
-  generativeModel
+  generativeModel,
+  HiringManagerMobile,
+  CourseCardMobile,
+  CommunityMobile,
+  MentorshipMobile,
 };

@@ -8,7 +8,9 @@ import {
   businessAnalystInsights,
   BusinessFundamentals,
   Community,
+  CommunityMobile,
   CourseCard,
+  CourseCardMobile,
   DataScientistCard,
   DoubtSupport,
   ExportData,
@@ -16,6 +18,7 @@ import {
   Gaurav_Kumar,
   generativeModel,
   HiringManager,
+  HiringManagerMobile,
   instagramIcon,
   Interview,
   JobSimulation,
@@ -28,6 +31,7 @@ import {
   ManishSinha,
   Mentorship,
   MentorshipIcon,
+  MentorshipMobile,
   MlEngineeringCard,
   MlLibrary,
   MockInterview,
@@ -1199,4 +1203,11 @@ export const FellowshipImages = [
   CourseCard,
   Mentorship,
   Community,
+];
+
+export const MobileFellowshipImages = [
+  HiringManagerMobile,
+  CourseCardMobile,
+  MentorshipMobile,
+  CommunityMobile,
 ];

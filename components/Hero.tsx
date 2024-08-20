@@ -6,7 +6,7 @@ import { BackgroundLogo } from '@/utils';
 
 const Hero: React.FC = () => {
     return (
-        <section className="section-style">
+        <section className="section-style items-center">
             <Image
                 src={BackgroundLogo}
                 alt="background image"

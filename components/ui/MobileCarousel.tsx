@@ -14,7 +14,7 @@ const MobileCarousel: React.FC<MobileCarouselProps> = ({ images }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((current) => (current === length - 1 ? 0 : current + 1));
-    }, 3000); 
+    }, 1000); 
 
     return () => clearInterval(interval);
   }, [length]);
@@ -36,9 +36,9 @@ const MobileCarousel: React.FC<MobileCarouselProps> = ({ images }) => {
                 <Image
                   src={image}
                   alt={`Fellowship image ${index}`}
-                  width={800}
-                  height={500}
-                  className="rounded-lg object-cover"
+                  width={400}
+                  height={250}
+                  className="rounded-lg object-cover w-full h-full"
                 />
               </div>
             ))}

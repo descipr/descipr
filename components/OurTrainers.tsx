@@ -1,6 +1,24 @@
+"use client";
+import React, { useEffect, useState } from "react";
 import TrainerSection from "./TrainerSection";
+import MobileTrainerCarousel from "./ui/MobileTrainerCarousel";
 
 const OurTrainers = () => {
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className="section-style">
       <div className="flex flex-col items-center space-y-1">
@@ -8,7 +26,7 @@ const OurTrainers = () => {
           Learn from Our Trainers
         </h2>
       </div>
-      <TrainerSection />
+      {isMobile ? <MobileTrainerCarousel /> : <TrainerSection />}
     </section>
   );
 };

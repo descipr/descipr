@@ -1,39 +1,40 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import LearningCard from "./LearningCard";
-import { LearningCardData } from "@/constants";
+import { ScheduledClassProps } from "@/constants";
+import ScheduledClassCard from "./ScheduledClassCard";
 
-interface LearningProps {
-  courseDetails: LearningCardData[];
+interface MobileScheduledCarouselProps {
+  scheduledClassData: ScheduledClassProps[];
 }
 
-const LearningCardSection = ({courseDetails} : LearningProps) => {
+const MobileScheduledCarousel: React.FC<MobileScheduledCarouselProps> = ({
+  scheduledClassData,
+}) => {
   const [current, setCurrent] = useState(0);
-  const [learningCardArrayPerPage, setLearningCardArrayPerPage] = useState(1);
-  const length = courseDetails.length;
+  const [cardsPerPage, setCardsPerPage] = useState(1);
+  const length = scheduledClassData.length;
 
+  //   useEffect(() => {
+  //     const handleResize = () => {
+  //       if (window.innerWidth >= 1024) {
+  //         setCardsPerPage(3);
+  //       } else if (window.innerWidth >= 768) {
+  //         setCardsPerPage(2);
+  //       } else {
+  //         setCardsPerPage(1);
+  //       }
+  //     };
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setLearningCardArrayPerPage(3);
-      } else if (window.innerWidth >= 768) {
-        setLearningCardArrayPerPage(2);
-      } else {
-        setLearningCardArrayPerPage(1);
-      }
-    };
+  //     handleResize();
 
-    handleResize();
+  //     window.addEventListener("resize", handleResize);
 
-    window.addEventListener("resize", handleResize);
+  //     return () => {
+  //       window.removeEventListener("resize", handleResize);
+  //     };
+  //   }, []);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const maxIndex = Math.ceil(length / learningCardArrayPerPage) - 1;
+  const maxIndex = Math.ceil(length / cardsPerPage) - 1;
 
   const nextSlide = () => {
     setCurrent(current === maxIndex ? 0 : current + 1);
@@ -44,22 +45,29 @@ const LearningCardSection = ({courseDetails} : LearningProps) => {
   };
 
   return (
-    <div className="text-white">
-      <div className="container mx-auto text-center flex flex-col">
-        <div className="overflow-x-hidden overflow-y-visible ">
+    <div className="">
+      <div className="container mx-auto  flex flex-col">
+        <div className="overflow-x-hidden overflow-y-visible">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
-            {courseDetails.map((data, index) => (
+            {scheduledClassData.map((data, index) => (
               <div
                 key={index}
-                className=" w-full px-4 flex-shrink-0"
+                className="w-full px-4 flex-shrink-0"
                 style={{
-                  maxWidth: `${100 / learningCardArrayPerPage}%`,
+                  maxWidth: `${100 / cardsPerPage}%`,
                 }}
               >
-                <LearningCard key={data.id} data={data} />
+                <ScheduledClassCard
+                  key={index}
+                  imageUrl={data.imageUrl}
+                  title={data.title}
+                  para={data.para}
+                  date={data.date}
+                  background={data.background}
+                />
               </div>
             ))}
           </div>
@@ -107,4 +115,4 @@ const LearningCardSection = ({courseDetails} : LearningProps) => {
   );
 };
 
-export default LearningCardSection;
+export default MobileScheduledCarousel;

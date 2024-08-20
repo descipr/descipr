@@ -1,5 +1,5 @@
-import { Community, CourseCard, HiringManager, Mentorship } from "@/utils";
 import Image from "next/image";
+import { Community, CourseCard, HiringManager, Mentorship } from "@/utils";
 
 const FellowshipSection = () => {
   return (

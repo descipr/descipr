@@ -1,43 +1,46 @@
-"use client";
-import { useState, FormEvent, ChangeEvent } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Phone, Whatsapp } from "@/utils";
+'use client'; 
+
+import { useState, FormEvent, ChangeEvent } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Phone, Whatsapp } from '@/utils'; 
 
 const Cta = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [fullName, setFullName] = useState<string>("");
-  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [fullName, setFullName] = useState<string>('');
+  const [phoneNumber, setPhoneNumber] = useState<string>('');
+
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!/^\d{10}$/.test(phoneNumber)) {
-      alert("Please enter a valid 10-digit phone number.");
+      alert('Please enter a valid 10-digit phone number.');
       return;
     }
 
     try {
-      const res = await fetch(`/api/user`, {
-        method: "POST",
+      const response = await fetch('/api/user', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ fullName, phoneNumber }),
       });
 
-      if (res.ok) {
-        alert("We’ve received your request. Our mentor will connect with you within the next 24 hours!");
-        setFullName("");
-        setPhoneNumber("");
+      if (response.ok) {
+        alert("We’ve received your request. Our mentor will connect with you within the next 24 hours!");
+        setFullName('');
+        setPhoneNumber('');
         setIsOpen(false);
       } else {
-        alert("Failed to send request. Please try again.");
+        alert('Failed to send request. Please try again.');
       }
     } catch (error) {
-      console.error("Error submitting the form", error);
+      console.error('Error submitting the form', error);
     }
   };
+
 
   const handleFullNameChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFullName(e.target.value);
@@ -48,7 +51,7 @@ const Cta = () => {
   };
 
   return (
-    <section className="section-style">
+    <section className="section-style items-center">
       <div className="flex flex-col items-center justify-center space-y-1 text-center">
         <h2 className="text-2xl md:text-5xl font-bold text-white">
           Ready to <span className="text-blue-primary">Take the Next Step</span>
@@ -61,7 +64,7 @@ const Cta = () => {
       <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
         <button
           onClick={() => setIsOpen(true)}
-          className="flex items-center px-4 py-2 space-x-2 text-black bg-blue-400 hover:bg-blue-500 rounded-xl box-shadow"
+          className="flex items-center px-4 py-2 space-x-2 text-black bg-blue-400 hover:bg-blue-500 rounded-xl shadow-md"
         >
           <span className="font-medium">Request a Call back</span>
           <Image src={Phone} alt="Phone icon" width={24} height={24} priority />
@@ -70,7 +73,7 @@ const Cta = () => {
           href="https://wa.me/917019156736"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center px-4 py-2 space-x-2 text-white bg-green-500 hover:bg-green-600 rounded-xl shadow-md box-shadow"
+          className="flex items-center px-4 py-2 space-x-2 text-white bg-green-500 hover:bg-green-600 rounded-xl shadow-md"
         >
           <span className="font-medium">Message us on</span>
           <Image src={Whatsapp} alt="WhatsApp icon" width={24} height={24} priority />

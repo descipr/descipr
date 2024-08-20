@@ -1,7 +1,7 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { careerCardData } from '@/constants';
-import CareerCard from './CareerCard';
+"use client";
+import React, { useState, useEffect } from "react";
+import { careerCardData } from "@/constants";
+import CareerCard from "./CareerCard";
 
 const CareerCardSection = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -26,10 +26,10 @@ const CareerCardSection = () => {
 
     handleResize();
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -58,9 +58,9 @@ const CareerCardSection = () => {
           ))}
         </div>
       ) : (
-        <div className="">
+        <div>
           <div className="container mx-auto flex flex-col">
-            <div className="overflow-x-hidden overflow-y-visible p-4">
+            <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${current * 100}%)` }}
@@ -72,11 +72,11 @@ const CareerCardSection = () => {
                     style={{ maxWidth: `${100 / cardsPerPage}%` }}
                   >
                     <CareerCard
-                      key={index}
                       imageUrl={card.imageUrl}
                       title={card.title}
                       description={card.description}
                       background={card.background}
+                      key={index}
                     />
                   </div>
                 ))}
@@ -125,6 +125,6 @@ const CareerCardSection = () => {
       )}
     </div>
   );
-}
+};
 
 export default CareerCardSection;
