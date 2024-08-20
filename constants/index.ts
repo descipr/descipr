@@ -143,6 +143,7 @@ export interface CourseDetail {
   heading: string;
   description: string;
   dateOfStart: string;
+  floatingBar: string;
   timeCommitment: string;
   cost: string;
   seatsLeft: number;
@@ -611,8 +612,9 @@ export const courseDetails: CourseDetail[] = [
     heading: "Data Scientist Fellowship",
     description:
       "Transform your career with our Data Scientist Fellowship! Master data analysis, machine learning, and real-world applications with expert mentorship and hands-on projects. Step into top roles at leading tech companies like Microsoft, Google, Amazon, etc",
-    dateOfStart: "Oct 19, 2024",
-    timeCommitment: "3.5 months",
+    dateOfStart: "October 19, 2024",
+    floatingBar: "Oct 19",
+    timeCommitment: "4 months",
     cost: "₹11,999",
     seatsLeft: 25,
     sessionInsights: businessAnalystInsights,
@@ -834,7 +836,8 @@ export const courseDetails: CourseDetail[] = [
     heading: "AI Engineer Fellowship",
     description:
       "Kickstart your AI career with our all-inclusive fellowship! Get hands-on experience, personalized mentorship, and exclusive networking. Work on cutting-edge projects and gear up for top roles at Google, Amazon, Microsoft, and more. Your AI future starts now!",
-    dateOfStart: "Oct 19, 2024",
+    dateOfStart: "October 19, 2024",
+    floatingBar: "Oct 19",
     timeCommitment: "12 hours/week",
     cost: "₹9,999",
     seatsLeft: 25,
@@ -1013,9 +1016,10 @@ export const courseDetails: CourseDetail[] = [
     heading: "Business Analyst Fellowship",
     description:
       "Kickstart your Business analyst career at top companies like Amazon, Dell, Swiggy etc. Gain hands-on experience, personalized mentorship, and exclusive networking while working on impactful projects. Your future in business analysis starts here!",
-    dateOfStart: "Jul, 2024",
+    dateOfStart: "October 19, 2024",
+    floatingBar: "Oct 19",
     timeCommitment: "10 hours/week",
-    cost: "₹10,499",
+    cost: "₹9,999",
     seatsLeft: 25,
     sessionInsights: businessAnalystInsights,
     id: "1",

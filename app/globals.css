@@ -29,3 +29,9 @@ body,
     0px 23px 23px 0px rgba(172, 194, 250, 0.09),
     0px 6px 13px 0px rgba(172, 194, 250, 0.1);
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+

@@ -80,8 +80,8 @@ const CoursePage = ({ params }: { params: { slug: string } }) => {
           <Image
             src={course.sessionInsights}
             alt="course insights"
-            width={470}
-            height={230}
+            width={500}
+            height={250}
             className="rounded-lg pt-4"
             priority
           />

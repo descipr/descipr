@@ -6,7 +6,7 @@ import { TestimonialCardProps } from '@/constants';
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ profilePic, name, position, testimonial, linkedinUrl }) => {
   return (
-    <div className="bg-white rounded-xl shadow-md  flex flex-col justify-between space-y-4 max-w-xs md:max-w-sm md:w-full mx-auto p-4">
+    <div className="bg-white rounded-xl shadow-md  flex flex-col justify-between space-y-4 max-w-xs md:max-w-sm md:w-full mx-auto p-4 h-full">
       <div className='flex items-center'>
         <p className=" text-black-Textsecondary text-sm md:text-lg font-Plus-jakarta font-normal text-left p-4 ">{testimonial}</p>
       </div>

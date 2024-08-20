@@ -6,7 +6,6 @@ import { useParams } from "next/navigation";
 
 const FloatingBar = () => {
   const { slug } = useParams();
-
   const cleanedSlug = typeof slug === "string" ? cleanUpSlug(slug) : "";
 
   const course: CourseDetail | undefined = courseDetails.find(
@@ -16,21 +15,33 @@ const FloatingBar = () => {
   useEffect(() => {
     if (!course || !course.razorPay?.paymentButtonId) return;
 
-    const script = document.createElement("script");
-    script.src = "https://checkout.razorpay.com/v1/payment-button.js";
-    script.setAttribute("data-payment_button_id", course.razorPay.paymentButtonId);
-    script.async = true;
+  
+    const existingScript = document.querySelector(
+      `script[src="https://checkout.razorpay.com/v1/payment-button.js"]`
+    );
 
-    const container = document.getElementById("razorpay-button-container-floating");
-    if (container) {
-      container.appendChild(script);
-    }
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/payment-button.js";
+      script.setAttribute(
+        "data-payment_button_id",
+        course.razorPay.paymentButtonId
+      );
+      script.async = true;
 
-    return () => {
-      if (container && container.contains(script)) {
-        container.removeChild(script);
+      const container = document.getElementById(
+        "razorpay-button-container-floating"
+      );
+      if (container) {
+        container.appendChild(script);
       }
-    };
+
+      return () => {
+        if (container && container.contains(script)) {
+          container.removeChild(script);
+        }
+      };
+    }
   }, [course]);
 
   if (!course) {
@@ -42,7 +53,7 @@ const FloatingBar = () => {
       <div className="container mx-auto max-w-7xl flex flex-row justify-between items-center space-x-2 md:space-x-4 px-2 md:px-4">
         <div className="flex flex-col items-center md:items-start">
           <span className="text-[10px] sm:text-xs md:text-sm text-gray-400">
-            Course starts on
+            Cohort starts
           </span>
           <span className="text-sm sm:text-base md:text-lg font-semibold">
             {course.dateOfStart}
@@ -76,8 +87,11 @@ const FloatingBar = () => {
           <span className="absolute -top-2 md:-top-3 -left-2 md:-left-4 bg-green-500 text-white text-[8px] sm:text-[10px] md:text-xs font-semibold rounded-full px-1 sm:px-2 py-[2px] z-30">
             {course.seatsLeft} (Filling fast)
           </span>
-          <form id="razorpay-button-container-floating" className="ml-2 sm:ml-4 md:ml-8 relative z-10">
-            {/* Razorpay button script will be appended here */}
+          <form
+            id="razorpay-button-container-floating"
+            className="ml-2 sm:ml-4 md:ml-8 relative z-10"
+          >
+            {/* The button will be injected here */}
           </form>
         </div>
       </div>
