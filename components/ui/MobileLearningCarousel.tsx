@@ -24,7 +24,7 @@ const MobileLearningCarousel: React.FC<MobileLearningCarouselProps> = ({ courseD
     <motion.div ref={carouselRef} whileTap={{ cursor: "grabbing" }}>
       <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className="flex">
         {courseDetails.map((data, i) => (
-          <div key={i} className="flex-shrink-0 w-80 px-2">
+          <div key={i} className="flex-shrink-0 w-70 px-2">
             <LearningCard data={data} />
           </div>
         ))}
