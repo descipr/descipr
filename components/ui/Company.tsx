@@ -13,10 +13,10 @@ const Company: React.FC = () => {
           </li>
         ))}
         <li className="text-xs font-light">
-          <Link href="/Privacy%Policy">Privacy Policy</Link>
+          <Link href="/Privacy-Policy">Privacy Policy</Link>
         </li>
         <li className="text-xs font-light">
-          <Link href="/Terms%of%Use">Terms of Use</Link>
+          <Link href="/Terms-of-Use">Terms of Use</Link>
         </li>
         <li className="text-xs font-light">
           <Link
