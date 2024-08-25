@@ -8,14 +8,12 @@ interface LearningCardProps {
 const LearningCard: React.FC<LearningCardProps> = ({ data }) => {
   return (
     <div className="relative bg-white rounded-xl shadow-md flex flex-col justify-between space-y-4 max-w-xs md:max-w-sm w-full mx-auto p-4 h-full">
-     
       <div className="absolute top-2 left-4 transform -translate-y-1/2 bg-green-secondary rounded-lg px-2 py-1 z-20">
         <p className="text-white font-semibold text-sm md:text-base">
           {data.time}
         </p>
       </div>
 
-     
       <div className="flex flex-col gap-4 text-left flex-grow">
         <h3 className="font-semibold text-lg md:text-xl text-blue-b2d">
           {data.title}
@@ -29,8 +27,8 @@ const LearningCard: React.FC<LearningCardProps> = ({ data }) => {
         </ul>
       </div>
 
-      
-      <div className="bg-blue-bl2 px-2 py-4 rounded-xl flex flex-col gap-2 text-left">
+      {/* Case study with consistent height */}
+      <div className="bg-blue-bl2 px-2 py-4 rounded-xl flex flex-col gap-2 text-left" style={{ minHeight: '120px' }}>
         <h4 className="text-sm md:text-base text-[#292A2D] font-normal">
           {data.subheading}
         </h4>

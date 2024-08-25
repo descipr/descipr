@@ -34,7 +34,7 @@ const MobileScheduledCarousel: React.FC<MobileScheduledCarouselProps> = ({
         className="flex"
       >
         {scheduledClassData.map((data, index) => (
-          <div key={index} className="flex-shrink-0 w-full px-4 md:w-1/2">
+          <div key={index} className="flex-shrink-0 w-full px-2 md:w-1/2">
             <ScheduledClassCard
               imageUrl={data.imageUrl}
               title={data.title}
