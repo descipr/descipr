@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
 
     // Validation
-    if (!fullName || !phoneNumber || !email || !message) {
+    if (!fullName || !phoneNumber || !email) {
       setError("All fields are required.");
       return;
     }
