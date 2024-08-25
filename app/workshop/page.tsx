@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const EnrollNow = () => {
   return (
     <>
-      <section className="max-w-7xl w-full flex flex-col space-y-8 items-center mx-auto">
+      <section className="max-w-7xl w-full flex flex-col space-y-8 items-center mx-auto overflow-x-hidden">
         <section className="relative container mx-auto px-4 py-4 md:py-8 flex flex-col sm:flex-row items-center sm:items-start justify-center sm:space-x-4 md:space-x-16 sm:space-y-8 md:space-y-16">
           <Image
             src={BackgroundLogo}

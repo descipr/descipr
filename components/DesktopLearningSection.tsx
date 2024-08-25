@@ -41,7 +41,7 @@ const DesktopLearningSection = () => {
       <div className="container mx-auto text-center flex flex-col">
         <div className="overflow-x-hidden overflow-y-visible ">
           <div
-            className="flex transition-transform duration-500 ease-in-out"
+            className="flex transition-transform duration-500 ease-in-out overflow-hidden"
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
             {workshopData.map((data, index) => (

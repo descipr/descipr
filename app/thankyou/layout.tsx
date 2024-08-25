@@ -10,5 +10,5 @@ export default function ThankYouLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <section>{children}</section>;
+  return <section className=" ">{children}</section>;
 }

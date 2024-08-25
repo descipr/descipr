@@ -17,7 +17,7 @@ const IntendedCardSection = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <div className="container py-6">
+    <div className="container py-6 overflow-hidden">
       {isDesktop ? (
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {WebinarForData.map((card, index) => (

@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import DesktopLearningSection from "./DesktopLearningSection";
 import MobileWorkshopLearning from "./MobileWorkshopLearning";
@@ -19,7 +18,7 @@ const LearningWorkShop = () => {
   }, []);
 
   return (
-    <section className="section-style gap-6 sm:gap-0 ">
+    <section className="section-style gap-6 sm:gap-0 overflow-hidden">
       <h2 className="heading text-white">
         What Will<span className="text-blue-Textprimary"> You Learn</span>
       </h2>
