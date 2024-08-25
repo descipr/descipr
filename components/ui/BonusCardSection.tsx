@@ -2,6 +2,7 @@ import { BonusWorkshop } from "@/constants";
 import { useEffect, useState } from "react";
 import IntendedForCard from "../IntendedForCard";
 import MobileIntendedSection from "./MobileIntendedSection";
+import MobileBonusCarousel from "./MobileBonusCarousel";
 
 const BonusCardSection = () => {
   const [isDesktop, setIsDesktop] = useState<boolean>(true);
@@ -31,7 +32,7 @@ const BonusCardSection = () => {
           ))}
         </div>
       ) : (
-        <MobileIntendedSection />
+        <MobileBonusCarousel />
       )}
     </div>
   );

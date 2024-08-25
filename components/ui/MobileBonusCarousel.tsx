@@ -1,9 +1,9 @@
-import {  WebinarForData } from "@/constants";
+import {  BonusWorkshop, WebinarForData } from "@/constants";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import IntendedForCard from "../IntendedForCard";
 
-const MobileIntendedSection = () => {
+const MobileBonusCarousel = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
 
@@ -13,7 +13,7 @@ const MobileIntendedSection = () => {
       const visibleWidth = carouselRef.current.offsetWidth;
       setWidth(totalWidth - visibleWidth);
     }
-  }, [WebinarForData]);
+  }, [BonusWorkshop]);
   return (
     <motion.div
       ref={carouselRef}
@@ -25,7 +25,7 @@ const MobileIntendedSection = () => {
         dragConstraints={{ right: 0, left: -width }}
         className="flex"
       >
-        {WebinarForData.map((card, index) => (
+        {BonusWorkshop.map((card, index) => (
           <div key={index} className="flex-shrink-0 w-[90%] px-4 md:w-1/2">
             <IntendedForCard
               key={card.id}
@@ -41,4 +41,4 @@ const MobileIntendedSection = () => {
   );
 };
 
-export default MobileIntendedSection;
+export default MobileBonusCarousel;

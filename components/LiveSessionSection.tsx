@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation"; 
+import { usePathname } from "next/navigation";
 import Video from "./ui/Video";
 
 interface VideoProps {
@@ -28,9 +28,9 @@ const LiveSessionSection = ({ VideoUrl }: VideoProps) => {
       </div>
       {isEnrollNowPage ? (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-7xl px-2">
-          <Video VideoUrl="https://www.youtube.com/embed/yXmK7TAJ1Mc?si=dfbTOXvm8rfRi_XJ" />
-          <Video VideoUrl="https://www.youtube.com/embed/md7C78glaGQ?si=3o-7rtKvM_sTg8gM" />
-          <Video VideoUrl="https://www.youtube.com/embed/mctYPXz85CA?si=sM2oW7pLucnQgfIU" />
+          <Video VideoUrl="https://www.youtube.com/embed/ipl7zZuAVts?si=YrDEC-SB2R_ByQXu" />
+          <Video VideoUrl="https://www.youtube.com/embed/6N7Og0IKwc0?si=EFySGyUfNsxBs6_g" />
+          <Video VideoUrl="https://www.youtube.com/embed/PwROxu2mrUI?si=3LBlTrd9D015sU1s" />
         </div>
       ) : (
         <div className="w-full max-w-3xl">

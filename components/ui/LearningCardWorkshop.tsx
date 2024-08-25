@@ -11,13 +11,13 @@ const LearningCardWorkshop = ({ data }: LearningCardProps) => {
         <h3 className="font-semibold text-lg md:text-xl text-blue-b2d">
           {data.title}
         </h3>
-        <ul className="list-disc pl-5 mb-4 text-sm md:text-base text-black-primary">
+        <div className="list-disc  mb-4 text-sm md:text-base text-black-primary">
           {data.listItems.map((item, index) => (
-            <li key={index} className="opacity-70">
+            <p key={index} className="opacity-70">
               {item}
-            </li>
+            </p>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );

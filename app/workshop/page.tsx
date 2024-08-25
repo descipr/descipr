@@ -11,7 +11,6 @@ import { BackgroundLogo, workshopInsights } from "@/utils";
 import { Metadata } from "next";
 import Image from "next/image";
 
-
 export const metadata: Metadata = {
   title: "Workshop",
   description: "Descipr | Workshop",
@@ -29,30 +28,31 @@ const EnrollNow = () => {
             priority
           />
           <div className="flex flex-col items-center sm:items-start gap-4 text-center sm:text-left sm:w-1/2">
-            <h3 className="text-2xl md:text-5xl font-bold text-white font-Plus-jakarta">
-              Ace Data Science & AI Interviews – A hands-on Workshop
-            </h3>
+            <h1 className="text-3xl md:text-5xl font-bold text-center sm:text-left text-white font-Plus-jakarta">
+              Ace Data Science & AI{" "}
+              <span className="text-blue-Textprimary font-Plus-jakarta">
+                Interviews – A hands-on Workshop
+              </span>
+            </h1>
             <p className="text-sm md:text-base text-white font-light">
-              Master your data science and AI interview with more than just
-              technical know-how. Achieving success requires outcome-focused
-              projects, strategic problem-solving, and effective communication.
-              Join this exclusive workshop, led by a seasoned hiring manager, to
-              gain a competitive advantage. Improve your interview techniques
-              and boost your confidence to secure your dream job in data science
-              and AI.
+              Master your data science and AI interview beyond technical skills.
+              This exclusive workshop, led by an experienced hiring manager,
+              will help you develop outcome-driven projects, strategic
+              problem-solving, and strong communication. Enhance your interview
+              techniques and boost your confidence to land your dream job.
             </p>
 
             <Image
               src={workshopInsights}
               alt="course insights"
-              width={630}
+              width={730}
               height={250}
               className="rounded-lg pt-4"
               priority
             />
           </div>
 
-          <div className="flex justify-center items-center sm:w-1/2  pt-16 md:pt-0">
+          <div className="flex justify-center items-center w-full px-2 sm:w-1/2  pt-16 md:pt-0">
             <ContactForm />
           </div>
         </section>
@@ -61,13 +61,13 @@ const EnrollNow = () => {
         <HorizontalLine />
         <WebinarIntended />
         <HorizontalLine />
+        <BonusWorkshop />
+        <HorizontalLine />
         <DesciprDifference />
         <HorizontalLine />
         <Testimonials />
         <HorizontalLine />
         <LiveSessionSection />
-        <HorizontalLine />
-        <BonusWorkshop />
         <HorizontalLine />
         <CallNow />
       </section>

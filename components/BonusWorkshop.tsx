@@ -4,8 +4,8 @@ import BonusCardSection from "./ui/BonusCardSection";
 const BonusWorkshop = () => {
   return (
     <section className="section-style">
-      <div className="flex flex-col items-center space-y-1">
-        <h2 className="text-white text-center text-3xl md:text-4xl font-bold">
+      <div className="flex flex-col items-center space-y-8">
+        <h2 className="heading text-white">
           Bonus with this Workshop
         </h2>
         <BonusCardSection />

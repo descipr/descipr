@@ -507,7 +507,7 @@ export const courseDetails: CourseDetail[] = [
     },
     pdf: "/Data_Scientist_Fellowship.pdf",
     discount: "60% OFF",
-    EmiOptions: " 699",
+    EmiOptions: "699",
     videoUrl: "https://www.youtube.com/embed/yXmK7TAJ1Mc?si=dfbTOXvm8rfRi_XJ",
     weekSchedule: [
       {
@@ -749,7 +749,7 @@ export const courseDetails: CourseDetail[] = [
     },
     pdf: "/AI_Engineering_Fellowship.pdf",
     discount: "50% OFF",
-    EmiOptions: "₹485",
+    EmiOptions: "485",
     videoUrl: "https://www.youtube.com/embed/md7C78glaGQ?si=3o-7rtKvM_sTg8gM",
     weekSchedule: [
       {
@@ -942,7 +942,7 @@ export const courseDetails: CourseDetail[] = [
     },
     pdf: "/Business_analyst_fellowship.pdf",
     discount: "45% OFF",
-    EmiOptions: "₹499",
+    EmiOptions: "499",
     weekSchedule: [
       {
         id: 1,
@@ -1203,13 +1203,6 @@ export const WebinarForData: IwebinarForData[] = [
 ];
 
 export const BonusWorkshop: IwebinarForData[] = [
-  {
-    id: 1,
-    title: "50 Essential SQL Questions for MAANG Interviews",
-    description:
-      "A comprehensive guide to the SQL questions you’re most likely to encounter at top tech companies.",
-    background: "#FFF0ED",
-  },
   {
     id: 2,
     title: "Ace Your Machine Learning Interviews Handbook",
