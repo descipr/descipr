@@ -526,7 +526,7 @@ export const courseDetails: CourseDetail[] = [
         id: 2,
         title: "Problem Solving Approach",
         listItems: [
-          "Structured Problem Solving Canva",
+          "Structured Problem Solving Canvas",
           "Human Centered Solution Design",
           "Stakeholders Communication",
         ],
@@ -960,7 +960,7 @@ export const courseDetails: CourseDetail[] = [
         id: 2,
         title: "Problem Solving Approach",
         listItems: [
-          "Structured Problem Solving Canva",
+          "Structured Problem Solving Canvas",
           "Human Centered Solution Design",
           "Stakeholders Communication",
         ],
@@ -1205,9 +1205,9 @@ export const WebinarForData: IwebinarForData[] = [
 export const BonusWorkshop: IwebinarForData[] = [
   {
     id: 2,
-    title: "Ace Your Machine Learning Interviews Handbook",
+    title: "50 Essential SQL Questions for MAANG Interviews",
     description:
-      "A step-by-step manual to mastering machine learning concepts and impressing your interviewers.",
+      "A comprehensive guide to the SQL questions you’re most likely to encounter at top tech companies",
     background: "#FFF5ED",
   },
   {

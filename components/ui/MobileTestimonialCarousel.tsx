@@ -21,7 +21,7 @@ const MobileTestimonialCarousel: React.FC = () => {
     <motion.div ref={carouselRef} whileTap={{ cursor: "grabbing" }} >
       <motion.div drag="x" dragConstraints={{ right: 0, left: -(width) }} className="flex">
         {testimonials.map((testimonial, i) => (
-          <div key={i} className="flex-shrink-0 w-70 px-2">
+          <div key={i} className="flex-shrink-0 w-[90%] sm:w-full px-2">
             <TestimonialCard
               profilePic={testimonial.profilePic}
               name={testimonial.name}
