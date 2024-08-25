@@ -45,7 +45,6 @@ export default function RootLayout({
       <body
         className={`${plus_jakarta.className} relative bg-gradient-custom bg-fixed bg-cover`}
       >
-        <PageLoader />
         <FloatingButton />
         <Navbar />
         {children}
