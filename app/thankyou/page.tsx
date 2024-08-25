@@ -1,20 +1,14 @@
-'use client'
+"use client";
 import { motion } from "framer-motion";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Thank you",
-  description: "Descipr | Thank you",
-};
 
 const ThankYou = () => {
   return (
-    <div className="max-w-4xl flex items-center justify-center mx-auto h-1/2">
+    <div className="max-w-4xl flex items-center justify-center mx-auto h-3/4 mb-8">
       <motion.div
-        initial={{ x: "-100vw" }} 
-        animate={{ x: 0 }} 
-        transition={{ type: "spring", stiffness: 70, damping: 20 }} 
-        className="text-center text-white"
+        initial={{ x: "-100vw" }}
+        animate={{ x: 0 }}
+        transition={{ type: "spring", stiffness: 70, damping: 20, delay: 0.6 }}
+        className="text-center text-white flex flex-col gap-6"
       >
         <h1 className="text-4xl md:text-6xl font-bold">Thank You!</h1>
         <p className="mt-4 text-lg md:text-xl">
