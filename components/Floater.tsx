@@ -49,7 +49,7 @@ const FloatingBar = () => {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-gray-900 to-black-primary text-white shadow-lg py-4 z-20 opacity-95">
+    <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-gray-900 to-black-primary text-white shadow-lg py-4 z-10 opacity-95">
       <div className="container mx-auto max-w-7xl flex flex-row justify-between items-center space-x-2 md:space-x-4 px-2 md:px-4">
         <div className="flex flex-col items-center md:items-start">
           <span className="text-[10px] sm:text-xs md:text-sm text-gray-400">
@@ -65,7 +65,7 @@ const FloatingBar = () => {
             Time commitment
           </span>
           <span className="text-sm sm:text-base md:text-lg font-semibold">
-            {course.timeCommitment}
+            {course.timePerweek}
           </span>
         </div>
 

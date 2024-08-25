@@ -13,6 +13,7 @@ export default function CourseLayout({
     <section
       className={`${plus_jakarta.className} relative flex flex-col items-center justify-center overflow-hidden mx-auto sm:px-10 px-5 `}
     >
+      
       <FloatingBar />
       <div className="max-w-7xl w-full flex flex-col space-y-8 items-center">
         {children}

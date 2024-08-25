@@ -1,10 +1,9 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import ScheduledClassCard from "./ui/ScheduledClassCard";
-import { ScheduledClassData } from "@/constants";
-import MobileScheduledCarousel from "./ui/MobileScheduledCarousel";
+import { WebinarForData } from "@/constants";
+import { useEffect, useState } from "react";
+import IntendedForCard from "./IntendedForCard";
+import MobileIntendedSection from "./ui/MobileIntendedSection";
 
-const ScheduledClasses = () => {
+const IntendedCardSection = () => {
   const [isDesktop, setIsDesktop] = useState<boolean>(true);
 
   useEffect(() => {
@@ -17,27 +16,25 @@ const ScheduledClasses = () => {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
   return (
     <div className="container py-6">
       {isDesktop ? (
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {ScheduledClassData.map((card, index) => (
-            <ScheduledClassCard
-              key={index}
-              imageUrl={card.imageUrl}
+          {WebinarForData.map((card, index) => (
+            <IntendedForCard
+              key={card.id}
               title={card.title}
-              para={card.para}
-              date={card.date}
+              description={card.description}
               background={card.background}
+              id={0}
             />
           ))}
         </div>
       ) : (
-        <MobileScheduledCarousel scheduledClassData={ScheduledClassData} />
+        <MobileIntendedSection />
       )}
     </div>
   );
 };
 
-export default ScheduledClasses;
+export default IntendedCardSection;

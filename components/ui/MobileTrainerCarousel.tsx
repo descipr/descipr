@@ -25,7 +25,7 @@ const MobileTrainerCarousel: React.FC = () => {
         className="flex"
       >
         {OutTrainers.map((trainer, index) => (
-          <div key={index} className="flex-shrink-0 w-60 px-2">
+          <div key={index} className="flex-shrink-0 w-80 px-2 py-2">
             <Link href={trainer.link}>
               <div className="relative w-full pb-1/1 overflow-hidden rounded-lg">
                 <Image

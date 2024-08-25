@@ -12,6 +12,7 @@ import {
   CourseCard,
   CourseCardMobile,
   DataScientistCard,
+  DataScientistInsights,
   DoubtSupport,
   ExportData,
   FarzandKhan,
@@ -99,8 +100,9 @@ export interface LearningCardData {
   id: number;
   title: string;
   listItems: string[];
-  time: string;
-  para: string;
+  time?: string;
+  subheading?: string;
+  para?: string;
 }
 
 export interface CourseCardProps {
@@ -149,6 +151,7 @@ export interface CourseDetail {
   dateOfStart: string;
   floatingBar: string;
   timeCommitment: string;
+  timePerweek?: string;
   cost: string;
   seatsLeft: number;
   sessionInsights: any;
@@ -159,12 +162,20 @@ export interface CourseDetail {
     src: string;
     paymentButtonId: string;
   };
+  pdf: string;
   discount: string;
   EmiOptions: string;
   weekSchedule?: LearningCardData[];
   videoUrl: string;
   learning: DesciprDiffernceProps[];
   tools: DesciprDiffernceProps[];
+}
+
+export interface IwebinarForData {
+  id: number;
+  title: string;
+  description: string;
+  background: string;
 }
 
 export const companyList: ListItem[] = [
@@ -182,7 +193,7 @@ export const socialLinks: SocialLink[] = [
   {
     label: "Instagram",
     iconSrc: instagramIcon,
-    link: "https://www.instagram.com/team_descipr/",
+    link: "https://www.instagram.com/descipr.official/",
   },
   {
     label: "YouTube",
@@ -345,142 +356,6 @@ export const fellowshipList: fellowship[] = [
   },
 ];
 
-export const LearningCardArray: LearningCardData[] = [
-  {
-    id: 1,
-    title: "Business Fundamentals",
-    listItems: [
-      "Business Models and Customer Segmentation",
-      "Products, Value Proposition and Distribution Channels",
-      "Revenue Streams and Costs Models",
-    ],
-    time: "Week 1",
-    para: "Dissecting Business of Indian Unicorns",
-  },
-  {
-    id: 2,
-    title: "Problem Solving Approach",
-    listItems: [
-      "Structured Problem Solving Canva",
-      "Human Centered Solution Design",
-      "Stakeholders Communication",
-    ],
-    time: "Week 2",
-    para: "Designing an Data/AI Product",
-  },
-  {
-    id: 3,
-    title: "Intro to SQL",
-    listItems: [
-      "Fundamental SQL Statements",
-      "Joins and Subqueries",
-      "Conditional and Case Statements",
-    ],
-    time: "Week 3",
-    para: "Deconstructing the Business of an E-Commerce Website",
-  },
-  {
-    id: 4,
-    title: "Business Analysis with SQL",
-    listItems: [
-      "Effective KPI Design Principles",
-      "KPI Trees and Impact Mapping",
-      "Advanced SQL Techniques for Production",
-    ],
-    time: "Week 4",
-    para: "Building Business Tracker for an E-commerce CEO Office",
-  },
-  {
-    id: 5,
-    title: "Intro to PowerBI",
-    listItems: [
-      "Data Preparation and Loading Data",
-      "Understanding Chart Types, Trends",
-      "Creating Dashboards",
-    ],
-    time: "Week 5",
-    para: "Building Business Tracker for an E-commerce CEO Office",
-  },
-  {
-    id: 6,
-    title: "Business Intelligence with PowerBI",
-    listItems: [
-      "Decision Funnel Understanding",
-      "Self Serve Dashboard Design Principles",
-      "Efficient Data Models for Speed and Accuracy",
-    ],
-    time: "Week 6",
-    para: "Developing Digital Marketing Dashboard for a Fitness Brand",
-  },
-  {
-    id: 7,
-    title: "Intro to Statistics",
-    listItems: [
-      "Types of statistics: Descriptive vs. Inferential",
-      "Basic Probability Concepts & Distributions",
-      "Hypothesis Testing, p-Value, Correlation",
-    ],
-    time: "Week 7",
-    para: "Analyzing the Business Model of a Fashion Store",
-  },
-  {
-    id: 8,
-    title: "Product Design and Insights",
-    listItems: [
-      "Understanding Business Metrics to Optimize",
-      "Customer Cohort Analysis",
-      "Statistical Analysis for Launch Decisions",
-    ],
-    time: "Week 8",
-    para: "Designing Launch Strategy for a New E-Commerce Fashion Store",
-  },
-  {
-    id: 9,
-    title: "Intro to MS-Excel & Python",
-    listItems: [
-      "Data Cleaning Techniques in Excel",
-      "PivotTable, Grouping, & Lookup Functions for Data Analysis in Excel",
-      "Python Programming Fundamentals",
-      "Data Manipulation using Pandas",
-    ],
-    time: "Week 9",
-    para: "Developing Digital Marketing Dashboard for a Fitness Brand",
-  },
-  {
-    id: 10,
-    title: "Business Insights with Python & Excel",
-    listItems: [
-      "Exploratory Data Analysis",
-      "Advanced Data Wrangling Techniques",
-      "Detailed Insights Report Writing for Stakeholders",
-    ],
-    time: "Week 10",
-    para: "Building Business Tracker for an E-commerce CEO Office",
-  },
-  {
-    id: 11,
-    title: "Generative AI: The Art of Prompt Engineering",
-    listItems: [
-      "NLP and LLM Fundamentals",
-      "Efficient Prompt Engineering",
-      "Automation using GenAI Tools",
-    ],
-    time: "Week 11",
-    para: "Building a YouTube Video Summarizer App",
-  },
-  {
-    id: 12,
-    title: "Mock Interviews & Portfolio Building",
-    listItems: [
-      "Building your Resume",
-      "Building your Project Portfolio",
-      "Business Analyst Interview Questions",
-    ],
-    time: "Week 12",
-    para: "Developing Digital Marketing Dashboard for a Fitness Brand",
-  },
-];
-
 export const ScheduledClassData: ScheduledClassProps[] = [
   {
     key: 1,
@@ -619,18 +494,20 @@ export const courseDetails: CourseDetail[] = [
     dateOfStart: "October 19, 2024",
     floatingBar: "Oct 19",
     timeCommitment: "4 months",
+    timePerweek: "12 hours/week",
     cost: "₹11,999",
     seatsLeft: 25,
-    sessionInsights: businessAnalystInsights,
+    sessionInsights: DataScientistInsights,
     id: "4",
     actualcost: "₹29,999",
     imgUrl: BusinessAnalystFellowshipCard,
     razorPay: {
       src: "https://checkout.razorpay.com/v1/payment-button.js",
-      paymentButtonId: "pl_OhyfCxUlrva95Q",
+      paymentButtonId: "pl_OihX6GjL94bcj4",
     },
+    pdf: "/Data_Scientist_Fellowship.pdf",
     discount: "60% OFF",
-    EmiOptions: "EMI from ₹699/month available at checkout",
+    EmiOptions: " 699",
     videoUrl: "https://www.youtube.com/embed/yXmK7TAJ1Mc?si=dfbTOXvm8rfRi_XJ",
     weekSchedule: [
       {
@@ -642,6 +519,7 @@ export const courseDetails: CourseDetail[] = [
           "Revenue Streams and Costs Models",
         ],
         time: "Week 1",
+        subheading: "Case studies on",
         para: "Dissecting Business of Indian Unicorns",
       },
       {
@@ -653,6 +531,7 @@ export const courseDetails: CourseDetail[] = [
           "Stakeholders Communication",
         ],
         time: "Week 2",
+        subheading: "Case studies on",
         para: "Designing an Data/AI Product",
       },
       {
@@ -664,6 +543,7 @@ export const courseDetails: CourseDetail[] = [
           "Conditional and Case Statements",
         ],
         time: "Week 3",
+        subheading: "Case studies on",
         para: "Grocery E-commerce Performance Analysis",
       },
       {
@@ -675,6 +555,7 @@ export const courseDetails: CourseDetail[] = [
           "Advanced SQL Techniques for Production",
         ],
         time: "Week 4",
+        subheading: "Case studies on",
         para: "Business Review Tracker for CEO Office",
       },
       {
@@ -686,6 +567,7 @@ export const courseDetails: CourseDetail[] = [
           "Creating Dashboards",
         ],
         time: "Week 5",
+        subheading: "Case studies on",
         para: "E-Commerce Store Google Analytics",
       },
       {
@@ -697,6 +579,7 @@ export const courseDetails: CourseDetail[] = [
           "Efficient Data Models for Speed and Accuracy",
         ],
         time: "Week 6",
+        subheading: "Case studies on",
         para: "Marketing Dashboard for a D2C Fitness Brand",
       },
       {
@@ -708,6 +591,7 @@ export const courseDetails: CourseDetail[] = [
           "Hypothesis Testing, p-Value, Correlation",
         ],
         time: "Week 7",
+        subheading: "Case studies on",
         para: "Assortment Analysis for a Quick Commerce Company",
       },
       {
@@ -719,6 +603,7 @@ export const courseDetails: CourseDetail[] = [
           "Statistical Analysis for Launch Decisions",
         ],
         time: "Week 8",
+        subheading: "Case studies on",
         para: "Launch Strategy for a Lifestyle Brand’s Landing Page",
       },
       {
@@ -731,6 +616,7 @@ export const courseDetails: CourseDetail[] = [
           "Data Manipulation using Pandas",
         ],
         time: "Week 9",
+        subheading: "Case studies on",
         para: "Assortment Analysis for a Quick Commerce Company",
       },
       {
@@ -742,6 +628,7 @@ export const courseDetails: CourseDetail[] = [
           "Detailed Insights Report Writing for Stakeholders",
         ],
         time: "Week 10",
+        subheading: "Case studies on",
         para: "Loan Application Quality Assessment for an NBFC",
       },
       {
@@ -753,6 +640,7 @@ export const courseDetails: CourseDetail[] = [
           "Feature Engineering & Scaling",
         ],
         time: "Week 11",
+        subheading: "Case studies on",
         para: "Credit Decisioning System for an NBFC",
       },
       {
@@ -764,6 +652,7 @@ export const courseDetails: CourseDetail[] = [
           "Optimizing for Accuracy & Explainability",
         ],
         time: "Week 12",
+        subheading: "Case studies on",
         para: "Valued Shopper Retention in E-Commerce",
       },
       {
@@ -775,6 +664,7 @@ export const courseDetails: CourseDetail[] = [
           "Sequential Modeling Techniques (RNN, LSTM)",
         ],
         time: "Week 13",
+        subheading: "Case studies on",
         para: "Brand’s Social Listening from X (Twitter) feed",
       },
       {
@@ -786,6 +676,7 @@ export const courseDetails: CourseDetail[] = [
           "Working with OpenAI and Opensource LLM Models",
         ],
         time: "Week 14",
+        subheading: "Case studies on",
         para: "Negative News Screener for Fraud Alerts",
       },
       {
@@ -797,6 +688,7 @@ export const courseDetails: CourseDetail[] = [
           "Finetune and Evaluate Model Performance",
         ],
         time: "Week 15",
+        subheading: "Case studies on",
         para: "Develop and Deploy an Privacy for a Website",
       },
       {
@@ -808,6 +700,7 @@ export const courseDetails: CourseDetail[] = [
           "Technical Interview Questions",
         ],
         time: "Week 16",
+        subheading: "Final assessment on",
         para: "Exit Exam, Resume Feedback, & Mock Interviews",
       },
     ],
@@ -843,19 +736,20 @@ export const courseDetails: CourseDetail[] = [
     dateOfStart: "October 19, 2024",
     floatingBar: "Oct 19",
     timeCommitment: "12 hours/week",
+    timePerweek: "12 hours/week",
     cost: "₹9,999",
     seatsLeft: 25,
     sessionInsights: businessAnalystInsights,
     id: "3",
     actualcost: "₹19,999",
     imgUrl: BusinessAnalystFellowshipCard,
-
     razorPay: {
       src: "https://checkout.razorpay.com/v1/payment-button.js",
       paymentButtonId: "pl_OhyfCxUlrva95Q",
     },
+    pdf: "/AI_Engineering_Fellowship.pdf",
     discount: "50% OFF",
-    EmiOptions: "EMI from ₹485/month available at checkout",
+    EmiOptions: "₹485",
     videoUrl: "https://www.youtube.com/embed/md7C78glaGQ?si=3o-7rtKvM_sTg8gM",
     weekSchedule: [
       {
@@ -867,6 +761,7 @@ export const courseDetails: CourseDetail[] = [
           "Revenue Streams and Costs Models",
         ],
         time: "Week 1",
+        subheading: "Case studies on",
         para: "Dissecting Business of Indian Unicorns",
       },
       {
@@ -878,6 +773,7 @@ export const courseDetails: CourseDetail[] = [
           "Stakeholders Communication",
         ],
         time: "Week 2",
+        subheading: "Case studies on",
         para: "Designing an Data/AI Product",
       },
       {
@@ -889,6 +785,7 @@ export const courseDetails: CourseDetail[] = [
           "Hypothesis Testing, p-Value, Correlation",
         ],
         time: "Week 3",
+        subheading: "Case studies on",
         para: "Assortment Analysis for a Quick Commerce Company",
       },
       {
@@ -900,6 +797,7 @@ export const courseDetails: CourseDetail[] = [
           "Statistical Analysis for Launch Decisions",
         ],
         time: "Week 4",
+        subheading: "Case studies on",
         para: "Launch Strategy for a New E-Commerce Fashion Store",
       },
       {
@@ -911,6 +809,7 @@ export const courseDetails: CourseDetail[] = [
           "Data Manipulation using Pandas",
         ],
         time: "Week 5",
+        subheading: "Case studies on",
         para: "Assortment Analysis for a Quick Commerce Company",
       },
       {
@@ -922,6 +821,7 @@ export const courseDetails: CourseDetail[] = [
           "Detailed Insights Report Writing for Stakeholders",
         ],
         time: "Week 6",
+        subheading: "Case studies on",
         para: "Loan Application Quality Assessments for an NBFC",
       },
       {
@@ -933,6 +833,7 @@ export const courseDetails: CourseDetail[] = [
           "Feature Engineering & Scaling",
         ],
         time: "Week 7",
+        subheading: "Case studies on",
         para: "Credit Decisioning System for an NBFC",
       },
       {
@@ -944,6 +845,7 @@ export const courseDetails: CourseDetail[] = [
           "Optimizing for Accuracy & Explainability",
         ],
         time: "Week 8",
+        subheading: "Case studies on",
         para: "Valued Shopper Retention in E-Commerce",
       },
       {
@@ -955,6 +857,7 @@ export const courseDetails: CourseDetail[] = [
           "Sequential Modeling Techniques (RNN, LSTM)",
         ],
         time: "Week 9",
+        subheading: "Case studies on",
         para: "Brand’s Social Listening from X (Twitter) feed",
       },
       {
@@ -966,6 +869,7 @@ export const courseDetails: CourseDetail[] = [
           "Working with OpenAI and Opensource LLM Models",
         ],
         time: "Week 10",
+        subheading: "Case studies on",
         para: "Negative News Screener for Fraud Alerts",
       },
       {
@@ -977,6 +881,7 @@ export const courseDetails: CourseDetail[] = [
           "Finetune and Evaluate Model Performance",
         ],
         time: "Week 11",
+        subheading: "Case studies on",
         para: "Develop and Deploy an Privacy for a Website",
       },
       {
@@ -988,6 +893,7 @@ export const courseDetails: CourseDetail[] = [
           "Technical Interview Questions",
         ],
         time: "Week 12",
+        subheading: "Final assessment on",
         para: "Exit Exam, Resume Feedback, & Mock Interviews",
       },
     ],
@@ -1023,6 +929,7 @@ export const courseDetails: CourseDetail[] = [
     dateOfStart: "October 19, 2024",
     floatingBar: "Oct 19",
     timeCommitment: "10 hours/week",
+    timePerweek: "10 hours/week",
     cost: "₹9,999",
     seatsLeft: 25,
     sessionInsights: businessAnalystInsights,
@@ -1033,8 +940,9 @@ export const courseDetails: CourseDetail[] = [
       src: "https://checkout.razorpay.com/v1/payment-button.js",
       paymentButtonId: "pl_OhyVw2SEjrbyw4",
     },
+    pdf: "/Business_analyst_fellowship.pdf",
     discount: "45% OFF",
-    EmiOptions: "EMI from ₹499/month available at checkout",
+    EmiOptions: "₹499",
     weekSchedule: [
       {
         id: 1,
@@ -1045,6 +953,7 @@ export const courseDetails: CourseDetail[] = [
           "Revenue Streams and Costs Models",
         ],
         time: "Week 1",
+        subheading: "Case studies on",
         para: "Dissecting Business of Indian Unicorns",
       },
       {
@@ -1056,6 +965,7 @@ export const courseDetails: CourseDetail[] = [
           "Stakeholders Communication",
         ],
         time: "Week 2",
+        subheading: "Case studies on",
         para: "Designing an Data/AI Product",
       },
       {
@@ -1067,6 +977,7 @@ export const courseDetails: CourseDetail[] = [
           "Conditional and Case Statements",
         ],
         time: "Week 3",
+        subheading: "Case studies on",
         para: "Grocery E-commerce Performance Analysis",
       },
       {
@@ -1078,6 +989,7 @@ export const courseDetails: CourseDetail[] = [
           "Advanced SQL Techniques for Production",
         ],
         time: "Week 4",
+        subheading: "Case studies on",
         para: "Business Review Tracker for CEO Office",
       },
       {
@@ -1089,6 +1001,7 @@ export const courseDetails: CourseDetail[] = [
           "Creating Dashboards",
         ],
         time: "Week 5",
+        subheading: "Case studies on",
         para: "E-Commerce Store Google Analytics",
       },
       {
@@ -1100,6 +1013,7 @@ export const courseDetails: CourseDetail[] = [
           "Efficient Data Models for Speed and Accuracy",
         ],
         time: "Week 6",
+        subheading: "Case studies on",
         para: "Marketing Dashboard for a D2C Fitness Brand",
       },
       {
@@ -1111,6 +1025,7 @@ export const courseDetails: CourseDetail[] = [
           "Hypothesis Testing, p-Value, Correlation",
         ],
         time: "Week 7",
+        subheading: "Case studies on",
         para: "Assortment Analysis for a Quick Commerce Company",
       },
       {
@@ -1122,6 +1037,7 @@ export const courseDetails: CourseDetail[] = [
           "Statistical Analysis for Launch Decisions",
         ],
         time: "Week 8",
+        subheading: "Case studies on",
         para: "Launch Strategy for a Lifestyle Brand’s Landing Page",
       },
       {
@@ -1134,6 +1050,7 @@ export const courseDetails: CourseDetail[] = [
           "Data Manipulation using Pandas",
         ],
         time: "Week 9",
+        subheading: "Case studies on",
         para: "Assortment Analysis for a Quick Commerce Company",
       },
       {
@@ -1145,6 +1062,7 @@ export const courseDetails: CourseDetail[] = [
           "Detailed Insights Report Writing for Stakeholders",
         ],
         time: "Week 10",
+        subheading: "Case studies on",
         para: "Loan Application Quality Assessment for an NBFC",
       },
       {
@@ -1156,6 +1074,7 @@ export const courseDetails: CourseDetail[] = [
           "Working with OpenAI and Opensource LLM Models",
         ],
         time: "Week 11",
+        subheading: "Case studies on",
         para: "Negative News Screener for Fraud Alerts",
       },
       {
@@ -1167,6 +1086,7 @@ export const courseDetails: CourseDetail[] = [
           "Technical Interview Questions",
         ],
         time: "Week 12",
+        subheading: "Final assessment on",
         para: "Exit Exam, Resume Feedback, & Mock Interviews",
       },
     ],
@@ -1210,4 +1130,112 @@ export const MobileFellowshipImages = [
   CourseCardMobile,
   MentorshipMobile,
   CommunityMobile,
+];
+
+export const workshopData: LearningCardData[] = [
+  {
+    id: 1,
+    title: "Overview of Different Career Paths in Data Science/AI",
+    listItems: [
+      "Not everyone with the title of Data Scientist performs the same role. Make an informed decision about the one you would enjoy the most.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Frameworks for Selecting the Right Data Science Project",
+    listItems: [
+      "Not all projects hold the same value. Learn the right framework to identify the best ones for your target industries or companies.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Essential Elements of an Effective Data Science Resume",
+    listItems: [
+      "Craft a profile that captures the attention of hiring managers and helps you secure the right opportunity.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Data Science Interview Stages and Preparation Strategies",
+    listItems: [
+      "Learn what to expect from each interview round for top data science positions and how to prepare effectively.",
+    ],
+  },
+  {
+    id: 5,
+    title:
+      "How to approach Business Case Study Round – Live Solution Demonstration",
+    listItems: [
+      "Discover how to confidently tackle case studies using a 7-step framework and steer clear of common pitfalls.",
+    ],
+  },
+];
+
+export const WebinarForData: IwebinarForData[] = [
+  {
+    id: 1,
+    title: "Aspiring Data Scientists",
+    description:
+      "Individuals looking to break into the field of data science and need guidance on how to approach the rigorous interview process",
+    background: "#FFF0ED",
+  },
+  {
+    id: 2,
+    title: "Students and Recent Graduates",
+    description:
+      "Individuals completing their studies in Data science, AI, or related fields, who want to ensure they are well-prepared to enter the job market with confidence",
+    background: "#FFF5ED",
+  },
+  {
+    id: 3,
+    title: "Exploring New Career",
+    description:
+      "Professionals from other fields who wish to transition into data science or AI roles and require a solid understanding of what to expect during the interview process.",
+    background: "#F5F3FF",
+  },
+  {
+    id: 4,
+    title: "AI Enthusiasts",
+    description:
+      "Those interested in AI roles and seeking to understand the technical and conceptual questions that are typically asked in AI interviews.",
+    background: "#DBE5FF",
+  },
+];
+
+export const BonusWorkshop: IwebinarForData[] = [
+  {
+    id: 1,
+    title: "50 Essential SQL Questions for MAANG Interviews",
+    description:
+      "A comprehensive guide to the SQL questions you’re most likely to encounter at top tech companies.",
+    background: "#FFF0ED",
+  },
+  {
+    id: 2,
+    title: "Ace Your Machine Learning Interviews Handbook",
+    description:
+      "A step-by-step manual to mastering machine learning concepts and impressing your interviewers.",
+    background: "#FFF5ED",
+  },
+  {
+    id: 3,
+    title: "Resume Optimization Masterclass Deck",
+    description:
+      "A powerful PPT deck designed to help you create a standout resume that gets noticed.",
+    background: "#F5F3FF",
+  },
+  {
+    id: 4,
+    title: "LinkedIn Optimization Guide for Efficient Job Search",
+    description:
+      "A handbook with Pro tips to use LinkedIn for your job search.",
+    background: "#DBE5FF",
+  },
+  {
+    id: 5,
+    title: "30 Mins 1:1 Guidance call with an Industry Expert",
+    description:
+      "Get a chance to speak to an industry expert to receive guidance and get your doubts clarified.",
+    background: "#DBE5FF",
+  },
 ];

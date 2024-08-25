@@ -12,7 +12,7 @@ const ScheduledClassCard = ({
 }: ScheduledClassProps) => {
   return (
     <div
-      className="flex flex-col max-w-md p-4 pb-8 space-y-4 rounded-xl shadow-md overflow-hidden h-full"
+      className="flex flex-col max-w-md w-full p-4 pb-8 space-y-4 rounded-xl shadow-md overflow-hidden h-full"
       style={{ backgroundColor: background }}
     >
       <div className="flex flex-col gap-2">

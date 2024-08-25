@@ -92,7 +92,7 @@ const CoursePage = ({ params }: { params: { slug: string } }) => {
         </div>
       </section>
       <HorizontalLine />
-      <Learning courseDetails={course.weekSchedule || []} />
+      <Learning courseDetails={course.weekSchedule || []} pdfurl={course.pdf} />
       <HorizontalLine />
       <LiveSchedule />
       <HorizontalLine />

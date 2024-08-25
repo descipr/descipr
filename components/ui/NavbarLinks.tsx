@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
@@ -15,6 +16,9 @@ const NavbarLinks: React.FC = () => {
 
   return (
     <ul className="flex flex-row items-center gap-8">
+      <li className="text-md hover:text-gray-500 text-white font-Plus-jakarta font-normal cursor-pointer">
+        <Link href="/">Home</Link>
+      </li>
       <li
         className="text-md hover:text-gray-500 text-white font-Plus-jakarta font-normal cursor-pointer"
         onClick={() => handleNavigation("#fellowship")}
@@ -26,18 +30,6 @@ const NavbarLinks: React.FC = () => {
         onClick={() => handleNavigation("#reviews")}
       >
         Reviews
-      </li>
-      <li
-        className="text-md hover:text-gray-500 text-white font-Plus-jakarta font-normal cursor-pointer"
-        onClick={() => handleNavigation("#blogs")}
-      >
-        Blogs
-      </li>
-      <li
-        className="text-md hover:text-gray-500 text-white font-Plus-jakarta font-normal cursor-pointer"
-        onClick={() => handleNavigation("#podcast")}
-      >
-        Podcast
       </li>
     </ul>
   );

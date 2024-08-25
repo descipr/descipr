@@ -60,18 +60,20 @@ import businessAnalystInsights from "@/public/Images/Business_analyst_insights_i
 import PriceCardImage from "@/public/Images/PriceCardImage.svg";
 import FarzandKhan from "@/public/Images/Farzand_khan.jpg";
 import Lochan_raj from "@/public/Images/Lochan_raj.jpg";
-import Suryansh_abijith from "@/public/Images/suryansh_abijith.jpg"
-import Sampath_vinayak from "@/public/Images/sampath_vinayak.jpg"
-import Sayan_paul from "@/public/Images/Sayan_paul.jpg"
-import transformers from "@/public/Images/Transformers.png"
-import largeLanguageModel from "@/public/Images/LLMs.png"
-import ModelBuilding from "@/public/Images/ML Models.png"
-import MlLibrary from "@/public/Images/ML Libraries.png"
-import generativeModel from "@/public/Images/Generative Models.png"
-import HiringManagerMobile from "@/public/Images/hiring_manager_mobile.svg"
-import CourseCardMobile from "@/public/Images/Course_card_mobile.svg"
-import MentorshipMobile from "@/public/Images/Mentorship_mobile.svg"
-import CommunityMobile from "@/public/Images/Community_mobile.svg"
+import Suryansh_abijith from "@/public/Images/suryansh_abijith.jpg";
+import Sampath_vinayak from "@/public/Images/sampath_vinayak.jpg";
+import Sayan_paul from "@/public/Images/Sayan_paul.jpg";
+import transformers from "@/public/Images/Transformers.png";
+import largeLanguageModel from "@/public/Images/LLMs.png";
+import ModelBuilding from "@/public/Images/ML Models.png";
+import MlLibrary from "@/public/Images/ML Libraries.png";
+import generativeModel from "@/public/Images/Generative Models.png";
+import HiringManagerMobile from "@/public/Images/hiring_manager_mobile.svg";
+import CourseCardMobile from "@/public/Images/Course_card_mobile.svg";
+import MentorshipMobile from "@/public/Images/Mentorship_mobile.svg";
+import CommunityMobile from "@/public/Images/Community_mobile.svg";
+import DataScientistInsights from "@/public/Images/data_scientist_insights.svg";
+import workshopInsights from "@/public/Images/workshopInsights.svg";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -161,4 +163,6 @@ export {
   CourseCardMobile,
   CommunityMobile,
   MentorshipMobile,
+  DataScientistInsights,
+  workshopInsights,
 };

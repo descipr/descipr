@@ -1,16 +1,9 @@
-"use client";
-import React, { useRef, useEffect, useState } from "react";
+import { BonusWorkshop } from "@/constants";
 import { motion } from "framer-motion";
-import { ScheduledClassProps } from "@/constants";
-import ScheduledClassCard from "./ScheduledClassCard";
+import { useEffect, useRef, useState } from "react";
+import IntendedForCard from "../IntendedForCard";
 
-interface MobileScheduledCarouselProps {
-  scheduledClassData: ScheduledClassProps[];
-}
-
-const MobileScheduledCarousel: React.FC<MobileScheduledCarouselProps> = ({
-  scheduledClassData,
-}) => {
+const MobileIntendedSection = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
 
@@ -20,8 +13,7 @@ const MobileScheduledCarousel: React.FC<MobileScheduledCarouselProps> = ({
       const visibleWidth = carouselRef.current.offsetWidth;
       setWidth(totalWidth - visibleWidth);
     }
-  }, [scheduledClassData]);
-
+  }, [BonusWorkshop]);
   return (
     <motion.div
       ref={carouselRef}
@@ -33,15 +25,14 @@ const MobileScheduledCarousel: React.FC<MobileScheduledCarouselProps> = ({
         dragConstraints={{ right: 0, left: -width }}
         className="flex"
       >
-        {scheduledClassData.map((data, index) => (
+        {BonusWorkshop.map((card, index) => (
           <div key={index} className="flex-shrink-0 w-full px-4 md:w-1/2">
-            <ScheduledClassCard
-              imageUrl={data.imageUrl}
-              title={data.title}
-              para={data.para}
-              date={data.date}
-              background={data.background}
-              key={index}
+            <IntendedForCard
+              key={card.id}
+              title={card.title}
+              description={card.description}
+              background={card.background}
+              id={0}
             />
           </div>
         ))}
@@ -50,4 +41,4 @@ const MobileScheduledCarousel: React.FC<MobileScheduledCarouselProps> = ({
   );
 };
 
-export default MobileScheduledCarousel;
+export default MobileIntendedSection;

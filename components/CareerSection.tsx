@@ -5,7 +5,7 @@ const CareerSection = () => {
   return (
     <section className="section-style  items-center">
       <div className="flex flex-col items-center space-y-1">
-        <h2 className="text-white text-center text-3xl md:text-4xl font-bold">
+        <h2 className="heading text-white">
           Take your career to newer heights with us
         </h2>
       </div>

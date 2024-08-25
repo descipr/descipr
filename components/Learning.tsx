@@ -1,6 +1,6 @@
 "use client";
 import { useState, ChangeEvent, FormEvent, useEffect } from "react";
-import LearningCardSection from "./ui/LearningCardSection"; 
+import LearningCardSection from "./ui/LearningCardSection";
 import Image from "next/image";
 import { DownloadIcon } from "@/utils";
 import { LearningCardData } from "@/constants";
@@ -8,9 +8,10 @@ import MobileLearningCarousel from "./ui/MobileLearningCarousel";
 
 interface LearningProps {
   courseDetails: LearningCardData[];
+  pdfurl: string;
 }
 
-const Learning = ({ courseDetails }: LearningProps) => {
+const Learning = ({ courseDetails, pdfurl }: LearningProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [fullName, setFullName] = useState<string>("");
   const [phoneNumber, setPhoneNumber] = useState<string>("");
@@ -21,22 +22,26 @@ const Learning = ({ courseDetails }: LearningProps) => {
       setIsDesktop(window.innerWidth >= 1024);
     };
 
-    handleResize(); 
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleDownloadClick = () => {
-    setTimeout(() => {
-      setIsOpen(true);
-    }, 2000);
+    setIsOpen(true);
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!/^\d{10}$/.test(phoneNumber)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
     try {
-      const res = await fetch(`/api/user`, {
+      const response = await fetch("/api/user", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -44,30 +49,39 @@ const Learning = ({ courseDetails }: LearningProps) => {
         body: JSON.stringify({ fullName, phoneNumber }),
       });
 
-      if (res.ok) {
-        alert("Your callback request has been sent!");
+      if (response.ok) {
+        alert(
+          "Thank you for downloading the curriculum. Our team will get in touch with you shortly"
+        );
         setFullName("");
         setPhoneNumber("");
         setIsOpen(false);
 
-        const link = document.createElement("a");
-        link.href = "/Business_analyst_cariculum.pdf";
-        link.download = "Business_analyst_cariculum.pdf";
-        link.click();
+        const pdfUrl = pdfurl;
+        const anchor = document.createElement("a");
+        anchor.href = pdfUrl;
+        anchor.download = pdfUrl;
+        document.body.appendChild(anchor);
+        anchor.click();
+        document.body.removeChild(anchor);
       } else {
         alert("Failed to send request. Please try again.");
       }
     } catch (error) {
       console.error("Error submitting the form", error);
+      alert("An error occurred. Please try again later.");
+    }
+  };
+
+  const handlePhoneNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const input = e.target.value;
+    if (/^\d*$/.test(input) && input.length <= 10) {
+      setPhoneNumber(input);
     }
   };
 
   const handleFullNameChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFullName(e.target.value);
-  };
-
-  const handlePhoneNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setPhoneNumber(e.target.value);
   };
 
   return (

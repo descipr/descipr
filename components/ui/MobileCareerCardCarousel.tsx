@@ -1,16 +1,10 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ScheduledClassProps } from "@/constants";
-import ScheduledClassCard from "./ScheduledClassCard";
+import { careerCardData } from "@/constants";
+import CareerCard from "./CareerCard";
 
-interface MobileScheduledCarouselProps {
-  scheduledClassData: ScheduledClassProps[];
-}
-
-const MobileScheduledCarousel: React.FC<MobileScheduledCarouselProps> = ({
-  scheduledClassData,
-}) => {
+const MobileCareerCardCarousel: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
 
@@ -20,12 +14,12 @@ const MobileScheduledCarousel: React.FC<MobileScheduledCarouselProps> = ({
       const visibleWidth = carouselRef.current.offsetWidth;
       setWidth(totalWidth - visibleWidth);
     }
-  }, [scheduledClassData]);
+  }, []);
 
   return (
     <motion.div
       ref={carouselRef}
-      className="container overflow-hidden"
+      className="container mx-auto px-4 py-6 overflow-hidden"
       whileTap={{ cursor: "grabbing" }}
     >
       <motion.div
@@ -33,14 +27,13 @@ const MobileScheduledCarousel: React.FC<MobileScheduledCarouselProps> = ({
         dragConstraints={{ right: 0, left: -width }}
         className="flex"
       >
-        {scheduledClassData.map((data, index) => (
-          <div key={index} className="flex-shrink-0 w-full px-4 md:w-1/2">
-            <ScheduledClassCard
-              imageUrl={data.imageUrl}
-              title={data.title}
-              para={data.para}
-              date={data.date}
-              background={data.background}
+        {careerCardData.map((card, index) => (
+          <div key={index} className="flex-shrink-0 w-full px-2 md:w-1/2">
+            <CareerCard
+              imageUrl={card.imageUrl}
+              title={card.title}
+              description={card.description}
+              background={card.background}
               key={index}
             />
           </div>
@@ -50,4 +43,4 @@ const MobileScheduledCarousel: React.FC<MobileScheduledCarouselProps> = ({
   );
 };
 
-export default MobileScheduledCarousel;
+export default MobileCareerCardCarousel;

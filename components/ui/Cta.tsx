@@ -1,4 +1,4 @@
-'use client'; 
+"use client"; 
 
 import { useState, FormEvent, ChangeEvent } from 'react';
 import Image from 'next/image';
@@ -10,44 +10,45 @@ const Cta = () => {
   const [fullName, setFullName] = useState<string>('');
   const [phoneNumber, setPhoneNumber] = useState<string>('');
 
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!/^\d{10}$/.test(phoneNumber)) {
-      alert('Please enter a valid 10-digit phone number.');
-      return;
-    }
-
-    try {
-      const response = await fetch('/api/user', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ fullName, phoneNumber }),
-      });
-
-      if (response.ok) {
-        alert("We’ve received your request. Our mentor will connect with you within the next 24 hours!");
-        setFullName('');
-        setPhoneNumber('');
-        setIsOpen(false);
-      } else {
-        alert('Failed to send request. Please try again.');
+      if (!/^\d{10}$/.test(phoneNumber)) {
+        alert('Please enter a valid 10-digit phone number.');
+        return;
       }
-    } catch (error) {
-      console.error('Error submitting the form', error);
-    }
-  };
 
+      try {
+        const response = await fetch('/api/user', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ fullName, phoneNumber }),
+        });
+
+        if (response.ok) {
+          alert("We’ve received your request. Our mentor will connect with you within the next 24 hours!");
+          setFullName('');
+          setPhoneNumber('');
+          setIsOpen(false);
+        } else {
+          alert('Failed to send request. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error submitting the form', error);
+      }
+    };
 
   const handleFullNameChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFullName(e.target.value);
   };
 
   const handlePhoneNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setPhoneNumber(e.target.value);
+    const input = e.target.value;
+    if (/^\d*$/.test(input) && input.length <= 10) {
+      setPhoneNumber(input);
+    }
   };
 
   return (
@@ -107,6 +108,7 @@ const Cta = () => {
                   onChange={handlePhoneNumberChange}
                   className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
                   required
+                  maxLength={10}
                 />
               </div>
               <div className="flex justify-between items-center">
