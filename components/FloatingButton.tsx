@@ -59,11 +59,7 @@ const FloatingButton = () => {
   return (
     <div
       className={`fixed z-50 ${
-        pathname === "/"
-          ? "bottom-3 right-3"
-          : pathname === "/workshop"
-          ? "bottom-3 right-3"
-          : "bottom-24 right-3"
+        pathname === "/" ? "bottom-3 right-3" : "bottom-24 right-3"
       }`}
     >
       <div className="flex justify-end items-center gap-4 md:flex-row">

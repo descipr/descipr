@@ -2,6 +2,7 @@ import BonusWorkshop from "@/components/BonusWorkshop";
 import CallNow from "@/components/CallNow";
 import ContactForm from "@/components/ContactForm";
 import DesciprDifference from "@/components/DesciprDifference";
+import FaqSection from "@/components/FaqSection";
 import LearningWorkShop from "@/components/LearningWorkShop";
 import LiveSessionSection from "@/components/LiveSessionSection";
 import Testimonials from "@/components/Testimonials";
@@ -63,13 +64,13 @@ const EnrollNow = () => {
         <HorizontalLine />
         <BonusWorkshop />
         <HorizontalLine />
-        <DesciprDifference />
-        <HorizontalLine />
         <Testimonials />
         <HorizontalLine />
         <LiveSessionSection />
         <HorizontalLine />
         <CallNow />
+        <HorizontalLine />
+        <FaqSection />
       </section>
     </>
   );

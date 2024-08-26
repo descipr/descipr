@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HorizontalLine from "@/components/ui/HorizontalLine";
 import FloatingButton from "@/components/FloatingButton";
-import PageLoader from "@/components/PageLoader";
+
 
 export const metadata: Metadata = {
   title: {
