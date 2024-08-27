@@ -180,8 +180,6 @@ export interface IwebinarForData {
 
 export const companyList: ListItem[] = [
   { label: "About Us" },
-  { label: "Blogs" },
-  { label: "Podcasts" },
 ];
 
 export const socialLinks: SocialLink[] = [
