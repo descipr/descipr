@@ -1,13 +1,13 @@
 import BonusWorkshop from "@/components/BonusWorkshop";
 import CallNow from "@/components/CallNow";
 import ContactForm from "@/components/ContactForm";
-import DesciprDifference from "@/components/DesciprDifference";
 import FaqSection from "@/components/FaqSection";
 import LearningWorkShop from "@/components/LearningWorkShop";
 import LiveSessionSection from "@/components/LiveSessionSection";
 import Testimonials from "@/components/Testimonials";
 import HorizontalLine from "@/components/ui/HorizontalLine";
 import WebinarIntended from "@/components/ui/WebinarIntended";
+import WorkshopCard from "@/components/ui/WorkshopCard";
 import { BackgroundLogo, workshopInsights } from "@/utils";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -54,7 +54,7 @@ const EnrollNow = () => {
           </div>
 
           <div className="flex justify-center items-center w-full px-2 sm:w-1/2  pt-16 md:pt-0">
-            <ContactForm />
+            <WorkshopCard />
           </div>
         </section>
         <HorizontalLine />

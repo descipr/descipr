@@ -33,7 +33,7 @@ const WorkshopFloatingBar = () => {
       <div className="container mx-auto max-w-5xl flex flex-row justify-between items-center space-x-2 md:space-x-4 px-2 md:px-4">
         <div className="flex flex-col items-center md:items-start">
           <span className="text-[10px] sm:text-xs md:text-sm text-gray-400">
-            Cohort starts
+            Workshop Date
           </span>
           <span className="text-sm sm:text-base md:text-lg font-semibold">
             Sep 28

@@ -74,6 +74,8 @@ import MentorshipMobile from "@/public/Images/Mentorship_mobile.svg";
 import CommunityMobile from "@/public/Images/Community_mobile.svg";
 import DataScientistInsights from "@/public/Images/data_scientist_insights.svg";
 import workshopInsights from "@/public/Images/workshopInsights.svg";
+import Tanoy_profile from "@/public/Images/Tanoy_img.svg"
+import HsbcLogo from "@/public/Images/Hsbc.svg"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -165,4 +167,6 @@ export {
   MentorshipMobile,
   DataScientistInsights,
   workshopInsights,
+  Tanoy_profile,
+  HsbcLogo
 };

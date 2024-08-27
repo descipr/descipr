@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
 import Cta from "@/components/ui/Cta";
 import HorizontalLine from "@/components/ui/HorizontalLine";
-import { motion } from "framer-motion";
+
 
 const Home: React.FC = () => {
   return (
