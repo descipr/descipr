@@ -689,7 +689,7 @@ export const courseDetails: CourseDetail[] = [
         ],
         time: "Week 15",
         subheading: "Case studies on",
-        para: "Develop and Deploy an Privacy for a Website",
+        para: "Develop and Deploy a Privacy bot",
       },
       {
         id: 16,
@@ -882,7 +882,7 @@ export const courseDetails: CourseDetail[] = [
         ],
         time: "Week 11",
         subheading: "Case studies on",
-        para: "Develop and Deploy an Privacy for a Website",
+        para: "Develop and Deploy a Privacy bot",
       },
       {
         id: 12,
@@ -1230,5 +1230,31 @@ export const BonusWorkshop: IwebinarForData[] = [
     description:
       "Get a chance to speak to an industry expert to receive guidance and get your doubts clarified.",
     background: "#DBE5FF",
+  },
+];
+
+export const workshopFaqData: FAQItem[] = [
+  {
+    question: "What is the focus of this workshop?",
+    answer:
+      "The workshop will cover strategies and best practices for successfully navigating data science interviews. Topics will include technical assessments, problem-solving techniques, common interview questions, and how to effectively present your experience and skills.",
+  },
+
+  {
+    question: "Who should attend this workshop?",
+    answer:
+      "This workshop is ideal for aspiring data scientists, recent graduates, or professionals looking to transition into data science roles. It’s also valuable for experienced data scientists who want to improve their interview performance.",
+  },
+  {
+    question:
+      "How do I register for the workshop?",
+    answer:
+      "You can register through our website or contact our support team for assistance with registration.",
+  },
+  {
+    question:
+      "What if I have more questions after the workshop?",
+    answer:
+      "You can reach out to the workshop facilitator via email or join our community forum where you can continue the discussion and get additional support.",
   },
 ];

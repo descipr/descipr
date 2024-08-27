@@ -1,7 +1,7 @@
-import { faqData } from "@/constants";
+import {  workshopFaqData } from "@/constants";
 import Question from "./ui/Question";
 
-const FaqSection = () => {
+const WorkshopFaq = () => {
   return (
     <section className="section-style mx-auto items-center">
       <div className="flex flex-col items-center space-y-4 mb-8">
@@ -10,9 +10,9 @@ const FaqSection = () => {
         </h2>
       </div>
 
-      <Question faqs={faqData} />
+      <Question faqs={workshopFaqData} />
     </section>
   );
 };
 
-export default FaqSection;
+export default WorkshopFaq;

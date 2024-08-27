@@ -1,9 +1,13 @@
-'use client'
+"use client";
 import { faqData, FAQItem } from "@/constants";
 import { useState } from "react";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
-const Question = () => {
+export interface Ifaqs {
+  faqs: FAQItem[];
+}
+
+const Question = ({ faqs }: Ifaqs) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -12,7 +16,7 @@ const Question = () => {
 
   return (
     <div className="space-y-4 w-full sm:w-[70%] mx-auto px-4">
-      {faqData.map((item: FAQItem, index: number) => (
+      {faqs.map((item: FAQItem, index: number) => (
         <div
           key={index}
           className="bg-white rounded-lg shadow-md p-4 cursor-pointer w-full"

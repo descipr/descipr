@@ -1,13 +1,12 @@
 import BonusWorkshop from "@/components/BonusWorkshop";
 import CallNow from "@/components/CallNow";
-import ContactForm from "@/components/ContactForm";
-import FaqSection from "@/components/FaqSection";
 import LearningWorkShop from "@/components/LearningWorkShop";
 import LiveSessionSection from "@/components/LiveSessionSection";
 import Testimonials from "@/components/Testimonials";
 import HorizontalLine from "@/components/ui/HorizontalLine";
 import WebinarIntended from "@/components/ui/WebinarIntended";
 import WorkshopCard from "@/components/ui/WorkshopCard";
+import WorkshopFaq from "@/components/WorkshopFaq";
 import { BackgroundLogo, workshopInsights } from "@/utils";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -70,7 +69,7 @@ const EnrollNow = () => {
         <HorizontalLine />
         <CallNow />
         <HorizontalLine />
-        <FaqSection />
+        <WorkshopFaq />
       </section>
     </>
   );
