@@ -6,6 +6,7 @@ const DesktopLearningSection = () => {
   const [current, setCurrent] = useState(0);
   const [learningCardArrayPerPage, setLearningCardArrayPerPage] = useState(1);
   const length = workshopData.length;
+  const maxIndex = Math.ceil(length / learningCardArrayPerPage) - 1;
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,7 +28,7 @@ const DesktopLearningSection = () => {
     };
   }, []);
 
-  const maxIndex = Math.ceil(length / learningCardArrayPerPage) - 1;
+
 
   const nextSlide = () => {
     setCurrent(current === maxIndex ? 0 : current + 1);
@@ -41,7 +42,7 @@ const DesktopLearningSection = () => {
       <div className="container mx-auto text-center flex flex-col">
         <div className="overflow-x-hidden overflow-y-visible ">
           <div
-            className="flex transition-transform duration-500 ease-in-out overflow-hidden"
+            className="flex transition-transform duration-500 ease-in-out "
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
             {workshopData.map((data, index) => (
