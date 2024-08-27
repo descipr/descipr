@@ -532,7 +532,7 @@ export const courseDetails: CourseDetail[] = [
         ],
         time: "Week 2",
         subheading: "Case studies on",
-        para: "Designing an Data/AI Product",
+        para: "Designing a Data/AI Product",
       },
       {
         id: 3,
@@ -768,13 +768,13 @@ export const courseDetails: CourseDetail[] = [
         id: 2,
         title: "Problem Solving Approach",
         listItems: [
-          "Structured Problem Solving Canva",
+          "Structured Problem Solving Canvas",
           "Human Centered Solution Design",
           "Stakeholders Communication",
         ],
         time: "Week 2",
         subheading: "Case studies on",
-        para: "Designing an Data/AI Product",
+        para: "Designing a Data/AI Product",
       },
       {
         id: 3,
@@ -966,7 +966,7 @@ export const courseDetails: CourseDetail[] = [
         ],
         time: "Week 2",
         subheading: "Case studies on",
-        para: "Designing an Data/AI Product",
+        para: "Designing a Data/AI Product",
       },
       {
         id: 3,
