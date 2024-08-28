@@ -11,7 +11,7 @@ const NavbarLinks: React.FC = () => {
         <Link href="/#Fellowship">Fellowship</Link>
       </li>
       <li className="text-md hover:text-gray-500 text-white font-Plus-jakarta font-normal cursor-pointer">
-      <Link href="/#reviews">reviews</Link>
+      <Link href="/#reviews">Reviews</Link>
       </li>
     </ul>
   );

@@ -113,7 +113,7 @@ const Learning = ({ courseDetails, pdfurl }: LearningProps) => {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
             <h3 className="text-2xl font-bold mb-4">Download Curriculum</h3>
             <p className="text-gray-600 mb-4">
