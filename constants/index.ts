@@ -179,7 +179,7 @@ export interface IwebinarForData {
 }
 
 export const companyList: ListItem[] = [
-  { label: "About Us" , href:"/about" },
+  { label: "About Us" , href:"/aboutus" },
 ];
 
 export const socialLinks: SocialLink[] = [
