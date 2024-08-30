@@ -179,7 +179,7 @@ export interface IwebinarForData {
 }
 
 export const companyList: ListItem[] = [
-  { label: "About Us" },
+  { label: "About Us" , href:"/about" },
 ];
 
 export const socialLinks: SocialLink[] = [
@@ -488,7 +488,7 @@ export const courseDetails: CourseDetail[] = [
   {
     heading: "Data Scientist Fellowship",
     description:
-      "Transform your career with our Data Scientist Fellowship! Master data analysis, machine learning, and real-world applications with expert mentorship and hands-on projects. Step into top roles at leading tech companies like Microsoft, Google, Amazon, etc",
+      "Master data analysis, machine learning, AI, and real-world skills with expert guidance and hands-on projects. Prepare for top roles at leading tech companies.",
     dateOfStart: "October 19, 2024",
     floatingBar: "Oct 19",
     timeCommitment: "4 months",
@@ -730,7 +730,7 @@ export const courseDetails: CourseDetail[] = [
   {
     heading: "AI Engineer Fellowship",
     description:
-      "Kickstart your AI career with our all-inclusive fellowship! Get hands-on experience, personalized mentorship, and exclusive networking. Work on cutting-edge projects and gear up for top roles at Google, Amazon, Microsoft, and more. Your AI future starts now!",
+      "Tackle cutting-edge projects and prepare for top roles at leading tech giants. Your AI future begins now!",
     dateOfStart: "October 19, 2024",
     floatingBar: "Oct 19",
     timeCommitment: "12 hours/week",
@@ -923,7 +923,7 @@ export const courseDetails: CourseDetail[] = [
   {
     heading: "Business Analyst Fellowship",
     description:
-      "Kickstart your Business analyst career at top companies like Amazon, Dell, Swiggy etc. Gain hands-on experience, personalized mentorship, and exclusive networking while working on impactful projects. Your future in business analysis starts here!",
+      "Kickstart your Business analyst career at top companies like Amazon, Dell, Swiggy etc. Your future in business analysis starts here!",
     dateOfStart: "October 19, 2024",
     floatingBar: "Oct 19",
     timeCommitment: "10 hours/week",

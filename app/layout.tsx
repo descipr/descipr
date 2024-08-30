@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://www.descipr.com",
     images: [
       {
-        url: "https://www.descipr.com/your-opengraph-image.jpg",
+        url: "https://www.descipr.com/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "Decipr - Become a 360-degree AI Professional",

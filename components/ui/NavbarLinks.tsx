@@ -13,6 +13,9 @@ const NavbarLinks: React.FC = () => {
       <li className="text-md hover:text-gray-500 text-white font-Plus-jakarta font-normal cursor-pointer">
       <Link href="/#reviews">Reviews</Link>
       </li>
+      <li className="text-md hover:text-gray-500 text-white font-Plus-jakarta font-normal cursor-pointer">
+      <Link href="/about">About Us</Link>
+      </li>
     </ul>
   );
 };

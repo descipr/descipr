@@ -9,7 +9,7 @@ const Company: React.FC = () => {
       <ul className="flex flex-col space-y-2">
         {companyList.map((item, index) => (
           <li key={index} className="text-xs font-light">
-            {item.label}
+            <Link href={item.href as string}>{item.label}</Link>
           </li>
         ))}
         <li className="text-xs font-light">

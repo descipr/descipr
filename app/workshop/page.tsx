@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Workshop",
-  description: "Descipr | Workshop",
+  description: "Enhance your data science and AI interview skills with this exclusive workshop, guided by a seasoned hiring manager. It will refine your strategic problem-solving abilities and strengthen your communication skills.",
 };
 const EnrollNow = () => {
   return (
