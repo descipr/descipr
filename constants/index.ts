@@ -1,4 +1,5 @@
 import {
+  adithiaV,
   AiEngineeringCard,
   AnkitaKundu,
   AtulAnand,
@@ -7,12 +8,14 @@ import {
   BusinessAnalystFellowshipCard,
   businessAnalystInsights,
   BusinessFundamentals,
+  charuGoyal,
   Community,
   CommunityMobile,
   CourseCard,
   CourseCardMobile,
   DataScientistCard,
   DataScientistInsights,
+  debjaniMajumder,
   DoubtSupport,
   ExportData,
   FarzandKhan,
@@ -23,6 +26,7 @@ import {
   instagramIcon,
   Interview,
   JobSimulation,
+  KoushikMitra,
   KshitjiJha,
   largeLanguageModel,
   linkedIcon,
@@ -41,11 +45,14 @@ import {
   PeerLearning,
   Portfolio,
   PowerBi,
+  pranoyDewanjee,
   ProblemSolving,
   python,
   ResumeReview,
   SameerDubey,
+  samikshaGebise,
   Sampath_vinayak,
+  samridhi,
   Sayan_paul,
   sql,
   SrinivasanBalaji,
@@ -239,6 +246,60 @@ export const items = [
 
 export const testimonials = [
   {
+    profilePic: KoushikMitra,
+    name: "Koushik Mitra",
+    position: "PowerBI Developer",
+    testimonial:
+      "My heartfelt gratitude to the entire team. I feel extremely lucky to be a part of Descipr. The sessions which I have attended, are the best so far. As I have got a thorough understanding of domains and its areas related to analysis. Looking forward to more amazing sessions.",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7235173094980476929?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7235173094980476929%2C7235298945701208064%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287235298945701208064%2Curn%3Ali%3Aactivity%3A7235173094980476929%29",
+  },
+  {
+    profilePic: adithiaV,
+    name: "Adithia V",
+    position: "Data Analyst",
+    testimonial:
+      "Being a part of Descipr's first Data Scientist Fellowship cohort has been an incredible journey. The growth I’ve experienced, both technically and professionally, has exceeded my expectations. The emphasis on real-world applications through case studies has been invaluable. I highly recommend this fellowship to anyone looking to elevate their data science skills and business acumen.🚀",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7235173094980476929?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7235173094980476929%2C7235203541722656770%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287235203541722656770%2Curn%3Ali%3Aactivity%3A7235173094980476929%29",
+  },
+  {
+    profilePic: samikshaGebise,
+    name: "Samiksha Gebise",
+    position: "Analyst, Rubixe",
+    testimonial:
+      "I want to express my sincere gratitude to the entire Descipr team for conducting this incredible Cohort. It has greatly enriched my industrial knowledge and provided me with invaluable insights. A special thank you to Tanoy Sir for his outstanding sessions, which have significantly enhanced my analytical skills. This cohort has truly helped me explore and develop my thinking abilities in new and diverse ways.",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7235173094980476929?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7235173094980476929%2C7235259291165716480%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287235259291165716480%2Curn%3Ali%3Aactivity%3A7235173094980476929%29",
+  },
+  {
+    profilePic: debjaniMajumder,
+    name: "Debjani Majumder",
+    position: "Fraud Analyst",
+    testimonial:
+      "I would like to thank to team Descipr for arranging some engaging sessions. It helped me to enhance my knowledge and drive my interest more into data science. I am happy be a part of this team and quite hopeful to become a contributor in future.",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7235173094980476929?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7235173094980476929%2C7235218954296705025%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287235218954296705025%2Curn%3Ali%3Aactivity%3A7235173094980476929%29",
+  },
+  {
+    profilePic: charuGoyal,
+    name: "Charu Goyal",
+    position: "Asst Manager, Data Science",
+    testimonial:
+      "I want to thank to the entire Descipr team for taking such wonderful initiatives and arranging the sessions. Would like to extend a big thank you to Srinivasan balaji for taking a well detailed session on AB testing. It really helped me in gaining valuable insights and having a detailed understanding of the concepts & business problems.",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7235173094980476929?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7235173094980476929%2C7235193173008867328%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287235193173008867328%2Curn%3Ali%3Aactivity%3A7235173094980476929%29",
+  },
+  {
+    profilePic: pranoyDewanjee,
+    name: "Pranoy Dewanjee",
+    position: "Senior Analyst",
+    testimonial:
+      "I want to extend a big thank you to the entire Descipr team for organizing this incredible cohort. It has been a truly enriching journey for me. I’m grateful for the support and would love to continue being involved with the Descipr community. Looking forward to staying connected.",
+    linkedinUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7235173094980476929?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7235173094980476929%2C7235184559074525184%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287235184559074525184%2Curn%3Ali%3Aactivity%3A7235173094980476929%29",
+  },
+  {
     profilePic: FarzandKhan,
     name: "Farzand Khan",
     position: "Business Analyst",
@@ -288,9 +349,9 @@ export const testimonials = [
     name: "Suryansh Abhijit",
     position: "Student, MIT",
     testimonial:
-      "A very insightful session indeed. Looking forward to more case studies.",
+      "Attended the very first workshop of the cohort, the sessions were very insightful and interactive. Descipr did a fantastic job with introducing the business aspect of different industries and how data analytics actually helps businesses in real life, something that is not much talked upon, and the one on one mentorship is just a cherry on the top.",
     linkedinUrl:
-      "https://www.linkedin.com/posts/suryansh-abhijit-29318a181_powerhour-activity-7202745454093082624-PNHX?utm_source=share&utm_medium=member_desktop",
+      "https://www.linkedin.com/feed/update/urn:li:activity:7235173094980476929?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7235173094980476929%2C7235516085750353921%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287235516085750353921%2Curn%3Ali%3Aactivity%3A7235173094980476929%29",
   },
   {
     profilePic: Sampath_vinayak,
@@ -310,6 +371,7 @@ export const testimonials = [
     linkedinUrl:
       "https://www.linkedin.com/feed/update/urn:li:activity:7205048134664642562?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7205048134664642562%2C7205095558686932992%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287205095558686932992%2Curn%3Ali%3Aactivity%3A7205048134664642562%29",
   },
+  
 ];
 
 export const careerCardData: CardData[] = [
@@ -414,6 +476,11 @@ export const OutTrainers: OurTrainerProp[] = [
     src: VasuBhasin,
     alt: "Image 5",
     link: "https://www.linkedin.com/in/vasubhasin/",
+  },
+  {
+    src: samridhi,
+    alt: "Image 6",
+    link: "https://www.linkedin.com/in/samriddhisinha/",
   },
 
   // Add more images as needed

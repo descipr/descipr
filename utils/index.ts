@@ -76,6 +76,13 @@ import DataScientistInsights from "@/public/Images/data_scientist_insights.svg";
 import workshopInsights from "@/public/Images/workshopInsights.svg";
 import Tanoy_profile from "@/public/Images/Tanoy_img.svg"
 import HsbcLogo from "@/public/Images/Hsbc.svg"
+import KoushikMitra from "@/public/Images/koushik_mitra.png"
+import adithiaV from "@/public/Images/Adithia_v.png"
+import samikshaGebise from "@/public/Images/samiksha_gebise.png"
+import debjaniMajumder from "@/public/Images/debjani_majumder.png"
+import charuGoyal from "@/public/Images/charu_goyal.png"
+import pranoyDewanjee from "@/public/Images/pranoy_dewanjee.png"
+import samridhi from "@/public/Images/samridhi.svg"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -93,6 +100,12 @@ export const cleanUpSlug = (slug: string): string => {
 };
 
 export {
+  samridhi,
+  adithiaV,
+  samikshaGebise,
+  debjaniMajumder,
+  charuGoyal,
+  pranoyDewanjee,
   Sayan_paul,
   headerLogo,
   BackgroundLogo,
@@ -168,5 +181,6 @@ export {
   DataScientistInsights,
   workshopInsights,
   Tanoy_profile,
-  HsbcLogo
+  HsbcLogo,
+  KoushikMitra
 };

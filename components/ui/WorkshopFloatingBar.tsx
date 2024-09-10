@@ -53,7 +53,7 @@ const WorkshopFloatingBar = () => {
 
         <div className="relative flex items-center">
           <span className="absolute -top-2 md:-top-3 -left-2 md:-left-4 bg-green-500 text-white text-[8px] sm:text-[10px] md:text-xs font-semibold rounded-full px-1 sm:px-2 py-[2px] z-30">
-            25 (Filling fast)
+            Filling fast
           </span>
           <form
             id="razorpay-button-container-floating"
