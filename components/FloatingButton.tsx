@@ -71,7 +71,7 @@ const FloatingButton = () => {
           <Image src={Phone} alt="Phone icon" width={20} height={20} priority />
         </button>
         <Link
-          href="https://wa.me/917019156736"
+          href="https://wa.me/9148398744"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center px-3 py-2 md:px-4 md:py-2 space-x-2 text-sm md:text-base text-white bg-green-500 hover:bg-green-600 rounded-lg md:rounded-xl shadow-md"

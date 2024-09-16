@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import HorizontalLine from "@/components/ui/HorizontalLine";
 import FloatingButton from "@/components/FloatingButton";
 
-
 export const metadata: Metadata = {
   title: {
     template: "%s | Descipr ",
@@ -28,6 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta
+        name="facebook-domain-verification"
+        content="vbrtbewbju9hb139todoh025sit6ax"
+      />
       <body
         className={`${plus_jakarta.className} relative bg-gradient-custom bg-fixed bg-cover`}
       >

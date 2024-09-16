@@ -71,7 +71,7 @@ const Cta = () => {
           <Image src={Phone} alt="Phone icon" width={24} height={24} priority />
         </button>
         <Link
-          href="https://wa.me/917019156736"
+          href="https://wa.me/9148398744"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center px-4 py-2 space-x-2 text-white bg-green-500 hover:bg-green-600 rounded-xl shadow-md"
