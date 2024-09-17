@@ -15,8 +15,8 @@ const CallNow = () => {
         </h1>
         <div className="flex flex-col md:flex-row items-center justify-center mt-4 md:space-x-4">
           <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl">
-            <a href="tel:+917019156736 " className="underline text-white">
-            +917019156736 
+            <a href="tel:+919148398744 " className="underline text-white">
+            +919148398744 
             </a>
           </p>
           <a
