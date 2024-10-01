@@ -9,13 +9,13 @@ import WebinarIntended from "@/components/ui/WebinarIntended";
 import WorkshopCard from "@/components/ui/WorkshopCard";
 import WorkshopFaq from "@/components/WorkshopFaq";
 import WorkshopToolSection from "@/components/WorkshopToolsection";
-import { BonusWorkshopData, workshopData } from "@/constants";
+import { BonusWorkshop__llm, workshopData_llm } from "@/constants";
 import {
+  Api,
   BackgroundLogo,
   largeLanguageModel,
-  MsExcel,
+  OpenAi,
   python,
-  workshopInsights,
 } from "@/utils";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -26,13 +26,14 @@ export const metadata: Metadata = {
   description:
     "Enhance your data science and AI interview skills with this exclusive workshop, guided by a seasoned hiring manager. It will refine your strategic problem-solving abilities and strengthen your communication skills.",
 };
-
 const tools = [
+  { src: OpenAi, alt: "Image 1", title: "OpenAi" },
   { src: python, alt: "Image 1", title: "Python" },
-  { src: MsExcel, alt: "Image 1", title: "MS Excel" },
+  { src: Api, alt: "Image 1", title: "Api" },
   { src: largeLanguageModel, alt: "Image 1", title: "LLM" },
 ];
-const Workshop = () => {
+
+const Workshop_llm = () => {
   return (
     <>
       <section className="max-w-7xl w-full flex flex-col space-y-8 items-center mx-auto overflow-x-hidden">
@@ -45,18 +46,23 @@ const Workshop = () => {
             priority
           />
           <div className="flex flex-col items-center sm:items-start gap-4 text-center sm:text-left sm:w-1/2">
-            <h1 className="text-3xl md:text-5xl font-bold text-center sm:text-left text-white font-Plus-jakarta">
-              Ace Data Science & AI{" "}
+            <h1 className="text-3xl md:text-4xl font-bold text-center sm:text-left text-white font-Plus-jakarta">
+              Mastering AI:Outsmarting{" "}
               <span className="text-blue-Textprimary font-Plus-jakarta">
-                Interviews – A hands-on Workshop
+                Banking Fraud with LLMs - A Hands-On Workshop
               </span>
             </h1>
             <p className="text-sm md:text-base text-white font-light">
-              Master your data science and AI interview beyond technical skills.
-              This exclusive workshop, led by an experienced hiring manager,
-              will help you develop outcome-driven projects, strategic
-              problem-solving, and strong communication. Enhance your interview
-              techniques and boost your confidence to land your dream job.
+              Join us for this workshop led by an industry expert as we explore
+              the latest advancements in AI and Large Language Models (LLMs) to
+              combat banking fraud. Engage in hands-on exercises to learn how to
+              effectively leverage AI and Financial News to combat potential
+              financial fraud. Whether you're looking to enhance your
+              organization's security protocols or are simply curious about AI
+              in banking, this workshop will equip you with essential knowledge
+              and techniques to stay ahead of emerging threats. Don’t miss your
+              chance to master AI-driven strategies and elevate your fraud
+              defense capabilities!
             </p>
 
             {/* <Image
@@ -72,17 +78,17 @@ const Workshop = () => {
           </div>
 
           <div className="flex justify-center items-center w-full px-2 sm:w-1/2  pt-16 md:pt-0">
-            <WorkshopCard date="October 13, 2024" cost="₹199" />
+            <WorkshopCard date="October 19, 2024" cost="₹199" />
           </div>
         </section>
         <HorizontalLine />
-        <LearningWorkShop data={workshopData} />
+        <LearningWorkShop data={workshopData_llm} />
         <HorizontalLine />
         <WebinarIntended />
         <HorizontalLine />
         <WorkshopToolSection tools={tools} />
         <HorizontalLine />
-        <BonusWorkshop data={BonusWorkshopData} />
+        <BonusWorkshop data={BonusWorkshop__llm} />
         <HorizontalLine />
         <Testimonials />
         <HorizontalLine />
@@ -96,4 +102,4 @@ const Workshop = () => {
   );
 };
 
-export default Workshop;
+export default Workshop_llm;

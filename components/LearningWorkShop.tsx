@@ -2,8 +2,13 @@
 import { useEffect, useState } from "react";
 import DesktopLearningSection from "./DesktopLearningSection";
 import MobileWorkshopLearning from "./MobileWorkshopLearning";
+import { LearningCardData } from "@/constants";
 
-const LearningWorkShop = () => {
+interface ILearningWorkshop {
+  data:LearningCardData[]
+}
+
+const LearningWorkShop = ({data} : ILearningWorkshop) => {
   const [isDesktop, setIsDesktop] = useState<boolean>(true);
 
   useEffect(() => {
@@ -23,7 +28,7 @@ const LearningWorkShop = () => {
         What Will<span className="text-blue-Textprimary"> You Learn</span>
       </h2>
 
-      {isDesktop ? <DesktopLearningSection /> : <MobileWorkshopLearning />}
+      {isDesktop ? <DesktopLearningSection Wdata = {data} /> : <MobileWorkshopLearning Wdata = {data} />}
     </section>
   );
 };

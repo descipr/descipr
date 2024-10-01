@@ -1,9 +1,13 @@
-import {  BonusWorkshop, WebinarForData } from "@/constants";
+import { BonusWorkshopData, IwebinarForData } from "@/constants";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import IntendedForCard from "../IntendedForCard";
 
-const MobileBonusCarousel = () => {
+interface IBonusCardSection {
+  Wdata : IwebinarForData[];
+}
+
+const MobileBonusCarousel = ({Wdata} : IBonusCardSection) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
 
@@ -13,7 +17,7 @@ const MobileBonusCarousel = () => {
       const visibleWidth = carouselRef.current.offsetWidth;
       setWidth(totalWidth - visibleWidth);
     }
-  }, [BonusWorkshop]);
+  }, [BonusWorkshopData]);
   return (
     <motion.div
       ref={carouselRef}
@@ -25,7 +29,7 @@ const MobileBonusCarousel = () => {
         dragConstraints={{ right: 0, left: -width }}
         className="flex"
       >
-        {BonusWorkshop.map((card, index) => (
+        {Wdata.map((card, index) => (
           <div key={index} className="flex-shrink-0 w-[90%] px-4 md:w-1/2">
             <IntendedForCard
               key={card.id}

@@ -11,7 +11,7 @@ const CallNow = () => {
         className="text-center text-white flex flex-col gap-4"
       >
         <h1 className="text-base sm:text-lg md:text-2xl lg:text-3xl font-bold">
-          For More Details on the Webinar, connect with us on the below number!
+          For More Details on the Workshop, connect with us on the below number!
         </h1>
         <div className="flex flex-col md:flex-row items-center justify-center mt-4 md:space-x-4">
           <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl">

@@ -17,6 +17,7 @@ import {
   DataScientistInsights,
   debjaniMajumder,
   DoubtSupport,
+  durationIcon,
   ExportData,
   FarzandKhan,
   Gaurav_Kumar,
@@ -35,6 +36,7 @@ import {
   Lochan_raj,
   ManishSinha,
   Mentorship,
+  mentorshipIcon,
   MentorshipIcon,
   MentorshipMobile,
   MlEngineeringCard,
@@ -44,6 +46,7 @@ import {
   MsExcel,
   PeerLearning,
   Portfolio,
+  portfolioIcon,
   PowerBi,
   pranoyDewanjee,
   ProblemSolving,
@@ -186,7 +189,7 @@ export interface IwebinarForData {
 }
 
 export const companyList: ListItem[] = [
-  { label: "About Us" , href:"/aboutus" },
+  { label: "About Us", href: "/aboutus" },
 ];
 
 export const socialLinks: SocialLink[] = [
@@ -371,7 +374,6 @@ export const testimonials = [
     linkedinUrl:
       "https://www.linkedin.com/feed/update/urn:li:activity:7205048134664642562?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7205048134664642562%2C7205095558686932992%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287205095558686932992%2Curn%3Ali%3Aactivity%3A7205048134664642562%29",
   },
-  
 ];
 
 export const careerCardData: CardData[] = [
@@ -1236,6 +1238,37 @@ export const workshopData: LearningCardData[] = [
   },
 ];
 
+export const workshopData_llm: LearningCardData[] = [
+  {
+    id: 1,
+    title: "Understanding AI and LLMs",
+    listItems: [
+      "Gain insights into the fundamentals of artificial intelligence and large language models and their applications in the banking sector.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Fraud Detection Techniques",
+    listItems: [
+      "Learn effective methods for detecting anomalies and identifying fraudulent activities using AI tools.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Hands-On Experience",
+    listItems: [
+      "Participate in practical exercises that reinforce your understanding of AI applications in real-world banking fraud cases.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Stay Ahead of Emerging Threats",
+    listItems: [
+      "Equip yourself with the latest tools and techniques to outsmart fraudsters in an evolving banking landscape.",
+    ],
+  },
+];
+
 export const WebinarForData: IwebinarForData[] = [
   {
     id: 1,
@@ -1267,7 +1300,7 @@ export const WebinarForData: IwebinarForData[] = [
   },
 ];
 
-export const BonusWorkshop: IwebinarForData[] = [
+export const BonusWorkshopData: IwebinarForData[] = [
   {
     id: 2,
     title: "50 Essential SQL Questions for MAANG Interviews",
@@ -1298,6 +1331,37 @@ export const BonusWorkshop: IwebinarForData[] = [
   },
 ];
 
+export const BonusWorkshop__llm: IwebinarForData[] = [
+  {
+    id: 2,
+    title: "Access to Recorded Sessions",
+    description:
+      "All the attendees will have lifetime access to the recordings, to review at your convenience and revisit key concepts and techniques.",
+    background: "#FFF5ED",
+  },
+  {
+    id: 3,
+    title: "Resume Optimization Masterclass Deck",
+    description:
+      "A powerful PPT deck designed to help you create a standout resume that gets noticed.",
+    background: "#F5F3FF",
+  },
+  {
+    id: 4,
+    title: "Python Notebook",
+    description:
+      "Participants will receive exclusive access to Python code and examples used during the workshop. These resources will enable you to implement the techniques learned and enhance your skills in AI-driven fraud detection.",
+    background: "#DBE5FF",
+  },
+  {
+    id: 5,
+    title: "30 Mins 1:1 Guidance call with an Industry Expert",
+    description:
+      "Get a chance to speak to an industry expert to receive guidance and get your doubts clarified.",
+    background: "#DBE5FF",
+  },
+];
+
 export const workshopFaqData: FAQItem[] = [
   {
     question: "What is the focus of this workshop?",
@@ -1311,15 +1375,40 @@ export const workshopFaqData: FAQItem[] = [
       "This workshop is ideal for aspiring data scientists, recent graduates, or professionals looking to transition into data science roles. It’s also valuable for experienced data scientists who want to improve their interview performance.",
   },
   {
-    question:
-      "How do I register for the workshop?",
+    question: "How do I register for the workshop?",
     answer:
       "You can register through our website or contact our support team for assistance with registration.",
   },
   {
-    question:
-      "What if I have more questions after the workshop?",
+    question: "What if I have more questions after the workshop?",
     answer:
       "You can reach out to the workshop facilitator via email or join our community forum where you can continue the discussion and get additional support.",
+  },
+];
+
+export const insightsData = [
+  {
+    id: 1,
+    icon: LiveSession,
+    title: "Live",
+    description: "Sessions on Zoom",
+  },
+  {
+    id: 2,
+    icon: durationIcon,
+    title: "Duration",
+    description: "1.5 hours Workshop",
+  },
+  {
+    id: 3,
+    icon: mentorshipIcon,
+    title: "Mentorship",
+    description: "With Industry Experts",
+  },
+  {
+    id: 4,
+    icon: portfolioIcon,
+    title: "Portfolio",
+    description: "of impactful Projects",
   },
 ];

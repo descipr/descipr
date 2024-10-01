@@ -1,7 +1,12 @@
 "use client";
 import { useEffect } from "react";
 
-const WorkshopFloatingBar = () => {
+interface Iworkshop {
+  date: string;
+  cost: string;
+}
+
+const WorkshopFloatingBar = ({date , cost} : Iworkshop) => {
   useEffect(() => {
     const existingScript = document.querySelector(
       `script[src="https://checkout.razorpay.com/v1/payment-button.js"]`
@@ -36,7 +41,7 @@ const WorkshopFloatingBar = () => {
             Workshop Date
           </span>
           <span className="text-sm sm:text-base md:text-lg font-semibold">
-            Sep 28
+            {date}
           </span>
         </div>
 
@@ -46,7 +51,7 @@ const WorkshopFloatingBar = () => {
           </span>
           <div className="flex items-baseline space-x-1 md:space-x-2">
             <span className="text-base sm:text-lg md:text-2xl font-bold">
-            ₹199
+              {cost}
             </span>
           </div>
         </div>

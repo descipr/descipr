@@ -6,14 +6,14 @@ export const metadata: Metadata = {
   description: "Descipr | Workshop",
 };
 
-export default function Workshop({
+export default function Workshop_llm({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <section className="relative">
-      <WorkshopFloatingBar date="Oct 13" cost="₹199" />
+      <WorkshopFloatingBar date="Oct 19" cost="₹199" />
       {children}
     </section>
   );

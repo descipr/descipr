@@ -35,6 +35,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://www.descipr.com/workshop",
       lastModified: new Date(),
     },
+    {
+      url: "https://www.descipr.com/workshop_llm",
+      lastModified: new Date(),
+    },
     ...courseEnries,
   ];
 }

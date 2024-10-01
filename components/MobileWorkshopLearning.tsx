@@ -1,10 +1,14 @@
 "use client";
-import { workshopData } from "@/constants";
+import { LearningCardData, workshopData } from "@/constants";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import LearningCardWorkshop from "./ui/LearningCardWorkshop";
 
-const MobileWorkshopLearning = () => {
+interface IMobileWorkshopLearning {
+  Wdata : LearningCardData[]
+}
+
+const MobileWorkshopLearning = ({Wdata}:IMobileWorkshopLearning) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
 
@@ -22,7 +26,7 @@ const MobileWorkshopLearning = () => {
         dragConstraints={{ right: 0, left: -width }}
         className="flex"
       >
-        {workshopData.map((data, i) => (
+        {Wdata.map((data, i) => (
           <div key={i} className="flex-shrink-0 w-70 px-2">
             <LearningCardWorkshop data={data} />
           </div>

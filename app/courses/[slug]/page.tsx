@@ -12,6 +12,7 @@ import { CourseDetail, courseDetails } from "@/constants";
 import { BackgroundLogo, cleanUpSlug } from "@/utils";
 import { Metadata } from "next";
 import Image from "next/image";
+import React from "react";
 
 export interface Params {
   slug: string;

@@ -1,8 +1,12 @@
-import { workshopData } from "@/constants";
+import { LearningCardData, workshopData } from "@/constants";
 import { useEffect, useState } from "react";
 import LearningCardWorkshop from "./ui/LearningCardWorkshop";
 
-const DesktopLearningSection = () => {
+interface IDesktopLearningSection {
+  Wdata : LearningCardData[]
+}
+
+const DesktopLearningSection = ({Wdata} : IDesktopLearningSection) => {
   const [current, setCurrent] = useState(0);
   const [learningCardArrayPerPage, setLearningCardArrayPerPage] = useState(1);
   const length = workshopData.length;
@@ -45,7 +49,7 @@ const DesktopLearningSection = () => {
             className="flex transition-transform duration-500 ease-in-out "
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
-            {workshopData.map((data, index) => (
+            {Wdata.map((data, index) => (
               <div
                 key={index}
                 className=" w-full px-4 flex-shrink-0"

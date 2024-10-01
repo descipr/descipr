@@ -83,6 +83,11 @@ import debjaniMajumder from "@/public/Images/debjani_majumder.png"
 import charuGoyal from "@/public/Images/charu_goyal.png"
 import pranoyDewanjee from "@/public/Images/pranoy_dewanjee.png"
 import samridhi from "@/public/Images/samridhi.svg"
+import durationIcon from "@/public/Images/duration.svg"
+import mentorshipIcon from "@/public/Images/mentorship-icon.svg"
+import portfolioIcon from "@/public/Images/portfolio-icon.svg"
+import Api from "@/public/Images/Api.jpg"
+import OpenAi from "@/public/Images/openAi.jpg"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -182,5 +187,10 @@ export {
   workshopInsights,
   Tanoy_profile,
   HsbcLogo,
-  KoushikMitra
+  KoushikMitra,
+  durationIcon,
+  mentorshipIcon,
+  portfolioIcon,
+  Api,
+  OpenAi
 };

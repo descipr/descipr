@@ -1,10 +1,14 @@
-import { BonusWorkshop } from "@/constants";
+import { IwebinarForData } from "@/constants";
 import { useEffect, useState } from "react";
 import IntendedForCard from "../IntendedForCard";
 import MobileIntendedSection from "./MobileIntendedSection";
 import MobileBonusCarousel from "./MobileBonusCarousel";
 
-const BonusCardSection = () => {
+interface IBonusCardSection {
+  Wdata : IwebinarForData[];
+}
+
+const BonusCardSection = ({Wdata} : IBonusCardSection) => {
   const [isDesktop, setIsDesktop] = useState<boolean>(true);
 
   useEffect(() => {
@@ -21,7 +25,7 @@ const BonusCardSection = () => {
     <div className="container py-6">
       {isDesktop ? (
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {BonusWorkshop.map((card, index) => (
+          {Wdata.map((card, index) => (
             <IntendedForCard
               key={card.id}
               title={card.title}
@@ -32,7 +36,7 @@ const BonusCardSection = () => {
           ))}
         </div>
       ) : (
-        <MobileBonusCarousel />
+        <MobileBonusCarousel Wdata = {Wdata} />
       )}
     </div>
   );

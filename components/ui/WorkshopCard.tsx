@@ -1,10 +1,21 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
-import { HsbcLogo, linkedIcon, linkedin, Tanoy_profile, TanoyDewanjee } from "@/utils";
+import {
+  HsbcLogo,
+  linkedIcon,
+  linkedin,
+  Tanoy_profile,
+  TanoyDewanjee,
+} from "@/utils";
 import Link from "next/link";
 
-const WorkshopCard = () => {
+interface IworkshopCard {
+  date: string;
+  cost: string;
+}
+
+const WorkshopCard = ({date, cost} : IworkshopCard) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/payment-button.js";
@@ -32,7 +43,7 @@ const WorkshopCard = () => {
 
       <div className="flex flex-col justify-between items-left  font-Plus-jakarta px-4 sm:px-6">
         <div className="flex items-center justify-between">
-          <div className="flex flex-col"> 
+          <div className="flex flex-col">
             <h3 className=" text-base lg:text-lg text-black-primary font-semibold">
               Tanoy Dewanjee
             </h3>
@@ -40,12 +51,12 @@ const WorkshopCard = () => {
               AVP, Data Science
             </span>
             <Image
-                src={HsbcLogo}
-                alt="Linked in icon"
-                width={108}
-                height={27}
-                className=""
-              />
+              src={HsbcLogo}
+              alt="Linked in icon"
+              width={108}
+              height={27}
+              className=""
+            />
           </div>
           <div>
             <Link href="https://www.linkedin.com/in/tanoydewanjee/">
@@ -66,14 +77,14 @@ const WorkshopCard = () => {
             Next Workshop on
           </h3>
           <span className="text-lg md:text-xl lg:text-lg text-black-primary font-medium">
-            September 28, 2024
+            {date}
           </span>
         </div>
         <div className="mt-4">
           <p className="text-gray-500 text-sm font-normal">Price</p>
           <div className="flex gap-2 items-end">
             <h1 className="text-3xl sm:text-4xl lg:text-3xl font-bold text-gray-900">
-              ₹199
+              {cost}
             </h1>
           </div>
         </div>
