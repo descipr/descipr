@@ -33,7 +33,7 @@ const tools = [
   { src: python, alt: "Image 1", title: "Python" },
   { src: sql, alt: "Image 1", title: "Sql" },
   { src: MsExcel, alt: "Image 1", title: "Ms Excel" },
-  { src: Analitical, alt: "Image 1", title: "Analitical Framework" },
+  { src: Analitical, alt: "Image 1", title: "Analytical Frameworks" },
 ];
 const Workshop = () => {
   return (
