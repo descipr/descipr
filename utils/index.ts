@@ -88,6 +88,7 @@ import mentorshipIcon from "@/public/Images/mentorship-icon.svg"
 import portfolioIcon from "@/public/Images/portfolio-icon.svg"
 import Api from "@/public/Images/Api.jpg"
 import OpenAi from "@/public/Images/openAi.jpg"
+import Analitical from "@/public/Images/analytical-framework.jpg"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -192,5 +193,6 @@ export {
   mentorshipIcon,
   portfolioIcon,
   Api,
-  OpenAi
+  OpenAi,
+  Analitical
 };

@@ -11,10 +11,12 @@ import WorkshopFaq from "@/components/WorkshopFaq";
 import WorkshopToolSection from "@/components/WorkshopToolsection";
 import { BonusWorkshopData, workshopData } from "@/constants";
 import {
+  Analitical,
   BackgroundLogo,
   largeLanguageModel,
   MsExcel,
   python,
+  sql,
   workshopInsights,
 } from "@/utils";
 import { Metadata } from "next";
@@ -29,8 +31,9 @@ export const metadata: Metadata = {
 
 const tools = [
   { src: python, alt: "Image 1", title: "Python" },
-  { src: MsExcel, alt: "Image 1", title: "MS Excel" },
-  { src: largeLanguageModel, alt: "Image 1", title: "LLM" },
+  { src: sql, alt: "Image 1", title: "Sql" },
+  { src: MsExcel, alt: "Image 1", title: "Ms Excel" },
+  { src: Analitical, alt: "Image 1", title: "Analitical Framework" },
 ];
 const Workshop = () => {
   return (
@@ -78,9 +81,9 @@ const Workshop = () => {
         <HorizontalLine />
         <LearningWorkShop data={workshopData} />
         <HorizontalLine />
-        <WebinarIntended />
-        <HorizontalLine />
         <WorkshopToolSection tools={tools} />
+        <HorizontalLine />
+        <WebinarIntended />
         <HorizontalLine />
         <BonusWorkshop data={BonusWorkshopData} />
         <HorizontalLine />

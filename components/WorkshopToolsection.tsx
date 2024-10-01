@@ -19,7 +19,7 @@ const WorkshopToolSection: FC<WorkshopToolSectionProps> = ({ tools }) => {
           Tools You Will Learn
         </h2>
       </div>
-      <div className="w-full flex flex-col space-y-4 sm:flex-row items-center justify-between gap-4 max-w-5xl">
+      <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4">
         {tools.map((item, index) => (
           <div
             key={index}

@@ -84,9 +84,9 @@ const Workshop_llm = () => {
         <HorizontalLine />
         <LearningWorkShop data={workshopData_llm} />
         <HorizontalLine />
-        <WebinarIntended />
-        <HorizontalLine />
         <WorkshopToolSection tools={tools} />
+        <HorizontalLine />
+        <WebinarIntended />
         <HorizontalLine />
         <BonusWorkshop data={BonusWorkshop__llm} />
         <HorizontalLine />
