@@ -13,6 +13,7 @@ import { BonusWorkshopData, workshopData } from "@/constants";
 import {
   Analitical,
   BackgroundLogo,
+  googleBitQuery,
   largeLanguageModel,
   MsExcel,
   python,
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
 
 const tools = [
   { src: python, alt: "Image 1", title: "Python" },
-  { src: sql, alt: "Image 1", title: "Sql" },
+  { src: googleBitQuery, alt: "Image 1", title: "Google Big Query" },
   { src: MsExcel, alt: "Image 1", title: "Ms Excel" },
   { src: Analitical, alt: "Image 1", title: "Analytical Frameworks" },
 ];

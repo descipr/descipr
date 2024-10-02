@@ -15,6 +15,7 @@ import {
   BackgroundLogo,
   largeLanguageModel,
   OpenAi,
+  promtEngineering,
   python,
 } from "@/utils";
 import { Metadata } from "next";
@@ -27,9 +28,9 @@ export const metadata: Metadata = {
     "Enhance your data science and AI interview skills with this exclusive workshop, guided by a seasoned hiring manager. It will refine your strategic problem-solving abilities and strengthen your communication skills.",
 };
 const tools = [
-  { src: OpenAi, alt: "Image 1", title: "OpenAi" },
+  { src: OpenAi, alt: "Image 1", title: "OpenAI" },
   { src: python, alt: "Image 1", title: "Python" },
-  { src: Api, alt: "Image 1", title: "Api" },
+  { src: promtEngineering, alt: "Image 1", title: "Prompt Engineering" },
   { src: largeLanguageModel, alt: "Image 1", title: "LLM" },
 ];
 
@@ -46,10 +47,10 @@ const Workshop_llm = () => {
             priority
           />
           <div className="flex flex-col items-center sm:items-start gap-4 text-center sm:text-left sm:w-1/2">
-            <h1 className="text-3xl md:text-4xl font-bold text-center sm:text-left text-white font-Plus-jakarta">
+            <h1 className="text-3xl md:text-5xl font-bold text-center sm:text-left text-white font-Plus-jakarta">
               Mastering AI:Outsmarting{" "}
               <span className="text-blue-Textprimary font-Plus-jakarta">
-                Banking Fraud with LLMs - A Hands-On Workshop
+                Banking Fraud with LLMs
               </span>
             </h1>
             <p className="text-sm md:text-base text-white font-light">
@@ -57,12 +58,8 @@ const Workshop_llm = () => {
               the latest advancements in AI and Large Language Models (LLMs) to
               combat banking fraud. Engage in hands-on exercises to learn how to
               effectively leverage AI and Financial News to combat potential
-              financial fraud. Whether you're looking to enhance your
-              organization's security protocols or are simply curious about AI
-              in banking, this workshop will equip you with essential knowledge
-              and techniques to stay ahead of emerging threats. Don’t miss your
-              chance to master AI-driven strategies and elevate your fraud
-              defense capabilities!
+              financial fraud. Don’t miss your chance to master AI-driven
+              strategies and elevate your fraud defense capabilities!
             </p>
 
             {/* <Image

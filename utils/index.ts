@@ -64,7 +64,7 @@ import Suryansh_abijith from "@/public/Images/suryansh_abijith.jpg";
 import Sampath_vinayak from "@/public/Images/sampath_vinayak.jpg";
 import Sayan_paul from "@/public/Images/Sayan_paul.jpg";
 import transformers from "@/public/Images/Transformers.png";
-import largeLanguageModel from "@/public/Images/LLMs.png";
+import largeLanguageModel from "@/public/Images/llm.png";
 import ModelBuilding from "@/public/Images/ML Models.png";
 import MlLibrary from "@/public/Images/ML Libraries.png";
 import generativeModel from "@/public/Images/Generative Models.png";
@@ -87,8 +87,10 @@ import durationIcon from "@/public/Images/duration.svg"
 import mentorshipIcon from "@/public/Images/mentorship-icon.svg"
 import portfolioIcon from "@/public/Images/portfolio-icon.svg"
 import Api from "@/public/Images/Api.jpg"
-import OpenAi from "@/public/Images/openAi.jpg"
-import Analitical from "@/public/Images/analytical-framework.jpg"
+import OpenAi from "@/public/Images/openai.505x512.png"
+import Analitical from "@/public/Images/analytical framework.png"
+import googleBitQuery from "@/public/Images/BigQuery.jpg"
+import promtEngineering from "@/public/Images/prompt-engineering-logo.png"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -194,5 +196,7 @@ export {
   portfolioIcon,
   Api,
   OpenAi,
-  Analitical
+  Analitical,
+  googleBitQuery,
+  promtEngineering
 };
