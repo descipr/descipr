@@ -87,9 +87,9 @@ import durationIcon from "@/public/Images/duration.svg"
 import mentorshipIcon from "@/public/Images/mentorship-icon.svg"
 import portfolioIcon from "@/public/Images/portfolio-icon.svg"
 import Api from "@/public/Images/Api.jpg"
-import OpenAi from "@/public/Images/openai.505x512.png"
+import OpenAi from "@/public/Images/Open ai.png"
 import Analitical from "@/public/Images/analytical framework.png"
-import googleBitQuery from "@/public/Images/BigQuery.jpg"
+import googleBitQuery from "@/public/Images/google-bigquery-logo-1.svg"
 import promtEngineering from "@/public/Images/prompt-engineering-logo.png"
 
 export function cn(...inputs: ClassValue[]) {
