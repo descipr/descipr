@@ -13,7 +13,7 @@ export default function Workshop_llm({
 }>) {
   return (
     <section className="relative">
-      <WorkshopFloatingBar date="Oct 19" cost="₹0" />
+      <WorkshopFloatingBar date="Oct 27" cost="₹0" />
       {children}
     </section>
   );
