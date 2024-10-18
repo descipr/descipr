@@ -71,7 +71,7 @@ const PriceCard = ({ courseDetails }: PriceCardProps) => {
         </form>
 
         <div className="mt-2 text-xs text-red-500">
-          Price increase from 01 Oct 11:59 PM
+          Price increase from Nov 10 11:59 PM
         </div>
       </div>
     </div>

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "Enhance your data science and AI interview skills with this exclusive workshop, guided by a seasoned hiring manager. It will refine your strategic problem-solving abilities and strengthen your communication skills.",
 };
 const tools = [
-  { src: sql, alt: "Image 1", title: "OpenAI" },
+  { src: sql, alt: "Image 1", title: "Sql" },
   { src: Big_Query_sql_workshop, alt: "Image 1", title: "Google Big Query " },
 ];
 
