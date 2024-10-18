@@ -10,15 +10,15 @@ import WorkshopCard from "@/components/ui/WorkshopCard";
 import WorkshopFaq from "@/components/WorkshopFaq";
 import WorkshopToolSection from "@/components/WorkshopToolsection";
 import { BonusWorkshopData, workshopData } from "@/constants";
+import { insightsData } from "@/constants";
 import {
   Analitical,
   BackgroundLogo,
   googleBitQuery,
-  largeLanguageModel,
   MsExcel,
   python,
   sql,
-  workshopInsights,
+  Tanoy_profile,
 } from "@/utils";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 };
 
 const tools = [
-  { src: python, alt: "Image 1", title: "Python" },
+  { src: sql, alt: "Image 1", title: "Sql" },
   { src: googleBitQuery, alt: "Image 1", title: "Google Big Query" },
   { src: MsExcel, alt: "Image 1", title: "Ms Excel" },
   { src: Analitical, alt: "Image 1", title: "Analytical Frameworks" },
@@ -72,11 +72,11 @@ const Workshop = () => {
               priority
             /> */}
 
-            <InsightsGrid />
+            <InsightsGrid data= {insightsData}/>
           </div>
 
           <div className="flex justify-center items-center w-full px-2 sm:w-1/2  pt-16 md:pt-0">
-            <WorkshopCard date="October 13, 2024" cost="₹199" />
+            <WorkshopCard date="TBA" cost="₹0" image={Tanoy_profile} name="Tanoy Dewanjee " />
           </div>
         </section>
         <HorizontalLine />

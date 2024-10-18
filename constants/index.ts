@@ -214,18 +214,18 @@ export const courses: Course[] = [
   {
     imageSrc: DataScientistCard,
     title: "Data Scientist Fellowship",
-    date: "19 Oct – 22 Feb",
+    date: "23 Nov - 29 Mar",
   },
 
   {
     imageSrc: AiEngineeringCard,
     title: "AI Engineer Fellowship",
-    date: "19 Oct – 18 Jan",
+    date: "23 Nov - 22 Feb",
   },
   {
     imageSrc: BusinessAnalystCard,
     title: "Business Analyst Fellowship",
-    date: "19 Oct – 25 Jan",
+    date: "23 Nov - 01 Mar",
   },
 ];
 export const items = [
@@ -558,8 +558,8 @@ export const courseDetails: CourseDetail[] = [
     heading: "Data Scientist Fellowship",
     description:
       "Master data analysis, machine learning, AI, and real-world skills with expert guidance and hands-on projects. Prepare for top roles at leading tech companies.",
-    dateOfStart: "October 19, 2024",
-    floatingBar: "Oct 19",
+    dateOfStart: "November 23, 2024",
+    floatingBar: "Nov 23",
     timeCommitment: "4 months",
     timePerweek: "12 hours/week",
     cost: "₹11,999",
@@ -800,8 +800,8 @@ export const courseDetails: CourseDetail[] = [
     heading: "AI Engineer Fellowship",
     description:
       "Tackle cutting-edge projects and prepare for top roles at leading tech giants. Your AI future begins now!",
-    dateOfStart: "October 19, 2024",
-    floatingBar: "Oct 19",
+    dateOfStart: "November 23, 2024 ",
+    floatingBar: "Nov 23",
     timeCommitment: "12 hours/week",
     timePerweek: "12 hours/week",
     cost: "₹9,999",
@@ -993,8 +993,8 @@ export const courseDetails: CourseDetail[] = [
     heading: "Business Analyst Fellowship",
     description:
       "Kickstart your Business analyst career at top companies like Amazon, Dell, Swiggy etc. Your future in business analysis starts here!",
-    dateOfStart: "October 19, 2024",
-    floatingBar: "Oct 19",
+    dateOfStart: "November 23, 2024 ",
+    floatingBar: "Nov 23",
     timeCommitment: "10 hours/week",
     timePerweek: "10 hours/week",
     cost: "₹9,999",
@@ -1268,6 +1268,36 @@ export const workshopData_llm: LearningCardData[] = [
     ],
   },
 ];
+export const workshopData_sql: LearningCardData[] = [
+  {
+    id: 1,
+    title: "Core SQL Concepts",
+    listItems: [
+      "Gain insights into the fundamentals of SQL concepts such as querying, filtering, aggregating, and joining data.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Fraud Detection Techniques",
+    listItems: [
+      "Learn practical techniques for analyzing large datasets and identifying fraud patterns in e-commerce transactions.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Advanced SQL Techniques",
+    listItems: [
+      "Equip yourself with the advanced topics like Window functions, Rank function, Subqueries, and CTEs",
+    ],
+  },
+  {
+    id: 4,
+    title: "Hands-On Experience",
+    listItems: [
+      "Participate in practical exercises that reinforce your understanding of how SQL can be applied to solve real-world problems faced by companies in the e-commerce industry.",
+    ],
+  },
+];
 
 export const WebinarForData: IwebinarForData[] = [
   {
@@ -1362,6 +1392,37 @@ export const BonusWorkshop__llm: IwebinarForData[] = [
   },
 ];
 
+export const BonusWorkshop__sql: IwebinarForData[] = [
+  {
+    id: 2,
+    title: "Access to Recorded Sessions",
+    description:
+      "All the attendees will have lifetime access to the recordings, to review at your convenience and revisit key concepts and techniques.",
+    background: "#FFF5ED",
+  },
+  {
+    id: 3,
+    title: "Keep Resume Optimization",
+    description:
+      "A powerful PPT deck designed to help you create a standout resume that gets noticed.",
+    background: "#F5F3FF",
+  },
+  {
+    id: 4,
+    title: "50 Essential SQL Questions for MAANG Interviews",
+    description:
+      "A complete guide to the SQL questions you are most likely to face in interviews with leading tech companies.",
+    background: "#DBE5FF",
+  },
+  {
+    id: 5,
+    title: "Keep 30 Mins 1:1 Call",
+    description:
+      "Get a chance to speak to an industry expert to receive guidance and get your doubts clarified.",
+    background: "#DBE5FF",
+  },
+];
+
 export const workshopFaqData: FAQItem[] = [
   {
     question: "What is the focus of this workshop?",
@@ -1386,7 +1447,14 @@ export const workshopFaqData: FAQItem[] = [
   },
 ];
 
-export const insightsData = [
+interface Insight {
+  id: number;
+  icon: StaticImageData;
+  title: string;
+  description: string;
+}
+
+export const insightsData: Insight[] = [
   {
     id: 1,
     icon: LiveSession,
@@ -1398,6 +1466,33 @@ export const insightsData = [
     icon: durationIcon,
     title: "Duration",
     description: "1.5 hours Workshop",
+  },
+  {
+    id: 3,
+    icon: mentorshipIcon,
+    title: "Mentorship",
+    description: "With Industry Experts",
+  },
+  {
+    id: 4,
+    icon: portfolioIcon,
+    title: "Portfolio",
+    description: "of impactful Projects",
+  },
+];
+
+export const insightsDataSql: Insight[] = [
+  {
+    id: 1,
+    icon: LiveSession,
+    title: "Live",
+    description: "Sessions on Zoom",
+  },
+  {
+    id: 2,
+    icon: durationIcon,
+    title: "Duration",
+    description: "2.5 hours Workshop",
   },
   {
     id: 3,

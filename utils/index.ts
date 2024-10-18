@@ -74,23 +74,26 @@ import MentorshipMobile from "@/public/Images/Mentorship_mobile.svg";
 import CommunityMobile from "@/public/Images/Community_mobile.svg";
 import DataScientistInsights from "@/public/Images/data_scientist_insights.svg";
 import workshopInsights from "@/public/Images/workshopInsights.svg";
-import Tanoy_profile from "@/public/Images/Tanoy_img.svg"
-import HsbcLogo from "@/public/Images/Hsbc.svg"
-import KoushikMitra from "@/public/Images/koushik_mitra.png"
-import adithiaV from "@/public/Images/Adithia_v.png"
-import samikshaGebise from "@/public/Images/samiksha_gebise.png"
-import debjaniMajumder from "@/public/Images/debjani_majumder.png"
-import charuGoyal from "@/public/Images/charu_goyal.png"
-import pranoyDewanjee from "@/public/Images/pranoy_dewanjee.png"
-import samridhi from "@/public/Images/samridhi.svg"
-import durationIcon from "@/public/Images/duration.svg"
-import mentorshipIcon from "@/public/Images/mentorship-icon.svg"
-import portfolioIcon from "@/public/Images/portfolio-icon.svg"
-import Api from "@/public/Images/Api.jpg"
-import OpenAi from "@/public/Images/Open ai.png"
-import Analitical from "@/public/Images/analytical framework.png"
-import googleBitQuery from "@/public/Images/google-bigquery-logo-1.svg"
-import promtEngineering from "@/public/Images/prompt-engineering-logo.png"
+import Tanoy_profile from "@/public/Images/Tanoy_img.svg";
+import HsbcLogo from "@/public/Images/Hsbc.svg";
+import KoushikMitra from "@/public/Images/koushik_mitra.png";
+import adithiaV from "@/public/Images/Adithia_v.png";
+import samikshaGebise from "@/public/Images/samiksha_gebise.png";
+import debjaniMajumder from "@/public/Images/debjani_majumder.png";
+import charuGoyal from "@/public/Images/charu_goyal.png";
+import pranoyDewanjee from "@/public/Images/pranoy_dewanjee.png";
+import samridhi from "@/public/Images/samridhi.svg";
+import durationIcon from "@/public/Images/duration.svg";
+import mentorshipIcon from "@/public/Images/mentorship-icon.svg";
+import portfolioIcon from "@/public/Images/portfolio-icon.svg";
+import Api from "@/public/Images/Api.jpg";
+import OpenAi from "@/public/Images/Open ai.png";
+import Analitical from "@/public/Images/analytical framework.png";
+import googleBitQuery from "@/public/Images/google-bigquery-logo-1.svg";
+import promtEngineering from "@/public/Images/prompt-engineering-logo.png";
+import Atul_profile from "@/public/Images/Atul_profile.png";
+import sql_logo_workshop from "@/public/Images/sql_swl.png";
+import Big_Query_sql_workshop from "@/public/Images/BigQuery_sql.jpg";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -198,5 +201,8 @@ export {
   OpenAi,
   Analitical,
   googleBitQuery,
-  promtEngineering
+  promtEngineering,
+  Atul_profile,
+  sql_logo_workshop,
+  Big_Query_sql_workshop,
 };

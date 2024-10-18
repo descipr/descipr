@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect } from "react";
 
 interface Iworkshop {
@@ -6,7 +7,7 @@ interface Iworkshop {
   cost: string;
 }
 
-const WorkshopFloatingBar = ({date , cost} : Iworkshop) => {
+const WorkshopFloatingBar = ({ date, cost }: Iworkshop) => {
   useEffect(() => {
     const existingScript = document.querySelector(
       `script[src="https://checkout.razorpay.com/v1/payment-button.js"]`
@@ -60,10 +61,13 @@ const WorkshopFloatingBar = ({date , cost} : Iworkshop) => {
           <span className="absolute -top-2 md:-top-3 -left-2 md:-left-4 bg-green-500 text-white text-[8px] sm:text-[10px] md:text-xs font-semibold rounded-full px-1 sm:px-2 py-[2px] z-30">
             Filling fast
           </span>
-          <form
+          {/* <form
             id="razorpay-button-container-floating"
             className="ml-2 sm:ml-4 md:ml-8 relative z-10"
-          ></form>
+          ></form> */}
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdHuTzfjEptrRohJahiIOIa_A_He9LdyEKJ30Y0KJ0EuL99tg/viewform" className="text-blue-900 px-4 py-2 bg-yellow-400/90 font-semibold rounded-lg">
+            Enroll Now
+          </Link>
         </div>
       </div>
     </div>

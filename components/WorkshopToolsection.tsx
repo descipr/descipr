@@ -12,6 +12,9 @@ interface WorkshopToolSectionProps {
 }
 
 const WorkshopToolSection: FC<WorkshopToolSectionProps> = ({ tools }) => {
+  // Determine grid columns based on the number of tools
+  const gridColumns = tools.length === 2 ? 'grid-cols-2  md:grid-cols-2' : 'grid-cols-2 sm:grid-cols-4';
+
   return (
     <div className="container mx-auto px-4 py-6 flex flex-col gap-12 justify-center items-center">
       <div className="flex flex-col items-center space-y-1">
@@ -19,7 +22,7 @@ const WorkshopToolSection: FC<WorkshopToolSectionProps> = ({ tools }) => {
           Tools You Will Learn
         </h2>
       </div>
-      <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div className={`w-full grid ${gridColumns} gap-4 mx-auto`}>
         {tools.map((item, index) => (
           <div
             key={index}

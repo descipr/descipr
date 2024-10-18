@@ -1,21 +1,17 @@
 "use client";
 import { useEffect } from "react";
-import Image from "next/image";
-import {
-  HsbcLogo,
-  linkedIcon,
-  linkedin,
-  Tanoy_profile,
-  TanoyDewanjee,
-} from "@/utils";
+import Image, { StaticImageData } from "next/image";
+import { HsbcLogo, linkedin } from "@/utils";
 import Link from "next/link";
 
 interface IworkshopCard {
   date: string;
   cost: string;
+  image: StaticImageData;
+  name: String;
 }
 
-const WorkshopCard = ({date, cost} : IworkshopCard) => {
+const WorkshopCard = ({ date, cost, image, name }: IworkshopCard) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/payment-button.js";
@@ -36,7 +32,7 @@ const WorkshopCard = ({date, cost} : IworkshopCard) => {
   return (
     <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden md:max-w-md lg:max-w-sm relative flex flex-col space-y-4">
       <Image
-        src={Tanoy_profile}
+        src={image}
         alt="Dashboard with analytics"
         className="w-full h-40 object-cover"
       />
@@ -45,7 +41,7 @@ const WorkshopCard = ({date, cost} : IworkshopCard) => {
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
             <h3 className=" text-base lg:text-lg text-black-primary font-semibold">
-              Tanoy Dewanjee
+              {name}
             </h3>
             <span className="text-sm lg:text-base text-black-primary font-light mb-2 ">
               AVP, Data Science
@@ -88,13 +84,20 @@ const WorkshopCard = ({date, cost} : IworkshopCard) => {
             </h1>
           </div>
         </div>
-
-        <form
+        {/* <form
           id="razorpay-button-container"
           className="mt-4 text-center sm:text-left"
         >
           {/* Razorpay button script will be appended here */}
-        </form>
+        {/* </form> */}
+      </div>
+      <div className="pl-4 pb-4">
+        <Link
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdHuTzfjEptrRohJahiIOIa_A_He9LdyEKJ30Y0KJ0EuL99tg/viewform"
+          className="text-blue-900 px-4 py-2 bg-yellow-400/90 font-semibold rounded-lg mt-4"
+        >
+          Enroll Now
+        </Link>
       </div>
     </div>
   );

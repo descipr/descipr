@@ -16,11 +16,11 @@ const CallNow = () => {
         <div className="flex flex-col md:flex-row items-center justify-center mt-4 md:space-x-4">
           <p className="text-lg sm:text-xl md:text-2xl lg:text-4xl">
             <a href="tel:+919148398744 " className="underline text-white">
-            +917019156736
+            +919148398744
             </a>
           </p>
           <a
-            href="tel:+917019156736"
+            href="tel:+919148398744"
             className="mt-4 md:mt-0 px-4 py-2 text-base md:text-lg lg:text-xl bg-blue-500 text-white rounded hover:bg-blue-600"
           >
             Call Us
