@@ -72,11 +72,17 @@ const Workshop = () => {
               priority
             /> */}
 
-            <InsightsGrid data= {insightsData}/>
+            <InsightsGrid data={insightsData} />
           </div>
 
           <div className="flex justify-center items-center w-full px-2 sm:w-1/2  pt-16 md:pt-0">
-            <WorkshopCard date="TBA" cost="₹0" image={Tanoy_profile} name="Tanoy Dewanjee " />
+            <WorkshopCard
+              date="TBA"
+              cost="₹0"
+              image={Tanoy_profile}
+              name="Tanoy Dewanjee "
+              linkedinLink="https://www.linkedin.com/in/tanoydewanjee/"
+            />
           </div>
         </section>
         <HorizontalLine />

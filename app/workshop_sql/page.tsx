@@ -89,6 +89,7 @@ const Workshop_sql = () => {
               cost="₹0"
               image={Atul_profile}
               name="Atul Anand"
+              linkedinLink="https://www.linkedin.com/in/atul-anand-6075bb58/"
             />
           </div>
         </section>

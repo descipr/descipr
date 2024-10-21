@@ -9,9 +9,10 @@ interface IworkshopCard {
   cost: string;
   image: StaticImageData;
   name: String;
+  linkedinLink:string
 }
 
-const WorkshopCard = ({ date, cost, image, name }: IworkshopCard) => {
+const WorkshopCard = ({ date, cost, image, name, linkedinLink }: IworkshopCard) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/payment-button.js";
@@ -55,7 +56,7 @@ const WorkshopCard = ({ date, cost, image, name }: IworkshopCard) => {
             />
           </div>
           <div>
-            <Link href="https://www.linkedin.com/in/tanoydewanjee/">
+            <Link href={linkedinLink}>
               <Image
                 src={linkedin}
                 alt="Linked in icon"
