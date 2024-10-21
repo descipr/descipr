@@ -59,7 +59,7 @@ const Workshop_sql = () => {
             <h1 className="text-3xl md:text-5xl font-bold text-center sm:text-left text-white font-Plus-jakarta">
               Master SQL Foundations: Detect E-commerce{" "}
               <span className="text-blue-Textprimary font-Plus-jakarta">
-                - A Hands-On Workshop
+                Return Fraud - A hands on workshop
               </span>
             </h1>
             <p className="text-sm md:text-base text-white font-light">
