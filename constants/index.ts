@@ -1492,7 +1492,7 @@ export const insightsDataSql: Insight[] = [
     id: 2,
     icon: durationIcon,
     title: "Duration",
-    description: "2.5 hours Workshop",
+    description: "1.5 hours Workshop",
   },
   {
     id: 3,

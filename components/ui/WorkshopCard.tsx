@@ -31,7 +31,7 @@ const WorkshopCard = ({ date, cost, image, name, linkedinLink }: IworkshopCard) 
     };
   }, []);
   return (
-    <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden md:max-w-md lg:max-w-sm relative flex flex-col space-y-4">
+    <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden md:max-w-md lg:max-w-sm relative flex flex-col space-y-4 w-full">
       <Image
         src={image}
         alt="Dashboard with analytics"
