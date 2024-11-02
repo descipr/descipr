@@ -10,15 +10,22 @@ import WorkshopCard from "@/components/ui/WorkshopCard";
 import WorkshopFaq from "@/components/WorkshopFaq";
 import WorkshopToolSection from "@/components/WorkshopToolsection";
 import {
+    BonusWorkshop__llm,
   BonusWorkshop__sql,
   insightsDataSql,
   workshopData_sql,
+  workshopData_vec,
 } from "@/constants";
 
 import {
   Atul_profile,
   BackgroundLogo,
   Big_Query_sql_workshop,
+  largeLanguageModel,
+  OpenAi,
+  promtEngineering,
+  python,
+  sammer_dubey_profile,
   sql,
 } from "@/utils";
 import { Metadata } from "next";
@@ -31,9 +38,11 @@ export const metadata: Metadata = {
     "Enhance your data science and AI interview skills with this exclusive workshop, guided by a seasoned hiring manager. It will refine your strategic problem-solving abilities and strengthen your communication skills.",
 };
 const tools = [
-  { src: sql, alt: "Image 1", title: "Sql" },
-  { src: Big_Query_sql_workshop, alt: "Image 1", title: "Google Big Query " },
-];
+    { src: OpenAi, alt: "Image 1", title: "OpenAI" },
+    { src: python, alt: "Image 1", title: "Python" },
+    { src: promtEngineering, alt: "Image 1", title: "Vector Databases" },
+    { src: largeLanguageModel, alt: "Image 1", title: "LLM" },
+  ];
 
 const Workshop_sql = () => {
   return (
@@ -49,18 +58,19 @@ const Workshop_sql = () => {
           />
           <div className="flex flex-col items-center sm:items-start gap-4 text-center sm:text-left sm:w-1/2">
             <h1 className="text-3xl md:text-5xl font-bold text-center sm:text-left text-white font-Plus-jakarta">
-              Master SQL Foundations: Detect E-commerce{" "}
+              Design an AI Powered Search System with{" "}
               <span className="text-blue-Textprimary font-Plus-jakarta">
-                Return Fraud - A hands on workshop
+                Vector Databases - A Hands-On Workshop
               </span>
             </h1>
             <p className="text-sm md:text-base text-white font-light">
-              Unlock the power of SQL by diving into real-world applications!
-              This workshop led by an Industry expert is designed to equip you
-              with essential SQL skills while tackling a relevant business
-              problem: E-commerce Return Fraud Detection. Whether you're new to
-              SQL or looking to strengthen your foundation, this hands-on
-              session offers the perfect blend of theory and practice.
+              In this workshop you'll gain hands-on insights into building
+              efficient search and retrieval systems powered by vector
+              databases. This session dives into the role of vector databases in
+              modern AI applications and how they enable fast, semantic search
+              capabilities beyond traditional keyword search. Join us to
+              discover how to unlock new possibilities in AI with advanced,
+              AI-powered search systems!
             </p>
 
             {/* <Image
@@ -77,22 +87,22 @@ const Workshop_sql = () => {
 
           <div className="flex justify-center items-center w-full px-2 sm:w-1/2  pt-16 md:pt-0">
             <WorkshopCard
-              date="November 9, 2024"
+              date="November 17, 2024"
               cost="₹0"
-              image={Atul_profile}
-              name="Atul Anand"
-              linkedinLink="https://www.linkedin.com/in/atul-anand-6075bb58/"
+              image={sammer_dubey_profile}
+              name="Sameer Dubey"
+              linkedinLink="https://www.linkedin.com/in/sameerz/"
             />
           </div>
         </section>
         <HorizontalLine />
-        <LearningWorkShop data={workshopData_sql} />
+        <LearningWorkShop data={workshopData_vec} />
         <HorizontalLine />
         <WorkshopToolSection tools={tools} />
         <HorizontalLine />
         <WebinarIntended />
         <HorizontalLine />
-        <BonusWorkshop data={BonusWorkshop__sql} />
+        <BonusWorkshop data={BonusWorkshop__llm} />
         <HorizontalLine />
         <Testimonials />
         <HorizontalLine />

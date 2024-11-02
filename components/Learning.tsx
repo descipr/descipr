@@ -30,6 +30,13 @@ const Learning = ({ courseDetails, pdfurl }: LearningProps) => {
 
   const handleDownloadClick = () => {
     setIsOpen(true);
+    const pdfUrl = pdfurl;
+    const anchor = document.createElement("a");
+    anchor.href = pdfUrl;
+    anchor.download = pdfUrl;
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -56,14 +63,6 @@ const Learning = ({ courseDetails, pdfurl }: LearningProps) => {
         setFullName("");
         setPhoneNumber("");
         setIsOpen(false);
-
-        const pdfUrl = pdfurl;
-        const anchor = document.createElement("a");
-        anchor.href = pdfUrl;
-        anchor.download = pdfUrl;
-        document.body.appendChild(anchor);
-        anchor.click();
-        document.body.removeChild(anchor);
       } else {
         alert("Failed to send request. Please try again.");
       }

@@ -1299,6 +1299,43 @@ export const workshopData_sql: LearningCardData[] = [
   },
 ];
 
+export const workshopData_vec: LearningCardData[] = [
+  {
+    id: 1,
+    title: "Introduction to Vector Databases:",
+    listItems: [
+      "Understand why vector representations are crucial in AI and search applications. Learn to generate vector embeddings from text and images using Python libraries, providing the foundation for similarity searches.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Search for Similar Vectors & Approximate Nearest Neighbors (ANN):",
+    listItems: [
+      "Discover how to use vector similarities to find similar items, using metrics like cosine similarity. Dive into faster search techniques for large datasets using tools like FAISS, making search scalable.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Explore Specialized Databases:",
+    listItems: [
+      "Understand specialized databases like Milvus and Pinecone and their advantages over traditional databases.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Sparse, Dense, and Hybrid Search:",
+    listItems: [
+      "Learn the differences between sparse and dense vectors and how to combine them for more effective search results.",
+    ],
+  },
+  {
+    id: 5,
+    title: "Application - Multilingual Search:",
+    listItems: [
+      "See how vector databases support multilingual search, enabling retrieval across different languages with transformer models.",
+    ],
+  },
+];
 export const WebinarForData: IwebinarForData[] = [
   {
     id: 1,

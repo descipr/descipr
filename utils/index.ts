@@ -94,6 +94,7 @@ import promtEngineering from "@/public/Images/prompt-engineering-logo.png";
 import Atul_profile from "@/public/Images/Atul_profile.png";
 import sql_logo_workshop from "@/public/Images/sql_swl.png";
 import Big_Query_sql_workshop from "@/public/Images/BigQuery_sql.jpg";
+import sammer_dubey_profile from "@/public/Images/sammer_dubey_profile.svg"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -111,6 +112,7 @@ export const cleanUpSlug = (slug: string): string => {
 };
 
 export {
+  sammer_dubey_profile,
   samridhi,
   adithiaV,
   samikshaGebise,
