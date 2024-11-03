@@ -19,6 +19,7 @@ import {
   Atul_profile,
   BackgroundLogo,
   Big_Query_sql_workshop,
+  HsbcLogo,
   sql,
 } from "@/utils";
 import { Metadata } from "next";
@@ -82,6 +83,8 @@ const Workshop_sql = () => {
               image={Atul_profile}
               name="Atul Anand"
               linkedinLink="https://www.linkedin.com/in/atul-anand-6075bb58/"
+              qualification="AVP, Business Analytics"
+              company={HsbcLogo}
             />
           </div>
         </section>

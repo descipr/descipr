@@ -30,6 +30,11 @@ const Learning = ({ courseDetails, pdfurl }: LearningProps) => {
 
   const handleDownloadClick = () => {
     setIsOpen(true);
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
     const pdfUrl = pdfurl;
     const anchor = document.createElement("a");
     anchor.href = pdfUrl;
@@ -37,10 +42,6 @@ const Learning = ({ courseDetails, pdfurl }: LearningProps) => {
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
-  };
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
 
     if (!/^\d{10}$/.test(phoneNumber)) {
       alert("Please enter a valid 10-digit phone number.");

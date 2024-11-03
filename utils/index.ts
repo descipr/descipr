@@ -94,7 +94,8 @@ import promtEngineering from "@/public/Images/prompt-engineering-logo.png";
 import Atul_profile from "@/public/Images/Atul_profile.png";
 import sql_logo_workshop from "@/public/Images/sql_swl.png";
 import Big_Query_sql_workshop from "@/public/Images/BigQuery_sql.jpg";
-import sammer_dubey_profile from "@/public/Images/sammer_dubey_profile.svg"
+import sammer_dubey_profile from "@/public/Images/sammer_dubey_profile.svg";
+import home_credit_company_logo from "@/public/Images/home_credit_logo.svg";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -112,6 +113,7 @@ export const cleanUpSlug = (slug: string): string => {
 };
 
 export {
+  home_credit_company_logo,
   sammer_dubey_profile,
   samridhi,
   adithiaV,

@@ -10,7 +10,7 @@ import WorkshopCard from "@/components/ui/WorkshopCard";
 import WorkshopFaq from "@/components/WorkshopFaq";
 import WorkshopToolSection from "@/components/WorkshopToolsection";
 import {
-    BonusWorkshop__llm,
+  BonusWorkshop__llm,
   BonusWorkshop__sql,
   insightsDataSql,
   workshopData_sql,
@@ -21,6 +21,8 @@ import {
   Atul_profile,
   BackgroundLogo,
   Big_Query_sql_workshop,
+  home_credit_company_logo,
+  HsbcLogo,
   largeLanguageModel,
   OpenAi,
   promtEngineering,
@@ -38,11 +40,11 @@ export const metadata: Metadata = {
     "Enhance your data science and AI interview skills with this exclusive workshop, guided by a seasoned hiring manager. It will refine your strategic problem-solving abilities and strengthen your communication skills.",
 };
 const tools = [
-    { src: OpenAi, alt: "Image 1", title: "OpenAI" },
-    { src: python, alt: "Image 1", title: "Python" },
-    { src: promtEngineering, alt: "Image 1", title: "Vector Databases" },
-    { src: largeLanguageModel, alt: "Image 1", title: "LLM" },
-  ];
+  { src: OpenAi, alt: "Image 1", title: "OpenAI" },
+  { src: python, alt: "Image 1", title: "Python" },
+  { src: promtEngineering, alt: "Image 1", title: "Vector Databases" },
+  { src: largeLanguageModel, alt: "Image 1", title: "LLM" },
+];
 
 const Workshop_sql = () => {
   return (
@@ -92,6 +94,8 @@ const Workshop_sql = () => {
               image={sammer_dubey_profile}
               name="Sameer Dubey"
               linkedinLink="https://www.linkedin.com/in/sameerz/"
+              qualification="Manager, Data Science"
+              company={home_credit_company_logo}
             />
           </div>
         </section>

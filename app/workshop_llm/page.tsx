@@ -14,6 +14,7 @@ import { insightsData } from "@/constants";
 import {
   Api,
   BackgroundLogo,
+  HsbcLogo,
   largeLanguageModel,
   OpenAi,
   promtEngineering,
@@ -82,8 +83,7 @@ const Workshop_llm = () => {
               cost="₹0"
               image={Tanoy_profile}
               name="Tanoy Dewanjee"
-              linkedinLink="https://www.linkedin.com/in/tanoydewanjee/"
-            />
+              linkedinLink="https://www.linkedin.com/in/tanoydewanjee/" qualification="AVP, Decision Science" company={HsbcLogo}            />
           </div>
         </section>
         <HorizontalLine />

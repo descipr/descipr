@@ -15,6 +15,7 @@ import {
   Analitical,
   BackgroundLogo,
   googleBitQuery,
+  HsbcLogo,
   MsExcel,
   python,
   sql,
@@ -81,8 +82,7 @@ const Workshop = () => {
               cost="₹0"
               image={Tanoy_profile}
               name="Tanoy Dewanjee "
-              linkedinLink="https://www.linkedin.com/in/tanoydewanjee/"
-            />
+              linkedinLink="https://www.linkedin.com/in/tanoydewanjee/" qualification="AVP, Decision Science" company={HsbcLogo}            />
           </div>
         </section>
         <HorizontalLine />

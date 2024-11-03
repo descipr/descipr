@@ -9,10 +9,20 @@ interface IworkshopCard {
   cost: string;
   image: StaticImageData;
   name: String;
-  linkedinLink:string
+  linkedinLink: string;
+  qualification: string;
+  company: StaticImageData;
 }
 
-const WorkshopCard = ({ date, cost, image, name, linkedinLink }: IworkshopCard) => {
+const WorkshopCard = ({
+  date,
+  cost,
+  image,
+  name,
+  linkedinLink,
+  qualification,
+  company
+}: IworkshopCard) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/payment-button.js";
@@ -45,13 +55,13 @@ const WorkshopCard = ({ date, cost, image, name, linkedinLink }: IworkshopCard) 
               {name}
             </h3>
             <span className="text-sm lg:text-base text-black-primary font-light mb-2 ">
-              AVP, Data Science
+              {qualification}
             </span>
             <Image
-              src={HsbcLogo}
+              src={company}
               alt="Linked in icon"
-              width={108}
-              height={27}
+              width={80}
+              height={38}
               className=""
             />
           </div>
