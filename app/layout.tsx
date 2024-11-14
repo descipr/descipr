@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   description:
     "Unlock your AI potential with our Fellowships led by Hiring managers. Gain personalized guidance, tackle job-simulation projects, and join a supportive community. Start now to fast-track your AI career!",
-  metadataBase: new URL("https://kikobot.com"),
+  metadataBase: new URL("https://descipr.com"),
   twitter: {
     card: "summary_large_image",
   },
@@ -34,13 +34,16 @@ export default function RootLayout({
           content="vbrtbewbju9hb139todoh025sit6ax"
         />
       </head>
-      
+
       <body
         className={`${plus_jakarta.className} relative bg-gradient-custom bg-fixed bg-cover`}
       >
         {/* Facebook Pixel */}
-        <Script id="facebook-pixel" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: `
+        <Script
+          id="facebook-pixel"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -52,7 +55,8 @@ export default function RootLayout({
             fbq('init', '867201552174593');
             fbq('track', 'PageView');
           `,
-        }} />
+          }}
+        />
 
         {/* Google Tag Manager */}
         <Script
@@ -60,17 +64,26 @@ export default function RootLayout({
           strategy="afterInteractive"
           async
         ></Script>
-        <Script id="google-analytics" strategy="afterInteractive" dangerouslySetInnerHTML={{
-          __html: `
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-T37HZ9T5W5');
           `,
-        }} />
+          }}
+        />
 
         <noscript>
-          <img height="1" width="1" style={{ display: 'none' }} src="https://www.facebook.com/tr?id=867201552174593&ev=PageView&noscript=1" />
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=867201552174593&ev=PageView&noscript=1"
+          />
         </noscript>
 
         <FloatingButton />
