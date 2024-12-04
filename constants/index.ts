@@ -1336,6 +1336,56 @@ export const workshopData_vec: LearningCardData[] = [
     ],
   },
 ];
+
+export const workshopData_pyt: LearningCardData[] = [
+  {
+    id: 1,
+    title: "Introduction to Python Data Structures",
+    listItems: [
+      "List, Tuple, Dictionary, Set. Creating, accessing, and manipulating these structures.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Exploratory Data Analysis (EDA) with Pandas",
+    listItems: [
+      "Creating, indexing, slicing, and basic manipulations.",
+      "Importing datasets (.csv, .xlsx), Handling missing values, Filtering, sorting, and aggregating data.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Data Visualization with Matplotlib",
+    listItems: [
+      "Building Blocks of a Plot: Line plots, bar plots, histograms, and scatter plots. Customizing visuals (titles, labels, legends).",
+      "Visualizing sales trends, category performance, and outlier detection.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Control Flow in Python",
+    listItems: [
+      "Automating repetitive tasks in data processing.",
+      "Generating insights for different regions or categories.",
+    ],
+  },
+  {
+    id: 5,
+    title: "User-Defined Functions",
+    listItems: [
+      "Writing reusable Python functions for data cleaning and transformation.",
+      "Custom aggregation functions to calculate weighted averages or performance metrics.",
+    ],
+  },
+  {
+    id: 6,
+    title: "Aggregation and Business Metrics",
+    listItems: [
+      "Grouping data for insights (e.g., by product category or time).",
+      " Calculating KPIs (e.g., average order value, customer retention metrics).",
+    ],
+  },
+];
 export const WebinarForData: IwebinarForData[] = [
   {
     id: 1,

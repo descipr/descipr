@@ -12,21 +12,18 @@ import WorkshopToolSection from "@/components/WorkshopToolsection";
 import {
   BonusWorkshop__llm,
   insightsDataSql,
+  workshopData_pyt,
   workshopData_vec,
 } from "@/constants";
 
 import {
-  Atul_profile,
   BackgroundLogo,
-  Big_Query_sql_workshop,
-  home_credit_company_logo,
   HsbcLogo,
   largeLanguageModel,
   OpenAi,
   promtEngineering,
   python,
-  sammer_dubey_profile,
-  sql,
+  Tanoy_profile,
 } from "@/utils";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -44,7 +41,7 @@ const tools = [
   { src: largeLanguageModel, alt: "Image 1", title: "LLM" },
 ];
 
-const Workshop_sql = () => {
+const Workshop_pyt = () => {
   return (
     <>
       <section className="max-w-7xl w-full flex flex-col space-y-8 items-center mx-auto overflow-x-hidden">
@@ -58,19 +55,17 @@ const Workshop_sql = () => {
           />
           <div className="flex flex-col items-center sm:items-start gap-4 text-center sm:text-left sm:w-1/2">
             <h1 className="text-3xl md:text-5xl font-bold text-center sm:text-left text-white font-Plus-jakarta">
-              Design an AI Powered Search System with{" "}
+              Business Insights with Python: Hands-on{" "}
               <span className="text-blue-Textprimary font-Plus-jakarta">
-                Vector Databases - A Hands-On Workshop
+                Workshop on Data Analysis
               </span>
             </h1>
             <p className="text-sm md:text-base text-white font-light">
-              In this workshop you'll gain hands-on insights into building
-              efficient search and retrieval systems powered by vector
-              databases. This session dives into the role of vector databases in
-              modern AI applications and how they enable fast, semantic search
-              capabilities beyond traditional keyword search. Join us to
-              discover how to unlock new possibilities in AI with advanced,
-              AI-powered search systems!
+              Unlock the power of Python to transform raw data into actionable
+              business insights in this hands-on workshop. Learn to analyze
+              trends, create visualizations, and make data-driven decisions with
+              real-world examples. Perfect for beginners and professionals eager
+              to leverage Python for business analytics.
             </p>
 
             {/* <Image
@@ -87,18 +82,18 @@ const Workshop_sql = () => {
 
           <div className="flex justify-center items-center w-full px-2 sm:w-1/2  pt-16 md:pt-0">
             <WorkshopCard
-              date="November 17, 2024"
+              date="December 15, 2024"
               cost="₹0"
-              image={sammer_dubey_profile}
-              name="Sameer Dubey"
-              linkedinLink="https://www.linkedin.com/in/sameerz/"
-              qualification="Manager, Data Science"
-              company={home_credit_company_logo}
+              image={Tanoy_profile}
+              name="Tanoy Dewanjee"
+              linkedinLink="https://www.linkedin.com/in/tanoydewanjee/"
+              qualification="AVP, Decision Science"
+              company={HsbcLogo}
             />
           </div>
         </section>
         <HorizontalLine />
-        <LearningWorkShop data={workshopData_vec} />
+        <LearningWorkShop data={workshopData_pyt} />
         <HorizontalLine />
         <WorkshopToolSection tools={tools} />
         <HorizontalLine />
@@ -118,4 +113,4 @@ const Workshop_sql = () => {
   );
 };
 
-export default Workshop_sql;
+export default Workshop_pyt;
