@@ -13,14 +13,13 @@ import {
   BonusWorkshop__llm,
   insightsDataSql,
   workshopData_pyt,
-  workshopData_vec,
 } from "@/constants";
 
 import {
   BackgroundLogo,
   HsbcLogo,
-  largeLanguageModel,
-  OpenAi,
+  jupitorNoteBookLogo,
+  matplotlibLogo,
   promtEngineering,
   python,
   Tanoy_profile,
@@ -35,10 +34,10 @@ export const metadata: Metadata = {
     "Enhance your data science and AI interview skills with this exclusive workshop, guided by a seasoned hiring manager. It will refine your strategic problem-solving abilities and strengthen your communication skills.",
 };
 const tools = [
-  { src: OpenAi, alt: "Image 1", title: "OpenAI" },
+  { src: promtEngineering, alt: "Image 1", title: "pandas" },
   { src: python, alt: "Image 1", title: "Python" },
-  { src: promtEngineering, alt: "Image 1", title: "Vector Databases" },
-  { src: largeLanguageModel, alt: "Image 1", title: "LLM" },
+  { src: jupitorNoteBookLogo, alt: "Image 1", title: "Jupyter Notebook" },
+  { src: matplotlibLogo, alt: "Image 1", title: "Matplotlib" },
 ];
 
 const Workshop_pyt = () => {
@@ -87,7 +86,7 @@ const Workshop_pyt = () => {
               image={Tanoy_profile}
               name="Tanoy Dewanjee"
               linkedinLink="https://www.linkedin.com/in/tanoydewanjee/"
-              qualification="AVP, Decision Science"
+              qualification="Lead AVP, Decision Science"
               company={HsbcLogo}
             />
           </div>

@@ -1591,6 +1591,6 @@ export const insightsDataSql: Insight[] = [
     id: 4,
     icon: portfolioIcon,
     title: "Portfolio",
-    description: "of impactful Projects",
+    description: "of Hands on Case studies",
   },
 ];
