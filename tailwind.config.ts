@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-custom": "linear-gradient(180deg, #02122b 6.32%, #000 100%)",
+        "gradient-workshop": "linear-gradient(180deg, #02122B 6.32%, #000 100%)",
       },
       backgroundAttachment: {
         fixed: "fixed",

@@ -1,5 +1,6 @@
 import {
   adithiaV,
+  advance,
   AiEngineeringCard,
   AnkitaKundu,
   AtulAnand,
@@ -20,11 +21,13 @@ import {
   durationIcon,
   ExportData,
   FarzandKhan,
+  foundation,
   Gaurav_Kumar,
   generativeModel,
   HiringManager,
   HiringManagerMobile,
   instagramIcon,
+  intermidiate,
   Interview,
   JobSimulation,
   KoushikMitra,
@@ -79,7 +82,9 @@ export interface BentoGridItemProps {
 export interface Course {
   imageSrc: StaticImageData;
   title: string;
-  date: string;
+  para: string;
+  bg: string;
+  button: string;
 }
 
 export interface TestimonialCardProps {
@@ -118,7 +123,9 @@ export interface LearningCardData {
 export interface CourseCardProps {
   imageSrc: StaticImageData;
   title: string;
-  date: string;
+  para: string;
+  bg: string;
+  button: string;
 }
 
 export interface ListItem {
@@ -212,20 +219,26 @@ export const socialLinks: SocialLink[] = [
 
 export const courses: Course[] = [
   {
-    imageSrc: DataScientistCard,
-    title: "Data Scientist Fellowship",
-    date: "23 Nov - 29 Mar",
+    imageSrc: foundation,
+    title: "Foundation",
+    para: "Aspiring analytics professionals, whether fresh graduates or career switchers, start here.",
+    bg: "#DBE5FF",
+    button: "#2154DA",
   },
 
   {
-    imageSrc: AiEngineeringCard,
-    title: "AI Engineer Fellowship",
-    date: "23 Nov - 22 Feb",
+    imageSrc: intermidiate,
+    title: "Intermidiate",
+    para: "Built a solid foundation? Take the next step towards data science roles.",
+    bg: "#FFF0ED",
+    button: "#EE4924",
   },
   {
-    imageSrc: BusinessAnalystCard,
-    title: "Business Analyst Fellowship",
-    date: "23 Nov - 01 Mar",
+    imageSrc: advance,
+    title: "Advanced",
+    para: "Perfect for ambitious data scientists aiming to fast-track their journey to senior roles.",
+    bg: "#F5F3FF",
+    button: "#6E08B1",
   },
 ];
 export const items = [
@@ -415,6 +428,19 @@ export const fellowshipList: fellowship[] = [
   {
     label: "Business Analyst Fellowship",
     link: "/courses/Business%20Analyst%20Fellowship",
+  },
+];
+
+export const pdfs = [
+  {
+    title: "E-Book 1",
+    description: "Resume Best Practices for Data Science Interviews",
+    downloadLink: "Descipr - Resume Best Practices for DS Interview.pdf",
+  },
+  {
+    title: "E-Book 2",
+    description: "SQL Case Study Book",
+    downloadLink: "Descipr - SQL Case Study Book.pdf",
   },
 ];
 

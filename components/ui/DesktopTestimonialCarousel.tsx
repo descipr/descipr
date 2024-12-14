@@ -22,7 +22,7 @@ const DesktopTestimonialCarousel: React.FC = () => {
       <div className="container mx-auto text-center flex flex-col">
         <div className="relative overflow-hidden">
           <div
-            className="flex transition-transform duration-500 ease-in-out"
+            className="flex transition-transform duration-500 ease-in-out items-center"
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
             {testimonials.map((testimonial, index) => (

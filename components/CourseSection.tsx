@@ -1,23 +1,27 @@
-import React from 'react';
-
-import CourseCard from './ui/CourseCard';
-import { courses } from '@/constants';
+import React from "react";
+import { courses } from "@/constants";
+import CourseCard from "./ui/CourseCard";
 
 const CourseSection: React.FC = () => {
-    return (
-        <div className="container mx-auto px-4 py-8 w-full">
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {courses.map((course, index) => (
-                    <CourseCard
-                        key={index}
-                        imageSrc={course.imageSrc}
-                        title={course.title}
-                        date={course.date}
-                    />
-                ))}
-            </div>
-        </div>
-    );
+  return (
+    <section className="section-style overflow-hidden">
+      <h2 className="heading text-white">
+        Fellow<span className="text-blue-Textprimary">ships</span>
+      </h2>
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {courses.map((course, index) => (
+          <CourseCard
+            key={index}
+            imageSrc={course.imageSrc}
+            title={course.title}
+            para={course.para}
+            bg={course.bg}
+            button={course.button}
+          />
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default CourseSection;

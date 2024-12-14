@@ -21,7 +21,7 @@ import Interview from "@/public/Images/interview.svg";
 import Portfolio from "@/public/Images/Portfolio.svg";
 import QuizBackgroud from "@/public/Images/QuizBackground.svg";
 import QuizArrow from "@/public/Images/Quiz-arrow.svg";
-import QuizLogo from "@/public/Images/QuizLogo.svg";
+import QuizLogo from "@/public/Images/QuizLogo.png";
 import Phone from "@/public/Images/call.svg";
 import Whatsapp from "@/public/Images/Whatsapp.svg";
 import linkedIcon from "@/public/Images/linkedin-svg.svg";
@@ -98,6 +98,12 @@ import sammer_dubey_profile from "@/public/Images/sammer_dubey_profile.svg";
 import home_credit_company_logo from "@/public/Images/home_credit_logo.svg";
 import matplotlibLogo from "@/public/Images/matplotlib.jpg";
 import jupitorNoteBookLogo from "@/public/Images/jupyter-seeklogo.svg";
+import foundation from "@/public/Images/Foundation.svg";
+import intermidiate from "@/public/Images/Intermediate.svg";
+import advance from "@/public/Images/Advanced.svg";
+import workshop_data_tanoy from "@/public/Images/tanoy_workshop_data.png";
+import coparate_partnership from "@/public/Images/coparate_partnership.png";
+import campus_connect from "@/public/Images/campus_connect.png";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -116,6 +122,8 @@ export const cleanUpSlug = (slug: string): string => {
 
 export {
   home_credit_company_logo,
+  coparate_partnership,
+  campus_connect,
   matplotlibLogo,
   jupitorNoteBookLogo,
   sammer_dubey_profile,
@@ -213,4 +221,8 @@ export {
   Atul_profile,
   sql_logo_workshop,
   Big_Query_sql_workshop,
+  foundation,
+  intermidiate,
+  advance,
+  workshop_data_tanoy,
 };
