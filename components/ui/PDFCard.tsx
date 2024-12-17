@@ -13,7 +13,7 @@ const PDFCard: React.FC<PDFCardProps> = ({
   downloadLink,
 }) => {
   return (
-    <div className="bg-transparent text-white rounded-lg p-4 shadow-lg w-72 h-96 mx-4 flex flex-col justify-between">
+    <div className="bg-transparent text-white rounded-lg shadow-lg w-full md:w-1/3 h-96 mx-auto flex flex-col justify-between">
       <div className="h-48 bg-gray-600 rounded-xl mb-4"></div>
       <div className="flex flex-col justify-between flex-grow">
         <h3 className="text-lg font-medium text-left text-[#C7C7CC]">

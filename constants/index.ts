@@ -1219,10 +1219,10 @@ export const FellowshipImages = [
 ];
 
 export const MobileFellowshipImages = [
-  HiringManagerMobile,
-  CourseCardMobile,
-  MentorshipMobile,
-  CommunityMobile,
+  HiringManager,
+  CourseCard,
+  Mentorship,
+  Community,
 ];
 
 export const workshopData: LearningCardData[] = [

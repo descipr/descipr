@@ -1,28 +1,52 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface MobileCarouselProps {
   images: string[];
 }
 
 const MobileCarousel: React.FC<MobileCarouselProps> = ({ images }) => {
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    if (carouselRef.current) {
+      const totalWidth = carouselRef.current.scrollWidth;
+      const visibleWidth = carouselRef.current.offsetWidth;
+      setWidth(totalWidth - visibleWidth);
+    }
+  }, []);
+
   return (
-    <div className="container text-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <motion.div
+      ref={carouselRef}
+      className="overflow-hidden cursor-grab w-full"
+      whileTap={{ cursor: "grabbing" }}
+    >
+      <motion.div
+        className="flex space-x-2"
+        drag="x"
+        dragConstraints={{ right: 0, left: -width }}
+      >
         {images.map((image, index) => (
-          <div key={index} className="w-full px-2">
+          <div
+            key={index}
+            className="flex-shrink-0"
+            style={{ width: "calc(100% / 1)", scrollSnapAlign: "center" }}
+          >
             <Image
               src={image}
               alt={`Fellowship image ${index}`}
-              width={400}
-              height={250}
-              className="rounded-lg object-cover w-full h-full"
+              width={300}
+              height={200}
+              className="rounded-lg object-cover w-full h-auto"
             />
           </div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

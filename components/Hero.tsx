@@ -35,15 +35,15 @@ const Hero: React.FC = () => {
             className="flex items-center px-6 py-4 md:px-8 md:py-4 space-x-2  text-black bg-blue-Textprimary hover:bg-white rounded-lg md:rounded-xl shadow-md text-base md:text-lg font-semibold"
           >
             {" "}
-            Explore fellowhips
+            Explore Programs
           </button>
-          <button
+          {/* <button
             //   onClick={() => setIsOpen(true)}
             className="flex items-center px-6 py-4 md:px-8 md:py-4 space-x-2 text-white bg-transparent rounded-lg md:rounded-xl shadow-md text-base md:text-lg font-semibold border-[2px] border-white"
           >
             {" "}
             Explore Workshops
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

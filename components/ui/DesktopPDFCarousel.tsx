@@ -23,7 +23,7 @@ const DesktopPDFCarousel: React.FC = () => {
             {Array.from({ length: totalPages }).map((_, pageIndex) => (
               <div
                 key={pageIndex}
-                className="flex flex-shrink-0 justify-center w-full"
+                className="flex gap-4 justify-center w-full"
               >
                 {pdfs
                   .slice(pageIndex * pdfsPerPage, (pageIndex + 1) * pdfsPerPage)

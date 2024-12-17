@@ -101,7 +101,7 @@ import jupitorNoteBookLogo from "@/public/Images/jupyter-seeklogo.svg";
 import foundation from "@/public/Images/Foundation.svg";
 import intermidiate from "@/public/Images/Intermediate.svg";
 import advance from "@/public/Images/Advanced.svg";
-import workshop_data_tanoy from "@/public/Images/tanoy_workshop_data.png";
+import workshop_data_tanoy from "@/public/Images/tanoy_workshop_data.svg";
 import coparate_partnership from "@/public/Images/coparate_partnership.png";
 import campus_connect from "@/public/Images/campus_connect.png";
 

@@ -5,7 +5,7 @@ import { HsbcLogo, workshop_data_tanoy } from '@/utils';
 const workshops = [
     {
       live: "Live",
-      date: "Sun , Dec 15, 10:00 AM",
+      date: "Sat , Jan 11, 10:00 AM",
       time: "10:30 PM",
       title: "Business Insights with Python",
       duration: "90 Min",
