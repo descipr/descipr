@@ -1,20 +1,21 @@
+// fellowship
+
 import {
   adithiaV,
   advance,
-  AiEngineeringCard,
   AnkitaKundu,
+  atul_annand,
   AtulAnand,
   Bibhuti_Jha,
-  BusinessAnalystCard,
   BusinessAnalystFellowshipCard,
   businessAnalystInsights,
   BusinessFundamentals,
+  campus_connect,
   charuGoyal,
-  Community,
   CommunityMobile,
-  CourseCard,
+  corporate_partnership,
   CourseCardMobile,
-  DataScientistCard,
+  data_science,
   DataScientistInsights,
   debjaniMajumder,
   DoubtSupport,
@@ -24,8 +25,10 @@ import {
   foundation,
   Gaurav_Kumar,
   generativeModel,
-  HiringManager,
   HiringManagerMobile,
+  home_credit,
+  hsbc_logo_white,
+  HsbcLogo,
   instagramIcon,
   intermidiate,
   Interview,
@@ -38,11 +41,9 @@ import {
   LiveSession,
   Lochan_raj,
   ManishSinha,
-  Mentorship,
   mentorshipIcon,
   MentorshipIcon,
   MentorshipMobile,
-  MlEngineeringCard,
   MlLibrary,
   MockInterview,
   ModelBuilding,
@@ -55,78 +56,47 @@ import {
   ProblemSolving,
   python,
   ResumeReview,
+  sameer_dubey_workshop,
   SameerDubey,
   samikshaGebise,
   Sampath_vinayak,
   samridhi,
   Sayan_paul,
   sql,
+  sql_case_study,
   SrinivasanBalaji,
   SrishtiShiksha,
   Statistcs,
   Suryansh_abijith,
   TanoyDewanjee,
   transformers,
-  twitterIcon,
   VasuBhasin,
+  workshop_data_tanoy,
   youtubeIcon,
 } from "@/utils";
-
 import { StaticImageData } from "next/image";
 
-export interface BentoGridItemProps {
-  className?: string;
-  imgsrc: StaticImageData;
+export interface fellowship {
+  label: string;
+  link: string;
 }
 
-export interface Course {
-  imageSrc: StaticImageData;
-  title: string;
-  para: string;
-  bg: string;
-  button: string;
-}
+export const fellowshipList: fellowship[] = [
+  {
+    label: "Data Scientist Fellowship",
+    link: "/courses/Data%20Scientist%20Fellowship",
+  },
+  {
+    label: "AI Engineer Fellowship",
+    link: "/courses/AI%20Engineer%20Fellowship",
+  },
+  {
+    label: "Business Analyst Fellowship",
+    link: "/courses/Business%20Analyst%20Fellowship",
+  },
+];
 
-export interface TestimonialCardProps {
-  profilePic: string;
-  name: string;
-  position: string;
-  testimonial: string;
-  linkedinUrl: string;
-}
-export interface CardData {
-  key: number;
-  imageUrl: StaticImageData;
-  title: string;
-  description: string;
-  background: string;
-}
-
-export interface ScheduledClassProps {
-  key: number;
-  imageUrl: StaticImageData;
-  title: string;
-  para: string;
-  date: string;
-  background: string;
-}
-
-export interface LearningCardData {
-  id: number;
-  title: string;
-  listItems: string[];
-  time?: string;
-  subheading?: string;
-  para?: string;
-}
-
-export interface CourseCardProps {
-  imageSrc: StaticImageData;
-  title: string;
-  para: string;
-  bg: string;
-  button: string;
-}
+// company
 
 export interface ListItem {
   label: string;
@@ -134,70 +104,17 @@ export interface ListItem {
   href?: string;
 }
 
+export const companyList: ListItem[] = [
+  { label: "About Us", href: "/aboutus" },
+];
+
+// socials
+
 export interface SocialLink {
   label: string;
   iconSrc: string;
   link: string;
 }
-
-export interface OurTrainerProp {
-  src: string;
-  alt: string;
-  link: string;
-}
-
-export interface DesciprDiffernceProps {
-  src: string;
-  alt: string;
-  title: string;
-}
-
-export interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-export interface fellowship {
-  label: string;
-  link: string;
-}
-
-export interface CourseDetail {
-  heading: string;
-  description: string;
-  dateOfStart: string;
-  floatingBar: string;
-  timeCommitment: string;
-  timePerweek?: string;
-  cost: string;
-  seatsLeft: number;
-  sessionInsights: any;
-  id: string;
-  actualcost: string;
-  imgUrl: any;
-  razorPay: {
-    src: string;
-    paymentButtonId: string;
-  };
-  pdf: string;
-  discount: string;
-  EmiOptions: string;
-  weekSchedule?: LearningCardData[];
-  videoUrl: string;
-  learning: DesciprDiffernceProps[];
-  tools: DesciprDiffernceProps[];
-}
-
-export interface IwebinarForData {
-  id: number;
-  title: string;
-  description: string;
-  background: string;
-}
-
-export const companyList: ListItem[] = [
-  { label: "About Us", href: "/aboutus" },
-];
 
 export const socialLinks: SocialLink[] = [
   {
@@ -217,6 +134,18 @@ export const socialLinks: SocialLink[] = [
   },
 ];
 
+// courses
+
+export interface Course {
+  imageSrc: StaticImageData;
+  title: string;
+  para: string;
+  bg: string;
+  button: string;
+  date: string;
+  slug: string;
+}
+
 export const courses: Course[] = [
   {
     imageSrc: foundation,
@@ -224,6 +153,8 @@ export const courses: Course[] = [
     para: "Aspiring analytics professionals, whether fresh graduates or career switchers, start here.",
     bg: "#DBE5FF",
     button: "#2154DA",
+    date: "Jan 18, 2025",
+    slug: "Data Scientist Fellowship",
   },
 
   {
@@ -232,6 +163,8 @@ export const courses: Course[] = [
     para: "Built a solid foundation? Take the next step towards data science roles.",
     bg: "#FFF0ED",
     button: "#EE4924",
+    date: "Jan 18, 2025",
+    slug: "Data Scientist Fellowship",
   },
   {
     imageSrc: advance,
@@ -239,26 +172,142 @@ export const courses: Course[] = [
     para: "Perfect for ambitious data scientists aiming to fast-track their journey to senior roles.",
     bg: "#F5F3FF",
     button: "#6E08B1",
+    date: "Jan 18, 2025",
+    slug: "Data Scientist Fellowship",
   },
 ];
-export const items = [
+
+export interface CourseCardProps {
+  imageSrc: StaticImageData;
+  title: string;
+  para: string;
+  bg: string;
+  button: string;
+  date: string;
+  slug: string;
+}
+
+// workshop data card
+export interface WorkshopCardProps {
+  live: string;
+  date: string;
+  time: string;
+  title: string;
+  duration: string;
+  mentorName: string;
+  mentorPhoto: StaticImageData;
+  designation: string;
+  logo: StaticImageData;
+  signups: number;
+}
+
+export const workshops = [
   {
-    className: "md:col-span-2",
-    imgsrc: HiringManager,
+    live: "Live",
+    date: "Sun , Dec 15, 10:00 AM",
+    time: "10:30 PM",
+    title: "Business Insights with Python",
+    duration: "90 Min",
+    mentorName: "Tanoy Dewanjee",
+    mentorPhoto: workshop_data_tanoy,
+    designation: "AVP, Decision Science",
+    logo: hsbc_logo_white,
+    signups: 50,
   },
   {
-    className: "md:col-span-2",
-    imgsrc: CourseCard,
+    live: "On Demand",
+    date: "Sun , Nov 17, 11:00 AM",
+    time: "10:30 PM",
+    title: "Design an AI Powered Search System with Vector Databases",
+    duration: "90 Min",
+    mentorName: "Sameer Dubey",
+    mentorPhoto: sameer_dubey_workshop,
+    designation: "Manager, Data Science",
+    logo: home_credit,
+    signups: 40,
   },
   {
-    className: "md:col-span-3",
-    imgsrc: Mentorship,
+    live: "On Demand",
+    date: "Sat , Nov 09, 11:00 AM",
+    time: "10:30 PM",
+    title: "Master SQL Foundations: Detect E-commerce Return Fraud",
+    duration: "90 Min",
+    mentorName: "Atul Anand",
+    mentorPhoto: atul_annand,
+    designation: "AVP, Business Analytics",
+    logo: hsbc_logo_white,
+    signups: 25,
   },
   {
-    className: "md:col-span-1",
-    imgsrc: Community,
+    live: "On Demand",
+    date: "Sun , Oct 27, 10:00 AM",
+    time: "10:30 PM",
+    title: "Mastering AI: Outsmarting Banking Fraud with LLMs",
+    duration: "90 Min",
+    mentorName: "Tanoy Dewanjee",
+    mentorPhoto: workshop_data_tanoy,
+    designation: "AVP, Decision Science",
+    logo: HsbcLogo,
+    signups: 120,
+  },
+  {
+    live: "On Demand",
+    date: "Sun , Oct 13, 11:00 AM",
+    time: "10:30 PM",
+    title: "Ace Data Science & AI Interviews",
+    duration: "90 Min",
+    mentorName: "Atul Anand",
+    mentorPhoto: workshop_data_tanoy,
+    designation: "AVP, Decision Science",
+    logo: HsbcLogo,
+    signups: 50,
   },
 ];
+
+// custom carriculum
+
+export interface workshopI {
+  img: StaticImageData;
+  title: string;
+  para: string;
+}
+
+export const customCarriculum = [
+  {
+    img: corporate_partnership,
+    title: "Corporate Partnership",
+    para: "Get you workforce AI ready in 1 month",
+  },
+  {
+    img: campus_connect,
+    title: "Campus Connect",
+    para: "Join us in shaping the next generation of AI Innovators and Leaders!",
+  },
+];
+
+//pdf
+export interface PdfI {
+  title: string;
+  description: string;
+  downloadLink: string;
+  img: StaticImageData;
+}
+export const pdfs: PdfI[] = [
+  {
+    title: "E-Book 1",
+    description: "Resume Best Practices for Data Science Interviews",
+    downloadLink: "Descipr - Resume Best Practices for DS Interview.pdf",
+    img: data_science,
+  },
+  {
+    title: "E-Book 2",
+    description: "SQL Case Study Book",
+    downloadLink: "Descipr - SQL Case Study Book.pdf",
+    img: sql_case_study,
+  },
+];
+
+// testimonial
 
 export const testimonials = [
   {
@@ -389,6 +438,31 @@ export const testimonials = [
   },
 ];
 
+export interface TestimonialCardProps {
+  profilePic: string;
+  name: string;
+  position: string;
+  testimonial: string;
+  linkedinUrl: string;
+}
+
+// fellowship
+
+export const MobileFellowshipImages = [
+  HiringManagerMobile,
+  CourseCardMobile,
+  MentorshipMobile,
+  CommunityMobile,
+];
+
+// career
+export interface CardData {
+  key: number;
+  imageUrl: StaticImageData;
+  title: string;
+  description: string;
+}
+
 export const careerCardData: CardData[] = [
   {
     key: 1,
@@ -396,15 +470,13 @@ export const careerCardData: CardData[] = [
     title: "Resume review",
     description:
       "Enhance your resume with personalized feedback from experienced mentors. Receive tailored advice to ensure your resume stands out for your dream role.",
-    background: "#F5F3FF",
   },
   {
     key: 2,
     imageUrl: Interview,
-    title: "Mock Interviews with Hiring Managers",
+    title: "Mock Interviews",
     description:
       "Sharpen your interview skills with mock interviews led by industry experts. Gain valuable insights and boost your confidence for real-world interviews.",
-    background: "#FFF0ED",
   },
   {
     key: 3,
@@ -412,72 +484,10 @@ export const careerCardData: CardData[] = [
     title: "Portfolio Building",
     description:
       "Craft an outstanding portfolio with our hands-on business problems that captivate hiring managers and sets you apart.",
-    background: "#DBE5FF",
   },
 ];
 
-export const fellowshipList: fellowship[] = [
-  {
-    label: "Data Scientist Fellowship",
-    link: "/courses/Data%20Scientist%20Fellowship",
-  },
-  {
-    label: "AI Engineer Fellowship",
-    link: "/courses/AI%20Engineer%20Fellowship",
-  },
-  {
-    label: "Business Analyst Fellowship",
-    link: "/courses/Business%20Analyst%20Fellowship",
-  },
-];
-
-export const pdfs = [
-  {
-    title: "E-Book 1",
-    description: "Resume Best Practices for Data Science Interviews",
-    downloadLink: "Descipr - Resume Best Practices for DS Interview.pdf",
-  },
-  {
-    title: "E-Book 2",
-    description: "SQL Case Study Book",
-    downloadLink: "Descipr - SQL Case Study Book.pdf",
-  },
-];
-
-export const ScheduledClassData: ScheduledClassProps[] = [
-  {
-    key: 1,
-    imageUrl: LiveClasses,
-    title: "Live Classes",
-    para: "Every Saturday and Sunday",
-    date: "10:00 AM - 01:00 PM",
-    background: "#FFF0ED",
-  },
-  {
-    key: 2,
-    imageUrl: DoubtSupport,
-    title: "Doubt Support",
-    para: "Every Wednesday",
-    date: "8:00 PM – 9:00 PM",
-    background: "#FFF5ED",
-  },
-  {
-    key: 3,
-    imageUrl: MentorshipIcon,
-    title: "Mentorship Connect",
-    para: "Once every 2 weeks",
-    date: "Duration 1 hour",
-    background: "#F5F3FF",
-  },
-  {
-    key: 4,
-    imageUrl: MockInterview,
-    title: "Mock Interview",
-    para: "Once every 6 weeks",
-    date: "Duration 2 hours",
-    background: "#DBE5FF",
-  },
-];
+// tainers
 
 export const OutTrainers: OurTrainerProp[] = [
   {
@@ -514,6 +524,12 @@ export const OutTrainers: OurTrainerProp[] = [
   // Add more images as needed
 ];
 
+export interface OurTrainerProp {
+  src: string;
+  alt: string;
+  link: string;
+}
+
 export const Mentors: OurTrainerProp[] = [
   {
     src: ManishSinha,
@@ -532,52 +548,48 @@ export const Mentors: OurTrainerProp[] = [
   },
 ];
 
-export const DesciprDiffernce: DesciprDiffernceProps[] = [
-  { src: LiveSession, alt: "Image 1", title: "Live Sessions" },
-  { src: JobSimulation, alt: "Image 1", title: "Job Simulations" },
-  { src: DoubtSupport, alt: "Image 1", title: "Doubt Support" },
-  { src: PeerLearning, alt: "Image 1", title: "Peer Learning" },
-];
+// courses
 
-export const Learning: DesciprDiffernceProps[] = [
-  { src: ProblemSolving, alt: "Image 1", title: "Problem Solving Frameworks" },
-  { src: BusinessFundamentals, alt: "Image 1", title: "Business Fundamentals" },
-  { src: Statistcs, alt: "Image 1", title: "Statistics" },
-  { src: ExportData, alt: "Image 1", title: "Exploratory Data Analysis (EDA)" },
-];
+export interface LearningCardData {
+  id: number;
+  title: string;
+  listItems: string[];
+  time?: string;
+  subheading?: string;
+  para?: string;
+}
 
-export const Tools: DesciprDiffernceProps[] = [
-  { src: python, alt: "Image 1", title: "Python" },
-  { src: MsExcel, alt: "Image 1", title: "MS Excel" },
-  { src: sql, alt: "Image 1", title: "SQL" },
-  { src: PowerBi, alt: "Image 1", title: "PowerBI" },
-];
+export interface DesciprDiffernceProps {
+  src: string;
+  alt: string;
+  title: string;
+}
 
-export const faqData: FAQItem[] = [
-  {
-    question: "What's the format of the Exit exam?",
-    answer:
-      "The exit exam will comprise of a problem statement along with scenario based questions to assess your understanding and readiness for the professional world.",
-  },
-  {
-    question:
-      "What are the key responsibilities of a Fellow during the program?",
-    answer:
-      "All Fellowships require a commitment of 12-14 hours per week. As a participant in this program, you will need to attend weekly live sessions with instructors, scheduled for Saturdays and Sundays. Additionally, you will be expected to review weekly learning materials on the Descipr website and submit your work for the weekly milestone, which involves solving a job-simulated project related to that week's topic. At the end of the fellowship, you will be required to take an exit exam.",
-  },
-  {
-    question:
-      "What kind of support and resources will Fellows have access to during the program?",
-    answer:
-      "During your weekly live sessions with instructors, you'll benefit from insights provided by industry experts. Each learner is also paired with a mentor who will assist with case study analyses, resolve any doubts, and help plan your career path. Additionally, each week you'll receive learning materials on that week’s topic and access a real-world problem statement as part of your weekly milestone.",
-  },
-  {
-    question:
-      "If I am unable to attend the program or need to pull out at the last minute, will I get a refund?",
-    answer:
-      "Refund requests can only be submitted up to 2 weeks before the start date of the Fellowship. If the reason for the request is deemed valid, we will issue a full refund. Requests made after this deadline will not be processed. The Descipr team reserves the right to make the final decision on all refund requests.",
-  },
-];
+export interface CourseDetail {
+  heading: string;
+  description: string;
+  dateOfStart: string;
+  floatingBar: string;
+  timeCommitment: string;
+  timePerweek?: string;
+  cost: string;
+  seatsLeft: number;
+  sessionInsights: any;
+  id: string;
+  actualcost: string;
+  imgUrl: any;
+  razorPay: {
+    src: string;
+    paymentButtonId: string;
+  };
+  pdf: string;
+  discount: string;
+  EmiOptions: string;
+  weekSchedule?: LearningCardData[];
+  videoUrl: string;
+  learning: DesciprDiffernceProps[];
+  tools: DesciprDiffernceProps[];
+}
 
 export const courseDetails: CourseDetail[] = [
   {
@@ -1211,237 +1223,126 @@ export const courseDetails: CourseDetail[] = [
   },
 ];
 
-export const FellowshipImages = [
-  HiringManager,
-  CourseCard,
-  Mentorship,
-  Community,
-];
+// faqs
 
-export const MobileFellowshipImages = [
-  HiringManagerMobile,
-  CourseCardMobile,
-  MentorshipMobile,
-  CommunityMobile,
-];
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
 
-export const workshopData: LearningCardData[] = [
+export const workshopFaqData: FAQItem[] = [
   {
-    id: 1,
-    title: "Overview of Different Career Paths in Data Science/AI",
-    listItems: [
-      "Not everyone with the title of Data Scientist performs the same role. Make an informed decision about the one you would enjoy the most.",
-    ],
+    question: "What is the focus of this workshop?",
+    answer:
+      "The workshop will cover strategies and best practices for successfully navigating data science interviews. Topics will include technical assessments, problem-solving techniques, common interview questions, and how to effectively present your experience and skills.",
+  },
+
+  {
+    question: "Who should attend this workshop?",
+    answer:
+      "This workshop is ideal for aspiring data scientists, recent graduates, or professionals looking to transition into data science roles. It’s also valuable for experienced data scientists who want to improve their interview performance.",
   },
   {
-    id: 2,
-    title: "Frameworks for Selecting the Right Data Science Project",
-    listItems: [
-      "Not all projects hold the same value. Learn the right framework to identify the best ones for your target industries or companies.",
-    ],
+    question: "How do I register for the workshop?",
+    answer:
+      "You can register through our website or contact our support team for assistance with registration.",
   },
   {
-    id: 3,
-    title: "Essential Elements of an Effective Data Science Resume",
-    listItems: [
-      "Craft a profile that captures the attention of hiring managers and helps you secure the right opportunity.",
-    ],
-  },
-  {
-    id: 4,
-    title: "Data Science Interview Stages and Preparation Strategies",
-    listItems: [
-      "Learn what to expect from each interview round for top data science positions and how to prepare effectively.",
-    ],
-  },
-  {
-    id: 5,
-    title:
-      "How to approach Business Case Study Round – Live Solution Demonstration",
-    listItems: [
-      "Discover how to confidently tackle case studies using a 7-step framework and steer clear of common pitfalls.",
-    ],
+    question: "What if I have more questions after the workshop?",
+    answer:
+      "You can reach out to the workshop facilitator via email or join our community forum where you can continue the discussion and get additional support.",
   },
 ];
 
-export const workshopData_llm: LearningCardData[] = [
+export const faqData: FAQItem[] = [
   {
-    id: 1,
-    title: "Understanding AI and LLMs",
-    listItems: [
-      "Gain insights into the fundamentals of artificial intelligence and large language models and their applications in the banking sector.",
-    ],
+    question: "What's the format of the Exit exam?",
+    answer:
+      "The exit exam will comprise of a problem statement along with scenario based questions to assess your understanding and readiness for the professional world.",
   },
   {
-    id: 2,
-    title: "Fraud Detection Techniques",
-    listItems: [
-      "Learn effective methods for detecting anomalies and identifying fraudulent activities using AI tools.",
-    ],
+    question:
+      "What are the key responsibilities of a Fellow during the program?",
+    answer:
+      "All Fellowships require a commitment of 12-14 hours per week. As a participant in this program, you will need to attend weekly live sessions with instructors, scheduled for Saturdays and Sundays. Additionally, you will be expected to review weekly learning materials on the Descipr website and submit your work for the weekly milestone, which involves solving a job-simulated project related to that week's topic. At the end of the fellowship, you will be required to take an exit exam.",
   },
   {
-    id: 3,
-    title: "Hands-On Experience",
-    listItems: [
-      "Participate in practical exercises that reinforce your understanding of AI applications in real-world banking fraud cases.",
-    ],
+    question:
+      "What kind of support and resources will Fellows have access to during the program?",
+    answer:
+      "During your weekly live sessions with instructors, you'll benefit from insights provided by industry experts. Each learner is also paired with a mentor who will assist with case study analyses, resolve any doubts, and help plan your career path. Additionally, each week you'll receive learning materials on that week’s topic and access a real-world problem statement as part of your weekly milestone.",
   },
   {
-    id: 4,
-    title: "Stay Ahead of Emerging Threats",
-    listItems: [
-      "Equip yourself with the latest tools and techniques to outsmart fraudsters in an evolving banking landscape.",
-    ],
-  },
-];
-export const workshopData_sql: LearningCardData[] = [
-  {
-    id: 1,
-    title: "Core SQL Concepts",
-    listItems: [
-      "Gain insights into the fundamentals of SQL concepts such as querying, filtering, aggregating, and joining data.",
-    ],
-  },
-  {
-    id: 2,
-    title: "Fraud Detection Techniques",
-    listItems: [
-      "Learn practical techniques for analyzing large datasets and identifying fraud patterns in e-commerce transactions.",
-    ],
-  },
-  {
-    id: 3,
-    title: "Advanced SQL Techniques",
-    listItems: [
-      "Equip yourself with the advanced topics like Window functions, Rank function, Subqueries, and CTEs",
-    ],
-  },
-  {
-    id: 4,
-    title: "Hands-On Experience",
-    listItems: [
-      "Participate in practical exercises that reinforce your understanding of how SQL can be applied to solve real-world problems faced by companies in the e-commerce industry.",
-    ],
+    question:
+      "If I am unable to attend the program or need to pull out at the last minute, will I get a refund?",
+    answer:
+      "Refund requests can only be submitted up to 2 weeks before the start date of the Fellowship. If the reason for the request is deemed valid, we will issue a full refund. Requests made after this deadline will not be processed. The Descipr team reserves the right to make the final decision on all refund requests.",
   },
 ];
 
-export const workshopData_vec: LearningCardData[] = [
-  {
-    id: 1,
-    title: "Introduction to Vector Databases:",
-    listItems: [
-      "Understand why vector representations are crucial in AI and search applications. Learn to generate vector embeddings from text and images using Python libraries, providing the foundation for similarity searches.",
-    ],
-  },
-  {
-    id: 2,
-    title: "Search for Similar Vectors & Approximate Nearest Neighbors (ANN):",
-    listItems: [
-      "Discover how to use vector similarities to find similar items, using metrics like cosine similarity. Dive into faster search techniques for large datasets using tools like FAISS, making search scalable.",
-    ],
-  },
-  {
-    id: 3,
-    title: "Explore Specialized Databases:",
-    listItems: [
-      "Understand specialized databases like Milvus and Pinecone and their advantages over traditional databases.",
-    ],
-  },
-  {
-    id: 4,
-    title: "Sparse, Dense, and Hybrid Search:",
-    listItems: [
-      "Learn the differences between sparse and dense vectors and how to combine them for more effective search results.",
-    ],
-  },
-  {
-    id: 5,
-    title: "Application - Multilingual Search:",
-    listItems: [
-      "See how vector databases support multilingual search, enabling retrieval across different languages with transformer models.",
-    ],
-  },
-];
+// schedules classes
 
-export const workshopData_pyt: LearningCardData[] = [
+export interface ScheduledClassProps {
+  key: number;
+  imageUrl: StaticImageData;
+  title: string;
+  para: string;
+  date: string;
+  background: string;
+}
+
+export const ScheduledClassData: ScheduledClassProps[] = [
   {
-    id: 1,
-    title: "Introduction to Python Data Structures",
-    listItems: [
-      "List, Tuple, Dictionary, Set. Creating, accessing, and manipulating these structures.",
-    ],
-  },
-  {
-    id: 2,
-    title: "Exploratory Data Analysis (EDA) with Pandas",
-    listItems: [
-      "Creating, indexing, slicing, and basic manipulations.",
-      "Importing datasets (.csv, .xlsx), Handling missing values, Filtering, sorting, and aggregating data.",
-    ],
-  },
-  {
-    id: 3,
-    title: "Data Visualization with Matplotlib",
-    listItems: [
-      "Building Blocks of a Plot: Line plots, bar plots, histograms, and scatter plots. Customizing visuals (titles, labels, legends).",
-      "Visualizing sales trends, category performance, and outlier detection.",
-    ],
-  },
-  {
-    id: 4,
-    title: "Control Flow in Python",
-    listItems: [
-      "Automating repetitive tasks in data processing.",
-      "Generating insights for different regions or categories.",
-    ],
-  },
-  {
-    id: 5,
-    title: "User-Defined Functions",
-    listItems: [
-      "Writing reusable Python functions for data cleaning and transformation.",
-      "Custom aggregation functions to calculate weighted averages or performance metrics.",
-    ],
-  },
-  {
-    id: 6,
-    title: "Aggregation and Business Metrics",
-    listItems: [
-      "Grouping data for insights (e.g., by product category or time).",
-      " Calculating KPIs (e.g., average order value, customer retention metrics).",
-    ],
-  },
-];
-export const WebinarForData: IwebinarForData[] = [
-  {
-    id: 1,
-    title: "Aspiring Data Scientists",
-    description:
-      "Individuals looking to break into the field of data science and need guidance on how to approach the rigorous interview process",
+    key: 1,
+    imageUrl: LiveClasses,
+    title: "Live Classes",
+    para: "Every Saturday and Sunday",
+    date: "10:00 AM - 01:00 PM",
     background: "#FFF0ED",
   },
   {
-    id: 2,
-    title: "Students and Recent Graduates",
-    description:
-      "Individuals completing their studies in Data science, AI, or related fields, who want to ensure they are well-prepared to enter the job market with confidence",
+    key: 2,
+    imageUrl: DoubtSupport,
+    title: "Doubt Support",
+    para: "Every Wednesday",
+    date: "8:00 PM – 9:00 PM",
     background: "#FFF5ED",
   },
   {
-    id: 3,
-    title: "Exploring New Career",
-    description:
-      "Professionals from other fields who wish to transition into data science or AI roles and require a solid understanding of what to expect during the interview process.",
+    key: 3,
+    imageUrl: MentorshipIcon,
+    title: "Mentorship Connect",
+    para: "Once every 2 weeks",
+    date: "Duration 1 hour",
     background: "#F5F3FF",
   },
   {
-    id: 4,
-    title: "AI Enthusiasts",
-    description:
-      "Those interested in AI roles and seeking to understand the technical and conceptual questions that are typically asked in AI interviews.",
+    key: 4,
+    imageUrl: MockInterview,
+    title: "Mock Interview",
+    para: "Once every 6 weeks",
+    date: "Duration 2 hours",
     background: "#DBE5FF",
   },
 ];
+
+// deschiper difference
+
+export const DesciprDiffernce: DesciprDiffernceProps[] = [
+  { src: LiveSession, alt: "Image 1", title: "Live Sessions" },
+  { src: JobSimulation, alt: "Image 1", title: "Job Simulations" },
+  { src: DoubtSupport, alt: "Image 1", title: "Doubt Support" },
+  { src: PeerLearning, alt: "Image 1", title: "Peer Learning" },
+];
+
+// bonus workshop
+
+export interface IwebinarForData {
+  id: number;
+  title: string;
+  description: string;
+  background: string;
+}
 
 export const BonusWorkshopData: IwebinarForData[] = [
   {
@@ -1536,29 +1437,198 @@ export const BonusWorkshop__sql: IwebinarForData[] = [
   },
 ];
 
-export const workshopFaqData: FAQItem[] = [
-  {
-    question: "What is the focus of this workshop?",
-    answer:
-      "The workshop will cover strategies and best practices for successfully navigating data science interviews. Topics will include technical assessments, problem-solving techniques, common interview questions, and how to effectively present your experience and skills.",
-  },
+// workshop data
 
+export const workshopData: LearningCardData[] = [
   {
-    question: "Who should attend this workshop?",
-    answer:
-      "This workshop is ideal for aspiring data scientists, recent graduates, or professionals looking to transition into data science roles. It’s also valuable for experienced data scientists who want to improve their interview performance.",
+    id: 1,
+    title: "Overview of Different Career Paths in Data Science/AI",
+    listItems: [
+      "Not everyone with the title of Data Scientist performs the same role. Make an informed decision about the one you would enjoy the most.",
+    ],
   },
   {
-    question: "How do I register for the workshop?",
-    answer:
-      "You can register through our website or contact our support team for assistance with registration.",
+    id: 2,
+    title: "Frameworks for Selecting the Right Data Science Project",
+    listItems: [
+      "Not all projects hold the same value. Learn the right framework to identify the best ones for your target industries or companies.",
+    ],
   },
   {
-    question: "What if I have more questions after the workshop?",
-    answer:
-      "You can reach out to the workshop facilitator via email or join our community forum where you can continue the discussion and get additional support.",
+    id: 3,
+    title: "Essential Elements of an Effective Data Science Resume",
+    listItems: [
+      "Craft a profile that captures the attention of hiring managers and helps you secure the right opportunity.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Data Science Interview Stages and Preparation Strategies",
+    listItems: [
+      "Learn what to expect from each interview round for top data science positions and how to prepare effectively.",
+    ],
+  },
+  {
+    id: 5,
+    title:
+      "How to approach Business Case Study Round – Live Solution Demonstration",
+    listItems: [
+      "Discover how to confidently tackle case studies using a 7-step framework and steer clear of common pitfalls.",
+    ],
   },
 ];
+
+export const workshopData_llm: LearningCardData[] = [
+  {
+    id: 1,
+    title: "Understanding AI and LLMs",
+    listItems: [
+      "Gain insights into the fundamentals of artificial intelligence and large language models and their applications in the banking sector.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Fraud Detection Techniques",
+    listItems: [
+      "Learn effective methods for detecting anomalies and identifying fraudulent activities using AI tools.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Hands-On Experience",
+    listItems: [
+      "Participate in practical exercises that reinforce your understanding of AI applications in real-world banking fraud cases.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Stay Ahead of Emerging Threats",
+    listItems: [
+      "Equip yourself with the latest tools and techniques to outsmart fraudsters in an evolving banking landscape.",
+    ],
+  },
+];
+
+export const workshopData_pyt: LearningCardData[] = [
+  {
+    id: 1,
+    title: "Introduction to Python Data Structures",
+    listItems: [
+      "List, Tuple, Dictionary, Set. Creating, accessing, and manipulating these structures.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Exploratory Data Analysis (EDA) with Pandas",
+    listItems: [
+      "Creating, indexing, slicing, and basic manipulations.",
+      "Importing datasets (.csv, .xlsx), Handling missing values, Filtering, sorting, and aggregating data.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Data Visualization with Matplotlib",
+    listItems: [
+      "Building Blocks of a Plot: Line plots, bar plots, histograms, and scatter plots. Customizing visuals (titles, labels, legends).",
+      "Visualizing sales trends, category performance, and outlier detection.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Control Flow in Python",
+    listItems: [
+      "Automating repetitive tasks in data processing.",
+      "Generating insights for different regions or categories.",
+    ],
+  },
+  {
+    id: 5,
+    title: "User-Defined Functions",
+    listItems: [
+      "Writing reusable Python functions for data cleaning and transformation.",
+      "Custom aggregation functions to calculate weighted averages or performance metrics.",
+    ],
+  },
+  {
+    id: 6,
+    title: "Aggregation and Business Metrics",
+    listItems: [
+      "Grouping data for insights (e.g., by product category or time).",
+      " Calculating KPIs (e.g., average order value, customer retention metrics).",
+    ],
+  },
+];
+
+export const workshopData_sql: LearningCardData[] = [
+  {
+    id: 1,
+    title: "Core SQL Concepts",
+    listItems: [
+      "Gain insights into the fundamentals of SQL concepts such as querying, filtering, aggregating, and joining data.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Fraud Detection Techniques",
+    listItems: [
+      "Learn practical techniques for analyzing large datasets and identifying fraud patterns in e-commerce transactions.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Advanced SQL Techniques",
+    listItems: [
+      "Equip yourself with the advanced topics like Window functions, Rank function, Subqueries, and CTEs",
+    ],
+  },
+  {
+    id: 4,
+    title: "Hands-On Experience",
+    listItems: [
+      "Participate in practical exercises that reinforce your understanding of how SQL can be applied to solve real-world problems faced by companies in the e-commerce industry.",
+    ],
+  },
+];
+
+export const workshopData_vec: LearningCardData[] = [
+  {
+    id: 1,
+    title: "Introduction to Vector Databases:",
+    listItems: [
+      "Understand why vector representations are crucial in AI and search applications. Learn to generate vector embeddings from text and images using Python libraries, providing the foundation for similarity searches.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Search for Similar Vectors & Approximate Nearest Neighbors (ANN):",
+    listItems: [
+      "Discover how to use vector similarities to find similar items, using metrics like cosine similarity. Dive into faster search techniques for large datasets using tools like FAISS, making search scalable.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Explore Specialized Databases:",
+    listItems: [
+      "Understand specialized databases like Milvus and Pinecone and their advantages over traditional databases.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Sparse, Dense, and Hybrid Search:",
+    listItems: [
+      "Learn the differences between sparse and dense vectors and how to combine them for more effective search results.",
+    ],
+  },
+  {
+    id: 5,
+    title: "Application - Multilingual Search:",
+    listItems: [
+      "See how vector databases support multilingual search, enabling retrieval across different languages with transformer models.",
+    ],
+  },
+];
+
+// insights
 
 interface Insight {
   id: number;
@@ -1618,5 +1688,38 @@ export const insightsDataSql: Insight[] = [
     icon: portfolioIcon,
     title: "Portfolio",
     description: "of Hands on Case studies",
+  },
+];
+
+// webinar intended for
+
+export const WebinarForData: IwebinarForData[] = [
+  {
+    id: 1,
+    title: "Aspiring Data Scientists",
+    description:
+      "Individuals looking to break into the field of data science and need guidance on how to approach the rigorous interview process",
+    background: "#FFF0ED",
+  },
+  {
+    id: 2,
+    title: "Students and Recent Graduates",
+    description:
+      "Individuals completing their studies in Data science, AI, or related fields, who want to ensure they are well-prepared to enter the job market with confidence",
+    background: "#FFF5ED",
+  },
+  {
+    id: 3,
+    title: "Exploring New Career",
+    description:
+      "Professionals from other fields who wish to transition into data science or AI roles and require a solid understanding of what to expect during the interview process.",
+    background: "#F5F3FF",
+  },
+  {
+    id: 4,
+    title: "AI Enthusiasts",
+    description:
+      "Those interested in AI roles and seeking to understand the technical and conceptual questions that are typically asked in AI interviews.",
+    background: "#DBE5FF",
   },
 ];

@@ -1,8 +1,8 @@
-import { plus_jakarta } from "@/app/fonts";
-import Accomplishments from "@/components/Accomplishments";
-import FaqSection from "@/components/FaqSection";
-import FloatingBar from "@/components/Floater";
-import HorizontalLine from "@/components/ui/HorizontalLine";
+import Accomplishments from "@/app/_components/courses/Accomplishments";
+import FaqSection from "@/app/_components/courses/FaqSection ";
+import FloatingBar from "@/app/_components/courses/FloatingBar";
+import HorizontalLine from "@/app/_components/HorizontalLine";
+import { plus_jakarta } from "@/app/_fonts/fonts";
 
 export default function CourseLayout({
   children,

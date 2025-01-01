@@ -1,13 +1,14 @@
-import DesciprDifference from "@/components/DesciprDifference";
-import Learning from "@/components/Learning";
-import LearningAndTools from "@/components/LearningAndTools";
-import LiveSchedule from "@/components/LiveSchedule";
-import LiveSessionSection from "@/components/LiveSessionSection";
-import OurMentors from "@/components/OurMentors";
-import OurTrainers from "@/components/OurTrainers";
-import Testimonials from "@/components/Testimonials";
-import HorizontalLine from "@/components/ui/HorizontalLine";
-import PriceCard from "@/components/ui/PriceCard";
+
+import OurTrainers from "@/app/_components/about/OurTrainers";
+import DesciprDifference from "@/app/_components/courses/DesciprDifference";
+import Learning from "@/app/_components/courses/Learning";
+import LearningAndTools from "@/app/_components/courses/LearningAndTools";
+import LiveSchedule from "@/app/_components/courses/LiveSchedule";
+import LiveSessionSection from "@/app/_components/courses/LiveSessionSection";
+import OurMentors from "@/app/_components/courses/OurMentors";
+import PriceCard from "@/app/_components/courses/PriceCard";
+import HorizontalLine from "@/app/_components/HorizontalLine";
+import Testimonials from "@/app/_components/testimonial/Testimonials";
 import { CourseDetail, courseDetails } from "@/constants";
 import { BackgroundLogo, cleanUpSlug } from "@/utils";
 import { Metadata } from "next";

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import User, { IUserDetails } from '@/models/User';
 import connectToDatabase from '@/lib/connectToDatabase';
-import User, { IUserDetails } from '@/Models/User';
+
 
 // Function to handle POST requests
 export async function POST(req: NextRequest) {

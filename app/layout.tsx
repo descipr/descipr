@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
-import { plus_jakarta } from "./fonts";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import HorizontalLine from "@/components/ui/HorizontalLine";
-import FloatingButton from "@/components/FloatingButton";
+import { plus_jakarta } from "./_fonts/fonts";
+import FloatingButton from "./_components/floatingBar/FloatingButton";
+import Navbar from "./_components/navbar/Navbar";
+import Footer from "./_components/footer/Footer";
+import HorizontalLine from "./_components/HorizontalLine";
+
 
 export const metadata: Metadata = {
   title: {

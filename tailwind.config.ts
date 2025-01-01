@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-custom": "linear-gradient(180deg, #02122b 6.32%, #000 100%)",
-        "gradient-workshop": "linear-gradient(180deg, #02122B 6.32%, #000 100%)",
+        "gradient-custom":
+          "linear-gradient(180deg, #02122B 6.32%, #000000 100%)",
       },
       backgroundAttachment: {
         fixed: "fixed",
@@ -24,10 +24,13 @@ const config: Config = {
           button: "#ACC2FA",
           bl2: "#DBE5FF",
           b2d: "#2154DA",
+          background: "#02122B",
         },
         gray: {
           line: "#B7B0B0",
           footer: "#CBDADA",
+          text: "#E5E5EA",
+          border: "#4D4D4D",
         },
         black: {
           Textsecondary: "#262629",
@@ -36,6 +39,7 @@ const config: Config = {
         green: {
           button: "#4CAF50",
           secondary: "#00916E",
+          accent: "#09922E",
         },
       },
     },

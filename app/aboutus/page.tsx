@@ -1,9 +1,9 @@
 
-import AboutSectionMentors from "@/components/AboutSectionMentors";
-import AboutUs from "@/components/AboutUs";
-import OurTrainers from "@/components/OurTrainers";
-import HorizontalLine from "@/components/ui/HorizontalLine";
 import { Metadata } from "next";
+import AboutUs from "../_components/about/AboutUs";      
+import HorizontalLine from "../_components/HorizontalLine";
+import OurTrainers from "../_components/about/OurTrainers";
+import AboutSectionMentors from "../_components/about/AboutSectionMentors";
 
 export const metadata: Metadata = {
   title: "About Us",

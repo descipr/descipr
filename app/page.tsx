@@ -1,12 +1,13 @@
-import CareerSection from "@/components/CareerSection";
-import CourseSection from "@/components/CourseSection";
-import DesciprFellowSection from "@/components/DesciprFellowSection";
-import Hero from "@/components/Hero";
-import Cta from "@/components/ui/Cta";
-import CustomCurriculum from "@/components/ui/CustomCurriculum";
-import Exclusive from "@/components/ui/Exclusive";
-import HorizontalLine from "@/components/ui/HorizontalLine";
-import WorkshopSection from "@/components/ui/WorkshopSection";
+import CareerSection from "./_components/carrer/CareerSection";
+import CourseSection from "./_components/courseSection/CourseSection";
+import Cta from "./_components/cta/Cta";
+import CustomCurriculum from "./_components/customCariculum/CustomCurriculum";
+import DesciprFellowSection from "./_components/dechiprFellowship/DesciprFellowSection";
+import Exclusive from "./_components/exclusive/Exclusive";
+import Hero from "./_components/hero/Hero";
+import HorizontalLine from "./_components/HorizontalLine";
+import Testimonials from "./_components/testimonial/Testimonials";
+import WorkshopSection from "./_components/workshopsection/WorkshopSection";
 
 const Home: React.FC = () => {
   return (
@@ -22,6 +23,8 @@ const Home: React.FC = () => {
           <CustomCurriculum />
           <HorizontalLine />
           <Exclusive />
+          <HorizontalLine />
+          <Testimonials />
           <HorizontalLine />
           <DesciprFellowSection />
           <HorizontalLine />

@@ -1,5 +1,6 @@
-import TermsOfUse from "@/components/TermsofUse";
+
 import { Metadata } from "next";
+import TermsOfUse from "../_components/termsOfUse/TermsOfUse";
 
 export const metadata: Metadata = {
   title: "Terms of use",
