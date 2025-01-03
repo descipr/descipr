@@ -11,8 +11,25 @@ import {
   businessAnalystInsights,
   BusinessFundamentals,
   campus_connect,
+  Carousel_learner_1,
+  Carousel_learner_10,
+  Carousel_learner_2,
+  Carousel_learner_3,
+  Carousel_learner_4,
+  Carousel_learner_5,
+  Carousel_learner_6,
+  Carousel_learner_7,
+  Carousel_learner_8,
+  Carousel_learner_9,
   charuGoyal,
+  Community,
   CommunityMobile,
+  company_logo_1,
+  company_logo_2,
+  company_logo_3,
+  company_logo_4,
+  company_logo_5,
+  company_logo_6,
   corporate_partnership,
   CourseCardMobile,
   data_science,
@@ -20,6 +37,10 @@ import {
   debjaniMajumder,
   DoubtSupport,
   durationIcon,
+  egs_training,
+  end_to_end,
+  excellence,
+  expert_explanation,
   ExportData,
   FarzandKhan,
   foundation,
@@ -27,6 +48,7 @@ import {
   generativeModel,
   HiringManagerMobile,
   home_credit,
+  home_credit_trainig,
   hsbc_logo_white,
   HsbcLogo,
   instagramIcon,
@@ -36,6 +58,7 @@ import {
   KoushikMitra,
   KshitjiJha,
   largeLanguageModel,
+  learner,
   linkedIcon,
   LiveClasses,
   LiveSession,
@@ -54,7 +77,11 @@ import {
   PowerBi,
   pranoyDewanjee,
   ProblemSolving,
+  product_custom_carriculum,
+  product_fellowship,
+  product_workshop,
   python,
+  ready_made_solution,
   ResumeReview,
   sameer_dubey_workshop,
   SameerDubey,
@@ -67,9 +94,11 @@ import {
   SrinivasanBalaji,
   SrishtiShiksha,
   Statistcs,
+  stay_ahead,
   Suryansh_abijith,
   TanoyDewanjee,
   transformers,
+  upskill,
   VasuBhasin,
   workshop_data_tanoy,
   youtubeIcon,
@@ -247,7 +276,7 @@ export const workshops = [
     mentorName: "Tanoy Dewanjee",
     mentorPhoto: workshop_data_tanoy,
     designation: "AVP, Decision Science",
-    logo: HsbcLogo,
+    logo: hsbc_logo_white,
     signups: 120,
   },
   {
@@ -259,7 +288,7 @@ export const workshops = [
     mentorName: "Atul Anand",
     mentorPhoto: workshop_data_tanoy,
     designation: "AVP, Decision Science",
-    logo: HsbcLogo,
+    logo: hsbc_logo_white,
     signups: 50,
   },
 ];
@@ -277,11 +306,13 @@ export const customCarriculum = [
     img: corporate_partnership,
     title: "Corporate Partnership",
     para: "Get you workforce AI ready in 1 month",
+    slug: "/corporate-partnership",
   },
   {
     img: campus_connect,
     title: "Campus Connect",
     para: "Join us in shaping the next generation of AI Innovators and Leaders!",
+    slug: "/campus-connect",
   },
 ];
 
@@ -304,6 +335,21 @@ export const pdfs: PdfI[] = [
     description: "SQL Case Study Book",
     downloadLink: "Descipr - SQL Case Study Book.pdf",
     img: sql_case_study,
+  },
+];
+
+export const trainingRecent = [
+  {
+    title: "EGA, Dubai: AI for Leaders",
+    description:
+      "A 2-day intensive interactive workshop, delivered in partnership with Refocus AI, introduced leaders to AI's potential and its revolutionary impact on manufacturing.",
+    img: egs_training,
+  },
+  {
+    title: "Home Credit: Product Analytics",
+    description:
+      "A 6-week, hands-on program using real-world industry case studies helped Home Credit's data science team redefine their product marketing strategies",
+    img: home_credit_trainig,
   },
 ];
 
@@ -452,7 +498,7 @@ export const MobileFellowshipImages = [
   HiringManagerMobile,
   CourseCardMobile,
   MentorshipMobile,
-  CommunityMobile,
+  Community,
 ];
 
 // career
@@ -484,6 +530,28 @@ export const careerCardData: CardData[] = [
     title: "Portfolio Building",
     description:
       "Craft an outstanding portfolio with our hands-on business problems that captivate hiring managers and sets you apart.",
+  },
+];
+export const CorporateCareerCardData: CardData[] = [
+  {
+    key: 1,
+    imageUrl: ready_made_solution,
+    title: "Ready-made solution templates",
+    description:
+      "Backed by decades of expertise, designed to solve real business challenges.",
+  },
+  {
+    key: 2,
+    imageUrl: end_to_end,
+    title: "End-to-end reusable codebases",
+    description: "Ready-to-deploy, production-grade codebases and assets.",
+  },
+  {
+    key: 3,
+    imageUrl: expert_explanation,
+    title: "Expert explanations",
+    description:
+      "In-depth insights into opportunities and challenges from industry experts.",
   },
 ];
 
@@ -1721,5 +1789,148 @@ export const WebinarForData: IwebinarForData[] = [
     description:
       "Those interested in AI roles and seeking to understand the technical and conceptual questions that are typically asked in AI interviews.",
     background: "#DBE5FF",
+  },
+];
+
+// carousel images
+
+export type carouselProp = {
+  img: StaticImageData;
+  name: string;
+};
+
+export const Carouselimages = [
+  { img: Carousel_learner_1, name: "Logoipsum" },
+  { img: Carousel_learner_2, name: "Logoipsum" },
+  { img: Carousel_learner_3, name: "Logoipsum" },
+  { img: Carousel_learner_4, name: "Logoipsum" },
+  { img: Carousel_learner_5, name: "Logoipsum" },
+  { img: Carousel_learner_6, name: "Logoipsum" },
+  { img: Carousel_learner_7, name: "Logoipsum" },
+  { img: Carousel_learner_8, name: "Logoipsum" },
+  { img: Carousel_learner_9, name: "Logoipsum" },
+  { img: Carousel_learner_10, name: "Logoipsum" },
+];
+
+export const logoImages = [
+  { img: company_logo_1, name: "Logoipsum" },
+  { img: company_logo_2, name: "Logoipsum" },
+  { img: company_logo_3, name: "Logoipsum" },
+  { img: company_logo_4, name: "Logoipsum" },
+  { img: company_logo_5, name: "Logoipsum" },
+  { img: company_logo_6, name: "Logoipsum" },
+];
+
+// products card
+
+export interface ProductcardI {
+  title: string;
+  points: string[];
+  image: StaticImageData;
+  buttonText: string;
+  link: string;
+}
+
+export const ProductcardData: ProductcardI[] = [
+  {
+    title: "Workshop",
+    points: [
+      "10 hours Interactive Learning",
+      "Master one Core Skill at a time",
+      "Use case-driven sessions",
+      "Suitable for reskilling initiatives",
+    ],
+    image: product_workshop,
+    buttonText: "Download Workshop Library",
+    link: "#",
+  },
+  {
+    title: "Fellowship",
+    points: [
+      "48 hours of Enterprise AI/DS Training",
+      "Live and Hands-On Sessions",
+      "Mentor-Led Office Hours",
+      "Suitable for fresh recruits upskilling",
+    ],
+    image: product_fellowship,
+    buttonText: "Download Brochure",
+    link: "#",
+  },
+  {
+    title: "Custom Curriculum",
+    points: [
+      "Have a specific upskilling vision for your team?",
+      "Share your goals, and we’ll tailor a program that fits your exact needs.",
+    ],
+    image: product_custom_carriculum,
+    buttonText: "Let’s Connect",
+    link: "#",
+  },
+];
+
+// steps
+
+export interface Step {
+  id: number;
+  title: string;
+  description: string;
+}
+
+export const steps: Step[] = [
+  {
+    id: 1,
+    title: "Discovery Call",
+    description: "Quickly assess your training needs.",
+  },
+  {
+    id: 2,
+    title: "Tailored Curriculum",
+    description:
+      "Choose from 150+ workshop variations or request one tailored to your industry, tools, and goals!",
+  },
+  {
+    id: 3,
+    title: "Expert Match",
+    description:
+      "Experienced instructors handpicked from our network of 50+ vetted experts.",
+  },
+  {
+    id: 4,
+    title: "Fast, Scalable Launch",
+    description:
+      "Training begins in 10 days, supporting multiple small batches concurrently.",
+  },
+];
+
+// descipr differnce
+
+export const desciprDiffernceCardData: CardData[] = [
+  {
+    key: 1,
+    imageUrl: excellence,
+    title: "A Legacy of Excellence",
+    description:
+      "With over five decades of combined expertise, we bring you a curriculum that's not just about what works, but also what doesn't—because in enterprise AI, knowing both is the edge.",
+  },
+  {
+    key: 2,
+    imageUrl: learner,
+    title: "Learn From Those Who've Done It",
+    description:
+      "Our sessions are led by seasoned practitioners who've delivered real-world data science and AI solutions. Their insights go beyond theory, equipping you with the wisdom to navigate enterprise challenges confidently.",
+  },
+  {
+    key: 3,
+    imageUrl: upskill,
+    title: "Upskill with Purpose",
+    description:
+      "Step-by-step processes. Practical frameworks. Ready-to-apply insights. Whether you're solving today's challenges or pioneering tomorrow's innovations, we'll show you how to make it happen.",
+  },
+  {
+    key: 4,
+    imageUrl: stay_ahead,
+    title: "Stay Ahead of the Curve",
+    description:
+      "Gain access to exclusive resources—cutting-edge AI tools, actionable templates, and a vibrant community of forward-thinkers. The future of enterprise AI isn't waiting. And neither should you.",
   },
 ];

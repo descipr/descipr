@@ -113,6 +113,25 @@ import Atul_profile from "@/public/Images/Atul_profile.png";
 import Big_Query_sql_workshop from "@/public/Images/BigQuery_sql.jpg";
 import home_credit_company_logo from "@/public/Images/home_credit_logo.svg";
 import sammer_dubey_profile from "@/public/Images/sammer_dubey_profile.svg";
+import corporate_hero_bg from "@/public/Images/corporate-hero-bg.svg";
+import company_logo_1 from "@/public/Images/logo-1.png";
+import company_logo_2 from "@/public/Images/logo-2.png";
+import company_logo_3 from "@/public/Images/logo-3.png";
+import company_logo_4 from "@/public/Images/logo-4.png";
+import company_logo_5 from "@/public/Images/logo-5.png";
+import company_logo_6 from "@/public/Images/logo-6.png";
+import product_workshop from "@/public/Images/product-workshop.png";
+import product_fellowship from "@/public/Images/product-Fellowships.png";
+import product_custom_carriculum from "@/public/Images/product-Custom-curriculum.png";
+import ready_made_solution from "@/public/Images/Ready-made-solution-templates.png";
+import end_to_end from "@/public/Images/End-to-end-codes.png";
+import expert_explanation from "@/public/Images/Expert-explanatioms.png";
+import egs_training from "@/public/Images/EGA_traning.png";
+import home_credit_trainig from "@/public/Images/Homecredit_training.png";
+import excellence from "@/public/Images/Excellence.svg";
+import learner from "@/public/Images/Learners.svg";
+import upskill from "@/public/Images/upskill.svg";
+import stay_ahead from "@/public/Images/stay_ahead.svg";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -130,6 +149,25 @@ export const cleanUpSlug = (slug: string): string => {
 };
 
 export {
+  excellence,
+  learner,
+  upskill,
+  stay_ahead,
+  egs_training,
+  home_credit_trainig,
+  product_workshop,
+  ready_made_solution,
+  end_to_end,
+  expert_explanation,
+  product_fellowship,
+  product_custom_carriculum,
+  company_logo_1,
+  company_logo_2,
+  company_logo_3,
+  company_logo_4,
+  company_logo_5,
+  company_logo_6,
+  corporate_hero_bg,
   sammer_dubey_profile,
   home_credit_company_logo,
   Atul_profile,

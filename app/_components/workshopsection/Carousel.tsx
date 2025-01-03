@@ -1,34 +1,19 @@
 'use client';
 
-import {
-  Carousel_learner_1,
-  Carousel_learner_10,
-  Carousel_learner_2,
-  Carousel_learner_3,
-  Carousel_learner_4,
-  Carousel_learner_5,
-  Carousel_learner_6,
-  Carousel_learner_7,
-  Carousel_learner_8,
-  Carousel_learner_9,
-} from '@/utils';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
-const Carousel = () => {
-  const images = [
-    { img: Carousel_learner_1, name: 'Logoipsum' },
-    { img: Carousel_learner_2, name: 'Logoipsum' },
-    { img: Carousel_learner_3, name: 'Logoipsum' },
-    { img: Carousel_learner_4, name: 'Logoipsum' },
-    { img: Carousel_learner_5, name: 'Logoipsum' },
-    { img: Carousel_learner_6, name: 'Logoipsum' },
-    { img: Carousel_learner_7, name: 'Logoipsum' },
-    { img: Carousel_learner_8, name: 'Logoipsum' },
-    { img: Carousel_learner_9, name: 'Logoipsum' },
-    { img: Carousel_learner_10, name: 'Logoipsum' },
-  ];
+// Define the type for the images prop
+interface CarouselImage {
+  img: string | StaticImageData; // Image can be a string or a StaticImageData type (Next.js images)
+  name: string;
+}
 
+interface CarouselProps {
+  images: CarouselImage[]; // Array of images with the defined structure
+}
+
+const Carousel: React.FC<CarouselProps> = ({ images }) => {
   return (
     <div className="overflow-hidden bg-blue-background flex flex-col space-y-8 py-8 border-[1px] border-[#4D4D4D] rounded-lg mt-16">
       {/* Heading */}

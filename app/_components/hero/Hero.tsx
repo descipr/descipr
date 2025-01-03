@@ -3,6 +3,7 @@ import Image from "next/image";
 import { BackgroundLogo } from "@/utils";
 import Link from "next/link";
 import Carousel from "../workshopsection/Carousel";
+import { Carouselimages } from "@/constants";
 
 const Hero: React.FC = () => {
   return (
@@ -33,27 +34,18 @@ const Hero: React.FC = () => {
         </p>
         <div className="flex items-center justify-between gap-4">
           <Link
-            //   onClick={() => setIsOpen(true)}
-            className="flex items-center px-6 py-4 md:px-8 md:py-4 space-x-2  text-black bg-blue-Textprimary hover:bg-white rounded-lg md:rounded-xl  shadow-white/80 shadow-lg text-base md:text-lg font-semibold" href=""        >
-            {" "}
+            href=""
+            className="flex items-center px-6 py-4 md:px-8 md:py-4 space-x-2 text-black bg-blue-Textprimary hover:bg-white rounded-lg md:rounded-xl shadow-white/80 shadow-lg text-base md:text-lg font-semibold"
+          >
             Aspiring Programs
           </Link>
-          {/* <button
-            //   onClick={() => setIsOpen(true)}
-            className="flex items-center px-6 py-4 md:px-8 md:py-4 space-x-2 text-white bg-transparent rounded-lg md:rounded-xl shadow-md text-base md:text-lg font-semibold border-[2px] border-white"
-          >
-            {" "}
-            Explore Workshops
-          </button> */}
         </div>
       </div>
 
-      <Carousel />
+      {/* Pass images as a prop */}
+      <Carousel images={Carouselimages} />
     </section>
   );
 };
 
 export default Hero;
-
-
-

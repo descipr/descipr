@@ -1,14 +1,16 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
 type CardProps = {
     img: StaticImageData,
     title: string,
     para: string,
+    slug: string,
 
 }
 
-const CustomCarriculumCard = ({ img, title, para }: CardProps) => {
+const CustomCarriculumCard = ({ img, title, para, slug }: CardProps) => {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 bg-gradient-custom rounded-lg overflow-hidden">
             <div className="relative w-full h-[200px] sm:h-[300px] md:w-[303px] md:h-[350px]">
@@ -26,7 +28,8 @@ const CustomCarriculumCard = ({ img, title, para }: CardProps) => {
                 <p className="mb-6 text-white font-light text-sm md:text-lg">
                     {para}
                 </p>
-                <button
+                <Link
+                    href={slug}
                     className="flex items-center justify-center w-full px-5 py-3 space-x-4 text-black bg-white cursor-pointer border-[1px] rounded-xl border-black-primary transition-colors hover:text-white"
                     onMouseEnter={(e) => {
                         (e.currentTarget as HTMLElement).style.backgroundColor =
@@ -43,7 +46,7 @@ const CustomCarriculumCard = ({ img, title, para }: CardProps) => {
                         Explore More
                     </span>
                     <FaArrowRight className="h-6 w-6 text-[#EE4924] hover:text-white transition-all" />
-                </button>
+                </Link >
             </div>
         </div>
     );

@@ -11,6 +11,7 @@ const config: Config = {
       backgroundImage: {
         "gradient-custom":
           "linear-gradient(180deg, #02122B 6.32%, #000000 100%)",
+        "gradient-card": "linear-gradient(270deg, #02122B 6.32%, #000000 100%)",
       },
       backgroundAttachment: {
         fixed: "fixed",

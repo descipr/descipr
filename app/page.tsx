@@ -1,3 +1,4 @@
+import { careerCardData } from "@/constants";
 import CareerSection from "./_components/carrer/CareerSection";
 import CourseSection from "./_components/courseSection/CourseSection";
 import Cta from "./_components/cta/Cta";
@@ -8,6 +9,7 @@ import Hero from "./_components/hero/Hero";
 import HorizontalLine from "./_components/HorizontalLine";
 import Testimonials from "./_components/testimonial/Testimonials";
 import WorkshopSection from "./_components/workshopsection/WorkshopSection";
+import TakeQuiz from "./_components/carrer/TakeQuiz";
 
 const Home: React.FC = () => {
   return (
@@ -28,7 +30,8 @@ const Home: React.FC = () => {
           <HorizontalLine />
           <DesciprFellowSection />
           <HorizontalLine />
-          <CareerSection />
+          <CareerSection title_white="Take your career to" title_blue="newer heights with us" cardData={careerCardData} />
+          <TakeQuiz />
           <HorizontalLine />
           <Cta />
         </div>

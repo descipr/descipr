@@ -2,9 +2,12 @@
 import React, { useState, useEffect } from "react";
 import MobileCareerCardCarousel from "./MobileCareerCardCarousel";
 import DesktopCareerCardGrid from "./DesktopCareerCardGrid";
+import { CardData } from "@/constants";
 
 
-const CareerCardSection: React.FC = () => {
+const CareerCardSection = ({cardData}:{
+  cardData:CardData[]
+}) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -20,7 +23,7 @@ const CareerCardSection: React.FC = () => {
     };
   }, []);
 
-  return isMobile ? <MobileCareerCardCarousel /> : <DesktopCareerCardGrid />;
+  return isMobile ? <MobileCareerCardCarousel cardData={cardData} /> : <DesktopCareerCardGrid cardData={cardData}/>;
 };
 
 export default CareerCardSection;

@@ -1,10 +1,12 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { careerCardData } from "@/constants";
+import { CardData, careerCardData } from "@/constants";
 import CareerCard from "./CareerCard";
 
-const MobileCareerCardCarousel: React.FC = () => {
+const MobileCareerCardCarousel  = ({cardData}:{
+  cardData:CardData[]
+}) => {
     const carouselRef = useRef<HTMLDivElement>(null);
     const [width, setWidth] = useState(0);
 
@@ -27,7 +29,7 @@ const MobileCareerCardCarousel: React.FC = () => {
                 dragConstraints={{ right: 0, left: -width }}
                 className="flex"
             >
-                {careerCardData.map((card, index) => (
+                {cardData.map((card, index) => (
                     <div key={index} className="flex-shrink-0 w-full px-2 md:w-1/2">
                         <CareerCard
                             imageUrl={card.imageUrl}
