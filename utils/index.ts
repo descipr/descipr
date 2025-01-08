@@ -132,6 +132,19 @@ import excellence from "@/public/Images/Excellence.svg";
 import learner from "@/public/Images/Learners.svg";
 import upskill from "@/public/Images/upskill.svg";
 import stay_ahead from "@/public/Images/stay_ahead.svg";
+import Instacart from "@/public/Images/Instacart.jpg";
+import Google from "@/public/Images/google_merchandise.jpg";
+import Big_basket from "@/public/Images/Big_basket.jpg";
+import medicare from "@/public/Images/Medicare_Fraud.jpg";
+import amazon from "@/public/Images/Amazon_WBR.jpg";
+import novofit from "@/public/Images/Novafit_marketing_channel.jpg";
+import home_credit_loadn from "@/public/Images/Homecredit_loan_quality.jpg";
+import ebay from "@/public/Images/Ebay_fraud_ML.jpg";
+import peter_england from "@/public/Images/Peter_England_AB.jpg";
+import apple from "@/public/Images/Apple_sentiment_analysis.jpg";
+import home_credit_develop from "@/public/Images/Homecredit_credit_decision.jpg";
+import airbnb from "@/public/Images/Airbnb_next_booking.jpg";
+import hindu from "@/public/Images/the_hindu_Chatbot.jpg";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -149,6 +162,19 @@ export const cleanUpSlug = (slug: string): string => {
 };
 
 export {
+  peter_england,
+  apple,
+  home_credit_develop,
+  airbnb,
+  hindu,
+  amazon,
+  novofit,
+  home_credit_loadn,
+  ebay,
+  Instacart,
+  Google,
+  Big_basket,
+  medicare,
   excellence,
   learner,
   upskill,

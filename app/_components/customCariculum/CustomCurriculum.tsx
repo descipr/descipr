@@ -6,7 +6,7 @@ import CustomCarriculumCard from "./CustomCarriculumCard";
 
 const CustomCurriculum = () => {
     return (
-        <div className="section-style overflow-hidden">
+        <div className="section-style overflow-hidden" id="custom-carriculum">
             <h2 className="heading text-white">
                 Custom <span className="text-blue-Textprimary">Curriculum</span>
             </h2>

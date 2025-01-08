@@ -4,7 +4,8 @@ import Link from "next/link";
 
 const TakeQuiz = () => {
   return (
-    <div className=" container relative overflow-hidden rounded-xl max-w-sm md:max-w-full md:w-full p-6 bg-black">
+    <div className="container relative overflow-hidden rounded-xl max-w-sm md:max-w-full md:w-full p-6 bg-black">
+      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src={QuizBackgroud}
@@ -16,6 +17,7 @@ const TakeQuiz = () => {
         />
       </div>
 
+      {/* Content */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-between rounded-xl space-y-4 md:space-y-0">
         <div className="flex flex-col items-start justify-center rounded-xl space-y-2 px-2">
           <p className="text-white font-Plus-jakarta text-3xl font-medium cursor-pointer">
@@ -28,15 +30,18 @@ const TakeQuiz = () => {
             <p className="text-white font-Plus-jakarta text-xl font-medium cursor-pointer">
               Take the Descrip Quiz
             </p>
+            {/* Arrow Image (Desktop Only) */}
             <Image
               src={QuizArrow}
               alt="right arrow"
               width={30}
               height={30}
+              className="hidden md:block"
               priority
             />
           </Link>
         </div>
+        {/* Quiz Logo */}
         <Link href="https://docs.google.com/forms/d/e/1FAIpQLSek560yqpVAo_JLnyf8BOw88AN4fdUC4XQ0qIQo83VajddFXw/viewform">
           <Image src={QuizLogo} alt="Logo" width={330} height={75} priority />
         </Link>

@@ -14,7 +14,7 @@ import Cta from "../_components/cta/Cta";
 
 const CorporatePartnership = () => {
     return (
-        <section className="flex flex-col sm:space-y-8 md:space-y-16 items-center justify-center mx-auto">
+        <section className="flex flex-col sm:space-y-8 md:space-y-16 items-center justify-center mx-auto w-full">
             <Hero />
             <Organization />
             <HorizontalLine />
@@ -33,9 +33,7 @@ const CorporatePartnership = () => {
                 <TakeQuiz />
             </section>
             <HorizontalLine />
-
             <Cta />
-
         </section>
     );
 }

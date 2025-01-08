@@ -9,8 +9,6 @@ const CourseCard: React.FC<CourseCardProps> = ({
   imageSrc,
   title,
   para,
-  bg,
-  button,
   date,
   slug
 
@@ -35,12 +33,12 @@ const CourseCard: React.FC<CourseCardProps> = ({
             {title}
           </h3>
           <div className="flex items-center mb-4 space-x-2 text-white">
-            <span className="text-sm font-normal md:text-lg font-Plus-jakarta">
+            <span className="text-sm font-normal md:text-base font-Plus-jakarta">
               {para}
             </span>
 
           </div>
-          <p className="font-Plus-jakarta text-sm md:text-base text-white">{date}</p>
+          <p className="font-Plus-jakarta text-sm  text-white">{date}</p>
 
 
         </div>
@@ -52,16 +50,8 @@ const CourseCard: React.FC<CourseCardProps> = ({
         >
           <button
             className="flex items-center justify-center w-full px-5 py-3 space-x-4 text-black bg-white cursor-pointer border-[1px] rounded-xl border-black-primary transition-colors "
-          // onMouseEnter={(e) => {
-          //   (e.currentTarget as HTMLElement).style.backgroundColor = button; // Hover button background
-          //   (e.currentTarget as HTMLElement).style.color = "white"; // Hover text color
-          // }}
-          // onMouseLeave={(e) => {
-          //   (e.currentTarget as HTMLElement).style.backgroundColor = "white"; // Reset button background
-          //   (e.currentTarget as HTMLElement).style.color = "black"; // Reset text color
-          // }}
           >
-            <span className="text-sm font-semibold md:text-lg">Enroll Now</span>
+            <span className="text-sm font-semibold md:text-base">Enroll Now</span>
             <FaArrowRight className="h-6 w-6 text-[#EE4924] hover:text-black-primary  transition-all" />
           </button>
         </Link>

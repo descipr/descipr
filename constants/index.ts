@@ -3,10 +3,14 @@
 import {
   adithiaV,
   advance,
+  airbnb,
+  amazon,
   AnkitaKundu,
+  apple,
   atul_annand,
   AtulAnand,
   Bibhuti_Jha,
+  Big_basket,
   BusinessAnalystFellowshipCard,
   businessAnalystInsights,
   BusinessFundamentals,
@@ -37,6 +41,7 @@ import {
   debjaniMajumder,
   DoubtSupport,
   durationIcon,
+  ebay,
   egs_training,
   end_to_end,
   excellence,
@@ -46,11 +51,16 @@ import {
   foundation,
   Gaurav_Kumar,
   generativeModel,
+  Google,
+  hindu,
   HiringManagerMobile,
   home_credit,
+  home_credit_develop,
+  home_credit_loadn,
   home_credit_trainig,
   hsbc_logo_white,
   HsbcLogo,
+  Instacart,
   instagramIcon,
   intermidiate,
   Interview,
@@ -64,6 +74,7 @@ import {
   LiveSession,
   Lochan_raj,
   ManishSinha,
+  medicare,
   mentorshipIcon,
   MentorshipIcon,
   MentorshipMobile,
@@ -71,7 +82,9 @@ import {
   MockInterview,
   ModelBuilding,
   MsExcel,
+  novofit,
   PeerLearning,
+  peter_england,
   Portfolio,
   portfolioIcon,
   PowerBi,
@@ -112,19 +125,18 @@ export interface fellowship {
 
 export const fellowshipList: fellowship[] = [
   {
-    label: "Data Scientist Fellowship",
+    label: "Foundation",
     link: "/courses/Data%20Scientist%20Fellowship",
   },
   {
-    label: "AI Engineer Fellowship",
+    label: "Intermediate",
     link: "/courses/AI%20Engineer%20Fellowship",
   },
   {
-    label: "Business Analyst Fellowship",
+    label: "Advanced",
     link: "/courses/Business%20Analyst%20Fellowship",
   },
 ];
-
 // company
 
 export interface ListItem {
@@ -183,17 +195,17 @@ export const courses: Course[] = [
     bg: "#DBE5FF",
     button: "#2154DA",
     date: "Jan 18, 2025",
-    slug: "Data Scientist Fellowship",
+    slug: "foundation",
   },
 
   {
     imageSrc: intermidiate,
-    title: "Intermidiate",
+    title: "Intermediate",
     para: "Built a solid foundation? Take the next step towards data science roles.",
     bg: "#FFF0ED",
     button: "#EE4924",
     date: "Jan 18, 2025",
-    slug: "Data Scientist Fellowship",
+    slug: "intermediate",
   },
   {
     imageSrc: advance,
@@ -202,7 +214,7 @@ export const courses: Course[] = [
     bg: "#F5F3FF",
     button: "#6E08B1",
     date: "Jan 18, 2025",
-    slug: "Data Scientist Fellowship",
+    slug: "advanced",
   },
 ];
 
@@ -228,12 +240,13 @@ export interface WorkshopCardProps {
   designation: string;
   logo: StaticImageData;
   signups: number;
+  buttonText: string;
 }
 
 export const workshops = [
   {
     live: "Live",
-    date: "Sun , Dec 15, 10:00 AM",
+    date: "TBD",
     time: "10:30 PM",
     title: "Business Insights with Python",
     duration: "90 Min",
@@ -242,9 +255,10 @@ export const workshops = [
     designation: "AVP, Decision Science",
     logo: hsbc_logo_white,
     signups: 50,
+    buttonText: "Enroll Now",
   },
   {
-    live: "On Demand",
+    live: "Live",
     date: "Sun , Nov 17, 11:00 AM",
     time: "10:30 PM",
     title: "Design an AI Powered Search System with Vector Databases",
@@ -254,9 +268,10 @@ export const workshops = [
     designation: "Manager, Data Science",
     logo: home_credit,
     signups: 40,
+    buttonText: "Watch for Free",
   },
   {
-    live: "On Demand",
+    live: "Live",
     date: "Sat , Nov 09, 11:00 AM",
     time: "10:30 PM",
     title: "Master SQL Foundations: Detect E-commerce Return Fraud",
@@ -266,9 +281,10 @@ export const workshops = [
     designation: "AVP, Business Analytics",
     logo: hsbc_logo_white,
     signups: 25,
+    buttonText: "Watch for Free",
   },
   {
-    live: "On Demand",
+    live: "Live",
     date: "Sun , Oct 27, 10:00 AM",
     time: "10:30 PM",
     title: "Mastering AI: Outsmarting Banking Fraud with LLMs",
@@ -278,9 +294,10 @@ export const workshops = [
     designation: "AVP, Decision Science",
     logo: hsbc_logo_white,
     signups: 120,
+    buttonText: "Watch for Free",
   },
   {
-    live: "On Demand",
+    live: "Live",
     date: "Sun , Oct 13, 11:00 AM",
     time: "10:30 PM",
     title: "Ace Data Science & AI Interviews",
@@ -290,6 +307,7 @@ export const workshops = [
     designation: "AVP, Decision Science",
     logo: hsbc_logo_white,
     signups: 50,
+    buttonText: "Watch for Free",
   },
 ];
 
@@ -657,35 +675,42 @@ export interface CourseDetail {
   videoUrl: string;
   learning: DesciprDiffernceProps[];
   tools: DesciprDiffernceProps[];
+  caseStudy: caseStudy[];
+}
+
+export interface caseStudy {
+  img: StaticImageData;
+  title: string;
+  para: string;
 }
 
 export const courseDetails: CourseDetail[] = [
   {
-    heading: "Data Scientist Fellowship",
+    heading: "Foundation",
     description:
       "Master data analysis, machine learning, AI, and real-world skills with expert guidance and hands-on projects. Prepare for top roles at leading tech companies.",
-    dateOfStart: "November 23, 2024",
-    floatingBar: "Nov 23",
+    dateOfStart: "January 18, 2025",
+    floatingBar: "Jan 18",
     timeCommitment: "4 months",
     timePerweek: "12 hours/week",
-    cost: "₹11,999",
+    cost: "₹3,499",
     seatsLeft: 25,
-    sessionInsights: DataScientistInsights,
+    sessionInsights: businessAnalystInsights,
     id: "4",
-    actualcost: "₹29,999",
+    actualcost: "₹7,999",
     imgUrl: BusinessAnalystFellowshipCard,
     razorPay: {
       src: "https://checkout.razorpay.com/v1/payment-button.js",
       paymentButtonId: "pl_OihX6GjL94bcj4",
     },
-    pdf: "/Data_Scientist_Fellowship.pdf",
+    pdf: "/1_Foundation_Fellowship_Brochure.pdf",
     discount: "60% OFF",
     EmiOptions: "699",
     videoUrl: "https://www.youtube.com/embed/yXmK7TAJ1Mc?si=dfbTOXvm8rfRi_XJ",
     weekSchedule: [
       {
         id: 1,
-        title: "Business Fundamentals",
+        title: "Business Fundamentals for Data Science",
         listItems: [
           "Business Models and Customer Segmentation",
           "Products, Value Proposition and Distribution Channels",
@@ -697,67 +722,67 @@ export const courseDetails: CourseDetail[] = [
       },
       {
         id: 2,
-        title: "Problem Solving Approach",
+        title: "Intro to SQL",
         listItems: [
-          "Structured Problem Solving Canvas",
-          "Human Centered Solution Design",
-          "Stakeholders Communication",
-        ],
-        time: "Week 2",
-        subheading: "Case studies on",
-        para: "Designing a Data/AI Product",
-      },
-      {
-        id: 3,
-        title: "Intro to Analytics with SQL",
-        listItems: [
-          "Relational data base & SQL syntax",
+          "Fundamental SQL Statements",
           "Joins and Subqueries",
           "Conditional and Case Statements",
         ],
-        time: "Week 3",
+        time: "Week 2",
         subheading: "Case studies on",
-        para: "Grocery E-commerce Performance Analysis",
+        para: "Deconstructing the Business of an E-Commerce Website",
       },
       {
-        id: 4,
-        title: "Advanced Business Analysis with SQL",
+        id: 3,
+        title: "Intro to PowerBI",
         listItems: [
-          "Effective KPI Design Principles",
-          "KPI Trees and Impact Mapping",
-          "Advanced SQL Techniques for Production",
-        ],
-        time: "Week 4",
-        subheading: "Case studies on",
-        para: "Business Review Tracker for CEO Office",
-      },
-      {
-        id: 5,
-        title: "Intro to Visualization with PowerBI",
-        listItems: [
-          "Understanding Data Models & Relationships",
+          "Data Preparation and Loading Data",
           "Understanding Chart Types, Trends",
           "Creating Dashboards",
         ],
+        time: "Week 3",
+        subheading: "Case studies on",
+        para: "Business Model of a Fitness Brand",
+      },
+      {
+        id: 4,
+        title: "Intro to MS-Excel for Business Reporting",
+        listItems: [
+          "Data Cleaning",
+          "Dat Processing",
+          "Pivot Tables, & Lookup for Analysis",
+        ],
+        time: "Week 4",
+        subheading: "Case studies on",
+        para: "Analyzing the Business Model of Banks",
+      },
+      {
+        id: 5,
+        title: "Intro to Python for Business Insights",
+        listItems: [
+          "Python Programming Fundamentals",
+          "Data Manipulation using Pandas",
+          "Exploratory Data Analysis (EDA)",
+        ],
         time: "Week 5",
         subheading: "Case studies on",
-        para: "E-Commerce Store Google Analytics",
+        para: "Sales & Delivery Performance Analysis",
       },
       {
         id: 6,
-        title: "Advanced Business Intelligence with PowerBI",
+        title: "Generative AI: The Art of Prompt Engineering",
         listItems: [
-          "Decision Funnel Understanding",
-          "Self Serve Dashboard Design Principles",
-          "Efficient Data Models for Speed and Accuracy",
+          "NLP and LLM Fundamentals",
+          "Efficient Prompt Engineering",
+          "Automation using GenAI Tools",
         ],
         time: "Week 6",
         subheading: "Case studies on",
-        para: "Marketing Dashboard for a D2C Fitness Brand",
+        para: "Building a YouTube Video Summarizer App",
       },
       {
         id: 7,
-        title: "Essential Statistics for Business Insights",
+        title: "Live Hands-on Project - PowerBI",
         listItems: [
           "Types of statistics: Descriptive vs. Inferential",
           "Basic Probability Concepts & Distributions",
@@ -765,11 +790,11 @@ export const courseDetails: CourseDetail[] = [
         ],
         time: "Week 7",
         subheading: "Case studies on",
-        para: "Assortment Analysis for a Quick Commerce Company",
+        para: "Business Model of a Fitness Brand",
       },
       {
         id: 8,
-        title: "Feature Design and Insights with A/B Testing",
+        title: "Live Hands-on Project - Python",
         listItems: [
           "Understanding Business Metrics to Optimize",
           "Customer Cohort Analysis",
@@ -777,104 +802,7 @@ export const courseDetails: CourseDetail[] = [
         ],
         time: "Week 8",
         subheading: "Case studies on",
-        para: "Launch Strategy for a Lifestyle Brand’s Landing Page",
-      },
-      {
-        id: 9,
-        title: "Intro to MS-Excel & Python",
-        listItems: [
-          "Data Cleaning Techniques in Excel",
-          "PivotTable, Grouping, & Lookup Functions for Data Analysis in Excel",
-          "Python Programming Fundamentals",
-          "Data Manipulation using Pandas",
-        ],
-        time: "Week 9",
-        subheading: "Case studies on",
-        para: "Assortment Analysis for a Quick Commerce Company",
-      },
-      {
-        id: 10,
-        title: "Advanced Business Insights with Python",
-        listItems: [
-          "Exploratory Data Analysis",
-          "Advanced Data Wrangling Techniques",
-          "Detailed Insights Report Writing for Stakeholders",
-        ],
-        time: "Week 10",
-        subheading: "Case studies on",
-        para: "Loan Application Quality Assessment for an NBFC",
-      },
-      {
-        id: 11,
-        title: "Fundamentals of Machine Learning",
-        listItems: [
-          "Problem Scope Definition & Evaluation Framework",
-          "Exploratory Data Analysis",
-          "Feature Engineering & Scaling",
-        ],
-        time: "Week 11",
-        subheading: "Case studies on",
-        para: "Credit Decisioning System for an NBFC",
-      },
-      {
-        id: 12,
-        title: "Advanced Machine Learning Techniques",
-        listItems: [
-          "Ensemble Learning – Bagging/Boosting",
-          "Hyperparameter Tuning – Grid Search",
-          "Optimizing for Accuracy & Explainability",
-        ],
-        time: "Week 12",
-        subheading: "Case studies on",
-        para: "Valued Shopper Retention in E-Commerce",
-      },
-      {
-        id: 13,
-        title: "Fundamentals of Deep Learning",
-        listItems: [
-          "Layers and Architectures",
-          "Backpropagation & Gradient Descent",
-          "Sequential Modeling Techniques (RNN, LSTM)",
-        ],
-        time: "Week 13",
-        subheading: "Case studies on",
-        para: "Brand’s Social Listening from X (Twitter) feed",
-      },
-      {
-        id: 14,
-        title: "Generative AI: The Art of Prompt Engineering",
-        listItems: [
-          "NLP and LLM Fundamentals",
-          "Efficient Prompt Engineering",
-          "Working with OpenAI and Opensource LLM Models",
-        ],
-        time: "Week 14",
-        subheading: "Case studies on",
-        para: "Negative News Screener for Fraud Alerts",
-      },
-      {
-        id: 15,
-        title: "Generative AI: Building RAG Systems",
-        listItems: [
-          "Understanding RAG Architecture",
-          "Design & Implement RAG Pipeline",
-          "Finetune and Evaluate Model Performance",
-        ],
-        time: "Week 15",
-        subheading: "Case studies on",
-        para: "Develop and Deploy a Privacy bot",
-      },
-      {
-        id: 16,
-        title: "Interview Prep & Portfolio Building",
-        listItems: [
-          "Building Project Portfolio & Optimizing your Resume",
-          "Business Case Study Interview Questions",
-          "Technical Interview Questions",
-        ],
-        time: "Week 16",
-        subheading: "Final assessment on",
-        para: "Exit Exam, Resume Feedback, & Mock Interviews",
+        para: "Analyzing the Business Model of Banks",
       },
     ],
     learning: [
@@ -901,173 +829,148 @@ export const courseDetails: CourseDetail[] = [
       { src: MlLibrary, alt: "Image 1", title: "ML Libraries" },
       { src: generativeModel, alt: "Image 1", title: "Generative Models" },
     ],
+
+    caseStudy: [
+      {
+        img: Instacart,
+        title: "Instacart",
+        para: "Sales & delivery performance analysis",
+      },
+      {
+        img: Google,
+        title: "Google",
+        para: "Merchandise website traffic analysis",
+      },
+      {
+        img: Big_basket,
+        title: "Big Basket",
+        para: "Product assortment analysis",
+      },
+      {
+        img: medicare,
+        title: "Medicare",
+        para: "Healthcare fraud claim dashboard",
+      },
+    ],
   },
   {
-    heading: "AI Engineer Fellowship",
+    heading: "Intermediate",
     description:
       "Tackle cutting-edge projects and prepare for top roles at leading tech giants. Your AI future begins now!",
-    dateOfStart: "November 23, 2024 ",
-    floatingBar: "Nov 23",
+    dateOfStart: "January 18, 2025",
+    floatingBar: "Jan 18",
     timeCommitment: "12 hours/week",
     timePerweek: "12 hours/week",
-    cost: "₹9,999",
+    cost: "₹6,499",
     seatsLeft: 25,
     sessionInsights: businessAnalystInsights,
     id: "3",
-    actualcost: "₹19,999",
+    actualcost: "₹11,999",
     imgUrl: BusinessAnalystFellowshipCard,
     razorPay: {
       src: "https://checkout.razorpay.com/v1/payment-button.js",
       paymentButtonId: "pl_OhyfCxUlrva95Q",
     },
-    pdf: "/AI_Engineering_Fellowship.pdf",
+    pdf: "/2_Intermediate_Fellowship_Brochure.pdf",
     discount: "50% OFF",
     EmiOptions: "485",
     videoUrl: "https://www.youtube.com/embed/md7C78glaGQ?si=3o-7rtKvM_sTg8gM",
     weekSchedule: [
       {
         id: 1,
-        title: "Business Fundamentals",
+        title: "Structured Problem Solving for Data Science",
         listItems: [
-          "Business Models and Customer Segmentation",
-          "Products, Value Proposition and Distribution Channels",
-          "Revenue Streams and Costs Models",
-        ],
-        time: "Week 1",
-        subheading: "Case studies on",
-        para: "Dissecting Business of Indian Unicorns",
-      },
-      {
-        id: 2,
-        title: "Problem Solving Approach",
-        listItems: [
-          "Structured Problem Solving Canvas",
+          "Structured Problem-Solving Canvas",
           "Human Centered Solution Design",
           "Stakeholders Communication",
         ],
-        time: "Week 2",
+        time: "Week 1",
         subheading: "Case studies on",
         para: "Designing a Data/AI Product",
       },
       {
-        id: 3,
-        title: "Essential Statistics for Business Insights",
+        id: 2,
+        title: "Business Analysis with SQL",
         listItems: [
-          "Types of statistics: Descriptive vs. Inferential",
-          "Basic Probability Concepts & Distributions",
-          "Hypothesis Testing, p-Value, Correlation",
+          "Effective KPI Design Principles",
+          "KPI Trees and Impact Mapping",
+          "Advanced SQL Techniques for Production",
+        ],
+        time: "Week 2",
+        subheading: "Case studies on",
+        para: "Business Tracker for an E-commerce CEO Office",
+      },
+      {
+        id: 3,
+        title: "Business Intelligence with PowerBI",
+        listItems: [
+          "Decision Funnel Understanding",
+          "Self Serve Dashboard Design Principles",
+          "Efficient Data Models for Speed and Accuracy",
         ],
         time: "Week 3",
         subheading: "Case studies on",
-        para: "Assortment Analysis for a Quick Commerce Company",
+        para: "Digital Marketing Dashboard for a Fitness Brand",
       },
       {
         id: 4,
-        title: "Feature Design and Insights with A/B Testing",
-        listItems: [
-          "Understanding Business Metrics to Optimize",
-          "Customer Cohort Analysis",
-          "Statistical Analysis for Launch Decisions",
-        ],
-        time: "Week 4",
-        subheading: "Case studies on",
-        para: "Launch Strategy for a New E-Commerce Fashion Store",
-      },
-      {
-        id: 5,
-        title: "Intro to MS-Excel & Python",
-        listItems: [
-          "Data Cleaning, Pivot Tables, & Lookup for Analysis",
-          "Python Programming Fundamentals",
-          "Data Manipulation using Pandas",
-        ],
-        time: "Week 5",
-        subheading: "Case studies on",
-        para: "Assortment Analysis for a Quick Commerce Company",
-      },
-      {
-        id: 6,
-        title: "Advanced Business Insights with Python",
+        title: "Business Insights with Python",
         listItems: [
           "Exploratory Data Analysis",
           "Advanced Data Wrangling Techniques",
           "Detailed Insights Report Writing for Stakeholders",
         ],
-        time: "Week 6",
+        time: "Week 4",
         subheading: "Case studies on",
         para: "Loan Application Quality Assessments for an NBFC",
       },
       {
-        id: 7,
-        title: "Fundamentals of Machine Learning",
+        id: 5,
+        title: "Applied Statistics for Data Science",
         listItems: [
-          "Problem Scope Definition & Evaluation Framework",
-          "Exploratory Data Analysis",
-          "Feature Engineering & Scaling",
+          "Types of statistics: Descriptive vs. Inferential",
+          "Basic Probability Concepts & Distributions",
+          "Hypothesis Testing, p-Value, Correlation",
+        ],
+        time: "Week 5",
+        subheading: "Case studies on",
+        para: "Analyzing the Business Model of a Fashion Store",
+      },
+      {
+        id: 6,
+        title: "Intro to Machine Learning",
+        listItems: [
+          "Supervised, Unsupervised, Reinforcement Learning",
+          "Datasets, Features, and Labels",
+          "Model selection, training, and evaluation",
+        ],
+        time: "Week 6",
+        subheading: "Case studies on",
+        para: "Fraud Detection Model",
+      },
+      {
+        id: 7,
+        title: "Live Hands-on Project - Supervised Learning",
+        listItems: [
+          // "Problem Scope Definition & Evaluation Framework",
+          // "Exploratory Data Analysis",
+          // "Feature Engineering & Scaling",
         ],
         time: "Week 7",
         subheading: "Case studies on",
-        para: "Credit Decisioning System for an NBFC",
+        para: "Business Model of a Fitness Brand",
       },
       {
         id: 8,
-        title: "Advanced Machine Learning Techniques",
+        title: "Live Hands-on Project - Unsupervised Learning",
         listItems: [
-          "Ensemble Learning – Bagging/Boosting",
-          "Hyperparameter Tuning – Grid Search",
-          "Optimizing for Accuracy & Explainability",
+          // "Ensemble Learning – Bagging/Boosting",
+          // "Hyperparameter Tuning – Grid Search",
+          // "Optimizing for Accuracy & Explainability",
         ],
         time: "Week 8",
         subheading: "Case studies on",
-        para: "Valued Shopper Retention in E-Commerce",
-      },
-      {
-        id: 9,
-        title: "Fundamentals of Deep Learning",
-        listItems: [
-          "Layers and Architectures",
-          "Backpropagation & Gradient Descent",
-          "Sequential Modeling Techniques (RNN, LSTM)",
-        ],
-        time: "Week 9",
-        subheading: "Case studies on",
-        para: "Brand’s Social Listening from X (Twitter) feed",
-      },
-      {
-        id: 10,
-        title: "Generative AI: The Art of Prompt Engineering",
-        listItems: [
-          "NLP and LLM Fundamentals",
-          "Efficient Prompt Engineering",
-          "Working with OpenAI and Opensource LLM Models",
-        ],
-        time: "Week 10",
-        subheading: "Case studies on",
-        para: "Negative News Screener for Fraud Alerts",
-      },
-      {
-        id: 11,
-        title: "Generative AI: Building RAG Systems",
-        listItems: [
-          "Understanding RAG Architecture",
-          "Design & Implement RAG Pipeline",
-          "Finetune and Evaluate Model Performance",
-        ],
-        time: "Week 11",
-        subheading: "Case studies on",
-        para: "Develop and Deploy a Privacy bot",
-      },
-      {
-        id: 12,
-        title: "Interview Prep & Portfolio Building",
-        listItems: [
-          "Building Project Portfolio & Optimizing your Resume",
-          "Business Study Interview Questions",
-          "Technical Interview Questions",
-        ],
-        time: "Week 12",
-        subheading: "Final assessment on",
-        para: "Exit Exam, Resume Feedback, & Mock Interviews",
+        para: "Fraud Detection Model in Banks",
       },
     ],
     learning: [
@@ -1081,7 +984,7 @@ export const courseDetails: CourseDetail[] = [
         alt: "Image 1",
         title: "Business Fundamentals",
       },
-      { src: transformers, alt: "Image 1", title: "Transformer Concepts" },
+      { src: Statistcs, alt: "Image 1", title: "Statistics" },
       {
         src: largeLanguageModel,
         alt: "Image 1",
@@ -1092,175 +995,140 @@ export const courseDetails: CourseDetail[] = [
       { src: python, alt: "Image 1", title: "Python" },
       { src: MsExcel, alt: "Image 1", title: "MS Excel" },
       { src: MlLibrary, alt: "Image 1", title: "ML Libraries" },
-      { src: generativeModel, alt: "Image 1", title: "Generative Models" },
+      { src: sql, alt: "Image 1", title: "Sql" },
+    ],
+    caseStudy: [
+      {
+        img: amazon,
+        title: "Amazon",
+        para: "Weekly business review tracker for CXO",
+      },
+      {
+        img: novofit,
+        title: "Novafit",
+        para: "Marketing channel analysis dashboard",
+      },
+      {
+        img: home_credit_loadn,
+        title: "Home Credit",
+        para: "Loan application quality analysis",
+      },
+      {
+        img: ebay,
+        title: "Ebay",
+        para: "Fraud detection ML algorithm",
+      },
     ],
   },
   {
-    heading: "Business Analyst Fellowship",
+    heading: "Advanced",
     description:
       "Kickstart your Business analyst career at top companies like Amazon, Dell, Swiggy etc. Your future in business analysis starts here!",
-    dateOfStart: "November 23, 2024 ",
-    floatingBar: "Nov 23",
+    dateOfStart: "January 18, 2025",
+    floatingBar: "Jan 18",
     timeCommitment: "10 hours/week",
     timePerweek: "10 hours/week",
-    cost: "₹9,999",
+    cost: "₹7,999",
     seatsLeft: 25,
     sessionInsights: businessAnalystInsights,
     id: "1",
-    actualcost: "₹19,999",
+    actualcost: "₹15,999",
     imgUrl: BusinessAnalystFellowshipCard,
     razorPay: {
       src: "https://checkout.razorpay.com/v1/payment-button.js",
       paymentButtonId: "pl_OhyVw2SEjrbyw4",
     },
-    pdf: "/Business_analyst_fellowship.pdf",
+    pdf: "/3_Advanced_Fellowship_Brochure.pdf",
     discount: "45% OFF",
     EmiOptions: "499",
     weekSchedule: [
       {
         id: 1,
-        title: "Business Fundamentals",
+        title: "Introduction to Product Analytics",
         listItems: [
-          "Business Models and Customer Segmentation",
-          "Products, Value Proposition and Distribution Channels",
-          "Revenue Streams and Costs Models",
+          "User behavior and Product performance",
+          "Metrics: DAU, MAU, Retention rate, Conversion rate",
+          "Cohort analysis, funnel analysis, event tracking.",
         ],
         time: "Week 1",
         subheading: "Case studies on",
-        para: "Dissecting Business of Indian Unicorns",
+        para: "Analyzing the Business Model of a Fashion Store",
       },
       {
         id: 2,
-        title: "Problem Solving Approach",
-        listItems: [
-          "Structured Problem Solving Canvas",
-          "Human Centered Solution Design",
-          "Stakeholders Communication",
-        ],
-        time: "Week 2",
-        subheading: "Case studies on",
-        para: "Designing a Data/AI Product",
-      },
-      {
-        id: 3,
-        title: "Intro to Analytics with SQL",
-        listItems: [
-          "Relational data base & SQL syntax",
-          "Joins and Subqueries",
-          "Conditional and Case Statements",
-        ],
-        time: "Week 3",
-        subheading: "Case studies on",
-        para: "Grocery E-commerce Performance Analysis",
-      },
-      {
-        id: 4,
-        title: "Advanced Business Analysis with SQL",
-        listItems: [
-          "Effective KPI Design Principles",
-          "KPI Trees and Impact Mapping",
-          "Advanced SQL Techniques for Production",
-        ],
-        time: "Week 4",
-        subheading: "Case studies on",
-        para: "Business Review Tracker for CEO Office",
-      },
-      {
-        id: 5,
-        title: "Intro to Visualization with PowerBI",
-        listItems: [
-          "Understanding Data Models & Relationships",
-          "Understanding Chart Types, Trends",
-          "Creating Dashboards",
-        ],
-        time: "Week 5",
-        subheading: "Case studies on",
-        para: "E-Commerce Store Google Analytics",
-      },
-      {
-        id: 6,
-        title: "Advanced Business Intelligence with PowerBI",
-        listItems: [
-          "Decision Funnel Understanding",
-          "Self Serve Dashboard Design Principles",
-          "Efficient Data Models for Speed and Accuracy",
-        ],
-        time: "Week 6",
-        subheading: "Case studies on",
-        para: "Marketing Dashboard for a D2C Fitness Brand",
-      },
-      {
-        id: 7,
-        title: "Essential Statistics for Business Insights",
-        listItems: [
-          "Types of statistics: Descriptive vs. Inferential",
-          "Basic Probability Concepts & Distributions",
-          "Hypothesis Testing, p-Value, Correlation",
-        ],
-        time: "Week 7",
-        subheading: "Case studies on",
-        para: "Assortment Analysis for a Quick Commerce Company",
-      },
-      {
-        id: 8,
-        title: "Feature Design and Insights with A/B Testing",
+        title: "Product Design and A/B Testing",
         listItems: [
           "Understanding Business Metrics to Optimize",
           "Customer Cohort Analysis",
           "Statistical Analysis for Launch Decisions",
         ],
+        time: "Week 2",
+        subheading: "Case studies on",
+        para: "Launch Strategy for a New E-Commerce Fashion Store",
+      },
+      {
+        id: 3,
+        title: "Regression Analysis In-Depth",
+        listItems: [
+          "Interpreting Coeff., R-squared, & adjusted R-squared",
+          "Multicollinearity, Homoscedasticity, & Residual analysis",
+          "Improving model accuracy",
+        ],
+        time: "Week 3",
+        subheading: "Case studies on",
+        para: "Sentiment Analysis from Twitter",
+      },
+      {
+        id: 4,
+        title: "Live Hands-on Project - Credit Decisioning System",
+        listItems: ["Building a Credit Decision System from scratch"],
+        time: "Week 4",
+        subheading: "Case studies on",
+        para: "Credit Decisioning System of Banks",
+      },
+      {
+        id: 5,
+        title: "Intro to Tree Based Algorithms",
+        listItems: [
+          "Concepts of nodes, branches, and leaves",
+          "Decision Trees, Random Forests, and GB Trees",
+          "Key differences and when to use them.",
+        ],
+        time: "Week 5",
+        subheading: "Case studies on",
+        para: "Deconstructing the Business of an E-Commerce Website",
+      },
+      {
+        id: 6,
+        title: "Live Hands-on Project - Propensity Modeling",
+        listItems: ["Building a Propensity Model from scratch"],
+        time: "Week 6",
+        subheading: "Case studies on",
+        para: "AirBNB Ticket Booking System",
+      },
+      {
+        id: 7,
+        title: "Intro to LLMs and Gen AI",
+        listItems: [
+          "Introduction to Neural Networks",
+          "Gen AI - Key concepts and applications",
+          "Real-world applications and innovations",
+        ],
+        time: "Week 7",
+        subheading: "Case studies on",
+        para: "Building a News Summarizer App",
+      },
+      {
+        id: 8,
+        title: "Live Hands-on Project - RAG System",
+        listItems: [
+          "Design RAG Systems",
+          "Agent Frameworks and Use case",
+          "Considerations for LLM Models in Production",
+        ],
         time: "Week 8",
         subheading: "Case studies on",
-        para: "Launch Strategy for a Lifestyle Brand’s Landing Page",
-      },
-      {
-        id: 9,
-        title: "Intro to Insights with MS-Excel & Python",
-        listItems: [
-          "Data Cleaning Techniques in Excel",
-          "PivotTable, Grouping, & Lookup Functions for Data Analysis in Excel",
-          "Python Programming Fundamentals",
-          "Data Manipulation using Pandas",
-        ],
-        time: "Week 9",
-        subheading: "Case studies on",
-        para: "Assortment Analysis for a Quick Commerce Company",
-      },
-      {
-        id: 10,
-        title: "Advanced Business Insights with Python",
-        listItems: [
-          "Exploratory Data Analysis",
-          "Advanced Data Wrangling Techniques",
-          "Detailed Insights Report Writing for Stakeholders",
-        ],
-        time: "Week 10",
-        subheading: "Case studies on",
-        para: "Loan Application Quality Assessment for an NBFC",
-      },
-      {
-        id: 11,
-        title: "Generative AI: The Art of Prompt Engineering",
-        listItems: [
-          "NLP and LLM Fundamentals",
-          "Efficient Prompt Engineering",
-          "Working with OpenAI and Opensource LLM Models",
-        ],
-        time: "Week 11",
-        subheading: "Case studies on",
-        para: "Negative News Screener for Fraud Alerts",
-      },
-      {
-        id: 12,
-        title: "Interview Prep & Portfolio Building",
-        listItems: [
-          "Building your Resume",
-          "Building your Project Portfolio",
-          "Technical Interview Questions",
-        ],
-        time: "Week 12",
-        subheading: "Final assessment on",
-        para: "Exit Exam, Resume Feedback, & Mock Interviews",
+        para: "Building a Chatbot to converse with News",
       },
     ],
     learning: [
@@ -1286,6 +1154,33 @@ export const courseDetails: CourseDetail[] = [
       { src: MsExcel, alt: "Image 1", title: "MS Excel" },
       { src: sql, alt: "Image 1", title: "SQL" },
       { src: PowerBi, alt: "Image 1", title: "PowerBI" },
+    ],
+    caseStudy: [
+      {
+        img: peter_england,
+        title: "Peter England",
+        para: "Website launch strategy with A/B test",
+      },
+      {
+        img: apple,
+        title: "Apple",
+        para: "Social media sentiment analysis from Twitter",
+      },
+      {
+        img: home_credit_develop,
+        title: "Home Credit",
+        para: "Develop a credit decisioning system",
+      },
+      {
+        img: airbnb,
+        title: "AirBNB",
+        para: "Where will a new guest book their first travel experience?",
+      },
+      {
+        img: hindu,
+        title: "The Hindu",
+        para: "Create a chatbot to converse with news",
+      },
     ],
     videoUrl: "https://www.youtube.com/embed/mctYPXz85CA?si=sM2oW7pLucnQgfIU",
   },
@@ -1323,11 +1218,6 @@ export const workshopFaqData: FAQItem[] = [
 ];
 
 export const faqData: FAQItem[] = [
-  {
-    question: "What's the format of the Exit exam?",
-    answer:
-      "The exit exam will comprise of a problem statement along with scenario based questions to assess your understanding and readiness for the professional world.",
-  },
   {
     question:
       "What are the key responsibilities of a Fellow during the program?",
@@ -1932,5 +1822,62 @@ export const desciprDiffernceCardData: CardData[] = [
     title: "Stay Ahead of the Curve",
     description:
       "Gain access to exclusive resources—cutting-edge AI tools, actionable templates, and a vibrant community of forward-thinkers. The future of enterprise AI isn't waiting. And neither should you.",
+  },
+];
+
+// navitems
+export interface NavItem {
+  title: string;
+  href: string;
+  subItems?: NavItem[];
+}
+
+export const navlinks: NavItem[] = [
+  { title: "Home", href: "/" },
+  {
+    title: "Programs",
+    href: "",
+    subItems: [
+      {
+        title: "Fellowships",
+        href: "#fellowships",
+      },
+      {
+        title: "Workshops",
+        href: "#workshop",
+      },
+      { title: "Custom Curriculum", href: "#custom-carriculum" },
+      { title: "Descipr Exclusives", href: "#Descipr-exclusives" },
+    ],
+  },
+  {
+    title: "About Us",
+    href: "/aboutus",
+  },
+
+  // { title: "Staff Augmentation", href: "/staff-augmentation" },
+  { title: "Reviews", href: "#reviews" },
+];
+
+export const workshopList = [
+  {
+    label: "Business Insights with Python",
+    link: "#",
+  },
+  {
+    label: "Design an AI Powered Search System",
+    link: "#",
+  },
+  {
+    label: "Detect E-commerce Return Fraud",
+    link: "#",
+  },
+  {
+    label: "tsmarting Banking Fraud with LLMs",
+    link: "#",
+  },
+  {
+    label: "Ace Data Science & AI Interviews",
+    link: "#",
   },
 ];

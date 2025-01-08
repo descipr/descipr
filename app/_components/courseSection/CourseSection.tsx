@@ -4,7 +4,7 @@ import CourseCard from "./CourseCard";
 
 const CourseSection: React.FC = () => {
   return (
-    <section className="section-style overflow-hidden">
+    <section className="section-style overflow-hidden" id="fellowships">
       <h2 className="heading text-white">
         Fellow<span className="text-blue-Textprimary">ships</span>
       </h2>
@@ -23,6 +23,7 @@ const CourseSection: React.FC = () => {
         ))}
       </div>
     </section>
+    
   );
 };
 

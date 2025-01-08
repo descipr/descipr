@@ -7,22 +7,22 @@ import { Carouselimages } from "@/constants";
 
 const Hero: React.FC = () => {
   return (
-    <section className="section-style items-center">
+    <section className="container mx-auto px-4 py-4  flex flex-col space-y-4 md:space-y-8 max-w-7xl items-center">
       <Image
         src={BackgroundLogo}
         alt="background image"
         width={480}
         className="absolute top-0 right-0 -z-10"
       />
-      <div className="relative flex flex-col items-center justify-center leading-relaxed tracking-wide space-y-5 md:space-y-8">
-        <div className="flex flex-col items-center">
-          <h1 className="text-3xl md:text-6xl font-bold text-center text-white leading-[120%]">
+      <div className="relative flex flex-col items-center  leading-relaxed tracking-wide gap-4 ">
+        <div className="flex flex-col ">
+          <h1 className="text-3xl md:text-5xl font-bold text-center text-white leading-[120%]">
             Become a{" "}
             <span className="text-blue-Textprimary font-Plus-jakarta">
               360-degree
             </span>
           </h1>
-          <h1 className="text-3xl md:text-6xl font-bold text-center text-blue-Textprimary mt-1 md:mt-3 leading-[120%]">
+          <h1 className="text-3xl md:text-5xl font-bold text-center text-blue-Textprimary mt-1 md:mt-3 leading-[120%]">
             AI Professional
           </h1>
         </div>
@@ -34,8 +34,8 @@ const Hero: React.FC = () => {
         </p>
         <div className="flex items-center justify-between gap-4">
           <Link
-            href=""
-            className="flex items-center px-6 py-4 md:px-8 md:py-4 space-x-2 text-black bg-blue-Textprimary hover:bg-white rounded-lg md:rounded-xl shadow-white/80 shadow-lg text-base md:text-lg font-semibold"
+            href="#fellowships"
+            className="flex items-center px-6 py-4 md:px-8 md:py-4 space-x-2 text-black bg-blue-Textprimary hover:bg-white rounded-lg md:rounded-xl text-base md:text-lg font-semibold"
           >
             Aspiring Programs
           </Link>

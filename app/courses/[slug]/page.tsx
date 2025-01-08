@@ -1,5 +1,6 @@
 
 import OurTrainers from "@/app/_components/about/OurTrainers";
+import CaseStudy from "@/app/_components/courses/CaseStudy";
 import DesciprDifference from "@/app/_components/courses/DesciprDifference";
 import Learning from "@/app/_components/courses/Learning";
 import LearningAndTools from "@/app/_components/courses/LearningAndTools";
@@ -96,17 +97,19 @@ const CoursePage = ({ params }: { params: { slug: string } }) => {
       <HorizontalLine />
       <Learning courseDetails={course.weekSchedule || []} pdfurl={course.pdf} />
       <HorizontalLine />
+      <CaseStudy casestudy={course.caseStudy} />
+      <HorizontalLine />
+      <LearningAndTools courseDetails={course} />
+      <HorizontalLine />
       <LiveSchedule />
       <HorizontalLine />
       <OurTrainers />
       <HorizontalLine />
       <OurMentors />
       <HorizontalLine />
-      <DesciprDifference />
-      <HorizontalLine />
       <Testimonials />
       <HorizontalLine />
-      <LearningAndTools courseDetails={course} />
+      <DesciprDifference />
       <HorizontalLine />
       <LiveSessionSection VideoUrl={course.videoUrl} />
     </>

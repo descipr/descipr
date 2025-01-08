@@ -20,7 +20,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
       <div className="text-center text-white">
         <h2 className="text-2xl md:text-3xl font-semibold">1000+ Learners</h2>
         <p className="text-gray-400 mt-2 text-sm md:text-lg font-medium">
-          have reaped benefits from our programs
+          to have gained valuable skills through our programs
         </p>
       </div>
 

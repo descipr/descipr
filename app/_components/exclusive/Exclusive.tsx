@@ -23,7 +23,7 @@ const Exclusive = () => {
         };
     }, []);
     return (
-        <section className="section-style overflow-hidden">
+        <section className="section-style overflow-hidden" id="Descipr-exclusives">
             <h2 className="heading text-white">
                 Descipr <span className="text-blue-Textprimary">Exclusives</span>
             </h2>

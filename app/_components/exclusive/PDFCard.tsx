@@ -1,61 +1,170 @@
-import React from "react";
+"use client";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import Image, { StaticImageData } from "next/image";
 
 interface PDFCardProps {
   title: string;
-  description: string;
+  description?: string;
   downloadLink: string;
   img: StaticImageData;
 }
 
-const PDFCard: React.FC<PDFCardProps> = ({
-  title,
-  description,
-  downloadLink,
-  img,
-}) => {
+const PDFCard: React.FC<PDFCardProps> = ({ title, downloadLink, img }) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [fullName, setFullName] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+
+  const handleDownloadClick = () => {
+    setIsOpen(true);
+  };
+
+  const handlePhoneNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const input = e.target.value;
+    if (/^\d*$/.test(input) && input.length <= 10) {
+      setPhoneNumber(input);
+    }
+  };
+
+  const handleFullNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setFullName(e.target.value);
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const anchor = document.createElement("a");
+    anchor.href = downloadLink;
+    anchor.download = downloadLink;
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+
+    // Validate phone number
+    if (!/^\d{10}$/.test(phoneNumber)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
+    try {
+      // Simulate API call to save user info
+      const response = await fetch("/api/user", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ fullName, phoneNumber }),
+      });
+
+      if (response.ok) {
+        // Trigger PDF download
+
+        alert(
+          "Thank you for downloading the curriculum. Our team will get in touch with you shortly."
+        );
+
+        setFullName("");
+        setPhoneNumber("");
+        setIsOpen(false);
+      } else {
+        alert("Failed to send request. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting the form", error);
+      alert("An error occurred. Please try again later.");
+    }
+  };
+
   return (
-    <div className="text-white rounded-lg shadow-lg flex flex-col  w-full h-full max-w-[340px] md:max-w-[400px] lg:max-w-[580px] md:min-h-[480px]">
-      {/* Top Section with Image */}
-      <div className="relative h-full md:h-[283px] w-full rounded-lg overflow-hidden">
+    <section className="text-white bg-black rounded-lg shadow-lg flex flex-col w-full max-w-[400px] md:max-w-[480px] lg:max-w-[680px]">
+      {/* Image Section */}
+      <div className="relative w-full pb-[56.25%] rounded-lg overflow-hidden">
         <Image
           src={img}
           alt="E-Book Cover"
-          objectFit="cover"
-          className="rounded-lg border-gray-border border-[1px]"
-          width={614}
-          height={218}
+          fill
+          className="rounded-lg"
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          priority
         />
       </div>
 
       {/* Content Section */}
-      <div className="mt-6 flex flex-col h-full justify-between flex-grow">
+      <div className="flex flex-col h-full p-4">
+        {/* Title */}
         <div>
-          <h3 className="text-xs sm:text-sm font-medium text-left text-[#C7C7CC]">
+          <h3 className="text-base md:text-lg font-medium text-left text-gray-300">
             {title}
           </h3>
-          <p className="text-white text-left text-base md:text-2xl mt-2 lg:text-3xl font-bold leading-tight">
-            {description}
-          </p>
         </div>
 
-        {/* Button Section */}
-        <div className="mt-6 flex items-start">
-          <a
-            href={downloadLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center w-full max-w-xs px-4 py-3 text-white hover:text-black-primary hover:bg-white border border-white rounded-xl transition-colors duration-300 "
+        {/* Download Button */}
+        <div className="mt-4 flex items-start">
+          <button
+            onClick={handleDownloadClick}
+            className="flex items-center justify-center w-full max-w-xs px-4 py-3 text-white hover:text-black bg-transparent border border-white rounded-xl transition-colors duration-300 group"
           >
-            <span className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold">
+            <span className="text-sm md:text-base font-semibold">
               Download
             </span>
             <FaArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 text-[#EE4924] transition-transform duration-300 transform group-hover:translate-x-1" />
-          </a>
+          </button>
         </div>
       </div>
-    </div>
+
+      {isOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
+            <h3 className="text-2xl font-bold mb-4">Download Curriculum</h3>
+            <p className="text-gray-600 mb-4">
+              Please fill in your details to download the PDF. The download will
+              start automatically after submission.
+            </p>
+            <form onSubmit={handleSubmit}>
+              <div className="mb-4 text-black-primary">
+                <label className="block text-gray-700 text-sm font-bold mb-2 text-left">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  value={fullName}
+                  onChange={handleFullNameChange}
+                  className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
+                  required
+                />
+              </div>
+              <div className="mb-4 text-black-primary">
+                <label className="block text-gray-700 text-sm font-bold mb-2 text-left">
+                  Phone Number
+                </label>
+                <input
+                  type="text"
+                  value={phoneNumber}
+                  onChange={handlePhoneNumberChange}
+                  className="w-full px-3 py-2 border rounded-lg shadow-sm focus:outline-none focus:border-blue-500"
+                  required
+                />
+              </div>
+              <div className="flex justify-between items-center">
+                <button
+                  type="button"
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-600"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+    </section>
   );
 };
 

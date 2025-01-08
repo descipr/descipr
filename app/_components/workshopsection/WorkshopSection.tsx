@@ -24,7 +24,7 @@ const WorkshopSection: React.FC = () => {
     };
   }, []);
   return (
-    <section className="section-style overflow-hidden">
+    <section className="section-style overflow-hidden" id="workshop">
       <h2 className="heading text-white">
         Work<span className="text-blue-Textprimary">shops</span>
       </h2>

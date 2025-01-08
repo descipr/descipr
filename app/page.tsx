@@ -14,8 +14,8 @@ import TakeQuiz from "./_components/carrer/TakeQuiz";
 const Home: React.FC = () => {
   return (
     <>
-      <main className="relative flex flex-col items-center justify-center overflow-hidden mx-auto sm:px-10 px-2">
-        <div className="max-w-7xl w-full flex flex-col space-y-8 items-center">
+      <main className="relative flex flex-col items-center overflow-hidden mx-auto sm:px-10 px-2">
+        <div className="max-w-6xl w-full flex flex-col gap-4 items-center">
           <Hero />
           <HorizontalLine />
           <CourseSection />
@@ -32,7 +32,6 @@ const Home: React.FC = () => {
           <HorizontalLine />
           <CareerSection title_white="Take your career to" title_blue="newer heights with us" cardData={careerCardData} />
           <TakeQuiz />
-          <HorizontalLine />
           <Cta />
         </div>
       </main>
