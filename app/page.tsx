@@ -17,7 +17,6 @@ const Home: React.FC = () => {
       <main className="relative flex flex-col items-center overflow-hidden mx-auto sm:px-10 px-2">
         <div className="max-w-6xl w-full flex flex-col gap-4 items-center">
           <Hero />
-          <HorizontalLine />
           <CourseSection />
           <HorizontalLine />
           <WorkshopSection />

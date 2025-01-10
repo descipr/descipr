@@ -89,7 +89,9 @@ import ExportData from "@/public/Images/Exploratory Data Analysis.svg";
 import sql from "@/public/Images/sql.svg";
 import PowerBi from "@/public/Images/1.svg";
 import Template16 from "@/public/Images/Cert Template 16.svg";
-import PriceCardImage from "@/public/Images/PriceCardImage.svg";
+import PriceCardImage_foundation from "@/public/Images/foundation_pricecardImage.png";
+import priceCardImage_intermediate from "@/public/Images/intermediate_pricecardimage.svg";
+import priceCardImage_advanced from "@/public/Images/advanced_pricecardimage.svg";
 import DownloadIcon from "@/public/Images/DownloadIcon.svg";
 import LiveClasses from "@/public/Images/LiveClasses.svg";
 import DoubtSupport from "@/public/Images/DoubtSupport.svg";
@@ -145,6 +147,7 @@ import apple from "@/public/Images/Apple_sentiment_analysis.jpg";
 import home_credit_develop from "@/public/Images/Homecredit_credit_decision.jpg";
 import airbnb from "@/public/Images/Airbnb_next_booking.jpg";
 import hindu from "@/public/Images/the_hindu_Chatbot.jpg";
+import genAi from "@/public/Images/Gen_Ai.svg";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -162,6 +165,10 @@ export const cleanUpSlug = (slug: string): string => {
 };
 
 export {
+  PriceCardImage_foundation,
+  priceCardImage_intermediate,
+  priceCardImage_advanced,
+  genAi,
   peter_england,
   apple,
   home_credit_develop,
@@ -217,7 +224,6 @@ export {
   MentorshipIcon,
   MockInterview,
   DownloadIcon,
-  PriceCardImage,
   Template16,
   PowerBi,
   sql,

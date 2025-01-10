@@ -1,13 +1,13 @@
 
 import OurTrainers from "@/app/_components/about/OurTrainers";
 import CaseStudy from "@/app/_components/courses/CaseStudy";
-import DesciprDifference from "@/app/_components/courses/DesciprDifference";
 import Learning from "@/app/_components/courses/Learning";
 import LearningAndTools from "@/app/_components/courses/LearningAndTools";
 import LiveSchedule from "@/app/_components/courses/LiveSchedule";
 import LiveSessionSection from "@/app/_components/courses/LiveSessionSection";
 import OurMentors from "@/app/_components/courses/OurMentors";
 import PriceCard from "@/app/_components/courses/PriceCard";
+import DesciprFellowSection from "@/app/_components/dechiprFellowship/DesciprFellowSection";
 import HorizontalLine from "@/app/_components/HorizontalLine";
 import Testimonials from "@/app/_components/testimonial/Testimonials";
 import { CourseDetail, courseDetails } from "@/constants";
@@ -63,8 +63,8 @@ const CoursePage = ({ params }: { params: { slug: string } }) => {
   }
 
   return (
-    <>
-      <section className="relative container mx-auto px-4 py-4 md:py-8 flex flex-col sm:flex-row items-center sm:items-start justify-center sm:space-x-4 md:space-x-16 sm:space-y-8 md:space-y-16">
+    <section className="max-w-6xl w-full flex flex-col">
+      <section className="relative container mx-auto px-4 py-4 md:py-8 flex flex-col sm:flex-row items-center sm:items-start justify-center sm:space-x-4 md:space-x-16 sm:space-y-8 md:space-y-16 ">
         <Image
           src={BackgroundLogo}
           alt="background image"
@@ -109,10 +109,10 @@ const CoursePage = ({ params }: { params: { slug: string } }) => {
       <HorizontalLine />
       <Testimonials />
       <HorizontalLine />
-      <DesciprDifference />
+      <DesciprFellowSection />
       <HorizontalLine />
       <LiveSessionSection VideoUrl={course.videoUrl} />
-    </>
+    </section>
   );
 };
 

@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
             href="#fellowships"
             className="flex items-center px-6 py-4 md:px-8 md:py-4 space-x-2 text-black bg-blue-Textprimary hover:bg-white rounded-lg md:rounded-xl text-base md:text-lg font-semibold"
           >
-            Aspiring Programs
+            Explore Programs
           </Link>
         </div>
       </div>

@@ -38,7 +38,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
             </span>
 
           </div>
-          <p className="font-Plus-jakarta text-sm  text-white">{date}</p>
+          <p className="font-Plus-jakarta text-sm  text-white">starts: {date}</p>
 
 
         </div>

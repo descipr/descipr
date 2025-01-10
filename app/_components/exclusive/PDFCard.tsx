@@ -76,14 +76,14 @@ const PDFCard: React.FC<PDFCardProps> = ({ title, downloadLink, img }) => {
   };
 
   return (
-    <section className="text-white bg-black rounded-lg shadow-lg flex flex-col w-full max-w-[400px] md:max-w-[480px] lg:max-w-[680px]">
+    <section className="text-white bg-black rounded-xl shadow-lg flex flex-col w-full max-w-[400px] md:max-w-[480px] lg:max-w-[680px] ">
       {/* Image Section */}
-      <div className="relative w-full pb-[56.25%] rounded-lg overflow-hidden">
+      <div className="relative w-full pb-[56.25%] rounded-xl ">
         <Image
           src={img}
           alt="E-Book Cover"
           fill
-          className="rounded-lg"
+          className="rounded-xl"
           sizes="(max-width: 1024px) 100vw, 50vw"
           priority
         />

@@ -16,11 +16,17 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Grid Section */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full items-start justify-center">
+        <div className="md:grid grid-cols-2 lg:grid-cols-4 gap-8 w-full items-start justify-center hidden ">
           <Fellowship />
+          <WorkshopFooter />
           <Company />
           <FollowUs />
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full items-start justify-center md:hidden ">
+          <Fellowship />
+          <Company />
           <WorkshopFooter />
+          <FollowUs />
         </div>
       </div>
 
