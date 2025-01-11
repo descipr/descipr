@@ -1,14 +1,4 @@
-import BonusWorkshop from "@/components/BonusWorkshop";
-import CallNow from "@/components/CallNow";
-import InsightsGrid from "@/components/InsightsGrid";
-import LearningWorkShop from "@/components/LearningWorkShop";
-import LiveSessionSection from "@/components/LiveSessionSection";
-import Testimonials from "@/components/Testimonials";
-import HorizontalLine from "@/components/ui/HorizontalLine";
-import WebinarIntended from "@/components/ui/WebinarIntended";
-import WorkshopCard from "@/components/ui/WorkshopCard";
-import WorkshopFaq from "@/components/WorkshopFaq";
-import WorkshopToolSection from "@/components/WorkshopToolsection";
+
 import {
   BonusWorkshop__sql,
   insightsDataSql,
@@ -25,6 +15,17 @@ import {
 import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
+import InsightsGrid from "../_components/workshop/InsightsGrid";
+import WorkshopCard from "../_components/workshop/WorkshopCard";
+import HorizontalLine from "../_components/HorizontalLine";
+import LearningWorkShop from "../_components/workshop/LearningWorkShop";
+import WorkshopToolSection from "../_components/workshop/WorkshopToolSection";
+import WebinarIntended from "../_components/workshop/WebinarIntended";
+import BonusWorkshop from "../_components/workshop/BonusWorkshop";
+import Testimonials from "../_components/testimonial/Testimonials";
+import LiveSessionSection from "../_components/courses/LiveSessionSection";
+import CallNow from "../_components/workshop/CallNow";
+import WorkshopFaq from "../_components/workshop/WorkshopFaq";
 
 export const metadata: Metadata = {
   title: "Workshop",

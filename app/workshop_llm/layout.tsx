@@ -1,5 +1,6 @@
-import WorkshopFloatingBar from "@/components/ui/WorkshopFloatingBar";
+
 import { Metadata } from "next";
+import WorkshopFloatingBar from "../_components/workshop/WorkshopFloatingBar";
 
 export const metadata: Metadata = {
   title: "Workshop",

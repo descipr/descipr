@@ -1,13 +1,15 @@
-import DesciprDifference from "@/components/DesciprDifference";
-import Learning from "@/components/Learning";
-import LearningAndTools from "@/components/LearningAndTools";
-import LiveSchedule from "@/components/LiveSchedule";
-import LiveSessionSection from "@/components/LiveSessionSection";
-import OurMentors from "@/components/OurMentors";
-import OurTrainers from "@/components/OurTrainers";
-import Testimonials from "@/components/Testimonials";
-import HorizontalLine from "@/components/ui/HorizontalLine";
-import PriceCard from "@/components/ui/PriceCard";
+
+import OurTrainers from "@/app/_components/about/OurTrainers";
+import CaseStudy from "@/app/_components/courses/CaseStudy";
+import Learning from "@/app/_components/courses/Learning";
+import LearningAndTools from "@/app/_components/courses/LearningAndTools";
+import LiveSchedule from "@/app/_components/courses/LiveSchedule";
+import LiveSessionSection from "@/app/_components/courses/LiveSessionSection";
+import OurMentors from "@/app/_components/courses/OurMentors";
+import PriceCard from "@/app/_components/courses/PriceCard";
+import DesciprFellowSection from "@/app/_components/dechiprFellowship/DesciprFellowSection";
+import HorizontalLine from "@/app/_components/HorizontalLine";
+import Testimonials from "@/app/_components/testimonial/Testimonials";
 import { CourseDetail, courseDetails } from "@/constants";
 import { BackgroundLogo, cleanUpSlug } from "@/utils";
 import { Metadata } from "next";
@@ -61,8 +63,8 @@ const CoursePage = ({ params }: { params: { slug: string } }) => {
   }
 
   return (
-    <>
-      <section className="relative container mx-auto px-4 py-4 md:py-8 flex flex-col sm:flex-row items-center sm:items-start justify-center sm:space-x-4 md:space-x-16 sm:space-y-8 md:space-y-16">
+    <section className="max-w-6xl w-full flex flex-col">
+      <section className="relative container mx-auto px-4 py-4 md:py-8 flex flex-col sm:flex-row items-center sm:items-start justify-center sm:space-x-4 md:space-x-16 sm:space-y-8 md:space-y-16 ">
         <Image
           src={BackgroundLogo}
           alt="background image"
@@ -95,20 +97,22 @@ const CoursePage = ({ params }: { params: { slug: string } }) => {
       <HorizontalLine />
       <Learning courseDetails={course.weekSchedule || []} pdfurl={course.pdf} />
       <HorizontalLine />
+      <CaseStudy casestudy={course.caseStudy} />
+      <HorizontalLine />
+      <LearningAndTools courseDetails={course} />
+      <HorizontalLine />
       <LiveSchedule />
       <HorizontalLine />
       <OurTrainers />
       <HorizontalLine />
       <OurMentors />
       <HorizontalLine />
-      <DesciprDifference />
-      <HorizontalLine />
       <Testimonials />
       <HorizontalLine />
-      <LearningAndTools courseDetails={course} />
+      <DesciprFellowSection />
       <HorizontalLine />
       <LiveSessionSection VideoUrl={course.videoUrl} />
-    </>
+    </section>
   );
 };
 

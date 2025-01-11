@@ -1,20 +1,22 @@
-import CareerSection from "@/components/CareerSection";
-import CourseSection from "@/components/CourseSection";
-import DesciprFellowSection from "@/components/DesciprFellowSection";
-import Hero from "@/components/Hero";
-import Cta from "@/components/ui/Cta";
-import CustomCurriculum from "@/components/ui/CustomCurriculum";
-import Exclusive from "@/components/ui/Exclusive";
-import HorizontalLine from "@/components/ui/HorizontalLine";
-import WorkshopSection from "@/components/ui/WorkshopSection";
+import { careerCardData } from "@/constants";
+import CareerSection from "./_components/carrer/CareerSection";
+import CourseSection from "./_components/courseSection/CourseSection";
+import Cta from "./_components/cta/Cta";
+import CustomCurriculum from "./_components/customCariculum/CustomCurriculum";
+import DesciprFellowSection from "./_components/dechiprFellowship/DesciprFellowSection";
+import Exclusive from "./_components/exclusive/Exclusive";
+import Hero from "./_components/hero/Hero";
+import HorizontalLine from "./_components/HorizontalLine";
+import Testimonials from "./_components/testimonial/Testimonials";
+import WorkshopSection from "./_components/workshopsection/WorkshopSection";
+import TakeQuiz from "./_components/carrer/TakeQuiz";
 
 const Home: React.FC = () => {
   return (
     <>
-      <main className="relative flex flex-col items-center justify-center overflow-hidden mx-auto sm:px-10 px-2">
-        <div className="max-w-7xl w-full flex flex-col space-y-8 items-center">
+      <main className="relative flex flex-col items-center overflow-hidden mx-auto sm:px-10 px-2">
+        <div className="max-w-6xl w-full flex flex-col gap-4 items-center">
           <Hero />
-          <HorizontalLine />
           <CourseSection />
           <HorizontalLine />
           <WorkshopSection />
@@ -23,10 +25,12 @@ const Home: React.FC = () => {
           <HorizontalLine />
           <Exclusive />
           <HorizontalLine />
+          <Testimonials />
+          <HorizontalLine />
           <DesciprFellowSection />
           <HorizontalLine />
-          <CareerSection />
-          <HorizontalLine />
+          <CareerSection title_white="Take your career to" title_blue="newer heights with us" cardData={careerCardData} />
+          <TakeQuiz />
           <Cta />
         </div>
       </main>
