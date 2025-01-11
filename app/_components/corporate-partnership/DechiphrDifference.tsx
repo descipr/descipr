@@ -2,7 +2,7 @@ import DifferenceCardSection from "./DifferenceCardSection";
 
 const DechiphrDifference = () => {
     return (
-        <section className="section-style  items-center">
+        <section className="section-style  items-center overflow-hidden">
             <div className="flex flex-col items-center gap-2">
                 <h2 className="heading text-white">
                     Experience the <span className="text-blue-Textprimary">Descipr Difference</span>

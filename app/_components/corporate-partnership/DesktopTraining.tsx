@@ -1,9 +1,20 @@
 import { trainingRecent } from "@/constants";
 import { useState } from "react";
 import TrainingCard from "./TrainingCard";
+import { StaticImageData } from "next/image";
 
 
-const DesktopTraining = () => {
+interface TrainingData {
+  title: string;
+  description: string;
+  img: StaticImageData; // Update the type if `img` is not a string
+}
+
+interface RecentTrainingProps {
+  trainingData: TrainingData[];
+}
+
+const DesktopTraining = ({ trainingData }: RecentTrainingProps) => {
 
     const [current, setCurrent] = useState(0);
     const pdfsPerPage = 2;
@@ -25,7 +36,7 @@ const DesktopTraining = () => {
                                 key={pageIndex}
                                 className="flex gap-4 h-full justify-center w-full"
                             >
-                                {trainingRecent
+                                {trainingData
                                     .slice(pageIndex * pdfsPerPage, (pageIndex + 1) * pdfsPerPage)
                                     .map((src, index) => (
 

@@ -2,8 +2,20 @@ import { trainingRecent } from "@/constants";
 import TrainingCard from "./TrainingCard";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { StaticImageData } from "next/image";
 
-const MobileTraining = () => {
+
+interface TrainingData {
+  title: string;
+  description: string;
+  img: StaticImageData; // Update the type if `img` is not a string
+}
+
+interface RecentTrainingProps {
+  trainingData: TrainingData[];
+}
+
+const MobileTraining = ({ trainingData }: RecentTrainingProps) => {
     const carouselRef = useRef<HTMLDivElement>(null);
     const [width, setWidth] = useState(0);
 
@@ -25,7 +37,7 @@ const MobileTraining = () => {
                 drag="x"
                 dragConstraints={{ right: 0, left: -width }}
             >
-                {trainingRecent.map((pdf, index) => (
+                {trainingData.map((pdf, index) => (
                     <div key={index} className="w-80 flex-shrink-0 mx-auto">
                         <TrainingCard key={index} {...pdf} />
                     </div>

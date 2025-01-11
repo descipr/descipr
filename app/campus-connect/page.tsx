@@ -1,4 +1,4 @@
-import { CorporateCareerCardData } from "@/constants";
+import { CampustrainingRecent, CorporateCareerCardData } from "@/constants";
 import CareerSection from "../_components/carrer/CareerSection";
 import CustomizedTraining from "../_components/corporate-partnership/CustomizedTraining";
 import Hero from "../_components/corporate-partnership/Hero";
@@ -8,13 +8,12 @@ import HorizontalLine from "../_components/HorizontalLine";
 import RecentTraining from "../_components/corporate-partnership/RecentTraining";
 import DechiphrDifference from "../_components/corporate-partnership/DechiphrDifference";
 import Testimonials from "../_components/testimonial/Testimonials";
-import TakeQuiz from "../_components/carrer/TakeQuiz";
-import Cta from "../_components/cta/Cta";
+import CorporateCta from "../_components/corporate-partnership/CorporateCta";
 
 
 const CampusConnect = () => {
     return (
-        <section className="flex flex-col sm:space-y-8 md:space-y-16 items-center justify-center mx-auto">
+        <section className="flex flex-col sm:space-y-8 md:space-y-16 items-center justify-center mx-auto overflow-hidden">
             <Hero />
             <Organization />
             <HorizontalLine />
@@ -24,18 +23,13 @@ const CampusConnect = () => {
             <HorizontalLine />
             <CareerSection title_white="Cut Down Your" title_blue="AI implementation timeline by 90%" cardData={CorporateCareerCardData} />
             <HorizontalLine />
-            <RecentTraining />
+            <RecentTraining trainingData = {CampustrainingRecent} />
             <HorizontalLine />
             <DechiphrDifference />
             <HorizontalLine />
             <Testimonials />
-            <section className="max-w-7xl w-full">
-                <TakeQuiz />
-            </section>
             <HorizontalLine />
-
-            <Cta />
-
+            <CorporateCta />
         </section>
     );
 }

@@ -384,6 +384,21 @@ export const trainingRecent = [
   },
 ];
 
+export const CampustrainingRecent = [
+  {
+    title: "Amity University: Gen AI Workshop",
+    description:
+      "A 1-day intensive interactive workshop on Gen-AI, introduced the students to AI's potential and its revolutionary impact in the Banking industry.",
+    img: egs_training,
+  },
+  {
+    title: "LBSIM: ML Workshop",
+    description:
+      "A 1-day intensive interactive workshop on Propensity Modeling with Python, introduced the students to the world of Machine learning and its use-case in the E-Commerce industry.",
+    img: home_credit_trainig,
+  },
+];
+
 // testimonial
 
 export const testimonials = [
@@ -1749,7 +1764,7 @@ export const ProductcardData: ProductcardI[] = [
     ],
     image: product_workshop,
     buttonText: "Download Workshop Library",
-    link: "#",
+    link: "/Workshop_Library.pdf",
   },
   {
     title: "Fellowship",
@@ -1761,17 +1776,17 @@ export const ProductcardData: ProductcardI[] = [
     ],
     image: product_fellowship,
     buttonText: "Download Brochure",
-    link: "#",
+    link: "/Descipr_B2B_Brochure.pdf",
   },
   {
     title: "Custom Curriculum",
     points: [
       "Have a specific upskilling vision for your team?",
-      "Share your goals, and we’ll tailor a program that fits your exact needs.",
+      "Share your goals, and we'll tailor a program that fits your exact needs.",
     ],
     image: product_custom_carriculum,
-    buttonText: "Let’s Connect",
-    link: "#",
+    buttonText: "Let's Connect",
+    link: "/Campus_Connect_Program.pdf",
   },
 ];
 

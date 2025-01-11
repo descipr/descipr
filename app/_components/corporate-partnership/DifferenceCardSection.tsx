@@ -4,16 +4,12 @@ import DesktopDiffernceCard from "./DesktopDiffernceCard";
 import MobileDifferenceSection from "./MobileDifferenceSection";
 
 const DifferenceCardSection = () => {
-
     const [isDesktop, setIsDesktop] = useState(true);
+
     useEffect(() => {
         const handleResize = () => {
             const width = window.innerWidth;
-            if (width >= 1024) {
-                setIsDesktop(true);
-            } else {
-                setIsDesktop(false);
-            }
+            setIsDesktop(width >= 1024); // Adjust breakpoint for desktop
         };
 
         handleResize();
@@ -22,12 +18,12 @@ const DifferenceCardSection = () => {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
-    return (
-        <section className="max-w-7xl mx-auto overflow-hidden">
 
+    return (
+        <section className="section-style overflow-hidden">
             {isDesktop ? <DesktopDiffernceCard /> : <MobileDifferenceSection />}
         </section>
     );
-}
+};
 
 export default DifferenceCardSection;
