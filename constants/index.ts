@@ -356,13 +356,13 @@ export interface PdfI {
 }
 export const pdfs: PdfI[] = [
   {
-    title: "E-Book",
+    title: "E-Book 1",
     description: "Resume Best Practices for Data Science Interviews",
     downloadLink: "Descipr - Resume Best Practices for DS Interview.pdf",
     img: data_science,
   },
   {
-    title: "E-Book",
+    title: "E-Book 2",
     description: "SQL Case Study Book",
     downloadLink: "Descipr - SQL Case Study Book.pdf",
     img: sql_case_study,
