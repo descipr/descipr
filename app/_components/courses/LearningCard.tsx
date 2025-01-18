@@ -28,14 +28,14 @@ const LearningCard: React.FC<LearningCardProps> = ({ data }) => {
       </div>
 
       {/* Case study with consistent height */}
-      <div className="bg-blue-bl2 px-2 py-4 rounded-xl flex flex-col gap-2 text-left" style={{ minHeight: '120px' }}>
+      {/* <div className="bg-blue-bl2 px-2 py-4 rounded-xl flex flex-col gap-2 text-left" style={{ minHeight: '120px' }}>
         <h4 className="text-sm md:text-base text-[#292A2D] font-normal">
           {data.subheading}
         </h4>
         <p className="text-sm md:text-base font-medium text-black-primary">
           {data.para}
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

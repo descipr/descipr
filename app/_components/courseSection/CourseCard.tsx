@@ -10,13 +10,14 @@ const CourseCard: React.FC<CourseCardProps> = ({
   title,
   para,
   date,
-  slug
-
+  slug,
+  button
 }) => {
+  const specialLink =
+    "https://docs.google.com/forms/d/e/1FAIpQLSdK_ZSmv7f20FF14uRz5HGdDhPwvC170rZdlKIxNIsgRPAInw/viewform?fbzx=5706864156212396717";
+
   return (
-    <div
-      className="flex flex-col h-full overflow-hidden rounded-md shadow-md bg-transparent border-[#4D4D4D]  border-[1px] transition-colors cursor-pointer"
-    >
+    <div className="flex flex-col h-full overflow-hidden rounded-md shadow-md bg-transparent border-[#4D4D4D]  border-[1px] transition-colors cursor-pointer">
       <div className="relative h-56 w-full">
         <Image
           src={imageSrc}
@@ -36,22 +37,17 @@ const CourseCard: React.FC<CourseCardProps> = ({
             <span className="text-sm font-normal md:text-base font-Plus-jakarta">
               {para}
             </span>
-
           </div>
-          <p className="font-Plus-jakarta text-sm  text-white">starts: {date}</p>
-
-
+          <p className="font-Plus-jakarta text-sm text-white">Starts: {date}</p>
         </div>
         <Link
-          href={`/courses/${slug}`}
+          href={title === "Mastering Gen AI" ? specialLink : `/courses/${slug}`}
           passHref
           className="mt-auto inline-block"
           target="_blank"
         >
-          <button
-            className="flex items-center justify-center w-full px-5 py-3 space-x-4 text-black bg-white cursor-pointer border-[1px] rounded-xl border-black-primary transition-colors "
-          >
-            <span className="text-sm font-semibold md:text-base">Enroll Now</span>
+          <button className="flex items-center justify-center w-full px-5 py-3 space-x-4 text-black bg-white cursor-pointer border-[1px] rounded-xl border-black-primary transition-colors">
+            <span className="text-sm font-semibold md:text-base">{button}</span>
             <FaArrowRight className="h-6 w-6 text-[#EE4924] hover:text-black-primary  transition-all" />
           </button>
         </Link>

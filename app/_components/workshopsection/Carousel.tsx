@@ -18,7 +18,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     <div className="overflow-hidden bg-blue-background flex flex-col space-y-8 py-8 border-[1px] border-[#4D4D4D] rounded-lg mt-16">
       {/* Heading */}
       <div className="text-center text-white">
-        <h2 className="text-2xl md:text-3xl font-semibold">1000+ Learners</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold">1000+ <span className='text-blue-Textprimary'>Learners</span></h2>
         <p className="text-gray-400 mt-2 text-sm md:text-lg font-medium">
           to have gained valuable skills through our programs
         </p>
@@ -28,17 +28,17 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
       <div className="relative mt-6 max-w-[1280px] mx-auto overflow-hidden">
         <motion.div
           className="flex space-x-6"
-          initial={{ x: 0 }} // Start from x=0
-          animate={{ x: ['0%', '-30%', '0%'] }} // Scroll left and back to right
+          initial={{ x: '100%' }} // Start from off-screen right
+          animate={{ x: '-100%' }} // Move left until off-screen
           transition={{
-            duration: 15, // Total time for one cycle (left + right)
-            ease: 'linear', // Smooth animation
+            duration: 15, // Time it takes to move across the screen
+            ease: 'linear', // Smooth and consistent motion
             repeat: Infinity, // Infinite loop
           }}
           style={{ display: 'flex' }}
         >
-          {/* Render the images */}
-          {images.map((item, idx) => (
+          {/* Render the images twice for seamless looping */}
+          {[...images, ...images].map((item, idx) => (
             <div
               key={idx}
               className="w-24 h-24 md:w-40 md:h-32 mb-2 relative flex-shrink-0"

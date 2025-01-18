@@ -14,7 +14,7 @@ import CorporateCta from "../_components/corporate-partnership/CorporateCta";
 const CorporatePartnership = () => {
     return (
         <section className="flex flex-col sm:space-y-8 md:space-y-16 items-center justify-center mx-auto w-full overflow-hidden">
-            <Hero />
+            <Hero text="Get your workforce AI ready" />
             <Organization />
             <HorizontalLine />
             <ProductsDesigned />

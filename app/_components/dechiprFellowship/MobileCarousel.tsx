@@ -22,7 +22,6 @@ const MobileCarousel: React.FC<MobileCarouselProps> = ({ images }) => {
   return (
     <motion.div
       ref={carouselRef}
-      className="overflow-hidden cursor-grab"
       whileTap={{ cursor: "grabbing" }}
     >
       <motion.div
@@ -31,18 +30,18 @@ const MobileCarousel: React.FC<MobileCarouselProps> = ({ images }) => {
         className="flex space-x-4"
       >
         {images.map((image, index) => (
-          <motion.div
+          <div
             key={index}
-            className="flex-shrink-0 w-[90%] sm:w-[70%] px-2"
+            className="flex-shrink-0 w-[90%] sm:w-full px-2"
           >
             <Image
               src={image}
               alt={`Carousel image ${index}`}
-              width={400}
-              height={250}
-              className="rounded-lg object-cover w-full h-auto"
+              width={400} // Fixed width
+              height={250} // Fixed height
+              className="rounded-lg object-cover w-full h-full" // Ensure full coverage
             />
-          </motion.div>
+          </div>
         ))}
       </motion.div>
     </motion.div>
@@ -50,4 +49,3 @@ const MobileCarousel: React.FC<MobileCarouselProps> = ({ images }) => {
 };
 
 export default MobileCarousel;
-``

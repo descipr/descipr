@@ -2,7 +2,7 @@ import { corporate_hero_bg } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-const Hero = () => {
+const Hero = ({text} : {text:string}) => {
     return (
         <section className="relative w-full h-full md:h-[75vh] flex flex-col items-center text-white overflow-hidden">
             {/* Background Image */}
@@ -30,21 +30,16 @@ const Hero = () => {
                 </div>
 
                 <p className="text-sm md:text-xl leading-[150%] text-white text-center font-light">
-                    Expert-led upskilling for actionable results in your field!
+                    {text}
                 </p>
-                <div className="flex items-center justify-center gap-4 mx-auto">
+                <div className="flex items-center justify-center gap-4 mx-auto" >
                     <Link
                         //   onClick={() => setIsOpen(true)}
                         className="flex items-center justify-center px-6 py-2 w-full mx-auto md:px-8 md:py-4 space-x-2  text-black-primary bg-blue-Textprimary  rounded-lg md:rounded-xl text-xs md:text-lg font-semibold" href="#products"        >
                         {" "}
                         Explore Programs
                     </Link>
-                    {/* <button
-                        //   onClick={() => setIsOpen(true)}
-                        className="flex items-center justify-center px-6 py-2 w-full mx-auto md:px-8 md:py-4 space-x-2 text-white border-[1px] border-blue-button bg-transparent  rounded-lg md:rounded-xl text-xs md:text-lg font-semibold"
-                    >
-                        Explore Workshops
-                    </button> */}
+            
                 </div>
             </div>
         </section>

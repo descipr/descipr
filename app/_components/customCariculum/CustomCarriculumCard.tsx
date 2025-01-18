@@ -34,6 +34,7 @@ const CustomCarriculumCard = ({ img, title, para, slug }: CardProps) => {
 
                 <Link
                     href={slug}
+                    target="_blank"
                     className="flex items-center justify-center w-full px-5 py-3 space-x-4 text-black bg-white cursor-pointer border-[1px] rounded-xl border-black-primary transition-colors hover:text-white"
                     onMouseEnter={(e) => {
                         (e.currentTarget as HTMLElement).style.backgroundColor =
