@@ -737,7 +737,7 @@ export const courseDetails: CourseDetail[] = [
     pdf: "/1_Foundation_Fellowship_Brochure.pdf",
     discount: "50% OFF",
     EmiOptions: "699",
-    videoUrl: "https://www.youtube.com/watch?v=mctYPXz85CA",
+    videoUrl: "https://www.youtube.com/embed/mctYPXz85CA?si=2kZBgHcUNLAKYFKL",
     priceCardImage: PriceCardImage_foundation,
     weekSchedule: [
       {
@@ -1220,7 +1220,7 @@ export const courseDetails: CourseDetail[] = [
         para: "Create a chatbot to converse with news",
       },
     ],
-    videoUrl: "https://www.youtube.com/watch?v=yXmK7TAJ1Mc",
+    videoUrl: "https://www.youtube.com/embed/yXmK7TAJ1Mc?si=A_cmQERC8wE_QRsK",
   },
 ];
 
