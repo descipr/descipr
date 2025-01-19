@@ -1911,7 +1911,7 @@ export const workshopList = [
     link: "https://descipr.com/workshop_sql",
   },
   {
-    label: "outsmarting Banking Fraud with LLMs",
+    label: "Outsmarting Banking Fraud with LLMs",
     link: "https://descipr.com/workshop_llm",
   },
   {

@@ -93,7 +93,7 @@ const CustomizedTraining = () => {
             <div className="flex items-center justify-center mx-auto mt-8">
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="flex items-center justify-center px-6 py-2 w-full mx-auto md:px-8 md:py-4 space-x-2  text-black-primary bg-blue-Textprimary  rounded-lg md:rounded-xl text-xs md:text-lg font-semibold">
+                    className="flex items-center justify-center px-6 py-2 w-full mx-auto md:px-8  space-x-2  text-black-primary bg-blue-Textprimary  rounded-lg md:rounded-xl text-xs md:text-lg font-semibold">
                     {" "}
                     Let's Discuss
                 </button>

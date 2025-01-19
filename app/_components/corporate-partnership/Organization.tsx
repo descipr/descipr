@@ -9,7 +9,6 @@ const Organization = () => {
                 <span className="text-blue-Textprimary font-Plus-jakarta">
                     Trust Us{" "}
                 </span>
-                in
             </h1>
 
             <CarouselLogo images={logoImages}  />

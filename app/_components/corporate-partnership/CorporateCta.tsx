@@ -23,7 +23,7 @@ const CorporateCta = () => {
                     className="flex items-center px-3 py-2 md:px-4 md:py-2 space-x-2 text-sm md:text-base text-black bg-blue-400 hover:bg-blue-500 rounded-lg md:rounded-xl shadow-md" href="https://wa.me/9148398744"
                     target="_blank"
                     rel="noopener noreferrer"                >
-                    <span className="font-medium">Book a Discovery cal</span>
+                    <span className="font-medium">Book a Discovery call</span>
                     <Image src={Phone} alt="Phone icon" width={20} height={20} priority />
                 </Link>
             </div>

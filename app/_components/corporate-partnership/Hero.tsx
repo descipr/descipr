@@ -2,9 +2,9 @@ import { corporate_hero_bg } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-const Hero = ({text} : {text:string}) => {
+const Hero = ({ text, blueText, heading }: { text: string, blueText: string, heading: string }) => {
     return (
-        <section className="relative w-full h-full md:h-[75vh] flex flex-col items-center text-white overflow-hidden">
+        <section className="relative w-full h-full md:h-[75vh] flex flex-col items-center  text-white overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0 -z-10 opacity-35 md:opacity-100">
                 <Image
@@ -17,29 +17,27 @@ const Hero = ({text} : {text:string}) => {
             </div>
 
             {/* Content */}
-            <div className="text-center max-w-3xl px-4 mt-4 md:mt-8 mx-auto flex flex-col gap-4">
+            <div className="text-center max-w-3xl px-4 mt-4 md:mt-32 mx-auto flex flex-col gap-4">
                 <div>
                     <h1 className="text-3xl md:text-[56px] font-bold text-center text-white leading-[120%]">
-                        Join us in shaping the next generation{" "}
+                        {heading}{" "}
                         <span className="text-blue-Textprimary font-Plus-jakarta">
-                            of AI Innovators{" "}
+                            {blueText}{" "}
                         </span>
-                        and Leaders!
                     </h1>
-                    
-                </div>
 
-                <p className="text-sm md:text-xl leading-[150%] text-white text-center font-light">
+                </div>
+                <p className="text-sm md:text-2xl text-center">
                     {text}
-                </p>
-                <div className="flex items-center justify-center gap-4 mx-auto" >
+                </p >
+                <div className="flex items-center justify-center gap-4 mx-auto mt-4" >
                     <Link
                         //   onClick={() => setIsOpen(true)}
-                        className="flex items-center justify-center px-6 py-2 w-full mx-auto md:px-8 md:py-4 space-x-2  text-black-primary bg-blue-Textprimary  rounded-lg md:rounded-xl text-xs md:text-lg font-semibold" href="#products"        >
+                        className="flex items-center justify-center px-6 py-3 w-full mx-auto md:px-8  space-x-2  text-black-primary bg-blue-Textprimary  rounded-lg md:rounded-xl text-xs md:text-lg font-semibold" href="#products"        >
                         {" "}
                         Explore Programs
                     </Link>
-            
+
                 </div>
             </div>
         </section>

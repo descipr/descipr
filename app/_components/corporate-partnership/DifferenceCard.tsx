@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const DifferenceCard = ({ imageUrl, title, description }: CardData) => {
   return (
-    <div className="flex flex-col p-4 lg:p-8 space-y-4 rounded-xl shadow-md overflow-hidden bg-gradient-card max-w-xs  md:max-w-full h-full ">
+    <div className="flex flex-col p-4 lg:p-8 space-y-4 rounded-xl shadow-md overflow-hidden  max-w-xs  md:max-w-full h-full border-[1px] border-gray-border ">
       {/* Image Section */}
       <div className="flex justify-center sm:justify-start">
         <Image

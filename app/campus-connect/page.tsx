@@ -14,7 +14,7 @@ import CorporateCta from "../_components/corporate-partnership/CorporateCta";
 const CampusConnect = () => {
     return (
         <section className="flex flex-col sm:space-y-8 md:space-y-16 items-center justify-center mx-auto overflow-hidden">
-            <Hero text="Join us in shaping the next generation of AI Innovators and Leaders!" />
+            <Hero text="Join us in shaping the next generation of AI Innovators and Leaders" blueText="Connect" heading="Campus" />
             <Organization />
             <HorizontalLine />
             <ProductsDesigned />
