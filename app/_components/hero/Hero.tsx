@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
         <div className="flex items-center justify-between gap-4 mt-2 md:mt-6">
           <Link
             href="#fellowships"
-            className="flex items-center px-6 py-4 md:px-8 md:py-4 space-x-2 text-black bg-blue-Textprimary hover:bg-white rounded-lg md:rounded-xl text-base md:text-lg font-semibold"
+            className="flex items-center px-6 py-3 md:px-8  space-x-2 text-black bg-blue-Textprimary hover:bg-white rounded-lg md:rounded-xl text-base md:text-lg font-semibold"
           >
             Explore Programs
           </Link>

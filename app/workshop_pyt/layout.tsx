@@ -14,7 +14,7 @@ export default function Workshop_pyt({
 }>) {
   return (
     <section className="relative">
-      <WorkshopFloatingBar date="Dec 15" cost="₹0" />
+      <WorkshopFloatingBar date="TBD" cost="₹0" />
       {children}
     </section>
   );

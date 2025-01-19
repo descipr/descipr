@@ -92,20 +92,20 @@ const PDFCard: React.FC<PDFCardProps> = ({ title, downloadLink, img }) => {
       {/* Content Section */}
       <div className="flex flex-col h-full p-4">
         {/* Title */}
-        <div>
+        {/* <div>
           <h3 className="text-base md:text-lg font-medium text-left text-gray-300">
             {title}
           </h3>
-        </div>
+        </div> */}
 
         {/* Download Button */}
-        <div className="mt-4 flex items-start">
+        <div className="flex items-start">
           <button
             onClick={handleDownloadClick}
             className="flex items-center justify-center w-full max-w-xs px-4 py-3 text-white hover:text-black bg-transparent border border-white rounded-xl transition-colors duration-300 group"
           >
             <span className="text-sm md:text-base font-semibold">
-              Download
+              Download E-book
             </span>
             <FaArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 text-[#EE4924] transition-transform duration-300 transform group-hover:translate-x-1" />
           </button>

@@ -84,6 +84,7 @@ import {
   ModelBuilding,
   MsExcel,
   novofit,
+  OpenAi,
   PeerLearning,
   peter_england,
   Portfolio,
@@ -97,6 +98,7 @@ import {
   product_custom_carriculum,
   product_fellowship,
   product_workshop,
+  promtEngineering,
   python,
   ready_made_solution,
   ResumeReview,
@@ -175,7 +177,7 @@ export const socialLinks: SocialLink[] = [
   {
     label: "YouTube",
     iconSrc: youtubeIcon,
-    link: "https://www.youtube.com/@team_descipr",
+    link: "https://www.youtube.com/@descipr",
   },
 ];
 
@@ -216,7 +218,7 @@ export const courses: Course[] = [
     title: "Intermediate",
     para: "Built a solid foundation? Take the next step towards data science roles.",
     bg: "#FFF0ED",
-    button: "enroll now",
+    button: "Enroll now",
     date: "Feb 22, 2025",
     slug: "intermediate",
   },
@@ -735,7 +737,7 @@ export const courseDetails: CourseDetail[] = [
     pdf: "/1_Foundation_Fellowship_Brochure.pdf",
     discount: "50% OFF",
     EmiOptions: "699",
-    videoUrl: "https://www.youtube.com/embed/yXmK7TAJ1Mc?si=dfbTOXvm8rfRi_XJ",
+    videoUrl: "https://www.youtube.com/watch?v=mctYPXz85CA",
     priceCardImage: PriceCardImage_foundation,
     weekSchedule: [
       {
@@ -813,11 +815,11 @@ export const courseDetails: CourseDetail[] = [
       },
       {
         id: 7,
-        title: "Generative AI: The Art of Prompt Engineering",
+        title: "Intro to visualization",
         listItems: [
-          "NLP and LLM Fundamentals",
-          "Efficient Prompt Engineering",
-          "Automation using GenAI Tools",
+          "Data Preparation and Loading Data",
+          "Understanding Chart Types, Trends",
+          "Creating Dashboards",
         ],
         time: "Session 7",
         subheading: "Case studies on",
@@ -860,8 +862,6 @@ export const courseDetails: CourseDetail[] = [
       { src: sql, alt: "Image 1", title: "SQL basics" },
       { src: PowerBi, alt: "Image 1", title: "PowerBI foundation" },
       { src: python, alt: "Image 1", title: "Numpy" },
-      { src: python, alt: "Image 1", title: "Pandas" },
-      { src: python, alt: "Image 1", title: "Matplotlib" },
       { src: MsExcel, alt: "Image 1", title: "MS Excel" },
     ],
     caseStudy: [
@@ -1030,10 +1030,9 @@ export const courseDetails: CourseDetail[] = [
     tools: [
       { src: sql, alt: "Image 1", title: "Advanced SQL" },
       { src: python, alt: "Image 1", title: "Advanced Python" },
-      { src: python, alt: "Image 1", title: "Scikit learn" },
-      { src: MsExcel, alt: "Image 1", title: "MS Excel" },
       { src: MlLibrary, alt: "Image 1", title: "ML Libraries" },
-      { src: generativeModel, alt: "Image 1", title: "Generative Models" },
+      { src: python, alt: "Image 1", title: "Scikit learn" },
+    
     ],
     caseStudy: [
       {
@@ -1089,7 +1088,7 @@ export const courseDetails: CourseDetail[] = [
           "Metrics: DAU, MAU, Retention rate, Conversion rate",
           "Cohort analysis, funnel analysis, event tracking.",
         ],
-        time: "Week 1",
+        time: "Session 1",
         subheading: "Case studies on",
         para: "Analyzing the Business Model of a Fashion Store",
       },
@@ -1101,7 +1100,7 @@ export const courseDetails: CourseDetail[] = [
           "Customer Cohort Analysis",
           "Statistical Analysis for Launch Decisions",
         ],
-        time: "Week 1",
+        time: "Session 2",
         subheading: "Case studies on",
         para: "Launch Strategy for a New E-Commerce Fashion Store",
       },
@@ -1113,7 +1112,7 @@ export const courseDetails: CourseDetail[] = [
           "Multicollinearity, Homoscedasticity, & Residual analysis",
           "Improving model accuracy",
         ],
-        time: "Week 2",
+        time: "Session 3",
         subheading: "Case studies on",
         para: "Sentiment Analysis from Twitter",
       },
@@ -1121,7 +1120,7 @@ export const courseDetails: CourseDetail[] = [
         id: 4,
         title: "Live Hands-on Project - Credit Decisioning System",
         listItems: ["Building a Credit Decision System from scratch"],
-        time: "Week 2",
+        time: "Session 4",
         subheading: "Case studies on",
         para: "Credit Decisioning System of Banks",
       },
@@ -1133,7 +1132,7 @@ export const courseDetails: CourseDetail[] = [
           "Decision Trees, Random Forests, and GB Trees",
           "Key differences and when to use them.",
         ],
-        time: "Week 3",
+        time: "Session 5",
         subheading: "Case studies on",
         para: "Deconstructing the Business of an E-Commerce Website",
       },
@@ -1141,7 +1140,7 @@ export const courseDetails: CourseDetail[] = [
         id: 6,
         title: "Live Hands-on Project - Propensity Modeling",
         listItems: ["Building a Propensity Model from scratch"],
-        time: "Week 3",
+        time: "Session 6",
         subheading: "Case studies on",
         para: "AirBNB Ticket Booking System",
       },
@@ -1153,7 +1152,7 @@ export const courseDetails: CourseDetail[] = [
           "Gen AI - Key concepts and applications",
           "Real-world applications and innovations",
         ],
-        time: "Week 4",
+        time: "Session 7",
         subheading: "Case studies on",
         para: "Building a News Summarizer App",
       },
@@ -1165,7 +1164,7 @@ export const courseDetails: CourseDetail[] = [
           "Agent Frameworks and Use case",
           "Considerations for LLM Models in Production",
         ],
-        time: "Week 4",
+        time: "Session 8",
         subheading: "Case studies on",
         para: "Building a Chatbot to converse with News",
       },
@@ -1189,8 +1188,8 @@ export const courseDetails: CourseDetail[] = [
       },
     ],
     tools: [
-      { src: python, alt: "Image 1", title: "Python" },
-      { src: MsExcel, alt: "Image 1", title: "MS Excel" },
+      { src: promtEngineering, alt: "Image 1", title: "A/B testing" },
+      { src: OpenAi, alt: "Image 1", title: "Open Ai" },
       { src: MlLibrary, alt: "Image 1", title: "ML Libraries" },
       { src: generativeModel, alt: "Image 1", title: "Generative Models" },
     ],
@@ -1221,7 +1220,7 @@ export const courseDetails: CourseDetail[] = [
         para: "Create a chatbot to converse with news",
       },
     ],
-    videoUrl: "https://www.youtube.com/embed/mctYPXz85CA?si=sM2oW7pLucnQgfIU",
+    videoUrl: "https://www.youtube.com/watch?v=yXmK7TAJ1Mc",
   },
 ];
 
@@ -1317,7 +1316,7 @@ export const ScheduledClassData: ScheduledClassProps[] = [
     key: 4,
     imageUrl: MockInterview,
     title: "Mock Interview",
-    para: "Once every 6 weeks",
+    para: "Once every 4 weeks",
     date: "Duration 2 hours",
     background: "#DBE5FF",
   },
@@ -1905,14 +1904,14 @@ export const workshopList = [
   },
   {
     label: "Design an AI Powered Search System",
-    link: "https://descipr.com/workshop",
+    link: "https://descipr.com/workshop_vec",
   },
   {
     label: "Detect E-commerce Return Fraud",
     link: "https://descipr.com/workshop_sql",
   },
   {
-    label: "tsmarting Banking Fraud with LLMs",
+    label: "outsmarting Banking Fraud with LLMs",
     link: "https://descipr.com/workshop_llm",
   },
   {

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import AboutUs from "../_components/about/AboutUs";      
 import HorizontalLine from "../_components/HorizontalLine";
 import OurTrainers from "../_components/about/OurTrainers";
-import AboutSectionMentors from "../_components/about/AboutSectionMentors";
+import OurMentors from "../_components/courses/OurMentors";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -18,7 +18,7 @@ const About = () => {
       <HorizontalLine />
       <OurTrainers />
       <HorizontalLine />
-      <AboutSectionMentors />
+      <OurMentors />
     </section>
   );
 };

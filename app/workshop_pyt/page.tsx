@@ -83,7 +83,7 @@ const Workshop_pyt = () => {
 
           <div className="flex justify-center items-center w-full px-2 sm:w-1/2  pt-16 md:pt-0">
             <WorkshopCard
-              date="December 15, 2024"
+              date="TBD, 2024"
               cost="₹0"
               image={Tanoy_profile}
               name="Tanoy Dewanjee"
