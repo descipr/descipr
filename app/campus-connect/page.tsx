@@ -9,12 +9,13 @@ import RecentTraining from "../_components/corporate-partnership/RecentTraining"
 import DechiphrDifference from "../_components/corporate-partnership/DechiphrDifference";
 import Testimonials from "../_components/testimonial/Testimonials";
 import CorporateCta from "../_components/corporate-partnership/CorporateCta";
+import { campus_connect_bg } from "@/utils";
 
 
 const CampusConnect = () => {
     return (
         <section className="flex flex-col sm:space-y-8 md:space-y-16 items-center justify-center mx-auto overflow-hidden">
-            <Hero text="Join us in shaping the next generation of AI Innovators and Leaders" blueText="Connect" heading="Campus" />
+            <Hero text="Join us in shaping the next generation of AI Innovators and Leaders" blueText="Connect" heading="Campus" img={campus_connect_bg} />
             <Organization />
             <HorizontalLine />
             <ProductsDesigned />

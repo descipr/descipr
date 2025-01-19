@@ -1,14 +1,14 @@
 import { corporate_hero_bg } from "@/utils";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-const Hero = ({ text, blueText, heading }: { text: string, blueText: string, heading: string }) => {
+const Hero = ({ text, blueText, heading, img }: { text: string, blueText: string, heading: string, img: StaticImageData }) => {
     return (
         <section className="relative w-full h-full md:h-[75vh] flex flex-col items-center  text-white overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0 -z-10 opacity-35 md:opacity-100">
                 <Image
-                    src={corporate_hero_bg} // Path to your image in the public folder
+                    src={img} // Path to your image in the public folder
                     alt="Background Image"
                     layout="fill" // Ensures the image covers the section
                     objectFit="cover" // Makes it behave like a background image

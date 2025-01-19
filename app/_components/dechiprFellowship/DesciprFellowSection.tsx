@@ -24,9 +24,8 @@ const DesciprFellowSection: React.FC = () => {
 
   return (
     <section
-      className={`container mx-auto px-4 py-4 md:py-8 flex flex-col items-center ${
-        isMobile ? "space-y-4" : "space-y-8"
-      }`}
+      className={`container mx-auto px-4 py-4 md:py-8 flex flex-col items-center ${isMobile ? "space-y-4" : "space-y-8"
+        }`}
     >
       <div className="flex flex-col space-y-1 items-center justify-center">
         <h2 className="heading text-white">
@@ -36,11 +35,9 @@ const DesciprFellowSection: React.FC = () => {
         <h2 className="heading text-white">Experience the difference</h2>
       </div>
 
-      {isMobile ? (
-        <MobileCarousel images={MobileFellowshipImages} />
-      ) : (
-        <FellowshipSection />
-      )}
+
+      <FellowshipSection />
+
     </section>
   );
 };

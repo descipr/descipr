@@ -10,11 +10,12 @@ import DechiphrDifference from "../_components/corporate-partnership/DechiphrDif
 import Testimonials from "../_components/testimonial/Testimonials";
 
 import CorporateCta from "../_components/corporate-partnership/CorporateCta";
+import { corporate_hero_bg } from "@/utils";
 
 const CorporatePartnership = () => {
     return (
         <section className="flex flex-col sm:space-y-8 md:space-y-16 items-center justify-center mx-auto w-full overflow-hidden">
-            <Hero text="Get your workforce AI ready" blueText="Partnership" heading="Corporate "  />
+            <Hero text="Get your workforce AI ready" blueText="Partnership" heading="Corporate " img = {corporate_hero_bg}  />
             <Organization />
             <HorizontalLine />
             <ProductsDesigned />

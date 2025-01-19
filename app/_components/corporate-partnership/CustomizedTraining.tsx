@@ -101,11 +101,8 @@ const CustomizedTraining = () => {
             {isOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
                     <div className="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
-                        <h3 className="text-2xl font-bold mb-4">Download Curriculum</h3>
-                        <p className="text-gray-600 mb-4">
-                            Please fill in your details to download the PDF. The download will
-                            start automatically after submission.
-                        </p>
+                        <h3 className="text-2xl font-bold mb-4">Book a Free Call</h3>
+                       
                         <form onSubmit={handleSubmit}>
                             <div className="mb-4 text-black-primary">
                                 <label className="block text-gray-700 text-sm font-bold mb-2 text-left">

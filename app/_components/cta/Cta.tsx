@@ -54,7 +54,7 @@ const Cta = () => {
     };
 
     return (
-        <section className="flex flex-col gap-8 items-center mt-4">
+        <section className="flex flex-col gap-10 items-center mt-4 md:mt-16 mb-4 md:mb-16">
             <div className="flex flex-col items-center justify-center space-y-4 text-center max-w-4xl">
                 <p className="text-white px-2 py-2 bg-gray-400/30 rounded-xl"> <span className="text-blue-Textprimary">1,000+ </span> People Have Taken Their First Step. </p>
                 <h2 className="text-xl md:text-5xl font-bold text-white">
@@ -68,7 +68,7 @@ const Cta = () => {
             </div>
 
             <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
-            
+
                 <Link
                     href="https://chat.whatsapp.com/GtjjkGQhgbo9WesLk12Wuj"
                     target="_blank"

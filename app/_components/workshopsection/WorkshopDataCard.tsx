@@ -31,7 +31,7 @@ const WorkshopDataCard: React.FC<WorkshopCardProps> = ({
           </div>
           {/* Date, Time, and Title Section */}
           <div className="flex flex-col items-start h-full">
-            <p className="text-gray-700 font-medium text-sm">{`${date}`}</p>
+            <p className="text-[#8E8E93] font-medium text-sm">{`${date}`}</p>
             <h3 className="text-white text-lg md:text-[20px] font-bold leading-snug mt-2 text-left">
               {title}
             </h3>

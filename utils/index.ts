@@ -116,12 +116,10 @@ import Big_Query_sql_workshop from "@/public/Images/BigQuery_sql.jpg";
 import home_credit_company_logo from "@/public/Images/home_credit_logo.svg";
 import sammer_dubey_profile from "@/public/Images/sammer_dubey_profile.svg";
 import corporate_hero_bg from "@/public/Images/corporate-hero-bg.svg";
-import company_logo_1 from "@/public/Images/logo-1.png";
-import company_logo_2 from "@/public/Images/logo-2.png";
-import company_logo_3 from "@/public/Images/logo-3.png";
-import company_logo_4 from "@/public/Images/logo-4.png";
-import company_logo_5 from "@/public/Images/logo-5.png";
-import company_logo_6 from "@/public/Images/logo-6.png";
+import company_logo_1 from "@/public/Images/Logo1.svg";
+import company_logo_2 from "@/public/Images/Logo2.svg";
+import company_logo_3 from "@/public/Images/Logo3.svg";
+import company_logo_4 from "@/public/Images/Logo4.svg";
 import product_workshop from "@/public/Images/product-workshop.png";
 import product_fellowship from "@/public/Images/product-Fellowships.png";
 import product_custom_carriculum from "@/public/Images/product-Custom-curriculum.png";
@@ -148,6 +146,7 @@ import home_credit_develop from "@/public/Images/Homecredit_credit_decision.jpg"
 import airbnb from "@/public/Images/Airbnb_next_booking.jpg";
 import hindu from "@/public/Images/the_hindu_Chatbot.jpg";
 import genAi from "@/public/Images/Gen_Ai.svg";
+import campus_connect_bg from "@/public/Images/Campus connect Banner.png"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -165,6 +164,7 @@ export const cleanUpSlug = (slug: string): string => {
 };
 
 export {
+  campus_connect_bg,
   PriceCardImage_foundation,
   priceCardImage_intermediate,
   priceCardImage_advanced,
@@ -198,8 +198,6 @@ export {
   company_logo_2,
   company_logo_3,
   company_logo_4,
-  company_logo_5,
-  company_logo_6,
   corporate_hero_bg,
   sammer_dubey_profile,
   home_credit_company_logo,

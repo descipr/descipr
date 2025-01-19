@@ -32,8 +32,6 @@ import {
   company_logo_2,
   company_logo_3,
   company_logo_4,
-  company_logo_5,
-  company_logo_6,
   corporate_partnership,
   CourseCardMobile,
   data_science,
@@ -1745,8 +1743,7 @@ export const logoImages = [
   { img: company_logo_2, name: "Logoipsum" },
   { img: company_logo_3, name: "Logoipsum" },
   { img: company_logo_4, name: "Logoipsum" },
-  { img: company_logo_5, name: "Logoipsum" },
-  { img: company_logo_6, name: "Logoipsum" },
+
 ];
 
 // products card
@@ -1782,7 +1779,7 @@ export const ProductcardData: ProductcardI[] = [
     ],
     image: product_fellowship,
     buttonText: "Download Brochure",
-    link: "/Descipr_B2B_Brochure.pdf",
+    link: "/Campus_Connect_Program.pdf",
   },
   {
     title: "Custom Curriculum",
@@ -1792,7 +1789,7 @@ export const ProductcardData: ProductcardI[] = [
     ],
     image: product_custom_carriculum,
     buttonText: "Let's Connect",
-    link: "/Campus_Connect_Program.pdf",
+    link: "",
   },
 ];
 
