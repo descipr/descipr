@@ -254,6 +254,7 @@ export interface WorkshopCardProps {
   logo: StaticImageData;
   signups: number;
   buttonText: string;
+  link: string;
 }
 
 export const workshops = [
@@ -269,6 +270,7 @@ export const workshops = [
     logo: hsbc_logo_white,
     signups: 50,
     buttonText: "Enroll Now",
+    link: "https://descipr.com/workshop_pyt",
   },
   {
     live: "Live",
@@ -282,6 +284,7 @@ export const workshops = [
     logo: home_credit,
     signups: 40,
     buttonText: "Watch for Free",
+    link: "https://descipr.graphy.com/courses/Design-an-AI-Powered-Search-System-with-Vector-Databases-6785142446197106244223e0",
   },
   {
     live: "Live",
@@ -295,6 +298,7 @@ export const workshops = [
     logo: hsbc_logo_white,
     signups: 25,
     buttonText: "Watch for Free",
+    link: "https://descipr.graphy.com/courses/Detect-Ecommerce-return-fraud-with-SQL-1737376657969-678e439169ef9e617ea0b8e5",
   },
   {
     live: "Live",
@@ -308,6 +312,7 @@ export const workshops = [
     logo: hsbc_logo_white,
     signups: 120,
     buttonText: "Watch for Free",
+    link: "https://descipr.graphy.com/courses/Outsmarting-banking-fraud-with-LLMs-1737376401782-678e42913ffdf04c4a15e7ad",
   },
   {
     live: "Live",
@@ -321,6 +326,7 @@ export const workshops = [
     logo: hsbc_logo_white,
     signups: 50,
     buttonText: "Watch for Free",
+    link: "https://descipr.graphy.com/courses/Ace-Data-Science--AI-interviews-1737376061764-678e413d1f8ac81645e3a352",
   },
 ];
 
@@ -786,7 +792,7 @@ export const courseDetails: CourseDetail[] = [
         subheading: "Case studies on",
         para: "Business Model of a Fitness Brand",
       },
-      
+
       {
         id: 5,
         title: "Intro to Python for Business Insights",
@@ -823,7 +829,7 @@ export const courseDetails: CourseDetail[] = [
         subheading: "Case studies on",
         para: "Building a YouTube Video Summarizer App",
       },
-      
+
       {
         id: 8,
         title: "Live Hands-on Project - PowerBI",
@@ -836,7 +842,6 @@ export const courseDetails: CourseDetail[] = [
         subheading: "Case studies on",
         para: "Business Model of a Fitness Brand",
       },
-     
     ],
     learning: [
       {
@@ -888,7 +893,7 @@ export const courseDetails: CourseDetail[] = [
   {
     heading: "Intermediate",
     description:
-      "Tackle cutting-edge projects and prepare for top roles at leading tech giants. Your AI future begins now!",
+      "Built a solid foundation? Take the next step towards data science roles.",
     dateOfStart: "February 22, 2025",
     floatingBar: "Feb 22",
     timeCommitment: "12 hours/week",
@@ -957,7 +962,7 @@ export const courseDetails: CourseDetail[] = [
         subheading: "Case studies on",
         para: "Digital Marketing Dashboard for a Fitness Brand",
       },
-     
+
       {
         id: 5,
         title: "Applied statistics for data science",
@@ -1030,7 +1035,6 @@ export const courseDetails: CourseDetail[] = [
       { src: python, alt: "Image 1", title: "Advanced Python" },
       { src: MlLibrary, alt: "Image 1", title: "ML Libraries" },
       { src: python, alt: "Image 1", title: "Scikit learn" },
-    
     ],
     caseStudy: [
       {
@@ -1058,7 +1062,7 @@ export const courseDetails: CourseDetail[] = [
   {
     heading: "Advanced",
     description:
-      "Kickstart your Business analyst career at top companies like Amazon, Dell, Swiggy etc. Your future in business analysis starts here!",
+      "Perfect for ambitious data scientists aiming to fast-track their journey to senior roles.",
     dateOfStart: "March 22, 2025",
     floatingBar: "Mar 22",
     timeCommitment: "10 hours/week",
@@ -1743,7 +1747,6 @@ export const logoImages = [
   { img: company_logo_2, name: "Logoipsum" },
   { img: company_logo_3, name: "Logoipsum" },
   { img: company_logo_4, name: "Logoipsum" },
-
 ];
 
 // products card

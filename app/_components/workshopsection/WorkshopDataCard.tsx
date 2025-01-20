@@ -1,6 +1,7 @@
 import { WorkshopCardProps } from "@/constants";
 import { home_credit } from "@/utils";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -16,6 +17,7 @@ const WorkshopDataCard: React.FC<WorkshopCardProps> = ({
     designation,
     logo,
     buttonText,
+    link
   }) => {
     return (
       <div className="rounded-lg bg-gradient-workshop p-5 shadow-lg border-[1px] border-[#4D4D4D] flex flex-col gap-4 h-[450px] justify-between items-start w-full">
@@ -66,10 +68,10 @@ const WorkshopDataCard: React.FC<WorkshopCardProps> = ({
   
         {/* Enroll Button and Signups Section */}
         <div className="flex items-center justify-between mt-4 w-full">
-          <button className="flex items-center justify-center w-full px-5 py-3 space-x-4 text-white hover:text-black-primary hover:bg-blue-Textprimary cursor-pointer border-[1px] rounded-xl border-white transition-color mx-auto ">
+          <Link href = {link} className="flex items-center justify-center w-full px-5 py-3 space-x-4 text-white hover:text-black-primary hover:bg-blue-Textprimary cursor-pointer border-[1px] rounded-xl border-white transition-color mx-auto ">
             <span className="text-sm font-semibold md:text-lg">{buttonText}</span>
             <FaArrowRight className="h-6 w-6 text-[#EE4924] transition-all" />
-          </button>
+          </Link>
         </div>
       </div>
     );

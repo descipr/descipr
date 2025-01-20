@@ -6,6 +6,7 @@ import FloatingButton from "./_components/floatingBar/FloatingButton";
 import Navbar from "./_components/navbar/Navbar";
 import Footer from "./_components/footer/Footer";
 import HorizontalLine from "./_components/HorizontalLine";
+import BackToTopButton from "./_components/BackToTopButton";
 
 
 export const metadata: Metadata = {
@@ -86,7 +87,7 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=867201552174593&ev=PageView&noscript=1"
           />
         </noscript>
-
+        <BackToTopButton />
         <FloatingButton />
         <Navbar />
         {children}

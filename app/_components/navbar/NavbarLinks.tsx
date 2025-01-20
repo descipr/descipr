@@ -3,7 +3,7 @@
 import { NavItem, navlinks } from "@/constants";
 import Link from "next/link";
 import React, { useState } from "react";
-import { usePathname } from "next/navigation"; // Import usePathname for detecting the current path
+import { usePathname } from "next/navigation";
 
 const NavbarLinks: React.FC = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -15,10 +15,16 @@ const NavbarLinks: React.FC = () => {
 
   // Function to generate the correct href based on current path
   const getHref = (href: string) => {
-    if (pathname === "/") {
-      return href.startsWith("#") ? href : `/${href}`;
+    if (href.startsWith("#")) {
+      return pathname === "/" ? href : `/${href}`;
     }
-    return href.startsWith("#") ? `/${href}` : href;
+    return href;
+  };
+
+  const handleLinkClick = (href: string) => {
+    if (href.startsWith("#") && pathname !== "/") {
+      window.location.href = `/${href}`; // Force redirect to home page with the hash
+    }
   };
 
   return (
@@ -49,7 +55,11 @@ const NavbarLinks: React.FC = () => {
                 </svg>
               </span>
             ) : (
-              <Link href={getHref(item.href)} className="flex items-center space-x-2">
+              <Link
+                href={getHref(item.href)}
+                onClick={() => handleLinkClick(item.href)}
+                className="flex items-center space-x-2"
+              >
                 <span>{item.title}</span>
               </Link>
             )}
@@ -65,6 +75,7 @@ const NavbarLinks: React.FC = () => {
                   <li key={subItem.title}>
                     <Link
                       href={getHref(subItem.href)}
+                      onClick={() => handleLinkClick(subItem.href)}
                       className="block px-4 py-2 hover:text-green-500"
                     >
                       {subItem.title}
@@ -81,5 +92,3 @@ const NavbarLinks: React.FC = () => {
 };
 
 export default NavbarLinks;
-
-
