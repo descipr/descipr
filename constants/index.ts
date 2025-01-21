@@ -1904,18 +1904,18 @@ export const workshopList = [
   },
   {
     label: "Design an AI Powered Search System",
-    link: "https://descipr.com/workshop_vec",
+    link: "https://descipr.graphy.com/courses/Design-an-AI-Powered-Search-System-with-Vector-Databases-6785142446197106244223e0 ",
   },
   {
     label: "Detect E-commerce Return Fraud",
-    link: "https://descipr.com/workshop_sql",
+    link: "https://descipr.graphy.com/courses/Detect-Ecommerce-return-fraud-with-SQL-1737376657969-678e439169ef9e617ea0b8e5",
   },
   {
     label: "Outsmarting Banking Fraud with LLMs",
-    link: "https://descipr.com/workshop_llm",
+    link: " https://descipr.graphy.com/courses/Outsmarting-banking-fraud-with-LLMs-1737376401782-678e42913ffdf04c4a15e7ad",
   },
   {
     label: "Ace Data Science & AI Interviews",
-    link: "https://descipr.com/workshop",
+    link: " https://descipr.graphy.com/courses/Ace-Data-Science--AI-interviews-1737376061764-678e413d1f8ac81645e3a352",
   },
 ];

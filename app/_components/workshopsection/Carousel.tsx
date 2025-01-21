@@ -21,7 +21,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         if (!carouselRef.current) return;
 
         const carousel = carouselRef.current;
-        const duration = 50; // Time for one full loop in seconds
+        const duration = 40; // Time for one full loop in seconds
 
         const cloneNodes = () => {
             // Duplicate images 3 times for seamless scrolling
